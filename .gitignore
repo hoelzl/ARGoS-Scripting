@@ -3,6 +3,13 @@
 .DS_Store
 *~
 *.csv
+*.o
+*.out
 *.png
 build/
 TAGS
+cmake/
+embedding/
+experiments.lua
+loop_functions/
+scripts/

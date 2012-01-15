@@ -61,7 +61,9 @@ class std::exception
 
 %rename(ConfigurationNode) TConfigurationNode;
 %rename(ConfigurationNodeIterator) TConfigurationNodeIterator;
-%warnfilter(509) SetNodeAttribute;
+%ignore SetNodeAttribute(TConfigurationNode& t_node,
+			 const std::string& str_attribute,
+			 const SInt8 n_value);
 %include <argos2/common/utility/configuration/argos_configuration.h>
 
 %rename(BaseConfigurableResource) CBaseConfigurableResource;
