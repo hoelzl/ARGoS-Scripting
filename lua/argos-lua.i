@@ -27,7 +27,7 @@
 #include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_motor_ground_sensor.h>
 %}
 
-%rename("%(lowercamelcase)s", %$isfunction) "";
+%rename("%(undercase)s", %$isfunction) "";
 
 %include <string>
 %include <vector>
@@ -61,6 +61,7 @@ class std::exception
 
 %rename(ConfigurationNode) TConfigurationNode;
 %rename(ConfigurationNodeIterator) TConfigurationNodeIterator;
+%warnfilter(509) SetNodeAttribute;
 %include <argos2/common/utility/configuration/argos_configuration.h>
 
 %rename(BaseConfigurableResource) CBaseConfigurableResource;
