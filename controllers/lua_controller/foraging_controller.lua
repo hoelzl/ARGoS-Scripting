@@ -3,6 +3,8 @@
 
 function init(configuration_node)
    print("Lua: init")
+   print("sin(pi) = ", argos.sin(argos.Radians_PI))
+   print("sin(2*pi) = ", argos.sin(argos.Radians_TWO_PI))
 end
 
 function control_step()
