@@ -1,0 +1,129 @@
+<?xml version="1.0" ?>
+<argos-configuration>
+
+  <!-- ************************* -->
+  <!-- * General configuration * -->
+  <!-- ************************* -->
+  <framework>
+    <system threads="0" />
+    <experiment length="0"
+                ticks_per_second="10"
+                random_seed="124" />
+
+  </framework>
+
+  <!-- *************** -->
+  <!-- * Controllers * -->
+  <!-- *************** -->
+  <controllers>
+    <lua_controller
+	id="foraging_controller"
+	library="build/controllers/lua_controller/liblua_controller.so">
+      <actuators>
+        <footbot_wheels implementation="default" />
+        <footbot_leds   implementation="default" />
+      </actuators>
+      <sensors>
+        <footbot_proximity
+	    implementation="rot_z_only" show_rays="true" calibrate="true" />
+      </sensors>
+      <parameters alpha="7.5" delta="0.1" velocity="5" />
+    </lua_controller>
+
+  </controllers>
+
+  <!-- *********************** -->
+  <!-- * Arena configuration * -->
+  <!-- *********************** -->
+  <arena size="2, 2, 1">
+
+    <!-- Place four boxes in a square to delimit the arena -->
+    <box id="wall_north"
+         position="0,1,0.25"
+         orientation="0,0,0"
+         size="2,0.1,0.5"
+         movable="false" />
+    <box id="wall_south"
+         position="0,-1,0.25"
+         orientation="0,0,0"
+         size="2,0.1,0.5"
+         movable="false" />
+    <box id="wall_east"
+         position="1,0,0.25"
+         orientation="0,0,0"
+         size="0.1,2,0.5"
+         movable="false" />
+    <box id="wall_west"
+         position="-1,0,0.25"
+         orientation="0,0,0"
+         size="0.1,2,0.5"
+         movable="false" />
+    <box id="obstacle"
+	 position="0,0.25,0.1"
+	 orientation="0,0,0"
+	 size="0.2,0.2,0.5"
+	 movable="true"
+	 mass="0.5"/>
+
+
+    <!-- Place a foot-bot in the origin and bind it to the controller -->
+    <!-- <foot-bot id="fb_0"
+              position="0,0,0"
+              orientation="0,0,0"
+              controller="foraging_controller" /> -->
+
+    <distribute>
+      <position method="uniform" min="-1,-1,0" max="1,1,0" />
+      <orientation method="gaussian" mean="0,0,0" std_dev="360,0,0" />
+      <entity quantity="10" max_trials="100">
+        <foot-bot id="fb"
+                  controller="foraging_controller" />
+      </entity>
+    </distribute>
+
+  </arena>
+
+  <!-- ******************* -->
+  <!-- * Physics engines * -->
+  <!-- ******************* -->
+  <physics_engines>
+    <!--
+       Use a 2D dynamics engine. The id is necessary for the
+       subsequent <arena_physics> section to say which physics engine
+       simulates which entity.
+      -->
+    <dynamics2d id="dyn2d" />
+  </physics_engines>
+
+  <!-- ************************************ -->
+  <!-- * Arena -> Physics Engines mapping * -->
+  <!-- ************************************ -->
+  <arena_physics>
+    <engine id="dyn2d">
+      <!-- <entity id="fb_0" /> -->
+      <entity id="fb_[[:digit:]]*" />
+      <entity id="wall_north" />
+      <entity id="wall_south" />
+      <entity id="wall_east" />
+      <entity id="wall_west" />
+      <entity id="obstacle" />
+    </engine>
+  </arena_physics>
+
+  <!-- ****************** -->
+  <!-- * Visualization * -->
+  <!-- ****************** -->
+  <visualization>
+    <qtopengl_render splash="false">
+      <camera>
+	<placement idx="0" position="-0.1,0,2" look_at="0,0,0"
+		   lens_focal_length="20" />
+	<placement idx="1" position="-2,0,2" look_at="0,0,0"
+		   lens_focal_length="20" />
+	<placement idx="2" position="-2,0,2" look_at="0,0,0"
+		   lens_focal_length="20" />
+      </camera>
+    </qtopengl_render>
+  </visualization>
+
+</argos-configuration>
