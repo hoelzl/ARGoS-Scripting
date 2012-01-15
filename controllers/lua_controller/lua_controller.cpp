@@ -9,26 +9,27 @@ using namespace std;
 
 static void dumpLuaStack (lua_State *L) {
   int top = lua_gettop(L);
+  cerr << "Stack dump: ";
   for (int i = 1; i <= top; ++i) {
-    int t = lua_type(L, i);
-    switch (t) {
-    case LUA_TSTRING: {
-      cerr << L << " (" << i << "): " << lua_tostring(L, i);
-      break;
-    }
-// Gcc complains about these cases.  Investigate why.
-#if (0)
-    case LUA_TBOOLEAN: {
-      cerr << L << " (" << i << "): " << lua_toboolean(L, i) ? "true" : "false";
-      break;
-    }
+    int type = lua_type(L, i);
+    switch (type) {
     case LUA_TNUMBER: {
-      cerr << L << " (" << i << "): " << lua_tonumber(L, i);
+      cerr << L << " (" << i << "): "
+	   << lua_tonumber(L, i);
       break;
     } 
-#endif
+    case LUA_TBOOLEAN: {
+      cerr << L << " (" << i << "): "
+	   << (lua_toboolean(L, i) ? "true" : "false");
+      break;
+    }
+    case LUA_TSTRING: {
+      cerr << L << " (" << i << "): "
+	   << lua_tostring(L, i);
+      break;
+    }
     default: {
-      cerr << L << " (" << i << "): " << lua_typename(L, t); 
+      cerr << L << " (" << i << "): " << lua_typename(L, type); 
       break;
     }
     } 
