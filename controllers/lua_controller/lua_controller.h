@@ -29,13 +29,14 @@ public:
    virtual void Destroy();
 
 private:
-   // TODO: actually pass the arg to Lua
-   inline void CallLuaFunction(const char *functionName, void* arg) {
-     lua_getglobal(LuaState, functionName);
+   void InitializeLuaInterpreter(std::string LuaSource);
+
+   inline void CallLuaInitFunction(TConfigurationNode *configurationNode,
+				   CCI_Controller *controller) {
+     lua_getglobal(LuaState, "init");
      if (lua_pcall(LuaState, 0, 0, 0)) {
-       std::cerr << "Error when calling Lua function " 
-		 << functionName
-		 << ":" << std::endl
+       std::cerr << "Error when calling Lua init function:" 
+		 << std::endl
 		 << lua_tostring(LuaState, -1)
 		 << std::endl;
      }

@@ -56,8 +56,7 @@ LuaController::LuaController() {
   // Nothing to see here.
 }
 
-void LuaController::Init(TConfigurationNode& configurationNode) {
-  GetNodeAttribute(configurationNode, "lua_source", LuaSource);
+void LuaController::InitializeLuaInterpreter(string LuaSource) {
   LuaState = luaL_newstate();
   luaL_openlibs(LuaState);
   luaopen_argos(LuaState);
@@ -76,7 +75,12 @@ void LuaController::Init(TConfigurationNode& configurationNode) {
 	 << endl;
     // dumpLuaStack(LuaState);
   }
-  CallLuaFunction("init", &configurationNode);
+}
+
+void LuaController::Init(TConfigurationNode& configurationNode) {
+  GetNodeAttribute(configurationNode, "lua_source", LuaSource);
+  InitializeLuaInterpreter(LuaSource);
+  CallLuaInitFunction(&configurationNode, this);
 }
 
 void LuaController::ControlStep() {

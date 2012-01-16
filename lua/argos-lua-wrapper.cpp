@@ -1621,6 +1621,12 @@ typedef struct{} LANGUAGE_OBJ;
   typedef signed char SInt8; 
   typedef unsigned char UInt8;
 
+extern "C" void argos::Tokenize(std::string const &,std::vector< std::string > &,std::string const &);
+extern "C" std::string argos::StringToUpperCase(std::string const &);
+extern "C" std::string argos::StringToLowerCase(std::string const &);
+extern "C" std::string argos::ExpandARGoSInstallDir(std::string const &);
+extern "C" void argos::Replace(std::string &,std::string const &,std::string const &);
+extern "C" bool argos::MatchPattern(std::string const &,std::string const);
 
   namespace argos {
     typedef argos::CARGoSRandom::CRNG CRNG;
@@ -1631,6 +1637,7 @@ typedef struct{} LANGUAGE_OBJ;
     typedef argos::CARGoSRandom::CCategory CCategory;
   }
 
+extern std::map< std::string,CCI_Controller_Maker *,std::less< std::string > > mapControllerFactory;
 
   namespace argos {
     typedef argos::CCI_FootBotProximitySensor::SReading ProximitySensorReading;
