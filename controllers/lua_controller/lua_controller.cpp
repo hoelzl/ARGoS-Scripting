@@ -4,6 +4,9 @@
 #include "lualib.h"
 
 #include <iostream>
+#include <uuid/uuid.h>
+
+#include <argos2/common/utility/logging/argos_log.h>
 
 using namespace std;
 
@@ -12,12 +15,53 @@ extern "C" {
   extern int luaopen_argos(lua_State *L);
 }
 
-LuaController::LuaController() :
-  LuaState(luaL_newstate()),
-  LuaSource("/Users/tc/Prog/Robots/Lua-Foraging/controllers/lua_controller/foraging_controller.lua")
-{
+// Some utility functions for the controllers.
+
+static int lua_uuid(lua_State *L) {
+  uuid_t uuid;
+  uuid_string_t result;
+  uuid_generate_random(uuid);
+  uuid_unparse(uuid, result);
+  lua_pushstring(L, result);
+  return 1;
+}
+
+static int lua_log(lua_State *L) {
+  luaL_checkstring(L, 1);
+  LOG << lua_tostring(L, 1) << endl;
+  return 0;
+}
+
+static int lua_log_error(lua_State *L) {
+  luaL_checkstring(L, 1);
+  LOGERR << lua_tostring(L, 1) << endl;
+  return 0;
+}
+
+static const struct luaL_Reg argos_utils[] = {
+  {"uuid", lua_uuid},
+  {"log_internal", lua_log},
+  {"log_error_internal", lua_log_error},
+  {NULL, NULL}
+};
+
+int luaopen_argos_utils(lua_State *L) {
+  luaL_register(L, "argos_utils", argos_utils);
+  return 1;
+}
+
+// Code for the controller proper.
+
+LuaController::LuaController() {
+  // Nothing to see here.
+}
+
+void LuaController::Init(TConfigurationNode& configurationNode) {
+  GetNodeAttribute(configurationNode, "lua_source", LuaSource);
+  LuaState = luaL_newstate();
   luaL_openlibs(LuaState);
   luaopen_argos(LuaState);
+  luaopen_argos_utils(LuaState);
   if (luaL_loadfile(LuaState, LuaSource.c_str())) {
     cerr << "Error while loading Lua controller source:"
 	 << endl
@@ -32,9 +76,6 @@ LuaController::LuaController() :
 	 << endl;
     // dumpLuaStack(LuaState);
   }
-}
-
-void LuaController::Init(TConfigurationNode& configurationNode) {
   CallLuaFunction("init", &configurationNode);
 }
 

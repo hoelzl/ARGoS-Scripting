@@ -27,7 +27,9 @@
         <footbot_proximity
 	    implementation="rot_z_only" show_rays="true" calibrate="true" />
       </sensors>
-      <parameters alpha="7.5" delta="0.1" velocity="5" />
+      <parameters
+	  alpha="7.5" delta="0.1" velocity="5"
+	  lua_source="controllers/lua_controller/foraging_controller.lua" />
     </lua_controller>
 
   </controllers>
