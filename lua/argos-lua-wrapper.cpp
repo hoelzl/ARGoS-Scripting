@@ -1503,77 +1503,132 @@ SWIG_Lua_dostring(lua_State *L, const char* str) {
 
 /* ------------------------------ end luarun.swg  ------------------------------ */
 
+/*  Errors in SWIG */
+#define  SWIG_UnknownError    	   -1 
+#define  SWIG_IOError        	   -2 
+#define  SWIG_RuntimeError   	   -3 
+#define  SWIG_IndexError     	   -4 
+#define  SWIG_TypeError      	   -5 
+#define  SWIG_DivisionByZero 	   -6 
+#define  SWIG_OverflowError  	   -7 
+#define  SWIG_SyntaxError    	   -8 
+#define  SWIG_ValueError     	   -9 
+#define  SWIG_SystemError    	   -10
+#define  SWIG_AttributeError 	   -11
+#define  SWIG_MemoryError    	   -12 
+#define  SWIG_NullReferenceError   -13
+
+
+
 
 /* -------- TYPES TABLE (BEGIN) -------- */
 
-#define SWIGTYPE_p_TLastReceivedPackets swig_types[0]
-#define SWIGTYPE_p_TLedSettings swig_types[1]
-#define SWIGTYPE_p_TRangeAndBearingData swig_types[2]
-#define SWIGTYPE_p_TRawValues swig_types[3]
-#define SWIGTYPE_p_TReadings swig_types[4]
-#define SWIGTYPE_p_argos__CARGoSException swig_types[5]
-#define SWIGTYPE_p_argos__CARGoSRandom swig_types[6]
-#define SWIGTYPE_p_argos__CBaseConfigurableResource swig_types[7]
-#define SWIGTYPE_p_argos__CByteArray swig_types[8]
-#define SWIGTYPE_p_argos__CCI_Actuator swig_types[9]
-#define SWIGTYPE_p_argos__CCI_Controller swig_types[10]
-#define SWIGTYPE_p_argos__CCI_FootBotLedsActuator swig_types[11]
-#define SWIGTYPE_p_argos__CCI_FootBotLightSensor swig_types[12]
-#define SWIGTYPE_p_argos__CCI_FootBotMotorGroundSensor swig_types[13]
-#define SWIGTYPE_p_argos__CCI_FootBotProximitySensor swig_types[14]
-#define SWIGTYPE_p_argos__CCI_FootBotWheelsActuator swig_types[15]
-#define SWIGTYPE_p_argos__CCI_RangeAndBearingActuator swig_types[16]
-#define SWIGTYPE_p_argos__CCI_RangeAndBearingSensor swig_types[17]
-#define SWIGTYPE_p_argos__CCI_Robot swig_types[18]
-#define SWIGTYPE_p_argos__CCI_Sensor swig_types[19]
-#define SWIGTYPE_p_argos__CCategory swig_types[20]
-#define SWIGTYPE_p_argos__CColor swig_types[21]
-#define SWIGTYPE_p_argos__CDegrees swig_types[22]
-#define SWIGTYPE_p_argos__CMemento swig_types[23]
-#define SWIGTYPE_p_argos__CQuaternion swig_types[24]
-#define SWIGTYPE_p_argos__CRNG swig_types[25]
-#define SWIGTYPE_p_argos__CRadians swig_types[26]
-#define SWIGTYPE_p_argos__CRangeT_argos__CRadians_t swig_types[27]
-#define SWIGTYPE_p_argos__CRangeT_float_t swig_types[28]
-#define SWIGTYPE_p_argos__CRangeT_int_t swig_types[29]
-#define SWIGTYPE_p_argos__CRangeT_unsigned_int_t swig_types[30]
-#define SWIGTYPE_p_argos__CVector2 swig_types[31]
-#define SWIGTYPE_p_argos__CVector3 swig_types[32]
-#define SWIGTYPE_p_argos__LightSensorReading swig_types[33]
-#define SWIGTYPE_p_argos__MotorGroundSensorReading swig_types[34]
-#define SWIGTYPE_p_argos__ProximitySensorReading swig_types[35]
-#define SWIGTYPE_p_argos__TRangeAndBearingReceivedPacket swig_types[36]
-#define SWIGTYPE_p_bool swig_types[37]
-#define SWIGTYPE_p_f___p_argos__CCI_Controller swig_types[38]
-#define SWIGTYPE_p_f_p_void__double swig_types[39]
-#define SWIGTYPE_p_f_p_void__unsigned_long swig_types[40]
-#define SWIGTYPE_p_f_p_void_unsigned_long__void swig_types[41]
-#define SWIGTYPE_p_float swig_types[42]
-#define SWIGTYPE_p_gsl_rng swig_types[43]
-#define SWIGTYPE_p_gsl_rng_type swig_types[44]
-#define SWIGTYPE_p_int swig_types[45]
-#define SWIGTYPE_p_long_long swig_types[46]
-#define SWIGTYPE_p_p_gsl_rng_type swig_types[47]
-#define SWIGTYPE_p_short swig_types[48]
-#define SWIGTYPE_p_signed_char swig_types[49]
-#define SWIGTYPE_p_std__exception swig_types[50]
-#define SWIGTYPE_p_std__mapT_std__string_argos__CCI_Actuator_p_std__lessT_std__string_t_t swig_types[51]
-#define SWIGTYPE_p_std__mapT_std__string_argos__CCI_Controller_pfpFfF_std__lessT_std__string_t_t swig_types[52]
-#define SWIGTYPE_p_std__mapT_std__string_argos__CCI_Sensor_p_std__lessT_std__string_t_t swig_types[53]
-#define SWIGTYPE_p_std__mapT_std__string_argos__TRangeAndBearingReceivedPacket_t swig_types[54]
-#define SWIGTYPE_p_std__string swig_types[55]
-#define SWIGTYPE_p_std__vectorT_SReading_t swig_types[56]
-#define SWIGTYPE_p_std__vectorT_argos__CColor_t swig_types[57]
-#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[58]
-#define SWIGTYPE_p_ticpp__Element swig_types[59]
-#define SWIGTYPE_p_ticpp__IteratorT_ticpp__Element_t swig_types[60]
-#define SWIGTYPE_p_unsigned_char swig_types[61]
-#define SWIGTYPE_p_unsigned_int swig_types[62]
-#define SWIGTYPE_p_unsigned_long_long swig_types[63]
-#define SWIGTYPE_p_unsigned_short swig_types[64]
-#define SWIGTYPE_p_void swig_types[65]
-static swig_type_info *swig_types[67];
-static swig_module_info swig_module = {swig_types, 66, 0, 0, 0, 0};
+#define SWIGTYPE_p_FILE swig_types[0]
+#define SWIGTYPE_p_TLastReceivedPackets swig_types[1]
+#define SWIGTYPE_p_TLedSettings swig_types[2]
+#define SWIGTYPE_p_TRangeAndBearingData swig_types[3]
+#define SWIGTYPE_p_TRawValues swig_types[4]
+#define SWIGTYPE_p_TReadings swig_types[5]
+#define SWIGTYPE_p_TiCppRC swig_types[6]
+#define SWIGTYPE_p_TiCppRCImp swig_types[7]
+#define SWIGTYPE_p_TiXmlAttribute swig_types[8]
+#define SWIGTYPE_p_TiXmlAttributeSet swig_types[9]
+#define SWIGTYPE_p_TiXmlBase swig_types[10]
+#define SWIGTYPE_p_TiXmlComment swig_types[11]
+#define SWIGTYPE_p_TiXmlCursor swig_types[12]
+#define SWIGTYPE_p_TiXmlDeclaration swig_types[13]
+#define SWIGTYPE_p_TiXmlDocument swig_types[14]
+#define SWIGTYPE_p_TiXmlElement swig_types[15]
+#define SWIGTYPE_p_TiXmlHandle swig_types[16]
+#define SWIGTYPE_p_TiXmlNode swig_types[17]
+#define SWIGTYPE_p_TiXmlParsingData swig_types[18]
+#define SWIGTYPE_p_TiXmlPrinter swig_types[19]
+#define SWIGTYPE_p_TiXmlStylesheetReference swig_types[20]
+#define SWIGTYPE_p_TiXmlText swig_types[21]
+#define SWIGTYPE_p_TiXmlUnknown swig_types[22]
+#define SWIGTYPE_p_TiXmlVisitor swig_types[23]
+#define SWIGTYPE_p_argos__CARGoSException swig_types[24]
+#define SWIGTYPE_p_argos__CARGoSRandom swig_types[25]
+#define SWIGTYPE_p_argos__CBaseConfigurableResource swig_types[26]
+#define SWIGTYPE_p_argos__CByteArray swig_types[27]
+#define SWIGTYPE_p_argos__CCI_Actuator swig_types[28]
+#define SWIGTYPE_p_argos__CCI_Controller swig_types[29]
+#define SWIGTYPE_p_argos__CCI_FootBotLedsActuator swig_types[30]
+#define SWIGTYPE_p_argos__CCI_FootBotLightSensor swig_types[31]
+#define SWIGTYPE_p_argos__CCI_FootBotMotorGroundSensor swig_types[32]
+#define SWIGTYPE_p_argos__CCI_FootBotProximitySensor swig_types[33]
+#define SWIGTYPE_p_argos__CCI_FootBotWheelsActuator swig_types[34]
+#define SWIGTYPE_p_argos__CCI_RangeAndBearingActuator swig_types[35]
+#define SWIGTYPE_p_argos__CCI_RangeAndBearingSensor swig_types[36]
+#define SWIGTYPE_p_argos__CCI_Robot swig_types[37]
+#define SWIGTYPE_p_argos__CCI_Sensor swig_types[38]
+#define SWIGTYPE_p_argos__CCategory swig_types[39]
+#define SWIGTYPE_p_argos__CColor swig_types[40]
+#define SWIGTYPE_p_argos__CDegrees swig_types[41]
+#define SWIGTYPE_p_argos__CMemento swig_types[42]
+#define SWIGTYPE_p_argos__CQuaternion swig_types[43]
+#define SWIGTYPE_p_argos__CRNG swig_types[44]
+#define SWIGTYPE_p_argos__CRadians swig_types[45]
+#define SWIGTYPE_p_argos__CRangeT_argos__CRadians_t swig_types[46]
+#define SWIGTYPE_p_argos__CRangeT_float_t swig_types[47]
+#define SWIGTYPE_p_argos__CRangeT_int_t swig_types[48]
+#define SWIGTYPE_p_argos__CRangeT_unsigned_int_t swig_types[49]
+#define SWIGTYPE_p_argos__CVector2 swig_types[50]
+#define SWIGTYPE_p_argos__CVector3 swig_types[51]
+#define SWIGTYPE_p_argos__LightSensorReading swig_types[52]
+#define SWIGTYPE_p_argos__MotorGroundSensorReading swig_types[53]
+#define SWIGTYPE_p_argos__ProximitySensorReading swig_types[54]
+#define SWIGTYPE_p_argos__TRangeAndBearingReceivedPacket swig_types[55]
+#define SWIGTYPE_p_bool swig_types[56]
+#define SWIGTYPE_p_double swig_types[57]
+#define SWIGTYPE_p_f___p_argos__CCI_Controller swig_types[58]
+#define SWIGTYPE_p_f_p_void__double swig_types[59]
+#define SWIGTYPE_p_f_p_void__unsigned_long swig_types[60]
+#define SWIGTYPE_p_f_p_void_unsigned_long__void swig_types[61]
+#define SWIGTYPE_p_float swig_types[62]
+#define SWIGTYPE_p_gsl_rng swig_types[63]
+#define SWIGTYPE_p_gsl_rng_type swig_types[64]
+#define SWIGTYPE_p_int swig_types[65]
+#define SWIGTYPE_p_long_long swig_types[66]
+#define SWIGTYPE_p_p_gsl_rng_type swig_types[67]
+#define SWIGTYPE_p_p_ticpp__Attribute swig_types[68]
+#define SWIGTYPE_p_short swig_types[69]
+#define SWIGTYPE_p_signed_char swig_types[70]
+#define SWIGTYPE_p_std__exception swig_types[71]
+#define SWIGTYPE_p_std__mapT_std__string_argos__CCI_Actuator_p_std__lessT_std__string_t_t swig_types[72]
+#define SWIGTYPE_p_std__mapT_std__string_argos__CCI_Controller_pfpFfF_std__lessT_std__string_t_t swig_types[73]
+#define SWIGTYPE_p_std__mapT_std__string_argos__CCI_Sensor_p_std__lessT_std__string_t_t swig_types[74]
+#define SWIGTYPE_p_std__mapT_std__string_argos__TRangeAndBearingReceivedPacket_t swig_types[75]
+#define SWIGTYPE_p_std__string swig_types[76]
+#define SWIGTYPE_p_std__vectorT_SReading_t swig_types[77]
+#define SWIGTYPE_p_std__vectorT_argos__CColor_t swig_types[78]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[79]
+#define SWIGTYPE_p_std__vectorT_ticpp__Base_p_t swig_types[80]
+#define SWIGTYPE_p_ticpp__Attribute swig_types[81]
+#define SWIGTYPE_p_ticpp__Base swig_types[82]
+#define SWIGTYPE_p_ticpp__Comment swig_types[83]
+#define SWIGTYPE_p_ticpp__Declaration swig_types[84]
+#define SWIGTYPE_p_ticpp__Document swig_types[85]
+#define SWIGTYPE_p_ticpp__Element swig_types[86]
+#define SWIGTYPE_p_ticpp__Exception swig_types[87]
+#define SWIGTYPE_p_ticpp__IteratorT_ticpp__Element_t swig_types[88]
+#define SWIGTYPE_p_ticpp__Node swig_types[89]
+#define SWIGTYPE_p_ticpp__NodeImpT_TiXmlComment_t swig_types[90]
+#define SWIGTYPE_p_ticpp__NodeImpT_TiXmlDeclaration_t swig_types[91]
+#define SWIGTYPE_p_ticpp__NodeImpT_TiXmlDocument_t swig_types[92]
+#define SWIGTYPE_p_ticpp__NodeImpT_TiXmlElement_t swig_types[93]
+#define SWIGTYPE_p_ticpp__NodeImpT_TiXmlStylesheetReference_t swig_types[94]
+#define SWIGTYPE_p_ticpp__NodeImpT_TiXmlText_t swig_types[95]
+#define SWIGTYPE_p_ticpp__StylesheetReference swig_types[96]
+#define SWIGTYPE_p_ticpp__Text swig_types[97]
+#define SWIGTYPE_p_ticpp__Visitor swig_types[98]
+#define SWIGTYPE_p_unsigned_char swig_types[99]
+#define SWIGTYPE_p_unsigned_int swig_types[100]
+#define SWIGTYPE_p_unsigned_long_long swig_types[101]
+#define SWIGTYPE_p_unsigned_short swig_types[102]
+#define SWIGTYPE_p_void swig_types[103]
+static swig_type_info *swig_types[105];
+static swig_module_info swig_module = {swig_types, 104, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -1616,6 +1671,35 @@ typedef struct{} LANGUAGE_OBJ;
 #include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_proximity_sensor.h>
 #include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_light_sensor.h>
 #include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_motor_ground_sensor.h>
+
+
+	#include <string>
+
+
+SWIGINTERN int SWIG_lua_isnilstring(lua_State *L, int idx) {
+  int ret = lua_isstring(L, idx);
+  if (!ret)
+   ret = lua_isnil(L, idx);
+  return ret;
+}
+
+
+#include <vector>
+
+
+#include <stdexcept>
+
+
+#define SWIG_exception(a,b)\
+{ lua_pushfstring(L,"%s:%s",#a,b);SWIG_fail; }
+
+
+#include <stdexcept>
+
+
+#include <map>
+#include <algorithm>
+#include <stdexcept>
 
 
   typedef signed char SInt8; 
@@ -1662,6 +1746,237 @@ extern std::map< std::string,CCI_Controller_Maker *,std::less< std::string > > m
 #ifdef __cplusplus
 extern "C" {
 #endif
+static int _wrap_new_string__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *result = 0 ;
+  
+  SWIG_check_num_args("std::string::string",0,0)
+  result = (std::string *)new std::string();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__string,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_string__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  char *arg1 = (char *) 0 ;
+  std::string *result = 0 ;
+  
+  SWIG_check_num_args("std::string::string",1,1)
+  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("std::string::string",1,"char const *");
+  arg1 = (char *)lua_tostring(L, 1);
+  result = (std::string *)new std::string((char const *)arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__string,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_string(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 0) {
+    return _wrap_new_string__SWIG_0(L);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      _v = SWIG_lua_isnilstring(L,argv[0]);
+    }
+    if (_v) {
+      return _wrap_new_string__SWIG_1(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_string'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::string::string()\n"
+    "    std::string::string(char const *)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_string_size(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = (std::string *) 0 ;
+  unsigned int result;
+  
+  SWIG_check_num_args("std::string::size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::string::size",1,"std::string const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
+    SWIG_fail_ptr("string_size",1,SWIGTYPE_p_std__string);
+  }
+  
+  result = (unsigned int)((std::string const *)arg1)->size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_string_length(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = (std::string *) 0 ;
+  unsigned int result;
+  
+  SWIG_check_num_args("std::string::length",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::string::length",1,"std::string const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
+    SWIG_fail_ptr("string_length",1,SWIGTYPE_p_std__string);
+  }
+  
+  result = (unsigned int)((std::string const *)arg1)->length();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_string_empty(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = (std::string *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("std::string::empty",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::string::empty",1,"std::string const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
+    SWIG_fail_ptr("string_empty",1,SWIGTYPE_p_std__string);
+  }
+  
+  result = (bool)((std::string const *)arg1)->empty();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_string_c_str(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = (std::string *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("std::string::c_str",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::string::c_str",1,"std::string const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
+    SWIG_fail_ptr("string_c_str",1,SWIGTYPE_p_std__string);
+  }
+  
+  result = (char *)((std::string const *)arg1)->c_str();
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_string_data(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = (std::string *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("std::string::data",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::string::data",1,"std::string const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
+    SWIG_fail_ptr("string_data",1,SWIGTYPE_p_std__string);
+  }
+  
+  result = (char *)((std::string const *)arg1)->data();
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_string_assign(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = (std::string *) 0 ;
+  char *arg2 = (char *) 0 ;
+  
+  SWIG_check_num_args("std::string::assign",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::string::assign",1,"std::string *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("std::string::assign",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
+    SWIG_fail_ptr("string_assign",1,SWIGTYPE_p_std__string);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  (arg1)->assign((char const *)arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_string(void *obj) {
+std::string *arg1 = (std::string *) obj;
+delete arg1;
+}
+static swig_lua_method swig_std_string_methods[] = {
+    {"size", _wrap_string_size}, 
+    {"length", _wrap_string_length}, 
+    {"empty", _wrap_string_empty}, 
+    {"c_str", _wrap_string_c_str}, 
+    {"data", _wrap_string_data}, 
+    {"assign", _wrap_string_assign}, 
+    {0,0}
+};
+static swig_lua_attribute swig_std_string_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_std_string_bases[] = {0};
+static const char *swig_std_string_base_names[] = {0};
+static swig_lua_class _wrap_class_std_string = { "string", &SWIGTYPE_p_std__string,_wrap_new_string, swig_delete_string, swig_std_string_methods, swig_std_string_attributes, swig_std_string_bases, swig_std_string_base_names };
+
 static int _wrap_new_ByteArray__SWIG_0(lua_State* L) {
   int SWIG_arg = 0;
   argos::CByteArray *result = 0 ;
@@ -1920,13 +2235,13 @@ static swig_lua_class *swig_argos_CByteArray_bases[] = {0};
 static const char *swig_argos_CByteArray_base_names[] = {0};
 static swig_lua_class _wrap_class_argos_CByteArray = { "ByteArray", &SWIGTYPE_p_argos__CByteArray,_wrap_new_ByteArray, swig_delete_ByteArray, swig_argos_CByteArray_methods, swig_argos_CByteArray_attributes, swig_argos_CByteArray_bases, swig_argos_CByteArray_base_names };
 
-static int _wrap_new_exception(lua_State* L) {
+static int _wrap_new_TiCppRC(lua_State* L) {
   int SWIG_arg = 0;
-  std::exception *result = 0 ;
+  TiCppRC *result = 0 ;
   
-  SWIG_check_num_args("std::exception::exception",0,0)
-  result = (std::exception *)new std::exception();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__exception,1); SWIG_arg++; 
+  SWIG_check_num_args("TiCppRC::TiCppRC",0,0)
+  result = (TiCppRC *)new TiCppRC();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiCppRC,1); SWIG_arg++; 
   return SWIG_arg;
   
   if(0) SWIG_fail;
@@ -1937,19 +2252,1383 @@ fail:
 }
 
 
-static int _wrap_exception_what(lua_State* L) {
+static int _wrap_TiCppRC_m_spawnedWrappers_set(lua_State* L) {
   int SWIG_arg = 0;
-  std::exception *arg1 = (std::exception *) 0 ;
-  char *result = 0 ;
+  TiCppRC *arg1 = (TiCppRC *) 0 ;
+  std::vector< ticpp::Base * > *arg2 = (std::vector< ticpp::Base * > *) 0 ;
   
-  SWIG_check_num_args("std::exception::what",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::exception::what",1,"std::exception const *");
+  SWIG_check_num_args("TiCppRC::m_spawnedWrappers",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiCppRC::m_spawnedWrappers",1,"TiCppRC *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiCppRC::m_spawnedWrappers",2,"std::vector< ticpp::Base * > *");
   
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__exception,0))){
-    SWIG_fail_ptr("exception_what",1,SWIGTYPE_p_std__exception);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiCppRC,0))){
+    SWIG_fail_ptr("TiCppRC_m_spawnedWrappers_set",1,SWIGTYPE_p_TiCppRC);
   }
   
-  result = (char *)((std::exception const *)arg1)->what();
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_ticpp__Base_p_t,0))){
+    SWIG_fail_ptr("TiCppRC_m_spawnedWrappers_set",2,SWIGTYPE_p_std__vectorT_ticpp__Base_p_t);
+  }
+  
+  if (arg1) (arg1)->m_spawnedWrappers = *arg2;
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiCppRC_m_spawnedWrappers_get(lua_State* L) {
+  int SWIG_arg = 0;
+  TiCppRC *arg1 = (TiCppRC *) 0 ;
+  std::vector< ticpp::Base * > *result = 0 ;
+  
+  SWIG_check_num_args("TiCppRC::m_spawnedWrappers",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiCppRC::m_spawnedWrappers",1,"TiCppRC *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiCppRC,0))){
+    SWIG_fail_ptr("TiCppRC_m_spawnedWrappers_get",1,SWIGTYPE_p_TiCppRC);
+  }
+  
+  result = (std::vector< ticpp::Base * > *)& ((arg1)->m_spawnedWrappers);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ticpp__Base_p_t,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiCppRC_delete_spawned_wrappers(lua_State* L) {
+  int SWIG_arg = 0;
+  TiCppRC *arg1 = (TiCppRC *) 0 ;
+  
+  SWIG_check_num_args("TiCppRC::DeleteSpawnedWrappers",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiCppRC::DeleteSpawnedWrappers",1,"TiCppRC *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiCppRC,0))){
+    SWIG_fail_ptr("TiCppRC_delete_spawned_wrappers",1,SWIGTYPE_p_TiCppRC);
+  }
+  
+  (arg1)->DeleteSpawnedWrappers();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_TiCppRC(void *obj) {
+TiCppRC *arg1 = (TiCppRC *) obj;
+delete arg1;
+}
+static swig_lua_method swig_TiCppRC_methods[] = {
+    {"delete_spawned_wrappers", _wrap_TiCppRC_delete_spawned_wrappers}, 
+    {0,0}
+};
+static swig_lua_attribute swig_TiCppRC_attributes[] = {
+    { "m_spawnedWrappers", _wrap_TiCppRC_m_spawnedWrappers_get, _wrap_TiCppRC_m_spawnedWrappers_set},
+    {0,0,0}
+};
+static swig_lua_class *swig_TiCppRC_bases[] = {0};
+static const char *swig_TiCppRC_base_names[] = {0};
+static swig_lua_class _wrap_class_TiCppRC = { "TiCppRC", &SWIGTYPE_p_TiCppRC,_wrap_new_TiCppRC, swig_delete_TiCppRC, swig_TiCppRC_methods, swig_TiCppRC_attributes, swig_TiCppRC_bases, swig_TiCppRC_base_names };
+
+static int _wrap_new_TiCppRCImp(lua_State* L) {
+  int SWIG_arg = 0;
+  TiCppRC *arg1 = (TiCppRC *) 0 ;
+  TiCppRCImp *result = 0 ;
+  
+  SWIG_check_num_args("TiCppRCImp::TiCppRCImp",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiCppRCImp::TiCppRCImp",1,"TiCppRC *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiCppRC,0))){
+    SWIG_fail_ptr("new_TiCppRCImp",1,SWIGTYPE_p_TiCppRC);
+  }
+  
+  result = (TiCppRCImp *)new TiCppRCImp(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiCppRCImp,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiCppRCImp_nullify(lua_State* L) {
+  int SWIG_arg = 0;
+  TiCppRCImp *arg1 = (TiCppRCImp *) 0 ;
+  
+  SWIG_check_num_args("TiCppRCImp::Nullify",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiCppRCImp::Nullify",1,"TiCppRCImp *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiCppRCImp,0))){
+    SWIG_fail_ptr("TiCppRCImp_nullify",1,SWIGTYPE_p_TiCppRCImp);
+  }
+  
+  (arg1)->Nullify();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiCppRCImp_inc_ref(lua_State* L) {
+  int SWIG_arg = 0;
+  TiCppRCImp *arg1 = (TiCppRCImp *) 0 ;
+  
+  SWIG_check_num_args("TiCppRCImp::IncRef",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiCppRCImp::IncRef",1,"TiCppRCImp *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiCppRCImp,0))){
+    SWIG_fail_ptr("TiCppRCImp_inc_ref",1,SWIGTYPE_p_TiCppRCImp);
+  }
+  
+  (arg1)->IncRef();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiCppRCImp_dec_ref(lua_State* L) {
+  int SWIG_arg = 0;
+  TiCppRCImp *arg1 = (TiCppRCImp *) 0 ;
+  
+  SWIG_check_num_args("TiCppRCImp::DecRef",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiCppRCImp::DecRef",1,"TiCppRCImp *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiCppRCImp,0))){
+    SWIG_fail_ptr("TiCppRCImp_dec_ref",1,SWIGTYPE_p_TiCppRCImp);
+  }
+  
+  (arg1)->DecRef();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiCppRCImp_init_ref(lua_State* L) {
+  int SWIG_arg = 0;
+  TiCppRCImp *arg1 = (TiCppRCImp *) 0 ;
+  
+  SWIG_check_num_args("TiCppRCImp::InitRef",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiCppRCImp::InitRef",1,"TiCppRCImp *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiCppRCImp,0))){
+    SWIG_fail_ptr("TiCppRCImp_init_ref",1,SWIGTYPE_p_TiCppRCImp);
+  }
+  
+  (arg1)->InitRef();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiCppRCImp_get(lua_State* L) {
+  int SWIG_arg = 0;
+  TiCppRCImp *arg1 = (TiCppRCImp *) 0 ;
+  TiCppRC *result = 0 ;
+  
+  SWIG_check_num_args("TiCppRCImp::Get",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiCppRCImp::Get",1,"TiCppRCImp *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiCppRCImp,0))){
+    SWIG_fail_ptr("TiCppRCImp_get",1,SWIGTYPE_p_TiCppRCImp);
+  }
+  
+  result = (TiCppRC *)(arg1)->Get();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiCppRC,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiCppRCImp_is_null(lua_State* L) {
+  int SWIG_arg = 0;
+  TiCppRCImp *arg1 = (TiCppRCImp *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiCppRCImp::IsNull",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiCppRCImp::IsNull",1,"TiCppRCImp *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiCppRCImp,0))){
+    SWIG_fail_ptr("TiCppRCImp_is_null",1,SWIGTYPE_p_TiCppRCImp);
+  }
+  
+  result = (bool)(arg1)->IsNull();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_TiCppRCImp(void *obj) {
+TiCppRCImp *arg1 = (TiCppRCImp *) obj;
+delete arg1;
+}
+static swig_lua_method swig_TiCppRCImp_methods[] = {
+    {"nullify", _wrap_TiCppRCImp_nullify}, 
+    {"inc_ref", _wrap_TiCppRCImp_inc_ref}, 
+    {"dec_ref", _wrap_TiCppRCImp_dec_ref}, 
+    {"init_ref", _wrap_TiCppRCImp_init_ref}, 
+    {"get", _wrap_TiCppRCImp_get}, 
+    {"is_null", _wrap_TiCppRCImp_is_null}, 
+    {0,0}
+};
+static swig_lua_attribute swig_TiCppRCImp_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_TiCppRCImp_bases[] = {0};
+static const char *swig_TiCppRCImp_base_names[] = {0};
+static swig_lua_class _wrap_class_TiCppRCImp = { "TiCppRCImp", &SWIGTYPE_p_TiCppRCImp,_wrap_new_TiCppRCImp, swig_delete_TiCppRCImp, swig_TiCppRCImp_methods, swig_TiCppRCImp_attributes, swig_TiCppRCImp_bases, swig_TiCppRCImp_base_names };
+
+static int _wrap_TIXML_MAJOR_VERSION_get(lua_State* L) {
+  int SWIG_arg = 0;
+  int result;
+  
+  SWIG_check_num_args("TIXML_MAJOR_VERSION",0,0)
+  result = (int)(int)TIXML_MAJOR_VERSION;
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TIXML_MINOR_VERSION_get(lua_State* L) {
+  int SWIG_arg = 0;
+  int result;
+  
+  SWIG_check_num_args("TIXML_MINOR_VERSION",0,0)
+  result = (int)(int)TIXML_MINOR_VERSION;
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TIXML_PATCH_VERSION_get(lua_State* L) {
+  int SWIG_arg = 0;
+  int result;
+  
+  SWIG_check_num_args("TIXML_PATCH_VERSION",0,0)
+  result = (int)(int)TIXML_PATCH_VERSION;
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlCursor(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlCursor *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlCursor::TiXmlCursor",0,0)
+  result = (TiXmlCursor *)new TiXmlCursor();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlCursor,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlCursor_clear(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlCursor *arg1 = (TiXmlCursor *) 0 ;
+  
+  SWIG_check_num_args("TiXmlCursor::Clear",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlCursor::Clear",1,"TiXmlCursor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlCursor,0))){
+    SWIG_fail_ptr("TiXmlCursor_clear",1,SWIGTYPE_p_TiXmlCursor);
+  }
+  
+  (arg1)->Clear();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlCursor_row_set(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlCursor *arg1 = (TiXmlCursor *) 0 ;
+  int arg2 ;
+  
+  SWIG_check_num_args("TiXmlCursor::row",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlCursor::row",1,"TiXmlCursor *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("TiXmlCursor::row",2,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlCursor,0))){
+    SWIG_fail_ptr("TiXmlCursor_row_set",1,SWIGTYPE_p_TiXmlCursor);
+  }
+  
+  arg2 = (int)lua_tonumber(L, 2);
+  if (arg1) (arg1)->row = arg2;
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlCursor_row_get(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlCursor *arg1 = (TiXmlCursor *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("TiXmlCursor::row",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlCursor::row",1,"TiXmlCursor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlCursor,0))){
+    SWIG_fail_ptr("TiXmlCursor_row_get",1,SWIGTYPE_p_TiXmlCursor);
+  }
+  
+  result = (int) ((arg1)->row);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlCursor_col_set(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlCursor *arg1 = (TiXmlCursor *) 0 ;
+  int arg2 ;
+  
+  SWIG_check_num_args("TiXmlCursor::col",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlCursor::col",1,"TiXmlCursor *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("TiXmlCursor::col",2,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlCursor,0))){
+    SWIG_fail_ptr("TiXmlCursor_col_set",1,SWIGTYPE_p_TiXmlCursor);
+  }
+  
+  arg2 = (int)lua_tonumber(L, 2);
+  if (arg1) (arg1)->col = arg2;
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlCursor_col_get(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlCursor *arg1 = (TiXmlCursor *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("TiXmlCursor::col",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlCursor::col",1,"TiXmlCursor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlCursor,0))){
+    SWIG_fail_ptr("TiXmlCursor_col_get",1,SWIGTYPE_p_TiXmlCursor);
+  }
+  
+  result = (int) ((arg1)->col);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_TiXmlCursor(void *obj) {
+TiXmlCursor *arg1 = (TiXmlCursor *) obj;
+delete arg1;
+}
+static swig_lua_method swig_TiXmlCursor_methods[] = {
+    {"clear", _wrap_TiXmlCursor_clear}, 
+    {0,0}
+};
+static swig_lua_attribute swig_TiXmlCursor_attributes[] = {
+    { "row", _wrap_TiXmlCursor_row_get, _wrap_TiXmlCursor_row_set},
+    { "col", _wrap_TiXmlCursor_col_get, _wrap_TiXmlCursor_col_set},
+    {0,0,0}
+};
+static swig_lua_class *swig_TiXmlCursor_bases[] = {0};
+static const char *swig_TiXmlCursor_base_names[] = {0};
+static swig_lua_class _wrap_class_TiXmlCursor = { "TiXmlCursor", &SWIGTYPE_p_TiXmlCursor,_wrap_new_TiXmlCursor, swig_delete_TiXmlCursor, swig_TiXmlCursor_methods, swig_TiXmlCursor_attributes, swig_TiXmlCursor_bases, swig_TiXmlCursor_base_names };
+
+static int _wrap_TiXmlVisitor_visit_enter__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlVisitor *arg1 = (TiXmlVisitor *) 0 ;
+  TiXmlDocument *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlVisitor::VisitEnter",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlVisitor::VisitEnter",1,"TiXmlVisitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlVisitor::VisitEnter",2,"TiXmlDocument const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlVisitor,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit_enter",1,SWIGTYPE_p_TiXmlVisitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit_enter",2,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (bool)(arg1)->VisitEnter((TiXmlDocument const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlVisitor_visit_exit__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlVisitor *arg1 = (TiXmlVisitor *) 0 ;
+  TiXmlDocument *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlVisitor::VisitExit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlVisitor::VisitExit",1,"TiXmlVisitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlVisitor::VisitExit",2,"TiXmlDocument const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlVisitor,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit_exit",1,SWIGTYPE_p_TiXmlVisitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit_exit",2,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (bool)(arg1)->VisitExit((TiXmlDocument const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlVisitor_visit_enter__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlVisitor *arg1 = (TiXmlVisitor *) 0 ;
+  TiXmlElement *arg2 = 0 ;
+  TiXmlAttribute *arg3 = (TiXmlAttribute *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlVisitor::VisitEnter",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlVisitor::VisitEnter",1,"TiXmlVisitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlVisitor::VisitEnter",2,"TiXmlElement const &");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlVisitor::VisitEnter",3,"TiXmlAttribute const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlVisitor,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit_enter",1,SWIGTYPE_p_TiXmlVisitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit_enter",2,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit_enter",3,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  result = (bool)(arg1)->VisitEnter((TiXmlElement const &)*arg2,(TiXmlAttribute const *)arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlVisitor_visit_enter(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlVisitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlVisitor_visit_enter__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlVisitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_TiXmlAttribute, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          return _wrap_TiXmlVisitor_visit_enter__SWIG_1(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlVisitor_visit_enter'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlVisitor::VisitEnter(TiXmlDocument const &)\n"
+    "    TiXmlVisitor::VisitEnter(TiXmlElement const &,TiXmlAttribute const *)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlVisitor_visit_exit__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlVisitor *arg1 = (TiXmlVisitor *) 0 ;
+  TiXmlElement *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlVisitor::VisitExit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlVisitor::VisitExit",1,"TiXmlVisitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlVisitor::VisitExit",2,"TiXmlElement const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlVisitor,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit_exit",1,SWIGTYPE_p_TiXmlVisitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit_exit",2,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  result = (bool)(arg1)->VisitExit((TiXmlElement const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlVisitor_visit_exit(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlVisitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlVisitor_visit_exit__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlVisitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlVisitor_visit_exit__SWIG_1(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlVisitor_visit_exit'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlVisitor::VisitExit(TiXmlDocument const &)\n"
+    "    TiXmlVisitor::VisitExit(TiXmlElement const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlVisitor_visit__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlVisitor *arg1 = (TiXmlVisitor *) 0 ;
+  TiXmlDeclaration *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlVisitor::Visit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlVisitor::Visit",1,"TiXmlVisitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlVisitor::Visit",2,"TiXmlDeclaration const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlVisitor,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit",1,SWIGTYPE_p_TiXmlVisitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlDeclaration,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit",2,SWIGTYPE_p_TiXmlDeclaration);
+  }
+  
+  result = (bool)(arg1)->Visit((TiXmlDeclaration const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlVisitor_visit__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlVisitor *arg1 = (TiXmlVisitor *) 0 ;
+  TiXmlStylesheetReference *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlVisitor::Visit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlVisitor::Visit",1,"TiXmlVisitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlVisitor::Visit",2,"TiXmlStylesheetReference const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlVisitor,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit",1,SWIGTYPE_p_TiXmlVisitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlStylesheetReference,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit",2,SWIGTYPE_p_TiXmlStylesheetReference);
+  }
+  
+  result = (bool)(arg1)->Visit((TiXmlStylesheetReference const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlVisitor_visit__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlVisitor *arg1 = (TiXmlVisitor *) 0 ;
+  TiXmlText *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlVisitor::Visit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlVisitor::Visit",1,"TiXmlVisitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlVisitor::Visit",2,"TiXmlText const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlVisitor,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit",1,SWIGTYPE_p_TiXmlVisitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlText,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit",2,SWIGTYPE_p_TiXmlText);
+  }
+  
+  result = (bool)(arg1)->Visit((TiXmlText const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlVisitor_visit__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlVisitor *arg1 = (TiXmlVisitor *) 0 ;
+  TiXmlComment *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlVisitor::Visit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlVisitor::Visit",1,"TiXmlVisitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlVisitor::Visit",2,"TiXmlComment const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlVisitor,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit",1,SWIGTYPE_p_TiXmlVisitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlComment,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit",2,SWIGTYPE_p_TiXmlComment);
+  }
+  
+  result = (bool)(arg1)->Visit((TiXmlComment const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlVisitor_visit__SWIG_4(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlVisitor *arg1 = (TiXmlVisitor *) 0 ;
+  TiXmlUnknown *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlVisitor::Visit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlVisitor::Visit",1,"TiXmlVisitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlVisitor::Visit",2,"TiXmlUnknown const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlVisitor,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit",1,SWIGTYPE_p_TiXmlVisitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlUnknown,0))){
+    SWIG_fail_ptr("TiXmlVisitor_visit",2,SWIGTYPE_p_TiXmlUnknown);
+  }
+  
+  result = (bool)(arg1)->Visit((TiXmlUnknown const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlVisitor_visit(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlVisitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlDeclaration, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlVisitor_visit__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlVisitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlStylesheetReference, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlVisitor_visit__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlVisitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlText, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlVisitor_visit__SWIG_2(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlVisitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlComment, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlVisitor_visit__SWIG_3(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlVisitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlUnknown, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlVisitor_visit__SWIG_4(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlVisitor_visit'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlVisitor::Visit(TiXmlDeclaration const &)\n"
+    "    TiXmlVisitor::Visit(TiXmlStylesheetReference const &)\n"
+    "    TiXmlVisitor::Visit(TiXmlText const &)\n"
+    "    TiXmlVisitor::Visit(TiXmlComment const &)\n"
+    "    TiXmlVisitor::Visit(TiXmlUnknown const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_new_TiXmlVisitor(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlVisitor *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlVisitor::TiXmlVisitor",0,0)
+  result = (TiXmlVisitor *)new TiXmlVisitor();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlVisitor,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_TiXmlVisitor(void *obj) {
+TiXmlVisitor *arg1 = (TiXmlVisitor *) obj;
+delete arg1;
+}
+static swig_lua_method swig_TiXmlVisitor_methods[] = {
+    {"visit_enter", _wrap_TiXmlVisitor_visit_enter}, 
+    {"visit_exit", _wrap_TiXmlVisitor_visit_exit}, 
+    {"visit", _wrap_TiXmlVisitor_visit}, 
+    {0,0}
+};
+static swig_lua_attribute swig_TiXmlVisitor_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_TiXmlVisitor_bases[] = {0};
+static const char *swig_TiXmlVisitor_base_names[] = {0};
+static swig_lua_class _wrap_class_TiXmlVisitor = { "TiXmlVisitor", &SWIGTYPE_p_TiXmlVisitor,_wrap_new_TiXmlVisitor, swig_delete_TiXmlVisitor, swig_TiXmlVisitor_methods, swig_TiXmlVisitor_attributes, swig_TiXmlVisitor_bases, swig_TiXmlVisitor_base_names };
+
+static int _wrap_TIXML_DEFAULT_ENCODING_get(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlEncoding result;
+  
+  SWIG_check_num_args("TIXML_DEFAULT_ENCODING",0,0)
+  result = (TiXmlEncoding)(TiXmlEncoding)TIXML_DEFAULT_ENCODING;
+  lua_pushnumber(L, (lua_Number)(int)(result)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlBase_print(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlBase *arg1 = (TiXmlBase *) 0 ;
+  FILE *arg2 = (FILE *) 0 ;
+  int arg3 ;
+  
+  SWIG_check_num_args("TiXmlBase::Print",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlBase::Print",1,"TiXmlBase const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlBase::Print",2,"FILE *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlBase::Print",3,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlBase,0))){
+    SWIG_fail_ptr("TiXmlBase_print",1,SWIGTYPE_p_TiXmlBase);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_FILE,0))){
+    SWIG_fail_ptr("TiXmlBase_print",2,SWIGTYPE_p_FILE);
+  }
+  
+  arg3 = (int)lua_tonumber(L, 3);
+  ((TiXmlBase const *)arg1)->Print(arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlBase_set_condense_white_space(lua_State* L) {
+  int SWIG_arg = 0;
+  bool arg1 ;
+  
+  SWIG_check_num_args("TiXmlBase::SetCondenseWhiteSpace",1,1)
+  if(!lua_isboolean(L,1)) SWIG_fail_arg("TiXmlBase::SetCondenseWhiteSpace",1,"bool");
+  arg1 = (lua_toboolean(L, 1)!=0);
+  TiXmlBase::SetCondenseWhiteSpace(arg1);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlBase_is_white_space_condensed(lua_State* L) {
+  int SWIG_arg = 0;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlBase::IsWhiteSpaceCondensed",0,0)
+  result = (bool)TiXmlBase::IsWhiteSpaceCondensed();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlBase_row(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlBase *arg1 = (TiXmlBase *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("TiXmlBase::Row",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlBase::Row",1,"TiXmlBase const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlBase,0))){
+    SWIG_fail_ptr("TiXmlBase_row",1,SWIGTYPE_p_TiXmlBase);
+  }
+  
+  result = (int)((TiXmlBase const *)arg1)->Row();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlBase_column(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlBase *arg1 = (TiXmlBase *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("TiXmlBase::Column",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlBase::Column",1,"TiXmlBase const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlBase,0))){
+    SWIG_fail_ptr("TiXmlBase_column",1,SWIGTYPE_p_TiXmlBase);
+  }
+  
+  result = (int)((TiXmlBase const *)arg1)->Column();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlBase_set_user_data(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlBase *arg1 = (TiXmlBase *) 0 ;
+  void *arg2 = (void *) 0 ;
+  
+  SWIG_check_num_args("TiXmlBase::SetUserData",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlBase::SetUserData",1,"TiXmlBase *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlBase::SetUserData",2,"void *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlBase,0))){
+    SWIG_fail_ptr("TiXmlBase_set_user_data",1,SWIGTYPE_p_TiXmlBase);
+  }
+  
+  arg2=(void *)SWIG_MustGetPtr(L,2,0,0,2,"TiXmlBase_set_user_data");
+  (arg1)->SetUserData(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlBase_get_user_data__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlBase *arg1 = (TiXmlBase *) 0 ;
+  void *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlBase::GetUserData",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlBase::GetUserData",1,"TiXmlBase *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlBase,0))){
+    SWIG_fail_ptr("TiXmlBase_get_user_data",1,SWIGTYPE_p_TiXmlBase);
+  }
+  
+  result = (void *)(arg1)->GetUserData();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_void,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlBase_get_user_data__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlBase *arg1 = (TiXmlBase *) 0 ;
+  void *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlBase::GetUserData",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlBase::GetUserData",1,"TiXmlBase const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlBase,0))){
+    SWIG_fail_ptr("TiXmlBase_get_user_data",1,SWIGTYPE_p_TiXmlBase);
+  }
+  
+  result = (void *)((TiXmlBase const *)arg1)->GetUserData();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_void,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlBase_get_user_data(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlBase, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlBase_get_user_data__SWIG_0(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlBase, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlBase_get_user_data__SWIG_1(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlBase_get_user_data'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlBase::GetUserData()\n"
+    "    TiXmlBase::GetUserData() const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlBase_utf8ByteTable_get(lua_State* L) {
+  int SWIG_arg = 0;
+  int *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlBase::utf8ByteTable",0,0)
+  result = (int *)(int *)TiXmlBase::utf8ByteTable;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_int,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlBase_parse(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlBase *arg1 = (TiXmlBase *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlParsingData *arg3 = (TiXmlParsingData *) 0 ;
+  TiXmlEncoding arg4 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlBase::Parse",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlBase::Parse",1,"TiXmlBase *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlBase::Parse",2,"char const *");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlBase::Parse",3,"TiXmlParsingData *");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("TiXmlBase::Parse",4,"TiXmlEncoding");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlBase,0))){
+    SWIG_fail_ptr("TiXmlBase_parse",1,SWIGTYPE_p_TiXmlBase);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlParsingData,0))){
+    SWIG_fail_ptr("TiXmlBase_parse",3,SWIGTYPE_p_TiXmlParsingData);
+  }
+  
+  arg4 = (TiXmlEncoding)(int)lua_tonumber(L, 4);
+  result = (char *)(arg1)->Parse((char const *)arg2,arg3,arg4);
   lua_pushstring(L,(const char *)result); SWIG_arg++;
   return SWIG_arg;
   
@@ -1961,35 +3640,18228 @@ fail:
 }
 
 
-static void swig_delete_exception(void *obj) {
-std::exception *arg1 = (std::exception *) obj;
+static int _wrap_TiXmlBase_encode_string(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = 0 ;
+  std::string *arg2 = (std::string *) 0 ;
+  std::string temp1 ;
+  
+  SWIG_check_num_args("TiXmlBase::EncodeString",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("TiXmlBase::EncodeString",1,"std::string const &");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlBase::EncodeString",2,"std::string *");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
+    SWIG_fail_ptr("TiXmlBase_encode_string",2,SWIGTYPE_p_std__string);
+  }
+  
+  TiXmlBase::EncodeString((std::string const &)*arg1,arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_TiXmlBase(void *obj) {
+TiXmlBase *arg1 = (TiXmlBase *) obj;
 delete arg1;
 }
-static swig_lua_method swig_std_exception_methods[] = {
-    {"what", _wrap_exception_what}, 
+static swig_lua_method swig_TiXmlBase_methods[] = {
+    {"print", _wrap_TiXmlBase_print}, 
+    {"row", _wrap_TiXmlBase_row}, 
+    {"column", _wrap_TiXmlBase_column}, 
+    {"set_user_data", _wrap_TiXmlBase_set_user_data}, 
+    {"get_user_data", _wrap_TiXmlBase_get_user_data}, 
+    {"parse", _wrap_TiXmlBase_parse}, 
     {0,0}
 };
-static swig_lua_attribute swig_std_exception_attributes[] = {
+static swig_lua_attribute swig_TiXmlBase_attributes[] = {
     {0,0,0}
 };
-static swig_lua_class *swig_std_exception_bases[] = {0};
-static const char *swig_std_exception_base_names[] = {0};
-static swig_lua_class _wrap_class_std_exception = { "exception", &SWIGTYPE_p_std__exception,_wrap_new_exception, swig_delete_exception, swig_std_exception_methods, swig_std_exception_attributes, swig_std_exception_bases, swig_std_exception_base_names };
+static swig_lua_class *swig_TiXmlBase_bases[] = {0,0};
+static const char *swig_TiXmlBase_base_names[] = {"TiCppRC *",0};
+static swig_lua_class _wrap_class_TiXmlBase = { "TiXmlBase", &SWIGTYPE_p_TiXmlBase,0, swig_delete_TiXmlBase, swig_TiXmlBase_methods, swig_TiXmlBase_attributes, swig_TiXmlBase_bases, swig_TiXmlBase_base_names };
+
+static int _wrap_TiXmlNode_value(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::Value",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::Value",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_value",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (char *)((TiXmlNode const *)arg1)->Value();
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_value_str(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  std::string *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::ValueStr",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::ValueStr",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_value_str",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (std::string *) &((TiXmlNode const *)arg1)->ValueStr();
+  lua_pushlstring(L,result->data(),result->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_value_tstr(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  std::string *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::ValueTStr",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::ValueTStr",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_value_tstr",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (std::string *) &((TiXmlNode const *)arg1)->ValueTStr();
+  lua_pushlstring(L,result->data(),result->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_set_value__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  char *arg2 = (char *) 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::SetValue",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::SetValue",1,"TiXmlNode *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlNode::SetValue",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_set_value",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  (arg1)->SetValue((char const *)arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_set_value__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  
+  SWIG_check_num_args("TiXmlNode::SetValue",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::SetValue",1,"TiXmlNode *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlNode::SetValue",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_set_value",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  (arg1)->SetValue((std::string const &)*arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_set_value(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_set_value__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_set_value__SWIG_1(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlNode_set_value'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlNode::SetValue(char const *)\n"
+    "    TiXmlNode::SetValue(std::string const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlNode_clear(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::Clear",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::Clear",1,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_clear",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  (arg1)->Clear();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_parent__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::Parent",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::Parent",1,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_parent",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)(arg1)->Parent();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_parent__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::Parent",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::Parent",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_parent",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)((TiXmlNode const *)arg1)->Parent();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_parent(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_parent__SWIG_0(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_parent__SWIG_1(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlNode_parent'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlNode::Parent()\n"
+    "    TiXmlNode::Parent() const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlNode_first_child__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::FirstChild",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::FirstChild",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_first_child",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)((TiXmlNode const *)arg1)->FirstChild();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_first_child__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::FirstChild",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::FirstChild",1,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_first_child",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)(arg1)->FirstChild();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_first_child__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::FirstChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::FirstChild",1,"TiXmlNode const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlNode::FirstChild",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_first_child",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (TiXmlNode *)((TiXmlNode const *)arg1)->FirstChild((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_first_child__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::FirstChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::FirstChild",1,"TiXmlNode *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlNode::FirstChild",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_first_child",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (TiXmlNode *)(arg1)->FirstChild((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_last_child__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::LastChild",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::LastChild",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_last_child",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)((TiXmlNode const *)arg1)->LastChild();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_last_child__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::LastChild",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::LastChild",1,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_last_child",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)(arg1)->LastChild();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_last_child__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::LastChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::LastChild",1,"TiXmlNode const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlNode::LastChild",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_last_child",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (TiXmlNode *)((TiXmlNode const *)arg1)->LastChild((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_last_child__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::LastChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::LastChild",1,"TiXmlNode *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlNode::LastChild",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_last_child",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (TiXmlNode *)(arg1)->LastChild((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_first_child__SWIG_4(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::FirstChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::FirstChild",1,"TiXmlNode const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlNode::FirstChild",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_first_child",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (TiXmlNode *)((TiXmlNode const *)arg1)->FirstChild((std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_first_child__SWIG_5(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::FirstChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::FirstChild",1,"TiXmlNode *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlNode::FirstChild",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_first_child",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (TiXmlNode *)(arg1)->FirstChild((std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_first_child(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_first_child__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_first_child__SWIG_0(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_first_child__SWIG_3(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_first_child__SWIG_2(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_first_child__SWIG_5(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_first_child__SWIG_4(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlNode_first_child'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlNode::FirstChild() const\n"
+    "    TiXmlNode::FirstChild()\n"
+    "    TiXmlNode::FirstChild(char const *) const\n"
+    "    TiXmlNode::FirstChild(char const *)\n"
+    "    TiXmlNode::FirstChild(std::string const &) const\n"
+    "    TiXmlNode::FirstChild(std::string const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlNode_last_child__SWIG_4(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::LastChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::LastChild",1,"TiXmlNode const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlNode::LastChild",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_last_child",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (TiXmlNode *)((TiXmlNode const *)arg1)->LastChild((std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_last_child__SWIG_5(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::LastChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::LastChild",1,"TiXmlNode *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlNode::LastChild",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_last_child",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (TiXmlNode *)(arg1)->LastChild((std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_last_child(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_last_child__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_last_child__SWIG_0(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_last_child__SWIG_3(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_last_child__SWIG_2(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_last_child__SWIG_5(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_last_child__SWIG_4(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlNode_last_child'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlNode::LastChild() const\n"
+    "    TiXmlNode::LastChild()\n"
+    "    TiXmlNode::LastChild(char const *) const\n"
+    "    TiXmlNode::LastChild(char const *)\n"
+    "    TiXmlNode::LastChild(std::string const &) const\n"
+    "    TiXmlNode::LastChild(std::string const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlNode_iterate_children__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *arg2 = (TiXmlNode *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::IterateChildren",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::IterateChildren",1,"TiXmlNode const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlNode::IterateChildren",2,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_iterate_children",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_iterate_children",2,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)((TiXmlNode const *)arg1)->IterateChildren((TiXmlNode const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_iterate_children__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *arg2 = (TiXmlNode *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::IterateChildren",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::IterateChildren",1,"TiXmlNode *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlNode::IterateChildren",2,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_iterate_children",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_iterate_children",2,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)(arg1)->IterateChildren((TiXmlNode const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_iterate_children__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlNode *arg3 = (TiXmlNode *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::IterateChildren",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::IterateChildren",1,"TiXmlNode const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlNode::IterateChildren",2,"char const *");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlNode::IterateChildren",3,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_iterate_children",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_iterate_children",3,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)((TiXmlNode const *)arg1)->IterateChildren((char const *)arg2,(TiXmlNode const *)arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_iterate_children__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlNode *arg3 = (TiXmlNode *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::IterateChildren",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::IterateChildren",1,"TiXmlNode *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlNode::IterateChildren",2,"char const *");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlNode::IterateChildren",3,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_iterate_children",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_iterate_children",3,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)(arg1)->IterateChildren((char const *)arg2,(TiXmlNode const *)arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_iterate_children__SWIG_4(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  std::string *arg2 = 0 ;
+  TiXmlNode *arg3 = (TiXmlNode *) 0 ;
+  std::string temp2 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::IterateChildren",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::IterateChildren",1,"TiXmlNode const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlNode::IterateChildren",2,"std::string const &");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlNode::IterateChildren",3,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_iterate_children",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_iterate_children",3,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)((TiXmlNode const *)arg1)->IterateChildren((std::string const &)*arg2,(TiXmlNode const *)arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_iterate_children__SWIG_5(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  std::string *arg2 = 0 ;
+  TiXmlNode *arg3 = (TiXmlNode *) 0 ;
+  std::string temp2 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::IterateChildren",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::IterateChildren",1,"TiXmlNode *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlNode::IterateChildren",2,"std::string const &");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlNode::IterateChildren",3,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_iterate_children",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_iterate_children",3,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)(arg1)->IterateChildren((std::string const &)*arg2,(TiXmlNode const *)arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_iterate_children(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_iterate_children__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_iterate_children__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          return _wrap_TiXmlNode_iterate_children__SWIG_3(L);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          return _wrap_TiXmlNode_iterate_children__SWIG_2(L);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          return _wrap_TiXmlNode_iterate_children__SWIG_5(L);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          return _wrap_TiXmlNode_iterate_children__SWIG_4(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlNode_iterate_children'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlNode::IterateChildren(TiXmlNode const *) const\n"
+    "    TiXmlNode::IterateChildren(TiXmlNode const *)\n"
+    "    TiXmlNode::IterateChildren(char const *,TiXmlNode const *) const\n"
+    "    TiXmlNode::IterateChildren(char const *,TiXmlNode const *)\n"
+    "    TiXmlNode::IterateChildren(std::string const &,TiXmlNode const *) const\n"
+    "    TiXmlNode::IterateChildren(std::string const &,TiXmlNode const *)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlNode_insert_end_child(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *arg2 = 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::InsertEndChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::InsertEndChild",1,"TiXmlNode *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlNode::InsertEndChild",2,"TiXmlNode const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_insert_end_child",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_insert_end_child",2,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)(arg1)->InsertEndChild((TiXmlNode const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_link_end_child(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *arg2 = (TiXmlNode *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::LinkEndChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::LinkEndChild",1,"TiXmlNode *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlNode::LinkEndChild",2,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_link_end_child",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_link_end_child",2,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)(arg1)->LinkEndChild(arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_insert_before_child(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *arg2 = (TiXmlNode *) 0 ;
+  TiXmlNode *arg3 = 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::InsertBeforeChild",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::InsertBeforeChild",1,"TiXmlNode *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlNode::InsertBeforeChild",2,"TiXmlNode *");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("TiXmlNode::InsertBeforeChild",3,"TiXmlNode const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_insert_before_child",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_insert_before_child",2,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_insert_before_child",3,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)(arg1)->InsertBeforeChild(arg2,(TiXmlNode const &)*arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_insert_after_child(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *arg2 = (TiXmlNode *) 0 ;
+  TiXmlNode *arg3 = 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::InsertAfterChild",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::InsertAfterChild",1,"TiXmlNode *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlNode::InsertAfterChild",2,"TiXmlNode *");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("TiXmlNode::InsertAfterChild",3,"TiXmlNode const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_insert_after_child",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_insert_after_child",2,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_insert_after_child",3,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)(arg1)->InsertAfterChild(arg2,(TiXmlNode const &)*arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_replace_child(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *arg2 = (TiXmlNode *) 0 ;
+  TiXmlNode *arg3 = 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::ReplaceChild",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::ReplaceChild",1,"TiXmlNode *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlNode::ReplaceChild",2,"TiXmlNode *");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("TiXmlNode::ReplaceChild",3,"TiXmlNode const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_replace_child",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_replace_child",2,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_replace_child",3,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)(arg1)->ReplaceChild(arg2,(TiXmlNode const &)*arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_remove_child(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *arg2 = (TiXmlNode *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlNode::RemoveChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::RemoveChild",1,"TiXmlNode *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlNode::RemoveChild",2,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_remove_child",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_remove_child",2,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (bool)(arg1)->RemoveChild(arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_previous_sibling__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::PreviousSibling",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::PreviousSibling",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_previous_sibling",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)((TiXmlNode const *)arg1)->PreviousSibling();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_previous_sibling__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::PreviousSibling",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::PreviousSibling",1,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_previous_sibling",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)(arg1)->PreviousSibling();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_previous_sibling__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::PreviousSibling",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::PreviousSibling",1,"TiXmlNode const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlNode::PreviousSibling",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_previous_sibling",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (TiXmlNode *)((TiXmlNode const *)arg1)->PreviousSibling((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_previous_sibling__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::PreviousSibling",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::PreviousSibling",1,"TiXmlNode *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlNode::PreviousSibling",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_previous_sibling",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (TiXmlNode *)(arg1)->PreviousSibling((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_previous_sibling__SWIG_4(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::PreviousSibling",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::PreviousSibling",1,"TiXmlNode const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlNode::PreviousSibling",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_previous_sibling",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (TiXmlNode *)((TiXmlNode const *)arg1)->PreviousSibling((std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_previous_sibling__SWIG_5(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::PreviousSibling",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::PreviousSibling",1,"TiXmlNode *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlNode::PreviousSibling",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_previous_sibling",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (TiXmlNode *)(arg1)->PreviousSibling((std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_previous_sibling(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_previous_sibling__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_previous_sibling__SWIG_0(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_previous_sibling__SWIG_3(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_previous_sibling__SWIG_2(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_previous_sibling__SWIG_5(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_previous_sibling__SWIG_4(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlNode_previous_sibling'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlNode::PreviousSibling() const\n"
+    "    TiXmlNode::PreviousSibling()\n"
+    "    TiXmlNode::PreviousSibling(char const *) const\n"
+    "    TiXmlNode::PreviousSibling(char const *)\n"
+    "    TiXmlNode::PreviousSibling(std::string const &) const\n"
+    "    TiXmlNode::PreviousSibling(std::string const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlNode_next_sibling__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::NextSibling",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::NextSibling",1,"TiXmlNode const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlNode::NextSibling",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_next_sibling",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (TiXmlNode *)((TiXmlNode const *)arg1)->NextSibling((std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_next_sibling__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::NextSibling",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::NextSibling",1,"TiXmlNode *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlNode::NextSibling",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_next_sibling",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (TiXmlNode *)(arg1)->NextSibling((std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_next_sibling__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::NextSibling",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::NextSibling",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_next_sibling",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)((TiXmlNode const *)arg1)->NextSibling();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_next_sibling__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::NextSibling",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::NextSibling",1,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_next_sibling",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)(arg1)->NextSibling();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_next_sibling__SWIG_4(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::NextSibling",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::NextSibling",1,"TiXmlNode const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlNode::NextSibling",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_next_sibling",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (TiXmlNode *)((TiXmlNode const *)arg1)->NextSibling((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_next_sibling__SWIG_5(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::NextSibling",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::NextSibling",1,"TiXmlNode *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlNode::NextSibling",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_next_sibling",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (TiXmlNode *)(arg1)->NextSibling((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_next_sibling(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_next_sibling__SWIG_3(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_next_sibling__SWIG_2(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_next_sibling__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_next_sibling__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_next_sibling__SWIG_5(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_next_sibling__SWIG_4(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlNode_next_sibling'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlNode::NextSibling(std::string const &) const\n"
+    "    TiXmlNode::NextSibling(std::string const &)\n"
+    "    TiXmlNode::NextSibling() const\n"
+    "    TiXmlNode::NextSibling()\n"
+    "    TiXmlNode::NextSibling(char const *) const\n"
+    "    TiXmlNode::NextSibling(char const *)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlNode_next_sibling_element__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::NextSiblingElement",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::NextSiblingElement",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_next_sibling_element",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlElement *)((TiXmlNode const *)arg1)->NextSiblingElement();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_next_sibling_element__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::NextSiblingElement",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::NextSiblingElement",1,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_next_sibling_element",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlElement *)(arg1)->NextSiblingElement();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_next_sibling_element__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::NextSiblingElement",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::NextSiblingElement",1,"TiXmlNode const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlNode::NextSiblingElement",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_next_sibling_element",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (TiXmlElement *)((TiXmlNode const *)arg1)->NextSiblingElement((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_next_sibling_element__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::NextSiblingElement",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::NextSiblingElement",1,"TiXmlNode *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlNode::NextSiblingElement",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_next_sibling_element",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (TiXmlElement *)(arg1)->NextSiblingElement((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_next_sibling_element__SWIG_4(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::NextSiblingElement",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::NextSiblingElement",1,"TiXmlNode const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlNode::NextSiblingElement",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_next_sibling_element",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (TiXmlElement *)((TiXmlNode const *)arg1)->NextSiblingElement((std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_next_sibling_element__SWIG_5(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::NextSiblingElement",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::NextSiblingElement",1,"TiXmlNode *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlNode::NextSiblingElement",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_next_sibling_element",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (TiXmlElement *)(arg1)->NextSiblingElement((std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_next_sibling_element(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_next_sibling_element__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_next_sibling_element__SWIG_0(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_next_sibling_element__SWIG_3(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_next_sibling_element__SWIG_2(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_next_sibling_element__SWIG_5(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_next_sibling_element__SWIG_4(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlNode_next_sibling_element'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlNode::NextSiblingElement() const\n"
+    "    TiXmlNode::NextSiblingElement()\n"
+    "    TiXmlNode::NextSiblingElement(char const *) const\n"
+    "    TiXmlNode::NextSiblingElement(char const *)\n"
+    "    TiXmlNode::NextSiblingElement(std::string const &) const\n"
+    "    TiXmlNode::NextSiblingElement(std::string const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlNode_first_child_element__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::FirstChildElement",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::FirstChildElement",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_first_child_element",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlElement *)((TiXmlNode const *)arg1)->FirstChildElement();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_first_child_element__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::FirstChildElement",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::FirstChildElement",1,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_first_child_element",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlElement *)(arg1)->FirstChildElement();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_first_child_element__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::FirstChildElement",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::FirstChildElement",1,"TiXmlNode const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlNode::FirstChildElement",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_first_child_element",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (TiXmlElement *)((TiXmlNode const *)arg1)->FirstChildElement((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_first_child_element__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::FirstChildElement",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::FirstChildElement",1,"TiXmlNode *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlNode::FirstChildElement",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_first_child_element",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (TiXmlElement *)(arg1)->FirstChildElement((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_first_child_element__SWIG_4(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::FirstChildElement",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::FirstChildElement",1,"TiXmlNode const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlNode::FirstChildElement",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_first_child_element",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (TiXmlElement *)((TiXmlNode const *)arg1)->FirstChildElement((std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_first_child_element__SWIG_5(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::FirstChildElement",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::FirstChildElement",1,"TiXmlNode *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlNode::FirstChildElement",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_first_child_element",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (TiXmlElement *)(arg1)->FirstChildElement((std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_first_child_element(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_first_child_element__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_first_child_element__SWIG_0(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_first_child_element__SWIG_3(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_first_child_element__SWIG_2(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_first_child_element__SWIG_5(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlNode_first_child_element__SWIG_4(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlNode_first_child_element'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlNode::FirstChildElement() const\n"
+    "    TiXmlNode::FirstChildElement()\n"
+    "    TiXmlNode::FirstChildElement(char const *) const\n"
+    "    TiXmlNode::FirstChildElement(char const *)\n"
+    "    TiXmlNode::FirstChildElement(std::string const &) const\n"
+    "    TiXmlNode::FirstChildElement(std::string const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlNode_type(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("TiXmlNode::Type",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::Type",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_type",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (int)((TiXmlNode const *)arg1)->Type();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_get_document__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlDocument *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::GetDocument",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::GetDocument",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_get_document",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlDocument *)((TiXmlNode const *)arg1)->GetDocument();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlDocument,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_get_document__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlDocument *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::GetDocument",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::GetDocument",1,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_get_document",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlDocument *)(arg1)->GetDocument();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlDocument,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_get_document(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_get_document__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_get_document__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlNode_get_document'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlNode::GetDocument() const\n"
+    "    TiXmlNode::GetDocument()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlNode_no_children(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlNode::NoChildren",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::NoChildren",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_no_children",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (bool)((TiXmlNode const *)arg1)->NoChildren();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_to_document__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlDocument *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::ToDocument",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::ToDocument",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_to_document",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlDocument *)((TiXmlNode const *)arg1)->ToDocument();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlDocument,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_to_element__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::ToElement",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::ToElement",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_to_element",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlElement *)((TiXmlNode const *)arg1)->ToElement();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_to_comment__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlComment *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::ToComment",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::ToComment",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_to_comment",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlComment *)((TiXmlNode const *)arg1)->ToComment();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlComment,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_to_unknown__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlUnknown *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::ToUnknown",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::ToUnknown",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_to_unknown",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlUnknown *)((TiXmlNode const *)arg1)->ToUnknown();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlUnknown,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_to_text__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlText *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::ToText",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::ToText",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_to_text",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlText *)((TiXmlNode const *)arg1)->ToText();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlText,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_to_declaration__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlDeclaration *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::ToDeclaration",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::ToDeclaration",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_to_declaration",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlDeclaration *)((TiXmlNode const *)arg1)->ToDeclaration();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlDeclaration,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_to_stylesheet_reference__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlStylesheetReference *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::ToStylesheetReference",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::ToStylesheetReference",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_to_stylesheet_reference",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlStylesheetReference *)((TiXmlNode const *)arg1)->ToStylesheetReference();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlStylesheetReference,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_to_document__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlDocument *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::ToDocument",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::ToDocument",1,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_to_document",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlDocument *)(arg1)->ToDocument();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlDocument,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_to_document(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_to_document__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_to_document__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlNode_to_document'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlNode::ToDocument() const\n"
+    "    TiXmlNode::ToDocument()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlNode_to_element__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::ToElement",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::ToElement",1,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_to_element",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlElement *)(arg1)->ToElement();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_to_element(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_to_element__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_to_element__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlNode_to_element'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlNode::ToElement() const\n"
+    "    TiXmlNode::ToElement()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlNode_to_comment__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlComment *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::ToComment",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::ToComment",1,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_to_comment",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlComment *)(arg1)->ToComment();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlComment,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_to_comment(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_to_comment__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_to_comment__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlNode_to_comment'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlNode::ToComment() const\n"
+    "    TiXmlNode::ToComment()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlNode_to_unknown__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlUnknown *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::ToUnknown",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::ToUnknown",1,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_to_unknown",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlUnknown *)(arg1)->ToUnknown();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlUnknown,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_to_unknown(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_to_unknown__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_to_unknown__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlNode_to_unknown'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlNode::ToUnknown() const\n"
+    "    TiXmlNode::ToUnknown()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlNode_to_text__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlText *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::ToText",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::ToText",1,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_to_text",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlText *)(arg1)->ToText();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlText,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_to_text(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_to_text__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_to_text__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlNode_to_text'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlNode::ToText() const\n"
+    "    TiXmlNode::ToText()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlNode_to_declaration__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlDeclaration *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::ToDeclaration",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::ToDeclaration",1,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_to_declaration",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlDeclaration *)(arg1)->ToDeclaration();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlDeclaration,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_to_declaration(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_to_declaration__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_to_declaration__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlNode_to_declaration'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlNode::ToDeclaration() const\n"
+    "    TiXmlNode::ToDeclaration()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlNode_to_stylesheet_reference__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlStylesheetReference *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::ToStylesheetReference",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::ToStylesheetReference",1,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_to_stylesheet_reference",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlStylesheetReference *)(arg1)->ToStylesheetReference();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlStylesheetReference,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_to_stylesheet_reference(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_to_stylesheet_reference__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlNode_to_stylesheet_reference__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlNode_to_stylesheet_reference'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlNode::ToStylesheetReference() const\n"
+    "    TiXmlNode::ToStylesheetReference()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlNode_clone(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlNode::Clone",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::Clone",1,"TiXmlNode const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_clone",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlNode *)((TiXmlNode const *)arg1)->Clone();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlNode_accept(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlVisitor *arg2 = (TiXmlVisitor *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlNode::Accept",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlNode::Accept",1,"TiXmlNode const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlNode::Accept",2,"TiXmlVisitor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("TiXmlNode_accept",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlVisitor,0))){
+    SWIG_fail_ptr("TiXmlNode_accept",2,SWIGTYPE_p_TiXmlVisitor);
+  }
+  
+  result = (bool)((TiXmlNode const *)arg1)->Accept(arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_TiXmlNode(void *obj) {
+TiXmlNode *arg1 = (TiXmlNode *) obj;
+delete arg1;
+}
+static swig_lua_method swig_TiXmlNode_methods[] = {
+    {"value", _wrap_TiXmlNode_value}, 
+    {"value_str", _wrap_TiXmlNode_value_str}, 
+    {"value_tstr", _wrap_TiXmlNode_value_tstr}, 
+    {"set_value", _wrap_TiXmlNode_set_value}, 
+    {"clear", _wrap_TiXmlNode_clear}, 
+    {"parent", _wrap_TiXmlNode_parent}, 
+    {"first_child", _wrap_TiXmlNode_first_child}, 
+    {"last_child", _wrap_TiXmlNode_last_child}, 
+    {"iterate_children", _wrap_TiXmlNode_iterate_children}, 
+    {"insert_end_child", _wrap_TiXmlNode_insert_end_child}, 
+    {"link_end_child", _wrap_TiXmlNode_link_end_child}, 
+    {"insert_before_child", _wrap_TiXmlNode_insert_before_child}, 
+    {"insert_after_child", _wrap_TiXmlNode_insert_after_child}, 
+    {"replace_child", _wrap_TiXmlNode_replace_child}, 
+    {"remove_child", _wrap_TiXmlNode_remove_child}, 
+    {"previous_sibling", _wrap_TiXmlNode_previous_sibling}, 
+    {"next_sibling", _wrap_TiXmlNode_next_sibling}, 
+    {"next_sibling_element", _wrap_TiXmlNode_next_sibling_element}, 
+    {"first_child_element", _wrap_TiXmlNode_first_child_element}, 
+    {"type", _wrap_TiXmlNode_type}, 
+    {"get_document", _wrap_TiXmlNode_get_document}, 
+    {"no_children", _wrap_TiXmlNode_no_children}, 
+    {"to_document", _wrap_TiXmlNode_to_document}, 
+    {"to_element", _wrap_TiXmlNode_to_element}, 
+    {"to_comment", _wrap_TiXmlNode_to_comment}, 
+    {"to_unknown", _wrap_TiXmlNode_to_unknown}, 
+    {"to_text", _wrap_TiXmlNode_to_text}, 
+    {"to_declaration", _wrap_TiXmlNode_to_declaration}, 
+    {"to_stylesheet_reference", _wrap_TiXmlNode_to_stylesheet_reference}, 
+    {"clone", _wrap_TiXmlNode_clone}, 
+    {"accept", _wrap_TiXmlNode_accept}, 
+    {0,0}
+};
+static swig_lua_attribute swig_TiXmlNode_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_TiXmlNode_bases[] = {0,0};
+static const char *swig_TiXmlNode_base_names[] = {"TiXmlBase *",0};
+static swig_lua_class _wrap_class_TiXmlNode = { "TiXmlNode", &SWIGTYPE_p_TiXmlNode,0, swig_delete_TiXmlNode, swig_TiXmlNode_methods, swig_TiXmlNode_attributes, swig_TiXmlNode_bases, swig_TiXmlNode_base_names };
+
+static int _wrap_new_TiXmlAttribute__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::TiXmlAttribute",0,0)
+  result = (TiXmlAttribute *)new TiXmlAttribute();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlAttribute__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp1 ;
+  std::string temp2 ;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::TiXmlAttribute",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("TiXmlAttribute::TiXmlAttribute",1,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlAttribute::TiXmlAttribute",2,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (TiXmlAttribute *)new TiXmlAttribute((std::string const &)*arg1,(std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlAttribute__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  char *arg1 = (char *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::TiXmlAttribute",2,2)
+  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("TiXmlAttribute::TiXmlAttribute",1,"char const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlAttribute::TiXmlAttribute",2,"char const *");
+  arg1 = (char *)lua_tostring(L, 1);
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (TiXmlAttribute *)new TiXmlAttribute((char const *)arg1,(char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlAttribute(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 0) {
+    return _wrap_new_TiXmlAttribute__SWIG_0(L);
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      _v = lua_isstring(L,argv[0]);
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_new_TiXmlAttribute__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      _v = SWIG_lua_isnilstring(L,argv[0]);
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_new_TiXmlAttribute__SWIG_2(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_TiXmlAttribute'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlAttribute::TiXmlAttribute()\n"
+    "    TiXmlAttribute::TiXmlAttribute(std::string const &,std::string const &)\n"
+    "    TiXmlAttribute::TiXmlAttribute(char const *,char const *)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlAttribute_name(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::Name",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::Name",1,"TiXmlAttribute const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_name",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  result = (char *)((TiXmlAttribute const *)arg1)->Name();
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_value(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::Value",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::Value",1,"TiXmlAttribute const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_value",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  result = (char *)((TiXmlAttribute const *)arg1)->Value();
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_value_str(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  std::string *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::ValueStr",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::ValueStr",1,"TiXmlAttribute const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_value_str",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  result = (std::string *) &((TiXmlAttribute const *)arg1)->ValueStr();
+  lua_pushlstring(L,result->data(),result->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_int_value(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("TiXmlAttribute::IntValue",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::IntValue",1,"TiXmlAttribute const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_int_value",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  result = (int)((TiXmlAttribute const *)arg1)->IntValue();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_double_value(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  double result;
+  
+  SWIG_check_num_args("TiXmlAttribute::DoubleValue",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::DoubleValue",1,"TiXmlAttribute const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_double_value",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  result = (double)((TiXmlAttribute const *)arg1)->DoubleValue();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_name_tstr(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  std::string *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::NameTStr",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::NameTStr",1,"TiXmlAttribute const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_name_tstr",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  result = (std::string *) &((TiXmlAttribute const *)arg1)->NameTStr();
+  lua_pushlstring(L,result->data(),result->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_query_int_value(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  int *arg2 = (int *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("TiXmlAttribute::QueryIntValue",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::QueryIntValue",1,"TiXmlAttribute const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlAttribute::QueryIntValue",2,"int *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_query_int_value",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_int,0))){
+    SWIG_fail_ptr("TiXmlAttribute_query_int_value",2,SWIGTYPE_p_int);
+  }
+  
+  result = (int)((TiXmlAttribute const *)arg1)->QueryIntValue(arg2);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_query_double_value(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  double *arg2 = (double *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("TiXmlAttribute::QueryDoubleValue",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::QueryDoubleValue",1,"TiXmlAttribute const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlAttribute::QueryDoubleValue",2,"double *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_query_double_value",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_double,0))){
+    SWIG_fail_ptr("TiXmlAttribute_query_double_value",2,SWIGTYPE_p_double);
+  }
+  
+  result = (int)((TiXmlAttribute const *)arg1)->QueryDoubleValue(arg2);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_set_name__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  char *arg2 = (char *) 0 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::SetName",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::SetName",1,"TiXmlAttribute *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlAttribute::SetName",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_set_name",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  (arg1)->SetName((char const *)arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_set_value__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  char *arg2 = (char *) 0 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::SetValue",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::SetValue",1,"TiXmlAttribute *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlAttribute::SetValue",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_set_value",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  (arg1)->SetValue((char const *)arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_set_int_value(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  int arg2 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::SetIntValue",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::SetIntValue",1,"TiXmlAttribute *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("TiXmlAttribute::SetIntValue",2,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_set_int_value",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  arg2 = (int)lua_tonumber(L, 2);
+  (arg1)->SetIntValue(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_set_double_value(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  double arg2 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::SetDoubleValue",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::SetDoubleValue",1,"TiXmlAttribute *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("TiXmlAttribute::SetDoubleValue",2,"double");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_set_double_value",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  arg2 = (double)lua_tonumber(L, 2);
+  (arg1)->SetDoubleValue(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_set_name__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::SetName",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::SetName",1,"TiXmlAttribute *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlAttribute::SetName",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_set_name",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  (arg1)->SetName((std::string const &)*arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_set_name(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttribute, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlAttribute_set_name__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttribute, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlAttribute_set_name__SWIG_1(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlAttribute_set_name'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlAttribute::SetName(char const *)\n"
+    "    TiXmlAttribute::SetName(std::string const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlAttribute_set_value__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::SetValue",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::SetValue",1,"TiXmlAttribute *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlAttribute::SetValue",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_set_value",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  (arg1)->SetValue((std::string const &)*arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_set_value(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttribute, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlAttribute_set_value__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttribute, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlAttribute_set_value__SWIG_1(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlAttribute_set_value'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlAttribute::SetValue(char const *)\n"
+    "    TiXmlAttribute::SetValue(std::string const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlAttribute_next__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::Next",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::Next",1,"TiXmlAttribute const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_next",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  result = (TiXmlAttribute *)((TiXmlAttribute const *)arg1)->Next();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_next__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::Next",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::Next",1,"TiXmlAttribute *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_next",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  result = (TiXmlAttribute *)(arg1)->Next();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_next(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttribute, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlAttribute_next__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttribute, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlAttribute_next__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlAttribute_next'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlAttribute::Next() const\n"
+    "    TiXmlAttribute::Next()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlAttribute_previous__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::Previous",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::Previous",1,"TiXmlAttribute const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_previous",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  result = (TiXmlAttribute *)((TiXmlAttribute const *)arg1)->Previous();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_previous__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::Previous",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::Previous",1,"TiXmlAttribute *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_previous",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  result = (TiXmlAttribute *)(arg1)->Previous();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_previous(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttribute, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlAttribute_previous__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttribute, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlAttribute_previous__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlAttribute_previous'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlAttribute::Previous() const\n"
+    "    TiXmlAttribute::Previous()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlAttribute___eq(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  TiXmlAttribute *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlAttribute::operator ==",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::operator ==",1,"TiXmlAttribute const *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlAttribute::operator ==",2,"TiXmlAttribute const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute___eq",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute___eq",2,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  result = (bool)((TiXmlAttribute const *)arg1)->operator ==((TiXmlAttribute const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute___lt(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  TiXmlAttribute *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlAttribute::operator <",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::operator <",1,"TiXmlAttribute const *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlAttribute::operator <",2,"TiXmlAttribute const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute___lt",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute___lt",2,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  result = (bool)((TiXmlAttribute const *)arg1)->operator <((TiXmlAttribute const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_parse(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlParsingData *arg3 = (TiXmlParsingData *) 0 ;
+  TiXmlEncoding arg4 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::Parse",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::Parse",1,"TiXmlAttribute *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlAttribute::Parse",2,"char const *");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlAttribute::Parse",3,"TiXmlParsingData *");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("TiXmlAttribute::Parse",4,"TiXmlEncoding");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_parse",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlParsingData,0))){
+    SWIG_fail_ptr("TiXmlAttribute_parse",3,SWIGTYPE_p_TiXmlParsingData);
+  }
+  
+  arg4 = (TiXmlEncoding)(int)lua_tonumber(L, 4);
+  result = (char *)(arg1)->Parse((char const *)arg2,arg3,arg4);
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_print__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  FILE *arg2 = (FILE *) 0 ;
+  int arg3 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::Print",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::Print",1,"TiXmlAttribute const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlAttribute::Print",2,"FILE *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlAttribute::Print",3,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_print",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_FILE,0))){
+    SWIG_fail_ptr("TiXmlAttribute_print",2,SWIGTYPE_p_FILE);
+  }
+  
+  arg3 = (int)lua_tonumber(L, 3);
+  ((TiXmlAttribute const *)arg1)->Print(arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_print__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  FILE *arg2 = (FILE *) 0 ;
+  int arg3 ;
+  std::string *arg4 = (std::string *) 0 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::Print",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::Print",1,"TiXmlAttribute const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlAttribute::Print",2,"FILE *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlAttribute::Print",3,"int");
+  if(!SWIG_isptrtype(L,4)) SWIG_fail_arg("TiXmlAttribute::Print",4,"std::string *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_print",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_FILE,0))){
+    SWIG_fail_ptr("TiXmlAttribute_print",2,SWIGTYPE_p_FILE);
+  }
+  
+  arg3 = (int)lua_tonumber(L, 3);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&arg4,SWIGTYPE_p_std__string,0))){
+    SWIG_fail_ptr("TiXmlAttribute_print",4,SWIGTYPE_p_std__string);
+  }
+  
+  ((TiXmlAttribute const *)arg1)->Print(arg2,arg3,arg4);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttribute_print(lua_State* L) {
+  int argc;
+  int argv[5]={
+    1,2,3,4,5
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttribute, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_FILE, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_TiXmlAttribute_print__SWIG_0(L);
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttribute, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_FILE, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          {
+            void *ptr;
+            if (SWIG_isptrtype(L,argv[3])==0 || SWIG_ConvertPtr(L,argv[3], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
+              _v = 0;
+            } else {
+              _v = 1;
+            }
+          }
+          if (_v) {
+            return _wrap_TiXmlAttribute_print__SWIG_1(L);
+          }
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlAttribute_print'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlAttribute::Print(FILE *,int) const\n"
+    "    TiXmlAttribute::Print(FILE *,int,std::string *) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlAttribute_set_document(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  TiXmlDocument *arg2 = (TiXmlDocument *) 0 ;
+  
+  SWIG_check_num_args("TiXmlAttribute::SetDocument",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttribute::SetDocument",1,"TiXmlAttribute *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlAttribute::SetDocument",2,"TiXmlDocument *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttribute_set_document",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlAttribute_set_document",2,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  (arg1)->SetDocument(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_TiXmlAttribute(void *obj) {
+TiXmlAttribute *arg1 = (TiXmlAttribute *) obj;
+delete arg1;
+}
+static swig_lua_method swig_TiXmlAttribute_methods[] = {
+    {"name", _wrap_TiXmlAttribute_name}, 
+    {"value", _wrap_TiXmlAttribute_value}, 
+    {"value_str", _wrap_TiXmlAttribute_value_str}, 
+    {"int_value", _wrap_TiXmlAttribute_int_value}, 
+    {"double_value", _wrap_TiXmlAttribute_double_value}, 
+    {"name_tstr", _wrap_TiXmlAttribute_name_tstr}, 
+    {"query_int_value", _wrap_TiXmlAttribute_query_int_value}, 
+    {"query_double_value", _wrap_TiXmlAttribute_query_double_value}, 
+    {"set_int_value", _wrap_TiXmlAttribute_set_int_value}, 
+    {"set_double_value", _wrap_TiXmlAttribute_set_double_value}, 
+    {"set_name", _wrap_TiXmlAttribute_set_name}, 
+    {"set_value", _wrap_TiXmlAttribute_set_value}, 
+    {"next", _wrap_TiXmlAttribute_next}, 
+    {"previous", _wrap_TiXmlAttribute_previous}, 
+    {"__eq", _wrap_TiXmlAttribute___eq}, 
+    {"__lt", _wrap_TiXmlAttribute___lt}, 
+    {"parse", _wrap_TiXmlAttribute_parse}, 
+    {"print", _wrap_TiXmlAttribute_print}, 
+    {"set_document", _wrap_TiXmlAttribute_set_document}, 
+    {0,0}
+};
+static swig_lua_attribute swig_TiXmlAttribute_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_TiXmlAttribute_bases[] = {0,0};
+static const char *swig_TiXmlAttribute_base_names[] = {"TiXmlBase *",0};
+static swig_lua_class _wrap_class_TiXmlAttribute = { "TiXmlAttribute", &SWIGTYPE_p_TiXmlAttribute,_wrap_new_TiXmlAttribute, swig_delete_TiXmlAttribute, swig_TiXmlAttribute_methods, swig_TiXmlAttribute_attributes, swig_TiXmlAttribute_bases, swig_TiXmlAttribute_base_names };
+
+static int _wrap_new_TiXmlAttributeSet(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttributeSet *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttributeSet::TiXmlAttributeSet",0,0)
+  result = (TiXmlAttributeSet *)new TiXmlAttributeSet();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttributeSet,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttributeSet_add(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttributeSet *arg1 = (TiXmlAttributeSet *) 0 ;
+  TiXmlAttribute *arg2 = (TiXmlAttribute *) 0 ;
+  
+  SWIG_check_num_args("TiXmlAttributeSet::Add",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttributeSet::Add",1,"TiXmlAttributeSet *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlAttributeSet::Add",2,"TiXmlAttribute *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttributeSet,0))){
+    SWIG_fail_ptr("TiXmlAttributeSet_add",1,SWIGTYPE_p_TiXmlAttributeSet);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttributeSet_add",2,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  (arg1)->Add(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttributeSet_remove(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttributeSet *arg1 = (TiXmlAttributeSet *) 0 ;
+  TiXmlAttribute *arg2 = (TiXmlAttribute *) 0 ;
+  
+  SWIG_check_num_args("TiXmlAttributeSet::Remove",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttributeSet::Remove",1,"TiXmlAttributeSet *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlAttributeSet::Remove",2,"TiXmlAttribute *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttributeSet,0))){
+    SWIG_fail_ptr("TiXmlAttributeSet_remove",1,SWIGTYPE_p_TiXmlAttributeSet);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlAttributeSet_remove",2,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  (arg1)->Remove(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttributeSet_first__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttributeSet *arg1 = (TiXmlAttributeSet *) 0 ;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttributeSet::First",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttributeSet::First",1,"TiXmlAttributeSet const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttributeSet,0))){
+    SWIG_fail_ptr("TiXmlAttributeSet_first",1,SWIGTYPE_p_TiXmlAttributeSet);
+  }
+  
+  result = (TiXmlAttribute *)((TiXmlAttributeSet const *)arg1)->First();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttributeSet_first__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttributeSet *arg1 = (TiXmlAttributeSet *) 0 ;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttributeSet::First",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttributeSet::First",1,"TiXmlAttributeSet *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttributeSet,0))){
+    SWIG_fail_ptr("TiXmlAttributeSet_first",1,SWIGTYPE_p_TiXmlAttributeSet);
+  }
+  
+  result = (TiXmlAttribute *)(arg1)->First();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttributeSet_first(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttributeSet, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlAttributeSet_first__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttributeSet, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlAttributeSet_first__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlAttributeSet_first'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlAttributeSet::First() const\n"
+    "    TiXmlAttributeSet::First()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlAttributeSet_last__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttributeSet *arg1 = (TiXmlAttributeSet *) 0 ;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttributeSet::Last",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttributeSet::Last",1,"TiXmlAttributeSet const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttributeSet,0))){
+    SWIG_fail_ptr("TiXmlAttributeSet_last",1,SWIGTYPE_p_TiXmlAttributeSet);
+  }
+  
+  result = (TiXmlAttribute *)((TiXmlAttributeSet const *)arg1)->Last();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttributeSet_last__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttributeSet *arg1 = (TiXmlAttributeSet *) 0 ;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttributeSet::Last",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttributeSet::Last",1,"TiXmlAttributeSet *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttributeSet,0))){
+    SWIG_fail_ptr("TiXmlAttributeSet_last",1,SWIGTYPE_p_TiXmlAttributeSet);
+  }
+  
+  result = (TiXmlAttribute *)(arg1)->Last();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttributeSet_last(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttributeSet, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlAttributeSet_last__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttributeSet, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlAttributeSet_last__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlAttributeSet_last'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlAttributeSet::Last() const\n"
+    "    TiXmlAttributeSet::Last()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlAttributeSet_find__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttributeSet *arg1 = (TiXmlAttributeSet *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttributeSet::Find",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttributeSet::Find",1,"TiXmlAttributeSet const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlAttributeSet::Find",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttributeSet,0))){
+    SWIG_fail_ptr("TiXmlAttributeSet_find",1,SWIGTYPE_p_TiXmlAttributeSet);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (TiXmlAttribute *)((TiXmlAttributeSet const *)arg1)->Find((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttributeSet_find__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttributeSet *arg1 = (TiXmlAttributeSet *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttributeSet::Find",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttributeSet::Find",1,"TiXmlAttributeSet *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlAttributeSet::Find",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttributeSet,0))){
+    SWIG_fail_ptr("TiXmlAttributeSet_find",1,SWIGTYPE_p_TiXmlAttributeSet);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (TiXmlAttribute *)(arg1)->Find((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttributeSet_find__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttributeSet *arg1 = (TiXmlAttributeSet *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttributeSet::Find",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttributeSet::Find",1,"TiXmlAttributeSet const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlAttributeSet::Find",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttributeSet,0))){
+    SWIG_fail_ptr("TiXmlAttributeSet_find",1,SWIGTYPE_p_TiXmlAttributeSet);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (TiXmlAttribute *)((TiXmlAttributeSet const *)arg1)->Find((std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttributeSet_find__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttributeSet *arg1 = (TiXmlAttributeSet *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlAttributeSet::Find",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlAttributeSet::Find",1,"TiXmlAttributeSet *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlAttributeSet::Find",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttributeSet,0))){
+    SWIG_fail_ptr("TiXmlAttributeSet_find",1,SWIGTYPE_p_TiXmlAttributeSet);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (TiXmlAttribute *)(arg1)->Find((std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlAttributeSet_find(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttributeSet, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlAttributeSet_find__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttributeSet, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlAttributeSet_find__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttributeSet, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlAttributeSet_find__SWIG_3(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttributeSet, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlAttributeSet_find__SWIG_2(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlAttributeSet_find'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlAttributeSet::Find(char const *) const\n"
+    "    TiXmlAttributeSet::Find(char const *)\n"
+    "    TiXmlAttributeSet::Find(std::string const &) const\n"
+    "    TiXmlAttributeSet::Find(std::string const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static void swig_delete_TiXmlAttributeSet(void *obj) {
+TiXmlAttributeSet *arg1 = (TiXmlAttributeSet *) obj;
+delete arg1;
+}
+static swig_lua_method swig_TiXmlAttributeSet_methods[] = {
+    {"add", _wrap_TiXmlAttributeSet_add}, 
+    {"remove", _wrap_TiXmlAttributeSet_remove}, 
+    {"first", _wrap_TiXmlAttributeSet_first}, 
+    {"last", _wrap_TiXmlAttributeSet_last}, 
+    {"find", _wrap_TiXmlAttributeSet_find}, 
+    {0,0}
+};
+static swig_lua_attribute swig_TiXmlAttributeSet_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_TiXmlAttributeSet_bases[] = {0};
+static const char *swig_TiXmlAttributeSet_base_names[] = {0};
+static swig_lua_class _wrap_class_TiXmlAttributeSet = { "TiXmlAttributeSet", &SWIGTYPE_p_TiXmlAttributeSet,_wrap_new_TiXmlAttributeSet, swig_delete_TiXmlAttributeSet, swig_TiXmlAttributeSet_methods, swig_TiXmlAttributeSet_attributes, swig_TiXmlAttributeSet_bases, swig_TiXmlAttributeSet_base_names };
+
+static int _wrap_new_TiXmlElement__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  char *arg1 = (char *) 0 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::TiXmlElement",1,1)
+  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("TiXmlElement::TiXmlElement",1,"char const *");
+  arg1 = (char *)lua_tostring(L, 1);
+  result = (TiXmlElement *)new TiXmlElement((char const *)arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlElement__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = 0 ;
+  std::string temp1 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::TiXmlElement",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("TiXmlElement::TiXmlElement",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
+  result = (TiXmlElement *)new TiXmlElement((std::string const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlElement__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = 0 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::TiXmlElement",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("TiXmlElement::TiXmlElement",1,"TiXmlElement const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("new_TiXmlElement",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  result = (TiXmlElement *)new TiXmlElement((TiXmlElement const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlElement(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_new_TiXmlElement__SWIG_2(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      _v = lua_isstring(L,argv[0]);
+    }
+    if (_v) {
+      return _wrap_new_TiXmlElement__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      _v = SWIG_lua_isnilstring(L,argv[0]);
+    }
+    if (_v) {
+      return _wrap_new_TiXmlElement__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_TiXmlElement'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlElement::TiXmlElement(char const *)\n"
+    "    TiXmlElement::TiXmlElement(std::string const &)\n"
+    "    TiXmlElement::TiXmlElement(TiXmlElement const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlElement_attribute__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  char *arg2 = (char *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::Attribute",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::Attribute",1,"TiXmlElement const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlElement::Attribute",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (char *)((TiXmlElement const *)arg1)->Attribute((char const *)arg2);
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_attribute__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  char *arg2 = (char *) 0 ;
+  int *arg3 = (int *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::Attribute",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::Attribute",1,"TiXmlElement const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlElement::Attribute",2,"char const *");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlElement::Attribute",3,"int *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_int,0))){
+    SWIG_fail_ptr("TiXmlElement_attribute",3,SWIGTYPE_p_int);
+  }
+  
+  result = (char *)((TiXmlElement const *)arg1)->Attribute((char const *)arg2,arg3);
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_attribute__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  char *arg2 = (char *) 0 ;
+  double *arg3 = (double *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::Attribute",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::Attribute",1,"TiXmlElement const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlElement::Attribute",2,"char const *");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlElement::Attribute",3,"double *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_double,0))){
+    SWIG_fail_ptr("TiXmlElement_attribute",3,SWIGTYPE_p_double);
+  }
+  
+  result = (char *)((TiXmlElement const *)arg1)->Attribute((char const *)arg2,arg3);
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_query_int_attribute__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  char *arg2 = (char *) 0 ;
+  int *arg3 = (int *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("TiXmlElement::QueryIntAttribute",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::QueryIntAttribute",1,"TiXmlElement const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlElement::QueryIntAttribute",2,"char const *");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlElement::QueryIntAttribute",3,"int *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_query_int_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_int,0))){
+    SWIG_fail_ptr("TiXmlElement_query_int_attribute",3,SWIGTYPE_p_int);
+  }
+  
+  result = (int)((TiXmlElement const *)arg1)->QueryIntAttribute((char const *)arg2,arg3);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_query_double_attribute__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  char *arg2 = (char *) 0 ;
+  double *arg3 = (double *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("TiXmlElement::QueryDoubleAttribute",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::QueryDoubleAttribute",1,"TiXmlElement const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlElement::QueryDoubleAttribute",2,"char const *");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlElement::QueryDoubleAttribute",3,"double *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_query_double_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_double,0))){
+    SWIG_fail_ptr("TiXmlElement_query_double_attribute",3,SWIGTYPE_p_double);
+  }
+  
+  result = (int)((TiXmlElement const *)arg1)->QueryDoubleAttribute((char const *)arg2,arg3);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_query_float_attribute(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  char *arg2 = (char *) 0 ;
+  float *arg3 = (float *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("TiXmlElement::QueryFloatAttribute",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::QueryFloatAttribute",1,"TiXmlElement const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlElement::QueryFloatAttribute",2,"char const *");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlElement::QueryFloatAttribute",3,"float *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_query_float_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_float,0))){
+    SWIG_fail_ptr("TiXmlElement_query_float_attribute",3,SWIGTYPE_p_float);
+  }
+  
+  result = (int)((TiXmlElement const *)arg1)->QueryFloatAttribute((char const *)arg2,arg3);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_set_attribute__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  char *arg2 = (char *) 0 ;
+  char *arg3 = (char *) 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::SetAttribute",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::SetAttribute",1,"TiXmlElement *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlElement::SetAttribute",2,"char const *");
+  if(!SWIG_lua_isnilstring(L,3)) SWIG_fail_arg("TiXmlElement::SetAttribute",3,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_set_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (char *)lua_tostring(L, 3);
+  (arg1)->SetAttribute((char const *)arg2,(char const *)arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_attribute__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  std::string *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::Attribute",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::Attribute",1,"TiXmlElement const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlElement::Attribute",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (std::string *)((TiXmlElement const *)arg1)->Attribute((std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__string,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_attribute__SWIG_4(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  std::string *arg2 = 0 ;
+  int *arg3 = (int *) 0 ;
+  std::string temp2 ;
+  std::string *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::Attribute",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::Attribute",1,"TiXmlElement const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlElement::Attribute",2,"std::string const &");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlElement::Attribute",3,"int *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_int,0))){
+    SWIG_fail_ptr("TiXmlElement_attribute",3,SWIGTYPE_p_int);
+  }
+  
+  result = (std::string *)((TiXmlElement const *)arg1)->Attribute((std::string const &)*arg2,arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__string,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_attribute__SWIG_5(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  std::string *arg2 = 0 ;
+  double *arg3 = (double *) 0 ;
+  std::string temp2 ;
+  std::string *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::Attribute",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::Attribute",1,"TiXmlElement const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlElement::Attribute",2,"std::string const &");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlElement::Attribute",3,"double *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_double,0))){
+    SWIG_fail_ptr("TiXmlElement_attribute",3,SWIGTYPE_p_double);
+  }
+  
+  result = (std::string *)((TiXmlElement const *)arg1)->Attribute((std::string const &)*arg2,arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__string,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_attribute(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlElement_attribute__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlElement_attribute__SWIG_3(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_double, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          return _wrap_TiXmlElement_attribute__SWIG_2(L);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_int, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          return _wrap_TiXmlElement_attribute__SWIG_1(L);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_int, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          return _wrap_TiXmlElement_attribute__SWIG_4(L);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_double, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          return _wrap_TiXmlElement_attribute__SWIG_5(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlElement_attribute'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlElement::Attribute(char const *) const\n"
+    "    TiXmlElement::Attribute(char const *,int *) const\n"
+    "    TiXmlElement::Attribute(char const *,double *) const\n"
+    "    TiXmlElement::Attribute(std::string const &) const\n"
+    "    TiXmlElement::Attribute(std::string const &,int *) const\n"
+    "    TiXmlElement::Attribute(std::string const &,double *) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlElement_query_int_attribute__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  std::string *arg2 = 0 ;
+  int *arg3 = (int *) 0 ;
+  std::string temp2 ;
+  int result;
+  
+  SWIG_check_num_args("TiXmlElement::QueryIntAttribute",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::QueryIntAttribute",1,"TiXmlElement const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlElement::QueryIntAttribute",2,"std::string const &");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlElement::QueryIntAttribute",3,"int *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_query_int_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_int,0))){
+    SWIG_fail_ptr("TiXmlElement_query_int_attribute",3,SWIGTYPE_p_int);
+  }
+  
+  result = (int)((TiXmlElement const *)arg1)->QueryIntAttribute((std::string const &)*arg2,arg3);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_query_int_attribute(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_int, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          return _wrap_TiXmlElement_query_int_attribute__SWIG_0(L);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_int, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          return _wrap_TiXmlElement_query_int_attribute__SWIG_1(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlElement_query_int_attribute'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlElement::QueryIntAttribute(char const *,int *) const\n"
+    "    TiXmlElement::QueryIntAttribute(std::string const &,int *) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlElement_query_double_attribute__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  std::string *arg2 = 0 ;
+  double *arg3 = (double *) 0 ;
+  std::string temp2 ;
+  int result;
+  
+  SWIG_check_num_args("TiXmlElement::QueryDoubleAttribute",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::QueryDoubleAttribute",1,"TiXmlElement const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlElement::QueryDoubleAttribute",2,"std::string const &");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlElement::QueryDoubleAttribute",3,"double *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_query_double_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_double,0))){
+    SWIG_fail_ptr("TiXmlElement_query_double_attribute",3,SWIGTYPE_p_double);
+  }
+  
+  result = (int)((TiXmlElement const *)arg1)->QueryDoubleAttribute((std::string const &)*arg2,arg3);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_query_double_attribute(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_double, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          return _wrap_TiXmlElement_query_double_attribute__SWIG_0(L);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_double, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          return _wrap_TiXmlElement_query_double_attribute__SWIG_1(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlElement_query_double_attribute'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlElement::QueryDoubleAttribute(char const *,double *) const\n"
+    "    TiXmlElement::QueryDoubleAttribute(std::string const &,double *) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlElement_set_attribute__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string *arg3 = 0 ;
+  std::string temp2 ;
+  std::string temp3 ;
+  
+  SWIG_check_num_args("TiXmlElement::SetAttribute",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::SetAttribute",1,"TiXmlElement *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlElement::SetAttribute",2,"std::string const &");
+  if(!lua_isstring(L,3)) SWIG_fail_arg("TiXmlElement::SetAttribute",3,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_set_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  temp3.assign(lua_tostring(L,3),lua_strlen(L,3)); arg3=&temp3;
+  (arg1)->SetAttribute((std::string const &)*arg2,(std::string const &)*arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_set_attribute__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  std::string *arg2 = 0 ;
+  int arg3 ;
+  std::string temp2 ;
+  
+  SWIG_check_num_args("TiXmlElement::SetAttribute",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::SetAttribute",1,"TiXmlElement *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlElement::SetAttribute",2,"std::string const &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlElement::SetAttribute",3,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_set_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  arg3 = (int)lua_tonumber(L, 3);
+  (arg1)->SetAttribute((std::string const &)*arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_set_attribute__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  char *arg2 = (char *) 0 ;
+  int arg3 ;
+  
+  SWIG_check_num_args("TiXmlElement::SetAttribute",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::SetAttribute",1,"TiXmlElement *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlElement::SetAttribute",2,"char const *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlElement::SetAttribute",3,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_set_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (int)lua_tonumber(L, 3);
+  (arg1)->SetAttribute((char const *)arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_set_attribute(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_TiXmlElement_set_attribute__SWIG_2(L);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_TiXmlElement_set_attribute__SWIG_3(L);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = SWIG_lua_isnilstring(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_TiXmlElement_set_attribute__SWIG_0(L);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isstring(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_TiXmlElement_set_attribute__SWIG_1(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlElement_set_attribute'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlElement::SetAttribute(char const *,char const *)\n"
+    "    TiXmlElement::SetAttribute(std::string const &,std::string const &)\n"
+    "    TiXmlElement::SetAttribute(std::string const &,int)\n"
+    "    TiXmlElement::SetAttribute(char const *,int)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlElement_set_double_attribute(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  char *arg2 = (char *) 0 ;
+  double arg3 ;
+  
+  SWIG_check_num_args("TiXmlElement::SetDoubleAttribute",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::SetDoubleAttribute",1,"TiXmlElement *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlElement::SetDoubleAttribute",2,"char const *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlElement::SetDoubleAttribute",3,"double");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_set_double_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (double)lua_tonumber(L, 3);
+  (arg1)->SetDoubleAttribute((char const *)arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_remove_attribute__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  char *arg2 = (char *) 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::RemoveAttribute",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::RemoveAttribute",1,"TiXmlElement *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlElement::RemoveAttribute",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_remove_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  (arg1)->RemoveAttribute((char const *)arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_remove_attribute__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  
+  SWIG_check_num_args("TiXmlElement::RemoveAttribute",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::RemoveAttribute",1,"TiXmlElement *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlElement::RemoveAttribute",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_remove_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  (arg1)->RemoveAttribute((std::string const &)*arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_remove_attribute(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlElement_remove_attribute__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlElement_remove_attribute__SWIG_1(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlElement_remove_attribute'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlElement::RemoveAttribute(char const *)\n"
+    "    TiXmlElement::RemoveAttribute(std::string const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlElement_first_attribute__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::FirstAttribute",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::FirstAttribute",1,"TiXmlElement const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_first_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  result = (TiXmlAttribute *)((TiXmlElement const *)arg1)->FirstAttribute();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_first_attribute__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::FirstAttribute",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::FirstAttribute",1,"TiXmlElement *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_first_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  result = (TiXmlAttribute *)(arg1)->FirstAttribute();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_first_attribute(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlElement_first_attribute__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlElement_first_attribute__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlElement_first_attribute'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlElement::FirstAttribute() const\n"
+    "    TiXmlElement::FirstAttribute()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlElement_last_attribute__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::LastAttribute",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::LastAttribute",1,"TiXmlElement const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_last_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  result = (TiXmlAttribute *)((TiXmlElement const *)arg1)->LastAttribute();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_last_attribute__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  TiXmlAttribute *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::LastAttribute",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::LastAttribute",1,"TiXmlElement *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_last_attribute",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  result = (TiXmlAttribute *)(arg1)->LastAttribute();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlAttribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_last_attribute(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlElement_last_attribute__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlElement_last_attribute__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlElement_last_attribute'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlElement::LastAttribute() const\n"
+    "    TiXmlElement::LastAttribute()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlElement_get_text(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::GetText",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::GetText",1,"TiXmlElement const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_get_text",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  result = (char *)((TiXmlElement const *)arg1)->GetText();
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_clone(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::Clone",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::Clone",1,"TiXmlElement const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_clone",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  result = (TiXmlNode *)((TiXmlElement const *)arg1)->Clone();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_print(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  FILE *arg2 = (FILE *) 0 ;
+  int arg3 ;
+  
+  SWIG_check_num_args("TiXmlElement::Print",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::Print",1,"TiXmlElement const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlElement::Print",2,"FILE *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlElement::Print",3,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_print",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_FILE,0))){
+    SWIG_fail_ptr("TiXmlElement_print",2,SWIGTYPE_p_FILE);
+  }
+  
+  arg3 = (int)lua_tonumber(L, 3);
+  ((TiXmlElement const *)arg1)->Print(arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_parse(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlParsingData *arg3 = (TiXmlParsingData *) 0 ;
+  TiXmlEncoding arg4 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::Parse",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::Parse",1,"TiXmlElement *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlElement::Parse",2,"char const *");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlElement::Parse",3,"TiXmlParsingData *");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("TiXmlElement::Parse",4,"TiXmlEncoding");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_parse",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlParsingData,0))){
+    SWIG_fail_ptr("TiXmlElement_parse",3,SWIGTYPE_p_TiXmlParsingData);
+  }
+  
+  arg4 = (TiXmlEncoding)(int)lua_tonumber(L, 4);
+  result = (char *)(arg1)->Parse((char const *)arg2,arg3,arg4);
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_to_element__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::ToElement",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::ToElement",1,"TiXmlElement const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_to_element",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  result = (TiXmlElement *)((TiXmlElement const *)arg1)->ToElement();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_to_element__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlElement::ToElement",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::ToElement",1,"TiXmlElement *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_to_element",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  result = (TiXmlElement *)(arg1)->ToElement();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlElement_to_element(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlElement_to_element__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlElement_to_element__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlElement_to_element'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlElement::ToElement() const\n"
+    "    TiXmlElement::ToElement()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlElement_accept(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  TiXmlVisitor *arg2 = (TiXmlVisitor *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlElement::Accept",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlElement::Accept",1,"TiXmlElement const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlElement::Accept",2,"TiXmlVisitor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlElement_accept",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlVisitor,0))){
+    SWIG_fail_ptr("TiXmlElement_accept",2,SWIGTYPE_p_TiXmlVisitor);
+  }
+  
+  result = (bool)((TiXmlElement const *)arg1)->Accept(arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_TiXmlElement(void *obj) {
+TiXmlElement *arg1 = (TiXmlElement *) obj;
+delete arg1;
+}
+static swig_lua_method swig_TiXmlElement_methods[] = {
+    {"query_float_attribute", _wrap_TiXmlElement_query_float_attribute}, 
+    {"attribute", _wrap_TiXmlElement_attribute}, 
+    {"query_int_attribute", _wrap_TiXmlElement_query_int_attribute}, 
+    {"query_double_attribute", _wrap_TiXmlElement_query_double_attribute}, 
+    {"set_attribute", _wrap_TiXmlElement_set_attribute}, 
+    {"set_double_attribute", _wrap_TiXmlElement_set_double_attribute}, 
+    {"remove_attribute", _wrap_TiXmlElement_remove_attribute}, 
+    {"first_attribute", _wrap_TiXmlElement_first_attribute}, 
+    {"last_attribute", _wrap_TiXmlElement_last_attribute}, 
+    {"get_text", _wrap_TiXmlElement_get_text}, 
+    {"clone", _wrap_TiXmlElement_clone}, 
+    {"print", _wrap_TiXmlElement_print}, 
+    {"parse", _wrap_TiXmlElement_parse}, 
+    {"to_element", _wrap_TiXmlElement_to_element}, 
+    {"accept", _wrap_TiXmlElement_accept}, 
+    {0,0}
+};
+static swig_lua_attribute swig_TiXmlElement_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_TiXmlElement_bases[] = {0,0};
+static const char *swig_TiXmlElement_base_names[] = {"TiXmlNode *",0};
+static swig_lua_class _wrap_class_TiXmlElement = { "TiXmlElement", &SWIGTYPE_p_TiXmlElement,_wrap_new_TiXmlElement, swig_delete_TiXmlElement, swig_TiXmlElement_methods, swig_TiXmlElement_attributes, swig_TiXmlElement_bases, swig_TiXmlElement_base_names };
+
+static int _wrap_new_TiXmlComment__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlComment *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlComment::TiXmlComment",0,0)
+  result = (TiXmlComment *)new TiXmlComment();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlComment,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlComment__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  char *arg1 = (char *) 0 ;
+  TiXmlComment *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlComment::TiXmlComment",1,1)
+  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("TiXmlComment::TiXmlComment",1,"char const *");
+  arg1 = (char *)lua_tostring(L, 1);
+  result = (TiXmlComment *)new TiXmlComment((char const *)arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlComment,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlComment__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlComment *arg1 = 0 ;
+  TiXmlComment *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlComment::TiXmlComment",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("TiXmlComment::TiXmlComment",1,"TiXmlComment const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlComment,0))){
+    SWIG_fail_ptr("new_TiXmlComment",1,SWIGTYPE_p_TiXmlComment);
+  }
+  
+  result = (TiXmlComment *)new TiXmlComment((TiXmlComment const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlComment,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlComment(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 0) {
+    return _wrap_new_TiXmlComment__SWIG_0(L);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlComment, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_new_TiXmlComment__SWIG_2(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      _v = SWIG_lua_isnilstring(L,argv[0]);
+    }
+    if (_v) {
+      return _wrap_new_TiXmlComment__SWIG_1(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_TiXmlComment'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlComment::TiXmlComment()\n"
+    "    TiXmlComment::TiXmlComment(char const *)\n"
+    "    TiXmlComment::TiXmlComment(TiXmlComment const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlComment_clone(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlComment *arg1 = (TiXmlComment *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlComment::Clone",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlComment::Clone",1,"TiXmlComment const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlComment,0))){
+    SWIG_fail_ptr("TiXmlComment_clone",1,SWIGTYPE_p_TiXmlComment);
+  }
+  
+  result = (TiXmlNode *)((TiXmlComment const *)arg1)->Clone();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlComment_print(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlComment *arg1 = (TiXmlComment *) 0 ;
+  FILE *arg2 = (FILE *) 0 ;
+  int arg3 ;
+  
+  SWIG_check_num_args("TiXmlComment::Print",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlComment::Print",1,"TiXmlComment const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlComment::Print",2,"FILE *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlComment::Print",3,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlComment,0))){
+    SWIG_fail_ptr("TiXmlComment_print",1,SWIGTYPE_p_TiXmlComment);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_FILE,0))){
+    SWIG_fail_ptr("TiXmlComment_print",2,SWIGTYPE_p_FILE);
+  }
+  
+  arg3 = (int)lua_tonumber(L, 3);
+  ((TiXmlComment const *)arg1)->Print(arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlComment_parse(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlComment *arg1 = (TiXmlComment *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlParsingData *arg3 = (TiXmlParsingData *) 0 ;
+  TiXmlEncoding arg4 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlComment::Parse",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlComment::Parse",1,"TiXmlComment *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlComment::Parse",2,"char const *");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlComment::Parse",3,"TiXmlParsingData *");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("TiXmlComment::Parse",4,"TiXmlEncoding");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlComment,0))){
+    SWIG_fail_ptr("TiXmlComment_parse",1,SWIGTYPE_p_TiXmlComment);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlParsingData,0))){
+    SWIG_fail_ptr("TiXmlComment_parse",3,SWIGTYPE_p_TiXmlParsingData);
+  }
+  
+  arg4 = (TiXmlEncoding)(int)lua_tonumber(L, 4);
+  result = (char *)(arg1)->Parse((char const *)arg2,arg3,arg4);
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlComment_to_comment__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlComment *arg1 = (TiXmlComment *) 0 ;
+  TiXmlComment *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlComment::ToComment",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlComment::ToComment",1,"TiXmlComment const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlComment,0))){
+    SWIG_fail_ptr("TiXmlComment_to_comment",1,SWIGTYPE_p_TiXmlComment);
+  }
+  
+  result = (TiXmlComment *)((TiXmlComment const *)arg1)->ToComment();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlComment,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlComment_to_comment__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlComment *arg1 = (TiXmlComment *) 0 ;
+  TiXmlComment *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlComment::ToComment",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlComment::ToComment",1,"TiXmlComment *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlComment,0))){
+    SWIG_fail_ptr("TiXmlComment_to_comment",1,SWIGTYPE_p_TiXmlComment);
+  }
+  
+  result = (TiXmlComment *)(arg1)->ToComment();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlComment,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlComment_to_comment(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlComment, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlComment_to_comment__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlComment, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlComment_to_comment__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlComment_to_comment'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlComment::ToComment() const\n"
+    "    TiXmlComment::ToComment()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlComment_accept(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlComment *arg1 = (TiXmlComment *) 0 ;
+  TiXmlVisitor *arg2 = (TiXmlVisitor *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlComment::Accept",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlComment::Accept",1,"TiXmlComment const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlComment::Accept",2,"TiXmlVisitor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlComment,0))){
+    SWIG_fail_ptr("TiXmlComment_accept",1,SWIGTYPE_p_TiXmlComment);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlVisitor,0))){
+    SWIG_fail_ptr("TiXmlComment_accept",2,SWIGTYPE_p_TiXmlVisitor);
+  }
+  
+  result = (bool)((TiXmlComment const *)arg1)->Accept(arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_TiXmlComment(void *obj) {
+TiXmlComment *arg1 = (TiXmlComment *) obj;
+delete arg1;
+}
+static swig_lua_method swig_TiXmlComment_methods[] = {
+    {"clone", _wrap_TiXmlComment_clone}, 
+    {"print", _wrap_TiXmlComment_print}, 
+    {"parse", _wrap_TiXmlComment_parse}, 
+    {"to_comment", _wrap_TiXmlComment_to_comment}, 
+    {"accept", _wrap_TiXmlComment_accept}, 
+    {0,0}
+};
+static swig_lua_attribute swig_TiXmlComment_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_TiXmlComment_bases[] = {0,0};
+static const char *swig_TiXmlComment_base_names[] = {"TiXmlNode *",0};
+static swig_lua_class _wrap_class_TiXmlComment = { "TiXmlComment", &SWIGTYPE_p_TiXmlComment,_wrap_new_TiXmlComment, swig_delete_TiXmlComment, swig_TiXmlComment_methods, swig_TiXmlComment_attributes, swig_TiXmlComment_bases, swig_TiXmlComment_base_names };
+
+static int _wrap_new_TiXmlText__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  char *arg1 = (char *) 0 ;
+  TiXmlText *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlText::TiXmlText",1,1)
+  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("TiXmlText::TiXmlText",1,"char const *");
+  arg1 = (char *)lua_tostring(L, 1);
+  result = (TiXmlText *)new TiXmlText((char const *)arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlText,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlText__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = 0 ;
+  std::string temp1 ;
+  TiXmlText *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlText::TiXmlText",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("TiXmlText::TiXmlText",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
+  result = (TiXmlText *)new TiXmlText((std::string const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlText,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlText__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlText *arg1 = 0 ;
+  TiXmlText *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlText::TiXmlText",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("TiXmlText::TiXmlText",1,"TiXmlText const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlText,0))){
+    SWIG_fail_ptr("new_TiXmlText",1,SWIGTYPE_p_TiXmlText);
+  }
+  
+  result = (TiXmlText *)new TiXmlText((TiXmlText const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlText,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlText(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlText, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_new_TiXmlText__SWIG_2(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      _v = lua_isstring(L,argv[0]);
+    }
+    if (_v) {
+      return _wrap_new_TiXmlText__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      _v = SWIG_lua_isnilstring(L,argv[0]);
+    }
+    if (_v) {
+      return _wrap_new_TiXmlText__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_TiXmlText'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlText::TiXmlText(char const *)\n"
+    "    TiXmlText::TiXmlText(std::string const &)\n"
+    "    TiXmlText::TiXmlText(TiXmlText const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlText_print(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlText *arg1 = (TiXmlText *) 0 ;
+  FILE *arg2 = (FILE *) 0 ;
+  int arg3 ;
+  
+  SWIG_check_num_args("TiXmlText::Print",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlText::Print",1,"TiXmlText const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlText::Print",2,"FILE *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlText::Print",3,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlText,0))){
+    SWIG_fail_ptr("TiXmlText_print",1,SWIGTYPE_p_TiXmlText);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_FILE,0))){
+    SWIG_fail_ptr("TiXmlText_print",2,SWIGTYPE_p_FILE);
+  }
+  
+  arg3 = (int)lua_tonumber(L, 3);
+  ((TiXmlText const *)arg1)->Print(arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlText_cdata(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlText *arg1 = (TiXmlText *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlText::CDATA",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlText::CDATA",1,"TiXmlText const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlText,0))){
+    SWIG_fail_ptr("TiXmlText_cdata",1,SWIGTYPE_p_TiXmlText);
+  }
+  
+  result = (bool)((TiXmlText const *)arg1)->CDATA();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlText_set_cdata(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlText *arg1 = (TiXmlText *) 0 ;
+  bool arg2 ;
+  
+  SWIG_check_num_args("TiXmlText::SetCDATA",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlText::SetCDATA",1,"TiXmlText *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("TiXmlText::SetCDATA",2,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlText,0))){
+    SWIG_fail_ptr("TiXmlText_set_cdata",1,SWIGTYPE_p_TiXmlText);
+  }
+  
+  arg2 = (lua_toboolean(L, 2)!=0);
+  (arg1)->SetCDATA(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlText_parse(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlText *arg1 = (TiXmlText *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlParsingData *arg3 = (TiXmlParsingData *) 0 ;
+  TiXmlEncoding arg4 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlText::Parse",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlText::Parse",1,"TiXmlText *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlText::Parse",2,"char const *");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlText::Parse",3,"TiXmlParsingData *");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("TiXmlText::Parse",4,"TiXmlEncoding");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlText,0))){
+    SWIG_fail_ptr("TiXmlText_parse",1,SWIGTYPE_p_TiXmlText);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlParsingData,0))){
+    SWIG_fail_ptr("TiXmlText_parse",3,SWIGTYPE_p_TiXmlParsingData);
+  }
+  
+  arg4 = (TiXmlEncoding)(int)lua_tonumber(L, 4);
+  result = (char *)(arg1)->Parse((char const *)arg2,arg3,arg4);
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlText_to_text__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlText *arg1 = (TiXmlText *) 0 ;
+  TiXmlText *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlText::ToText",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlText::ToText",1,"TiXmlText const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlText,0))){
+    SWIG_fail_ptr("TiXmlText_to_text",1,SWIGTYPE_p_TiXmlText);
+  }
+  
+  result = (TiXmlText *)((TiXmlText const *)arg1)->ToText();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlText,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlText_to_text__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlText *arg1 = (TiXmlText *) 0 ;
+  TiXmlText *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlText::ToText",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlText::ToText",1,"TiXmlText *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlText,0))){
+    SWIG_fail_ptr("TiXmlText_to_text",1,SWIGTYPE_p_TiXmlText);
+  }
+  
+  result = (TiXmlText *)(arg1)->ToText();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlText,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlText_to_text(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlText, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlText_to_text__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlText, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlText_to_text__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlText_to_text'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlText::ToText() const\n"
+    "    TiXmlText::ToText()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlText_accept(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlText *arg1 = (TiXmlText *) 0 ;
+  TiXmlVisitor *arg2 = (TiXmlVisitor *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlText::Accept",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlText::Accept",1,"TiXmlText const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlText::Accept",2,"TiXmlVisitor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlText,0))){
+    SWIG_fail_ptr("TiXmlText_accept",1,SWIGTYPE_p_TiXmlText);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlVisitor,0))){
+    SWIG_fail_ptr("TiXmlText_accept",2,SWIGTYPE_p_TiXmlVisitor);
+  }
+  
+  result = (bool)((TiXmlText const *)arg1)->Accept(arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_TiXmlText(void *obj) {
+TiXmlText *arg1 = (TiXmlText *) obj;
+delete arg1;
+}
+static swig_lua_method swig_TiXmlText_methods[] = {
+    {"print", _wrap_TiXmlText_print}, 
+    {"cdata", _wrap_TiXmlText_cdata}, 
+    {"set_cdata", _wrap_TiXmlText_set_cdata}, 
+    {"parse", _wrap_TiXmlText_parse}, 
+    {"to_text", _wrap_TiXmlText_to_text}, 
+    {"accept", _wrap_TiXmlText_accept}, 
+    {0,0}
+};
+static swig_lua_attribute swig_TiXmlText_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_TiXmlText_bases[] = {0,0};
+static const char *swig_TiXmlText_base_names[] = {"TiXmlNode *",0};
+static swig_lua_class _wrap_class_TiXmlText = { "TiXmlText", &SWIGTYPE_p_TiXmlText,_wrap_new_TiXmlText, swig_delete_TiXmlText, swig_TiXmlText_methods, swig_TiXmlText_attributes, swig_TiXmlText_bases, swig_TiXmlText_base_names };
+
+static int _wrap_new_TiXmlDeclaration__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDeclaration *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDeclaration::TiXmlDeclaration",0,0)
+  result = (TiXmlDeclaration *)new TiXmlDeclaration();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlDeclaration,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlDeclaration__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = 0 ;
+  std::string *arg2 = 0 ;
+  std::string *arg3 = 0 ;
+  std::string temp1 ;
+  std::string temp2 ;
+  std::string temp3 ;
+  TiXmlDeclaration *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDeclaration::TiXmlDeclaration",3,3)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("TiXmlDeclaration::TiXmlDeclaration",1,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlDeclaration::TiXmlDeclaration",2,"std::string const &");
+  if(!lua_isstring(L,3)) SWIG_fail_arg("TiXmlDeclaration::TiXmlDeclaration",3,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  temp3.assign(lua_tostring(L,3),lua_strlen(L,3)); arg3=&temp3;
+  result = (TiXmlDeclaration *)new TiXmlDeclaration((std::string const &)*arg1,(std::string const &)*arg2,(std::string const &)*arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlDeclaration,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlDeclaration__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  char *arg1 = (char *) 0 ;
+  char *arg2 = (char *) 0 ;
+  char *arg3 = (char *) 0 ;
+  TiXmlDeclaration *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDeclaration::TiXmlDeclaration",3,3)
+  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("TiXmlDeclaration::TiXmlDeclaration",1,"char const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlDeclaration::TiXmlDeclaration",2,"char const *");
+  if(!SWIG_lua_isnilstring(L,3)) SWIG_fail_arg("TiXmlDeclaration::TiXmlDeclaration",3,"char const *");
+  arg1 = (char *)lua_tostring(L, 1);
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (char *)lua_tostring(L, 3);
+  result = (TiXmlDeclaration *)new TiXmlDeclaration((char const *)arg1,(char const *)arg2,(char const *)arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlDeclaration,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlDeclaration__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDeclaration *arg1 = 0 ;
+  TiXmlDeclaration *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDeclaration::TiXmlDeclaration",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("TiXmlDeclaration::TiXmlDeclaration",1,"TiXmlDeclaration const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDeclaration,0))){
+    SWIG_fail_ptr("new_TiXmlDeclaration",1,SWIGTYPE_p_TiXmlDeclaration);
+  }
+  
+  result = (TiXmlDeclaration *)new TiXmlDeclaration((TiXmlDeclaration const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlDeclaration,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlDeclaration(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 0) {
+    return _wrap_new_TiXmlDeclaration__SWIG_0(L);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDeclaration, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_new_TiXmlDeclaration__SWIG_3(L);
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      _v = SWIG_lua_isnilstring(L,argv[0]);
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = SWIG_lua_isnilstring(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_new_TiXmlDeclaration__SWIG_2(L);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      _v = lua_isstring(L,argv[0]);
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isstring(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_new_TiXmlDeclaration__SWIG_1(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_TiXmlDeclaration'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlDeclaration::TiXmlDeclaration()\n"
+    "    TiXmlDeclaration::TiXmlDeclaration(std::string const &,std::string const &,std::string const &)\n"
+    "    TiXmlDeclaration::TiXmlDeclaration(char const *,char const *,char const *)\n"
+    "    TiXmlDeclaration::TiXmlDeclaration(TiXmlDeclaration const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlDeclaration_version(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDeclaration *arg1 = (TiXmlDeclaration *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDeclaration::Version",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDeclaration::Version",1,"TiXmlDeclaration const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDeclaration,0))){
+    SWIG_fail_ptr("TiXmlDeclaration_version",1,SWIGTYPE_p_TiXmlDeclaration);
+  }
+  
+  result = (char *)((TiXmlDeclaration const *)arg1)->Version();
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDeclaration_encoding(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDeclaration *arg1 = (TiXmlDeclaration *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDeclaration::Encoding",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDeclaration::Encoding",1,"TiXmlDeclaration const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDeclaration,0))){
+    SWIG_fail_ptr("TiXmlDeclaration_encoding",1,SWIGTYPE_p_TiXmlDeclaration);
+  }
+  
+  result = (char *)((TiXmlDeclaration const *)arg1)->Encoding();
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDeclaration_standalone(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDeclaration *arg1 = (TiXmlDeclaration *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDeclaration::Standalone",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDeclaration::Standalone",1,"TiXmlDeclaration const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDeclaration,0))){
+    SWIG_fail_ptr("TiXmlDeclaration_standalone",1,SWIGTYPE_p_TiXmlDeclaration);
+  }
+  
+  result = (char *)((TiXmlDeclaration const *)arg1)->Standalone();
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDeclaration_clone(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDeclaration *arg1 = (TiXmlDeclaration *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDeclaration::Clone",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDeclaration::Clone",1,"TiXmlDeclaration const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDeclaration,0))){
+    SWIG_fail_ptr("TiXmlDeclaration_clone",1,SWIGTYPE_p_TiXmlDeclaration);
+  }
+  
+  result = (TiXmlNode *)((TiXmlDeclaration const *)arg1)->Clone();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDeclaration_print__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDeclaration *arg1 = (TiXmlDeclaration *) 0 ;
+  FILE *arg2 = (FILE *) 0 ;
+  int arg3 ;
+  std::string *arg4 = (std::string *) 0 ;
+  
+  SWIG_check_num_args("TiXmlDeclaration::Print",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDeclaration::Print",1,"TiXmlDeclaration const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlDeclaration::Print",2,"FILE *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlDeclaration::Print",3,"int");
+  if(!SWIG_isptrtype(L,4)) SWIG_fail_arg("TiXmlDeclaration::Print",4,"std::string *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDeclaration,0))){
+    SWIG_fail_ptr("TiXmlDeclaration_print",1,SWIGTYPE_p_TiXmlDeclaration);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_FILE,0))){
+    SWIG_fail_ptr("TiXmlDeclaration_print",2,SWIGTYPE_p_FILE);
+  }
+  
+  arg3 = (int)lua_tonumber(L, 3);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&arg4,SWIGTYPE_p_std__string,0))){
+    SWIG_fail_ptr("TiXmlDeclaration_print",4,SWIGTYPE_p_std__string);
+  }
+  
+  ((TiXmlDeclaration const *)arg1)->Print(arg2,arg3,arg4);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDeclaration_print__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDeclaration *arg1 = (TiXmlDeclaration *) 0 ;
+  FILE *arg2 = (FILE *) 0 ;
+  int arg3 ;
+  
+  SWIG_check_num_args("TiXmlDeclaration::Print",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDeclaration::Print",1,"TiXmlDeclaration const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlDeclaration::Print",2,"FILE *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlDeclaration::Print",3,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDeclaration,0))){
+    SWIG_fail_ptr("TiXmlDeclaration_print",1,SWIGTYPE_p_TiXmlDeclaration);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_FILE,0))){
+    SWIG_fail_ptr("TiXmlDeclaration_print",2,SWIGTYPE_p_FILE);
+  }
+  
+  arg3 = (int)lua_tonumber(L, 3);
+  ((TiXmlDeclaration const *)arg1)->Print(arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDeclaration_print(lua_State* L) {
+  int argc;
+  int argv[5]={
+    1,2,3,4,5
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDeclaration, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_FILE, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_TiXmlDeclaration_print__SWIG_1(L);
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDeclaration, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_FILE, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          {
+            void *ptr;
+            if (SWIG_isptrtype(L,argv[3])==0 || SWIG_ConvertPtr(L,argv[3], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
+              _v = 0;
+            } else {
+              _v = 1;
+            }
+          }
+          if (_v) {
+            return _wrap_TiXmlDeclaration_print__SWIG_0(L);
+          }
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlDeclaration_print'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlDeclaration::Print(FILE *,int,std::string *) const\n"
+    "    TiXmlDeclaration::Print(FILE *,int) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlDeclaration_parse(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDeclaration *arg1 = (TiXmlDeclaration *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlParsingData *arg3 = (TiXmlParsingData *) 0 ;
+  TiXmlEncoding arg4 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDeclaration::Parse",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDeclaration::Parse",1,"TiXmlDeclaration *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlDeclaration::Parse",2,"char const *");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlDeclaration::Parse",3,"TiXmlParsingData *");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("TiXmlDeclaration::Parse",4,"TiXmlEncoding");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDeclaration,0))){
+    SWIG_fail_ptr("TiXmlDeclaration_parse",1,SWIGTYPE_p_TiXmlDeclaration);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlParsingData,0))){
+    SWIG_fail_ptr("TiXmlDeclaration_parse",3,SWIGTYPE_p_TiXmlParsingData);
+  }
+  
+  arg4 = (TiXmlEncoding)(int)lua_tonumber(L, 4);
+  result = (char *)(arg1)->Parse((char const *)arg2,arg3,arg4);
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDeclaration_to_declaration__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDeclaration *arg1 = (TiXmlDeclaration *) 0 ;
+  TiXmlDeclaration *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDeclaration::ToDeclaration",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDeclaration::ToDeclaration",1,"TiXmlDeclaration const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDeclaration,0))){
+    SWIG_fail_ptr("TiXmlDeclaration_to_declaration",1,SWIGTYPE_p_TiXmlDeclaration);
+  }
+  
+  result = (TiXmlDeclaration *)((TiXmlDeclaration const *)arg1)->ToDeclaration();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlDeclaration,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDeclaration_to_declaration__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDeclaration *arg1 = (TiXmlDeclaration *) 0 ;
+  TiXmlDeclaration *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDeclaration::ToDeclaration",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDeclaration::ToDeclaration",1,"TiXmlDeclaration *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDeclaration,0))){
+    SWIG_fail_ptr("TiXmlDeclaration_to_declaration",1,SWIGTYPE_p_TiXmlDeclaration);
+  }
+  
+  result = (TiXmlDeclaration *)(arg1)->ToDeclaration();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlDeclaration,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDeclaration_to_declaration(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDeclaration, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlDeclaration_to_declaration__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDeclaration, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlDeclaration_to_declaration__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlDeclaration_to_declaration'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlDeclaration::ToDeclaration() const\n"
+    "    TiXmlDeclaration::ToDeclaration()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlDeclaration_accept(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDeclaration *arg1 = (TiXmlDeclaration *) 0 ;
+  TiXmlVisitor *arg2 = (TiXmlVisitor *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlDeclaration::Accept",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDeclaration::Accept",1,"TiXmlDeclaration const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlDeclaration::Accept",2,"TiXmlVisitor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDeclaration,0))){
+    SWIG_fail_ptr("TiXmlDeclaration_accept",1,SWIGTYPE_p_TiXmlDeclaration);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlVisitor,0))){
+    SWIG_fail_ptr("TiXmlDeclaration_accept",2,SWIGTYPE_p_TiXmlVisitor);
+  }
+  
+  result = (bool)((TiXmlDeclaration const *)arg1)->Accept(arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_TiXmlDeclaration(void *obj) {
+TiXmlDeclaration *arg1 = (TiXmlDeclaration *) obj;
+delete arg1;
+}
+static swig_lua_method swig_TiXmlDeclaration_methods[] = {
+    {"version", _wrap_TiXmlDeclaration_version}, 
+    {"encoding", _wrap_TiXmlDeclaration_encoding}, 
+    {"standalone", _wrap_TiXmlDeclaration_standalone}, 
+    {"clone", _wrap_TiXmlDeclaration_clone}, 
+    {"print", _wrap_TiXmlDeclaration_print}, 
+    {"parse", _wrap_TiXmlDeclaration_parse}, 
+    {"to_declaration", _wrap_TiXmlDeclaration_to_declaration}, 
+    {"accept", _wrap_TiXmlDeclaration_accept}, 
+    {0,0}
+};
+static swig_lua_attribute swig_TiXmlDeclaration_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_TiXmlDeclaration_bases[] = {0,0};
+static const char *swig_TiXmlDeclaration_base_names[] = {"TiXmlNode *",0};
+static swig_lua_class _wrap_class_TiXmlDeclaration = { "TiXmlDeclaration", &SWIGTYPE_p_TiXmlDeclaration,_wrap_new_TiXmlDeclaration, swig_delete_TiXmlDeclaration, swig_TiXmlDeclaration_methods, swig_TiXmlDeclaration_attributes, swig_TiXmlDeclaration_bases, swig_TiXmlDeclaration_base_names };
+
+static int _wrap_new_TiXmlStylesheetReference__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlStylesheetReference *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlStylesheetReference::TiXmlStylesheetReference",0,0)
+  result = (TiXmlStylesheetReference *)new TiXmlStylesheetReference();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlStylesheetReference,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlStylesheetReference__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp1 ;
+  std::string temp2 ;
+  TiXmlStylesheetReference *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlStylesheetReference::TiXmlStylesheetReference",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("TiXmlStylesheetReference::TiXmlStylesheetReference",1,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlStylesheetReference::TiXmlStylesheetReference",2,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (TiXmlStylesheetReference *)new TiXmlStylesheetReference((std::string const &)*arg1,(std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlStylesheetReference,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlStylesheetReference__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  char *arg1 = (char *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlStylesheetReference *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlStylesheetReference::TiXmlStylesheetReference",2,2)
+  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("TiXmlStylesheetReference::TiXmlStylesheetReference",1,"char const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlStylesheetReference::TiXmlStylesheetReference",2,"char const *");
+  arg1 = (char *)lua_tostring(L, 1);
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (TiXmlStylesheetReference *)new TiXmlStylesheetReference((char const *)arg1,(char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlStylesheetReference,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlStylesheetReference__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlStylesheetReference *arg1 = 0 ;
+  TiXmlStylesheetReference *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlStylesheetReference::TiXmlStylesheetReference",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("TiXmlStylesheetReference::TiXmlStylesheetReference",1,"TiXmlStylesheetReference const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlStylesheetReference,0))){
+    SWIG_fail_ptr("new_TiXmlStylesheetReference",1,SWIGTYPE_p_TiXmlStylesheetReference);
+  }
+  
+  result = (TiXmlStylesheetReference *)new TiXmlStylesheetReference((TiXmlStylesheetReference const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlStylesheetReference,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlStylesheetReference(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 0) {
+    return _wrap_new_TiXmlStylesheetReference__SWIG_0(L);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlStylesheetReference, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_new_TiXmlStylesheetReference__SWIG_3(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      _v = SWIG_lua_isnilstring(L,argv[0]);
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_new_TiXmlStylesheetReference__SWIG_2(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      _v = lua_isstring(L,argv[0]);
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_new_TiXmlStylesheetReference__SWIG_1(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_TiXmlStylesheetReference'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlStylesheetReference::TiXmlStylesheetReference()\n"
+    "    TiXmlStylesheetReference::TiXmlStylesheetReference(std::string const &,std::string const &)\n"
+    "    TiXmlStylesheetReference::TiXmlStylesheetReference(char const *,char const *)\n"
+    "    TiXmlStylesheetReference::TiXmlStylesheetReference(TiXmlStylesheetReference const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlStylesheetReference_type(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlStylesheetReference *arg1 = (TiXmlStylesheetReference *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlStylesheetReference::Type",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlStylesheetReference::Type",1,"TiXmlStylesheetReference const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlStylesheetReference,0))){
+    SWIG_fail_ptr("TiXmlStylesheetReference_type",1,SWIGTYPE_p_TiXmlStylesheetReference);
+  }
+  
+  result = (char *)((TiXmlStylesheetReference const *)arg1)->Type();
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlStylesheetReference_href(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlStylesheetReference *arg1 = (TiXmlStylesheetReference *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlStylesheetReference::Href",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlStylesheetReference::Href",1,"TiXmlStylesheetReference const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlStylesheetReference,0))){
+    SWIG_fail_ptr("TiXmlStylesheetReference_href",1,SWIGTYPE_p_TiXmlStylesheetReference);
+  }
+  
+  result = (char *)((TiXmlStylesheetReference const *)arg1)->Href();
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlStylesheetReference_clone(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlStylesheetReference *arg1 = (TiXmlStylesheetReference *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlStylesheetReference::Clone",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlStylesheetReference::Clone",1,"TiXmlStylesheetReference const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlStylesheetReference,0))){
+    SWIG_fail_ptr("TiXmlStylesheetReference_clone",1,SWIGTYPE_p_TiXmlStylesheetReference);
+  }
+  
+  result = (TiXmlNode *)((TiXmlStylesheetReference const *)arg1)->Clone();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlStylesheetReference_print__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlStylesheetReference *arg1 = (TiXmlStylesheetReference *) 0 ;
+  FILE *arg2 = (FILE *) 0 ;
+  int arg3 ;
+  std::string *arg4 = (std::string *) 0 ;
+  
+  SWIG_check_num_args("TiXmlStylesheetReference::Print",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlStylesheetReference::Print",1,"TiXmlStylesheetReference const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlStylesheetReference::Print",2,"FILE *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlStylesheetReference::Print",3,"int");
+  if(!SWIG_isptrtype(L,4)) SWIG_fail_arg("TiXmlStylesheetReference::Print",4,"std::string *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlStylesheetReference,0))){
+    SWIG_fail_ptr("TiXmlStylesheetReference_print",1,SWIGTYPE_p_TiXmlStylesheetReference);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_FILE,0))){
+    SWIG_fail_ptr("TiXmlStylesheetReference_print",2,SWIGTYPE_p_FILE);
+  }
+  
+  arg3 = (int)lua_tonumber(L, 3);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&arg4,SWIGTYPE_p_std__string,0))){
+    SWIG_fail_ptr("TiXmlStylesheetReference_print",4,SWIGTYPE_p_std__string);
+  }
+  
+  ((TiXmlStylesheetReference const *)arg1)->Print(arg2,arg3,arg4);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlStylesheetReference_print__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlStylesheetReference *arg1 = (TiXmlStylesheetReference *) 0 ;
+  FILE *arg2 = (FILE *) 0 ;
+  int arg3 ;
+  
+  SWIG_check_num_args("TiXmlStylesheetReference::Print",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlStylesheetReference::Print",1,"TiXmlStylesheetReference const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlStylesheetReference::Print",2,"FILE *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlStylesheetReference::Print",3,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlStylesheetReference,0))){
+    SWIG_fail_ptr("TiXmlStylesheetReference_print",1,SWIGTYPE_p_TiXmlStylesheetReference);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_FILE,0))){
+    SWIG_fail_ptr("TiXmlStylesheetReference_print",2,SWIGTYPE_p_FILE);
+  }
+  
+  arg3 = (int)lua_tonumber(L, 3);
+  ((TiXmlStylesheetReference const *)arg1)->Print(arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlStylesheetReference_print(lua_State* L) {
+  int argc;
+  int argv[5]={
+    1,2,3,4,5
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlStylesheetReference, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_FILE, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_TiXmlStylesheetReference_print__SWIG_1(L);
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlStylesheetReference, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_FILE, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          {
+            void *ptr;
+            if (SWIG_isptrtype(L,argv[3])==0 || SWIG_ConvertPtr(L,argv[3], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
+              _v = 0;
+            } else {
+              _v = 1;
+            }
+          }
+          if (_v) {
+            return _wrap_TiXmlStylesheetReference_print__SWIG_0(L);
+          }
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlStylesheetReference_print'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlStylesheetReference::Print(FILE *,int,std::string *) const\n"
+    "    TiXmlStylesheetReference::Print(FILE *,int) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlStylesheetReference_parse(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlStylesheetReference *arg1 = (TiXmlStylesheetReference *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlParsingData *arg3 = (TiXmlParsingData *) 0 ;
+  TiXmlEncoding arg4 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlStylesheetReference::Parse",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlStylesheetReference::Parse",1,"TiXmlStylesheetReference *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlStylesheetReference::Parse",2,"char const *");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlStylesheetReference::Parse",3,"TiXmlParsingData *");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("TiXmlStylesheetReference::Parse",4,"TiXmlEncoding");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlStylesheetReference,0))){
+    SWIG_fail_ptr("TiXmlStylesheetReference_parse",1,SWIGTYPE_p_TiXmlStylesheetReference);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlParsingData,0))){
+    SWIG_fail_ptr("TiXmlStylesheetReference_parse",3,SWIGTYPE_p_TiXmlParsingData);
+  }
+  
+  arg4 = (TiXmlEncoding)(int)lua_tonumber(L, 4);
+  result = (char *)(arg1)->Parse((char const *)arg2,arg3,arg4);
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlStylesheetReference_to_stylesheet_reference__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlStylesheetReference *arg1 = (TiXmlStylesheetReference *) 0 ;
+  TiXmlStylesheetReference *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlStylesheetReference::ToStylesheetReference",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlStylesheetReference::ToStylesheetReference",1,"TiXmlStylesheetReference const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlStylesheetReference,0))){
+    SWIG_fail_ptr("TiXmlStylesheetReference_to_stylesheet_reference",1,SWIGTYPE_p_TiXmlStylesheetReference);
+  }
+  
+  result = (TiXmlStylesheetReference *)((TiXmlStylesheetReference const *)arg1)->ToStylesheetReference();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlStylesheetReference,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlStylesheetReference_to_stylesheet_reference__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlStylesheetReference *arg1 = (TiXmlStylesheetReference *) 0 ;
+  TiXmlStylesheetReference *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlStylesheetReference::ToStylesheetReference",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlStylesheetReference::ToStylesheetReference",1,"TiXmlStylesheetReference *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlStylesheetReference,0))){
+    SWIG_fail_ptr("TiXmlStylesheetReference_to_stylesheet_reference",1,SWIGTYPE_p_TiXmlStylesheetReference);
+  }
+  
+  result = (TiXmlStylesheetReference *)(arg1)->ToStylesheetReference();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlStylesheetReference,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlStylesheetReference_to_stylesheet_reference(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlStylesheetReference, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlStylesheetReference_to_stylesheet_reference__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlStylesheetReference, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlStylesheetReference_to_stylesheet_reference__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlStylesheetReference_to_stylesheet_reference'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlStylesheetReference::ToStylesheetReference() const\n"
+    "    TiXmlStylesheetReference::ToStylesheetReference()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlStylesheetReference_accept(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlStylesheetReference *arg1 = (TiXmlStylesheetReference *) 0 ;
+  TiXmlVisitor *arg2 = (TiXmlVisitor *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlStylesheetReference::Accept",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlStylesheetReference::Accept",1,"TiXmlStylesheetReference const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlStylesheetReference::Accept",2,"TiXmlVisitor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlStylesheetReference,0))){
+    SWIG_fail_ptr("TiXmlStylesheetReference_accept",1,SWIGTYPE_p_TiXmlStylesheetReference);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlVisitor,0))){
+    SWIG_fail_ptr("TiXmlStylesheetReference_accept",2,SWIGTYPE_p_TiXmlVisitor);
+  }
+  
+  result = (bool)((TiXmlStylesheetReference const *)arg1)->Accept(arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_TiXmlStylesheetReference(void *obj) {
+TiXmlStylesheetReference *arg1 = (TiXmlStylesheetReference *) obj;
+delete arg1;
+}
+static swig_lua_method swig_TiXmlStylesheetReference_methods[] = {
+    {"type", _wrap_TiXmlStylesheetReference_type}, 
+    {"href", _wrap_TiXmlStylesheetReference_href}, 
+    {"clone", _wrap_TiXmlStylesheetReference_clone}, 
+    {"print", _wrap_TiXmlStylesheetReference_print}, 
+    {"parse", _wrap_TiXmlStylesheetReference_parse}, 
+    {"to_stylesheet_reference", _wrap_TiXmlStylesheetReference_to_stylesheet_reference}, 
+    {"accept", _wrap_TiXmlStylesheetReference_accept}, 
+    {0,0}
+};
+static swig_lua_attribute swig_TiXmlStylesheetReference_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_TiXmlStylesheetReference_bases[] = {0,0};
+static const char *swig_TiXmlStylesheetReference_base_names[] = {"TiXmlNode *",0};
+static swig_lua_class _wrap_class_TiXmlStylesheetReference = { "TiXmlStylesheetReference", &SWIGTYPE_p_TiXmlStylesheetReference,_wrap_new_TiXmlStylesheetReference, swig_delete_TiXmlStylesheetReference, swig_TiXmlStylesheetReference_methods, swig_TiXmlStylesheetReference_attributes, swig_TiXmlStylesheetReference_bases, swig_TiXmlStylesheetReference_base_names };
+
+static int _wrap_new_TiXmlUnknown__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlUnknown *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlUnknown::TiXmlUnknown",0,0)
+  result = (TiXmlUnknown *)new TiXmlUnknown();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlUnknown,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlUnknown__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlUnknown *arg1 = 0 ;
+  TiXmlUnknown *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlUnknown::TiXmlUnknown",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("TiXmlUnknown::TiXmlUnknown",1,"TiXmlUnknown const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlUnknown,0))){
+    SWIG_fail_ptr("new_TiXmlUnknown",1,SWIGTYPE_p_TiXmlUnknown);
+  }
+  
+  result = (TiXmlUnknown *)new TiXmlUnknown((TiXmlUnknown const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlUnknown,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlUnknown(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 0) {
+    return _wrap_new_TiXmlUnknown__SWIG_0(L);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlUnknown, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_new_TiXmlUnknown__SWIG_1(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_TiXmlUnknown'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlUnknown::TiXmlUnknown()\n"
+    "    TiXmlUnknown::TiXmlUnknown(TiXmlUnknown const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlUnknown_clone(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlUnknown *arg1 = (TiXmlUnknown *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlUnknown::Clone",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlUnknown::Clone",1,"TiXmlUnknown const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlUnknown,0))){
+    SWIG_fail_ptr("TiXmlUnknown_clone",1,SWIGTYPE_p_TiXmlUnknown);
+  }
+  
+  result = (TiXmlNode *)((TiXmlUnknown const *)arg1)->Clone();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlUnknown_print(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlUnknown *arg1 = (TiXmlUnknown *) 0 ;
+  FILE *arg2 = (FILE *) 0 ;
+  int arg3 ;
+  
+  SWIG_check_num_args("TiXmlUnknown::Print",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlUnknown::Print",1,"TiXmlUnknown const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlUnknown::Print",2,"FILE *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlUnknown::Print",3,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlUnknown,0))){
+    SWIG_fail_ptr("TiXmlUnknown_print",1,SWIGTYPE_p_TiXmlUnknown);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_FILE,0))){
+    SWIG_fail_ptr("TiXmlUnknown_print",2,SWIGTYPE_p_FILE);
+  }
+  
+  arg3 = (int)lua_tonumber(L, 3);
+  ((TiXmlUnknown const *)arg1)->Print(arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlUnknown_parse(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlUnknown *arg1 = (TiXmlUnknown *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlParsingData *arg3 = (TiXmlParsingData *) 0 ;
+  TiXmlEncoding arg4 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlUnknown::Parse",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlUnknown::Parse",1,"TiXmlUnknown *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlUnknown::Parse",2,"char const *");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlUnknown::Parse",3,"TiXmlParsingData *");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("TiXmlUnknown::Parse",4,"TiXmlEncoding");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlUnknown,0))){
+    SWIG_fail_ptr("TiXmlUnknown_parse",1,SWIGTYPE_p_TiXmlUnknown);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlParsingData,0))){
+    SWIG_fail_ptr("TiXmlUnknown_parse",3,SWIGTYPE_p_TiXmlParsingData);
+  }
+  
+  arg4 = (TiXmlEncoding)(int)lua_tonumber(L, 4);
+  result = (char *)(arg1)->Parse((char const *)arg2,arg3,arg4);
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlUnknown_to_unknown__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlUnknown *arg1 = (TiXmlUnknown *) 0 ;
+  TiXmlUnknown *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlUnknown::ToUnknown",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlUnknown::ToUnknown",1,"TiXmlUnknown const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlUnknown,0))){
+    SWIG_fail_ptr("TiXmlUnknown_to_unknown",1,SWIGTYPE_p_TiXmlUnknown);
+  }
+  
+  result = (TiXmlUnknown *)((TiXmlUnknown const *)arg1)->ToUnknown();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlUnknown,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlUnknown_to_unknown__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlUnknown *arg1 = (TiXmlUnknown *) 0 ;
+  TiXmlUnknown *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlUnknown::ToUnknown",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlUnknown::ToUnknown",1,"TiXmlUnknown *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlUnknown,0))){
+    SWIG_fail_ptr("TiXmlUnknown_to_unknown",1,SWIGTYPE_p_TiXmlUnknown);
+  }
+  
+  result = (TiXmlUnknown *)(arg1)->ToUnknown();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlUnknown,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlUnknown_to_unknown(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlUnknown, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlUnknown_to_unknown__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlUnknown, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlUnknown_to_unknown__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlUnknown_to_unknown'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlUnknown::ToUnknown() const\n"
+    "    TiXmlUnknown::ToUnknown()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlUnknown_accept(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlUnknown *arg1 = (TiXmlUnknown *) 0 ;
+  TiXmlVisitor *arg2 = (TiXmlVisitor *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlUnknown::Accept",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlUnknown::Accept",1,"TiXmlUnknown const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlUnknown::Accept",2,"TiXmlVisitor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlUnknown,0))){
+    SWIG_fail_ptr("TiXmlUnknown_accept",1,SWIGTYPE_p_TiXmlUnknown);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlVisitor,0))){
+    SWIG_fail_ptr("TiXmlUnknown_accept",2,SWIGTYPE_p_TiXmlVisitor);
+  }
+  
+  result = (bool)((TiXmlUnknown const *)arg1)->Accept(arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_TiXmlUnknown(void *obj) {
+TiXmlUnknown *arg1 = (TiXmlUnknown *) obj;
+delete arg1;
+}
+static swig_lua_method swig_TiXmlUnknown_methods[] = {
+    {"clone", _wrap_TiXmlUnknown_clone}, 
+    {"print", _wrap_TiXmlUnknown_print}, 
+    {"parse", _wrap_TiXmlUnknown_parse}, 
+    {"to_unknown", _wrap_TiXmlUnknown_to_unknown}, 
+    {"accept", _wrap_TiXmlUnknown_accept}, 
+    {0,0}
+};
+static swig_lua_attribute swig_TiXmlUnknown_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_TiXmlUnknown_bases[] = {0,0};
+static const char *swig_TiXmlUnknown_base_names[] = {"TiXmlNode *",0};
+static swig_lua_class _wrap_class_TiXmlUnknown = { "TiXmlUnknown", &SWIGTYPE_p_TiXmlUnknown,_wrap_new_TiXmlUnknown, swig_delete_TiXmlUnknown, swig_TiXmlUnknown_methods, swig_TiXmlUnknown_attributes, swig_TiXmlUnknown_bases, swig_TiXmlUnknown_base_names };
+
+static int _wrap_new_TiXmlDocument__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDocument::TiXmlDocument",0,0)
+  result = (TiXmlDocument *)new TiXmlDocument();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlDocument,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlDocument__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  char *arg1 = (char *) 0 ;
+  TiXmlDocument *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDocument::TiXmlDocument",1,1)
+  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("TiXmlDocument::TiXmlDocument",1,"char const *");
+  arg1 = (char *)lua_tostring(L, 1);
+  result = (TiXmlDocument *)new TiXmlDocument((char const *)arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlDocument,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlDocument__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = 0 ;
+  std::string temp1 ;
+  TiXmlDocument *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDocument::TiXmlDocument",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("TiXmlDocument::TiXmlDocument",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
+  result = (TiXmlDocument *)new TiXmlDocument((std::string const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlDocument,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlDocument__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = 0 ;
+  TiXmlDocument *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDocument::TiXmlDocument",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("TiXmlDocument::TiXmlDocument",1,"TiXmlDocument const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("new_TiXmlDocument",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (TiXmlDocument *)new TiXmlDocument((TiXmlDocument const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlDocument,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlDocument(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 0) {
+    return _wrap_new_TiXmlDocument__SWIG_0(L);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_new_TiXmlDocument__SWIG_3(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      _v = lua_isstring(L,argv[0]);
+    }
+    if (_v) {
+      return _wrap_new_TiXmlDocument__SWIG_2(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      _v = SWIG_lua_isnilstring(L,argv[0]);
+    }
+    if (_v) {
+      return _wrap_new_TiXmlDocument__SWIG_1(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_TiXmlDocument'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlDocument::TiXmlDocument()\n"
+    "    TiXmlDocument::TiXmlDocument(char const *)\n"
+    "    TiXmlDocument::TiXmlDocument(std::string const &)\n"
+    "    TiXmlDocument::TiXmlDocument(TiXmlDocument const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlDocument_load_file__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  TiXmlEncoding arg2 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlDocument::LoadFile",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::LoadFile",1,"TiXmlDocument *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("TiXmlDocument::LoadFile",2,"TiXmlEncoding");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_load_file",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  arg2 = (TiXmlEncoding)(int)lua_tonumber(L, 2);
+  result = (bool)(arg1)->LoadFile(arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_load_file__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlDocument::LoadFile",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::LoadFile",1,"TiXmlDocument *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_load_file",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (bool)(arg1)->LoadFile();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_save_file__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlDocument::SaveFile",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::SaveFile",1,"TiXmlDocument const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_save_file",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (bool)((TiXmlDocument const *)arg1)->SaveFile();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_load_file__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlEncoding arg3 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlDocument::LoadFile",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::LoadFile",1,"TiXmlDocument *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlDocument::LoadFile",2,"char const *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlDocument::LoadFile",3,"TiXmlEncoding");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_load_file",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (TiXmlEncoding)(int)lua_tonumber(L, 3);
+  result = (bool)(arg1)->LoadFile((char const *)arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_load_file__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  char *arg2 = (char *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlDocument::LoadFile",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::LoadFile",1,"TiXmlDocument *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlDocument::LoadFile",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_load_file",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (bool)(arg1)->LoadFile((char const *)arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_save_file__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  char *arg2 = (char *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlDocument::SaveFile",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::SaveFile",1,"TiXmlDocument const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlDocument::SaveFile",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_save_file",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (bool)((TiXmlDocument const *)arg1)->SaveFile((char const *)arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_load_file__SWIG_4(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  FILE *arg2 = (FILE *) 0 ;
+  TiXmlEncoding arg3 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlDocument::LoadFile",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::LoadFile",1,"TiXmlDocument *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlDocument::LoadFile",2,"FILE *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlDocument::LoadFile",3,"TiXmlEncoding");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_load_file",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_FILE,0))){
+    SWIG_fail_ptr("TiXmlDocument_load_file",2,SWIGTYPE_p_FILE);
+  }
+  
+  arg3 = (TiXmlEncoding)(int)lua_tonumber(L, 3);
+  result = (bool)(arg1)->LoadFile(arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_load_file__SWIG_5(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  FILE *arg2 = (FILE *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlDocument::LoadFile",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::LoadFile",1,"TiXmlDocument *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlDocument::LoadFile",2,"FILE *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_load_file",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_FILE,0))){
+    SWIG_fail_ptr("TiXmlDocument_load_file",2,SWIGTYPE_p_FILE);
+  }
+  
+  result = (bool)(arg1)->LoadFile(arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_save_file__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  FILE *arg2 = (FILE *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlDocument::SaveFile",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::SaveFile",1,"TiXmlDocument const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlDocument::SaveFile",2,"FILE *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_save_file",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_FILE,0))){
+    SWIG_fail_ptr("TiXmlDocument_save_file",2,SWIGTYPE_p_FILE);
+  }
+  
+  result = (bool)((TiXmlDocument const *)arg1)->SaveFile(arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_load_file__SWIG_6(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  std::string *arg2 = 0 ;
+  TiXmlEncoding arg3 ;
+  std::string temp2 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlDocument::LoadFile",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::LoadFile",1,"TiXmlDocument *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlDocument::LoadFile",2,"std::string const &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlDocument::LoadFile",3,"TiXmlEncoding");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_load_file",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  arg3 = (TiXmlEncoding)(int)lua_tonumber(L, 3);
+  result = (bool)(arg1)->LoadFile((std::string const &)*arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_load_file__SWIG_7(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlDocument::LoadFile",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::LoadFile",1,"TiXmlDocument *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlDocument::LoadFile",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_load_file",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (bool)(arg1)->LoadFile((std::string const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_load_file(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlDocument_load_file__SWIG_1(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_FILE, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlDocument_load_file__SWIG_5(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isnumber(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlDocument_load_file__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlDocument_load_file__SWIG_3(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlDocument_load_file__SWIG_7(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_FILE, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_TiXmlDocument_load_file__SWIG_4(L);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_TiXmlDocument_load_file__SWIG_6(L);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_TiXmlDocument_load_file__SWIG_2(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlDocument_load_file'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlDocument::LoadFile(TiXmlEncoding)\n"
+    "    TiXmlDocument::LoadFile()\n"
+    "    TiXmlDocument::LoadFile(char const *,TiXmlEncoding)\n"
+    "    TiXmlDocument::LoadFile(char const *)\n"
+    "    TiXmlDocument::LoadFile(FILE *,TiXmlEncoding)\n"
+    "    TiXmlDocument::LoadFile(FILE *)\n"
+    "    TiXmlDocument::LoadFile(std::string const &,TiXmlEncoding)\n"
+    "    TiXmlDocument::LoadFile(std::string const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlDocument_save_file__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlDocument::SaveFile",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::SaveFile",1,"TiXmlDocument const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlDocument::SaveFile",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_save_file",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (bool)((TiXmlDocument const *)arg1)->SaveFile((std::string const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_save_file(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlDocument_save_file__SWIG_0(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_FILE, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlDocument_save_file__SWIG_2(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlDocument_save_file__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlDocument_save_file__SWIG_3(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlDocument_save_file'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlDocument::SaveFile() const\n"
+    "    TiXmlDocument::SaveFile(char const *) const\n"
+    "    TiXmlDocument::SaveFile(FILE *) const\n"
+    "    TiXmlDocument::SaveFile(std::string const &) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlDocument_parse__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlParsingData *arg3 = (TiXmlParsingData *) 0 ;
+  TiXmlEncoding arg4 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDocument::Parse",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::Parse",1,"TiXmlDocument *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlDocument::Parse",2,"char const *");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlDocument::Parse",3,"TiXmlParsingData *");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("TiXmlDocument::Parse",4,"TiXmlEncoding");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_parse",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlParsingData,0))){
+    SWIG_fail_ptr("TiXmlDocument_parse",3,SWIGTYPE_p_TiXmlParsingData);
+  }
+  
+  arg4 = (TiXmlEncoding)(int)lua_tonumber(L, 4);
+  result = (char *)(arg1)->Parse((char const *)arg2,arg3,arg4);
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_parse__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlParsingData *arg3 = (TiXmlParsingData *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDocument::Parse",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::Parse",1,"TiXmlDocument *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlDocument::Parse",2,"char const *");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlDocument::Parse",3,"TiXmlParsingData *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_parse",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlParsingData,0))){
+    SWIG_fail_ptr("TiXmlDocument_parse",3,SWIGTYPE_p_TiXmlParsingData);
+  }
+  
+  result = (char *)(arg1)->Parse((char const *)arg2,arg3);
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_parse__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  char *arg2 = (char *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDocument::Parse",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::Parse",1,"TiXmlDocument *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlDocument::Parse",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_parse",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (char *)(arg1)->Parse((char const *)arg2);
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_parse(lua_State* L) {
+  int argc;
+  int argv[5]={
+    1,2,3,4,5
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlDocument_parse__SWIG_2(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_TiXmlParsingData, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          return _wrap_TiXmlDocument_parse__SWIG_1(L);
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_TiXmlParsingData, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          {
+            _v = lua_isnumber(L,argv[3]);
+          }
+          if (_v) {
+            return _wrap_TiXmlDocument_parse__SWIG_0(L);
+          }
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlDocument_parse'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlDocument::Parse(char const *,TiXmlParsingData *,TiXmlEncoding)\n"
+    "    TiXmlDocument::Parse(char const *,TiXmlParsingData *)\n"
+    "    TiXmlDocument::Parse(char const *)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlDocument_root_element__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDocument::RootElement",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::RootElement",1,"TiXmlDocument const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_root_element",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (TiXmlElement *)((TiXmlDocument const *)arg1)->RootElement();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_root_element__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDocument::RootElement",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::RootElement",1,"TiXmlDocument *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_root_element",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (TiXmlElement *)(arg1)->RootElement();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_root_element(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlDocument_root_element__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlDocument_root_element__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlDocument_root_element'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlDocument::RootElement() const\n"
+    "    TiXmlDocument::RootElement()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlDocument_error(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlDocument::Error",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::Error",1,"TiXmlDocument const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_error",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (bool)((TiXmlDocument const *)arg1)->Error();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_error_desc(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDocument::ErrorDesc",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::ErrorDesc",1,"TiXmlDocument const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_error_desc",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (char *)((TiXmlDocument const *)arg1)->ErrorDesc();
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_error_id(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("TiXmlDocument::ErrorId",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::ErrorId",1,"TiXmlDocument const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_error_id",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (int)((TiXmlDocument const *)arg1)->ErrorId();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_error_row(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("TiXmlDocument::ErrorRow",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::ErrorRow",1,"TiXmlDocument const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_error_row",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (int)((TiXmlDocument const *)arg1)->ErrorRow();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_error_col(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("TiXmlDocument::ErrorCol",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::ErrorCol",1,"TiXmlDocument const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_error_col",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (int)((TiXmlDocument const *)arg1)->ErrorCol();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_set_tab_size(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  int arg2 ;
+  
+  SWIG_check_num_args("TiXmlDocument::SetTabSize",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::SetTabSize",1,"TiXmlDocument *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("TiXmlDocument::SetTabSize",2,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_set_tab_size",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  arg2 = (int)lua_tonumber(L, 2);
+  (arg1)->SetTabSize(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_tab_size(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("TiXmlDocument::TabSize",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::TabSize",1,"TiXmlDocument const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_tab_size",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (int)((TiXmlDocument const *)arg1)->TabSize();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_clear_error(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  
+  SWIG_check_num_args("TiXmlDocument::ClearError",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::ClearError",1,"TiXmlDocument *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_clear_error",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  (arg1)->ClearError();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_print__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  
+  SWIG_check_num_args("TiXmlDocument::Print",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::Print",1,"TiXmlDocument const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_print",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  ((TiXmlDocument const *)arg1)->Print();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_print__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  FILE *arg2 = (FILE *) 0 ;
+  int arg3 ;
+  
+  SWIG_check_num_args("TiXmlDocument::Print",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::Print",1,"TiXmlDocument const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlDocument::Print",2,"FILE *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlDocument::Print",3,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_print",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_FILE,0))){
+    SWIG_fail_ptr("TiXmlDocument_print",2,SWIGTYPE_p_FILE);
+  }
+  
+  arg3 = (int)lua_tonumber(L, 3);
+  ((TiXmlDocument const *)arg1)->Print(arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_print__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  FILE *arg2 = (FILE *) 0 ;
+  
+  SWIG_check_num_args("TiXmlDocument::Print",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::Print",1,"TiXmlDocument const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlDocument::Print",2,"FILE *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_print",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_FILE,0))){
+    SWIG_fail_ptr("TiXmlDocument_print",2,SWIGTYPE_p_FILE);
+  }
+  
+  ((TiXmlDocument const *)arg1)->Print(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_print(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlDocument_print__SWIG_0(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_FILE, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlDocument_print__SWIG_2(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_FILE, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_TiXmlDocument_print__SWIG_1(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlDocument_print'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlDocument::Print() const\n"
+    "    TiXmlDocument::Print(FILE *,int) const\n"
+    "    TiXmlDocument::Print(FILE *) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlDocument_set_error(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  int arg2 ;
+  char *arg3 = (char *) 0 ;
+  TiXmlParsingData *arg4 = (TiXmlParsingData *) 0 ;
+  TiXmlEncoding arg5 ;
+  
+  SWIG_check_num_args("TiXmlDocument::SetError",5,5)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::SetError",1,"TiXmlDocument *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("TiXmlDocument::SetError",2,"int");
+  if(!SWIG_lua_isnilstring(L,3)) SWIG_fail_arg("TiXmlDocument::SetError",3,"char const *");
+  if(!SWIG_isptrtype(L,4)) SWIG_fail_arg("TiXmlDocument::SetError",4,"TiXmlParsingData *");
+  if(!lua_isnumber(L,5)) SWIG_fail_arg("TiXmlDocument::SetError",5,"TiXmlEncoding");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_set_error",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  arg2 = (int)lua_tonumber(L, 2);
+  arg3 = (char *)lua_tostring(L, 3);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&arg4,SWIGTYPE_p_TiXmlParsingData,0))){
+    SWIG_fail_ptr("TiXmlDocument_set_error",4,SWIGTYPE_p_TiXmlParsingData);
+  }
+  
+  arg5 = (TiXmlEncoding)(int)lua_tonumber(L, 5);
+  (arg1)->SetError(arg2,(char const *)arg3,arg4,arg5);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_to_document__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  TiXmlDocument *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDocument::ToDocument",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::ToDocument",1,"TiXmlDocument const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_to_document",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (TiXmlDocument *)((TiXmlDocument const *)arg1)->ToDocument();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlDocument,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_to_document__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  TiXmlDocument *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlDocument::ToDocument",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::ToDocument",1,"TiXmlDocument *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_to_document",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (TiXmlDocument *)(arg1)->ToDocument();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlDocument,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlDocument_to_document(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlDocument_to_document__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlDocument_to_document__SWIG_0(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlDocument_to_document'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlDocument::ToDocument() const\n"
+    "    TiXmlDocument::ToDocument()\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlDocument_accept(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  TiXmlVisitor *arg2 = (TiXmlVisitor *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlDocument::Accept",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlDocument::Accept",1,"TiXmlDocument const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("TiXmlDocument::Accept",2,"TiXmlVisitor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlDocument_accept",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlVisitor,0))){
+    SWIG_fail_ptr("TiXmlDocument_accept",2,SWIGTYPE_p_TiXmlVisitor);
+  }
+  
+  result = (bool)((TiXmlDocument const *)arg1)->Accept(arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_TiXmlDocument(void *obj) {
+TiXmlDocument *arg1 = (TiXmlDocument *) obj;
+delete arg1;
+}
+static swig_lua_method swig_TiXmlDocument_methods[] = {
+    {"load_file", _wrap_TiXmlDocument_load_file}, 
+    {"save_file", _wrap_TiXmlDocument_save_file}, 
+    {"parse", _wrap_TiXmlDocument_parse}, 
+    {"root_element", _wrap_TiXmlDocument_root_element}, 
+    {"error", _wrap_TiXmlDocument_error}, 
+    {"error_desc", _wrap_TiXmlDocument_error_desc}, 
+    {"error_id", _wrap_TiXmlDocument_error_id}, 
+    {"error_row", _wrap_TiXmlDocument_error_row}, 
+    {"error_col", _wrap_TiXmlDocument_error_col}, 
+    {"set_tab_size", _wrap_TiXmlDocument_set_tab_size}, 
+    {"tab_size", _wrap_TiXmlDocument_tab_size}, 
+    {"clear_error", _wrap_TiXmlDocument_clear_error}, 
+    {"print", _wrap_TiXmlDocument_print}, 
+    {"set_error", _wrap_TiXmlDocument_set_error}, 
+    {"to_document", _wrap_TiXmlDocument_to_document}, 
+    {"accept", _wrap_TiXmlDocument_accept}, 
+    {0,0}
+};
+static swig_lua_attribute swig_TiXmlDocument_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_TiXmlDocument_bases[] = {0,0};
+static const char *swig_TiXmlDocument_base_names[] = {"TiXmlNode *",0};
+static swig_lua_class _wrap_class_TiXmlDocument = { "TiXmlDocument", &SWIGTYPE_p_TiXmlDocument,_wrap_new_TiXmlDocument, swig_delete_TiXmlDocument, swig_TiXmlDocument_methods, swig_TiXmlDocument_attributes, swig_TiXmlDocument_bases, swig_TiXmlDocument_base_names };
+
+static int _wrap_new_TiXmlHandle__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlNode *arg1 = (TiXmlNode *) 0 ;
+  TiXmlHandle *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlHandle::TiXmlHandle",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::TiXmlHandle",1,"TiXmlNode *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlNode,0))){
+    SWIG_fail_ptr("new_TiXmlHandle",1,SWIGTYPE_p_TiXmlNode);
+  }
+  
+  result = (TiXmlHandle *)new TiXmlHandle(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlHandle,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlHandle__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = 0 ;
+  TiXmlHandle *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlHandle::TiXmlHandle",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("TiXmlHandle::TiXmlHandle",1,"TiXmlHandle const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("new_TiXmlHandle",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  result = (TiXmlHandle *)new TiXmlHandle((TiXmlHandle const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlHandle,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_TiXmlHandle(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlNode, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_new_TiXmlHandle__SWIG_0(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlHandle, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_new_TiXmlHandle__SWIG_1(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_TiXmlHandle'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlHandle::TiXmlHandle(TiXmlNode *)\n"
+    "    TiXmlHandle::TiXmlHandle(TiXmlHandle const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlHandle_first_child__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  SwigValueWrapper< TiXmlHandle > result;
+  
+  SWIG_check_num_args("TiXmlHandle::FirstChild",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::FirstChild",1,"TiXmlHandle const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_first_child",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  result = ((TiXmlHandle const *)arg1)->FirstChild();
+  {
+    TiXmlHandle * resultptr = new TiXmlHandle((const TiXmlHandle &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_TiXmlHandle,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_first_child__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  char *arg2 = (char *) 0 ;
+  SwigValueWrapper< TiXmlHandle > result;
+  
+  SWIG_check_num_args("TiXmlHandle::FirstChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::FirstChild",1,"TiXmlHandle const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlHandle::FirstChild",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_first_child",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = ((TiXmlHandle const *)arg1)->FirstChild((char const *)arg2);
+  {
+    TiXmlHandle * resultptr = new TiXmlHandle((const TiXmlHandle &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_TiXmlHandle,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_first_child_element__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  SwigValueWrapper< TiXmlHandle > result;
+  
+  SWIG_check_num_args("TiXmlHandle::FirstChildElement",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::FirstChildElement",1,"TiXmlHandle const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_first_child_element",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  result = ((TiXmlHandle const *)arg1)->FirstChildElement();
+  {
+    TiXmlHandle * resultptr = new TiXmlHandle((const TiXmlHandle &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_TiXmlHandle,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_first_child_element__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  char *arg2 = (char *) 0 ;
+  SwigValueWrapper< TiXmlHandle > result;
+  
+  SWIG_check_num_args("TiXmlHandle::FirstChildElement",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::FirstChildElement",1,"TiXmlHandle const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlHandle::FirstChildElement",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_first_child_element",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = ((TiXmlHandle const *)arg1)->FirstChildElement((char const *)arg2);
+  {
+    TiXmlHandle * resultptr = new TiXmlHandle((const TiXmlHandle &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_TiXmlHandle,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_child__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  char *arg2 = (char *) 0 ;
+  int arg3 ;
+  SwigValueWrapper< TiXmlHandle > result;
+  
+  SWIG_check_num_args("TiXmlHandle::Child",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::Child",1,"TiXmlHandle const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlHandle::Child",2,"char const *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlHandle::Child",3,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_child",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (int)lua_tonumber(L, 3);
+  result = ((TiXmlHandle const *)arg1)->Child((char const *)arg2,arg3);
+  {
+    TiXmlHandle * resultptr = new TiXmlHandle((const TiXmlHandle &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_TiXmlHandle,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_child__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  int arg2 ;
+  SwigValueWrapper< TiXmlHandle > result;
+  
+  SWIG_check_num_args("TiXmlHandle::Child",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::Child",1,"TiXmlHandle const *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("TiXmlHandle::Child",2,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_child",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  arg2 = (int)lua_tonumber(L, 2);
+  result = ((TiXmlHandle const *)arg1)->Child(arg2);
+  {
+    TiXmlHandle * resultptr = new TiXmlHandle((const TiXmlHandle &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_TiXmlHandle,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_child_element__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  char *arg2 = (char *) 0 ;
+  int arg3 ;
+  SwigValueWrapper< TiXmlHandle > result;
+  
+  SWIG_check_num_args("TiXmlHandle::ChildElement",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::ChildElement",1,"TiXmlHandle const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlHandle::ChildElement",2,"char const *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlHandle::ChildElement",3,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_child_element",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (int)lua_tonumber(L, 3);
+  result = ((TiXmlHandle const *)arg1)->ChildElement((char const *)arg2,arg3);
+  {
+    TiXmlHandle * resultptr = new TiXmlHandle((const TiXmlHandle &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_TiXmlHandle,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_child_element__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  int arg2 ;
+  SwigValueWrapper< TiXmlHandle > result;
+  
+  SWIG_check_num_args("TiXmlHandle::ChildElement",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::ChildElement",1,"TiXmlHandle const *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("TiXmlHandle::ChildElement",2,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_child_element",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  arg2 = (int)lua_tonumber(L, 2);
+  result = ((TiXmlHandle const *)arg1)->ChildElement(arg2);
+  {
+    TiXmlHandle * resultptr = new TiXmlHandle((const TiXmlHandle &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_TiXmlHandle,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_first_child__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  SwigValueWrapper< TiXmlHandle > result;
+  
+  SWIG_check_num_args("TiXmlHandle::FirstChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::FirstChild",1,"TiXmlHandle const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlHandle::FirstChild",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_first_child",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = ((TiXmlHandle const *)arg1)->FirstChild((std::string const &)*arg2);
+  {
+    TiXmlHandle * resultptr = new TiXmlHandle((const TiXmlHandle &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_TiXmlHandle,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_first_child(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlHandle, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlHandle_first_child__SWIG_0(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlHandle, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlHandle_first_child__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlHandle, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlHandle_first_child__SWIG_2(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlHandle_first_child'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlHandle::FirstChild() const\n"
+    "    TiXmlHandle::FirstChild(char const *) const\n"
+    "    TiXmlHandle::FirstChild(std::string const &) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlHandle_first_child_element__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  SwigValueWrapper< TiXmlHandle > result;
+  
+  SWIG_check_num_args("TiXmlHandle::FirstChildElement",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::FirstChildElement",1,"TiXmlHandle const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlHandle::FirstChildElement",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_first_child_element",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = ((TiXmlHandle const *)arg1)->FirstChildElement((std::string const &)*arg2);
+  {
+    TiXmlHandle * resultptr = new TiXmlHandle((const TiXmlHandle &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_TiXmlHandle,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_first_child_element(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlHandle, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_TiXmlHandle_first_child_element__SWIG_0(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlHandle, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlHandle_first_child_element__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlHandle, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlHandle_first_child_element__SWIG_2(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlHandle_first_child_element'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlHandle::FirstChildElement() const\n"
+    "    TiXmlHandle::FirstChildElement(char const *) const\n"
+    "    TiXmlHandle::FirstChildElement(std::string const &) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlHandle_child__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  std::string *arg2 = 0 ;
+  int arg3 ;
+  std::string temp2 ;
+  SwigValueWrapper< TiXmlHandle > result;
+  
+  SWIG_check_num_args("TiXmlHandle::Child",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::Child",1,"TiXmlHandle const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlHandle::Child",2,"std::string const &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlHandle::Child",3,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_child",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  arg3 = (int)lua_tonumber(L, 3);
+  result = ((TiXmlHandle const *)arg1)->Child((std::string const &)*arg2,arg3);
+  {
+    TiXmlHandle * resultptr = new TiXmlHandle((const TiXmlHandle &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_TiXmlHandle,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_child(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlHandle, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isnumber(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlHandle_child__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlHandle, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_TiXmlHandle_child__SWIG_0(L);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlHandle, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_TiXmlHandle_child__SWIG_2(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlHandle_child'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlHandle::Child(char const *,int) const\n"
+    "    TiXmlHandle::Child(int) const\n"
+    "    TiXmlHandle::Child(std::string const &,int) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlHandle_child_element__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  std::string *arg2 = 0 ;
+  int arg3 ;
+  std::string temp2 ;
+  SwigValueWrapper< TiXmlHandle > result;
+  
+  SWIG_check_num_args("TiXmlHandle::ChildElement",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::ChildElement",1,"TiXmlHandle const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("TiXmlHandle::ChildElement",2,"std::string const &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("TiXmlHandle::ChildElement",3,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_child_element",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  arg3 = (int)lua_tonumber(L, 3);
+  result = ((TiXmlHandle const *)arg1)->ChildElement((std::string const &)*arg2,arg3);
+  {
+    TiXmlHandle * resultptr = new TiXmlHandle((const TiXmlHandle &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_TiXmlHandle,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_child_element(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlHandle, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isnumber(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_TiXmlHandle_child_element__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlHandle, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_TiXmlHandle_child_element__SWIG_0(L);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlHandle, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_TiXmlHandle_child_element__SWIG_2(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlHandle_child_element'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlHandle::ChildElement(char const *,int) const\n"
+    "    TiXmlHandle::ChildElement(int) const\n"
+    "    TiXmlHandle::ChildElement(std::string const &,int) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlHandle_to_node(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlHandle::ToNode",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::ToNode",1,"TiXmlHandle const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_to_node",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  result = (TiXmlNode *)((TiXmlHandle const *)arg1)->ToNode();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_to_element(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlHandle::ToElement",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::ToElement",1,"TiXmlHandle const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_to_element",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  result = (TiXmlElement *)((TiXmlHandle const *)arg1)->ToElement();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_to_text(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  TiXmlText *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlHandle::ToText",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::ToText",1,"TiXmlHandle const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_to_text",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  result = (TiXmlText *)((TiXmlHandle const *)arg1)->ToText();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlText,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_to_unknown(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  TiXmlUnknown *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlHandle::ToUnknown",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::ToUnknown",1,"TiXmlHandle const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_to_unknown",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  result = (TiXmlUnknown *)((TiXmlHandle const *)arg1)->ToUnknown();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlUnknown,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_node(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  TiXmlNode *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlHandle::Node",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::Node",1,"TiXmlHandle const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_node",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  result = (TiXmlNode *)((TiXmlHandle const *)arg1)->Node();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlNode,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_element(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  TiXmlElement *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlHandle::Element",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::Element",1,"TiXmlHandle const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_element",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  result = (TiXmlElement *)((TiXmlHandle const *)arg1)->Element();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlElement,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_text(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  TiXmlText *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlHandle::Text",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::Text",1,"TiXmlHandle const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_text",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  result = (TiXmlText *)((TiXmlHandle const *)arg1)->Text();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlText,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlHandle_unknown(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlHandle *arg1 = (TiXmlHandle *) 0 ;
+  TiXmlUnknown *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlHandle::Unknown",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlHandle::Unknown",1,"TiXmlHandle const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlHandle,0))){
+    SWIG_fail_ptr("TiXmlHandle_unknown",1,SWIGTYPE_p_TiXmlHandle);
+  }
+  
+  result = (TiXmlUnknown *)((TiXmlHandle const *)arg1)->Unknown();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlUnknown,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_TiXmlHandle(void *obj) {
+TiXmlHandle *arg1 = (TiXmlHandle *) obj;
+delete arg1;
+}
+static swig_lua_method swig_TiXmlHandle_methods[] = {
+    {"first_child", _wrap_TiXmlHandle_first_child}, 
+    {"first_child_element", _wrap_TiXmlHandle_first_child_element}, 
+    {"child", _wrap_TiXmlHandle_child}, 
+    {"child_element", _wrap_TiXmlHandle_child_element}, 
+    {"to_node", _wrap_TiXmlHandle_to_node}, 
+    {"to_element", _wrap_TiXmlHandle_to_element}, 
+    {"to_text", _wrap_TiXmlHandle_to_text}, 
+    {"to_unknown", _wrap_TiXmlHandle_to_unknown}, 
+    {"node", _wrap_TiXmlHandle_node}, 
+    {"element", _wrap_TiXmlHandle_element}, 
+    {"text", _wrap_TiXmlHandle_text}, 
+    {"unknown", _wrap_TiXmlHandle_unknown}, 
+    {0,0}
+};
+static swig_lua_attribute swig_TiXmlHandle_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_TiXmlHandle_bases[] = {0};
+static const char *swig_TiXmlHandle_base_names[] = {0};
+static swig_lua_class _wrap_class_TiXmlHandle = { "TiXmlHandle", &SWIGTYPE_p_TiXmlHandle,_wrap_new_TiXmlHandle, swig_delete_TiXmlHandle, swig_TiXmlHandle_methods, swig_TiXmlHandle_attributes, swig_TiXmlHandle_bases, swig_TiXmlHandle_base_names };
+
+static int _wrap_new_TiXmlPrinter(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlPrinter *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlPrinter::TiXmlPrinter",0,0)
+  result = (TiXmlPrinter *)new TiXmlPrinter();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TiXmlPrinter,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlPrinter_visit_enter__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlPrinter *arg1 = (TiXmlPrinter *) 0 ;
+  TiXmlDocument *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlPrinter::VisitEnter",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlPrinter::VisitEnter",1,"TiXmlPrinter *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlPrinter::VisitEnter",2,"TiXmlDocument const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlPrinter,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit_enter",1,SWIGTYPE_p_TiXmlPrinter);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit_enter",2,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (bool)(arg1)->VisitEnter((TiXmlDocument const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlPrinter_visit_exit__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlPrinter *arg1 = (TiXmlPrinter *) 0 ;
+  TiXmlDocument *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlPrinter::VisitExit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlPrinter::VisitExit",1,"TiXmlPrinter *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlPrinter::VisitExit",2,"TiXmlDocument const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlPrinter,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit_exit",1,SWIGTYPE_p_TiXmlPrinter);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit_exit",2,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (bool)(arg1)->VisitExit((TiXmlDocument const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlPrinter_visit_enter__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlPrinter *arg1 = (TiXmlPrinter *) 0 ;
+  TiXmlElement *arg2 = 0 ;
+  TiXmlAttribute *arg3 = (TiXmlAttribute *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlPrinter::VisitEnter",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlPrinter::VisitEnter",1,"TiXmlPrinter *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlPrinter::VisitEnter",2,"TiXmlElement const &");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("TiXmlPrinter::VisitEnter",3,"TiXmlAttribute const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlPrinter,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit_enter",1,SWIGTYPE_p_TiXmlPrinter);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit_enter",2,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit_enter",3,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  result = (bool)(arg1)->VisitEnter((TiXmlElement const &)*arg2,(TiXmlAttribute const *)arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlPrinter_visit_enter(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlPrinter, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlPrinter_visit_enter__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlPrinter, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_TiXmlAttribute, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          return _wrap_TiXmlPrinter_visit_enter__SWIG_1(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlPrinter_visit_enter'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlPrinter::VisitEnter(TiXmlDocument const &)\n"
+    "    TiXmlPrinter::VisitEnter(TiXmlElement const &,TiXmlAttribute const *)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlPrinter_visit_exit__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlPrinter *arg1 = (TiXmlPrinter *) 0 ;
+  TiXmlElement *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlPrinter::VisitExit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlPrinter::VisitExit",1,"TiXmlPrinter *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlPrinter::VisitExit",2,"TiXmlElement const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlPrinter,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit_exit",1,SWIGTYPE_p_TiXmlPrinter);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit_exit",2,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  result = (bool)(arg1)->VisitExit((TiXmlElement const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlPrinter_visit_exit(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlPrinter, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlPrinter_visit_exit__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlPrinter, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlPrinter_visit_exit__SWIG_1(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlPrinter_visit_exit'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlPrinter::VisitExit(TiXmlDocument const &)\n"
+    "    TiXmlPrinter::VisitExit(TiXmlElement const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlPrinter_visit__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlPrinter *arg1 = (TiXmlPrinter *) 0 ;
+  TiXmlDeclaration *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlPrinter::Visit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlPrinter::Visit",1,"TiXmlPrinter *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlPrinter::Visit",2,"TiXmlDeclaration const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlPrinter,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit",1,SWIGTYPE_p_TiXmlPrinter);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlDeclaration,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit",2,SWIGTYPE_p_TiXmlDeclaration);
+  }
+  
+  result = (bool)(arg1)->Visit((TiXmlDeclaration const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlPrinter_visit__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlPrinter *arg1 = (TiXmlPrinter *) 0 ;
+  TiXmlText *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlPrinter::Visit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlPrinter::Visit",1,"TiXmlPrinter *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlPrinter::Visit",2,"TiXmlText const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlPrinter,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit",1,SWIGTYPE_p_TiXmlPrinter);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlText,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit",2,SWIGTYPE_p_TiXmlText);
+  }
+  
+  result = (bool)(arg1)->Visit((TiXmlText const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlPrinter_visit__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlPrinter *arg1 = (TiXmlPrinter *) 0 ;
+  TiXmlComment *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlPrinter::Visit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlPrinter::Visit",1,"TiXmlPrinter *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlPrinter::Visit",2,"TiXmlComment const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlPrinter,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit",1,SWIGTYPE_p_TiXmlPrinter);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlComment,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit",2,SWIGTYPE_p_TiXmlComment);
+  }
+  
+  result = (bool)(arg1)->Visit((TiXmlComment const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlPrinter_visit__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlPrinter *arg1 = (TiXmlPrinter *) 0 ;
+  TiXmlUnknown *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlPrinter::Visit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlPrinter::Visit",1,"TiXmlPrinter *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlPrinter::Visit",2,"TiXmlUnknown const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlPrinter,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit",1,SWIGTYPE_p_TiXmlPrinter);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlUnknown,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit",2,SWIGTYPE_p_TiXmlUnknown);
+  }
+  
+  result = (bool)(arg1)->Visit((TiXmlUnknown const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlPrinter_visit__SWIG_4(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlPrinter *arg1 = (TiXmlPrinter *) 0 ;
+  TiXmlStylesheetReference *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("TiXmlPrinter::Visit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlPrinter::Visit",1,"TiXmlPrinter *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("TiXmlPrinter::Visit",2,"TiXmlStylesheetReference const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlPrinter,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit",1,SWIGTYPE_p_TiXmlPrinter);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlStylesheetReference,0))){
+    SWIG_fail_ptr("TiXmlPrinter_visit",2,SWIGTYPE_p_TiXmlStylesheetReference);
+  }
+  
+  result = (bool)(arg1)->Visit((TiXmlStylesheetReference const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlPrinter_visit(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlPrinter, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlDeclaration, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlPrinter_visit__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlPrinter, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlText, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlPrinter_visit__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlPrinter, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlComment, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlPrinter_visit__SWIG_2(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlPrinter, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlUnknown, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlPrinter_visit__SWIG_3(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlPrinter, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlStylesheetReference, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_TiXmlPrinter_visit__SWIG_4(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'TiXmlPrinter_visit'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    TiXmlPrinter::Visit(TiXmlDeclaration const &)\n"
+    "    TiXmlPrinter::Visit(TiXmlText const &)\n"
+    "    TiXmlPrinter::Visit(TiXmlComment const &)\n"
+    "    TiXmlPrinter::Visit(TiXmlUnknown const &)\n"
+    "    TiXmlPrinter::Visit(TiXmlStylesheetReference const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_TiXmlPrinter_set_indent(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlPrinter *arg1 = (TiXmlPrinter *) 0 ;
+  char *arg2 = (char *) 0 ;
+  
+  SWIG_check_num_args("TiXmlPrinter::SetIndent",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlPrinter::SetIndent",1,"TiXmlPrinter *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlPrinter::SetIndent",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlPrinter,0))){
+    SWIG_fail_ptr("TiXmlPrinter_set_indent",1,SWIGTYPE_p_TiXmlPrinter);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  (arg1)->SetIndent((char const *)arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlPrinter_indent(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlPrinter *arg1 = (TiXmlPrinter *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlPrinter::Indent",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlPrinter::Indent",1,"TiXmlPrinter *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlPrinter,0))){
+    SWIG_fail_ptr("TiXmlPrinter_indent",1,SWIGTYPE_p_TiXmlPrinter);
+  }
+  
+  result = (char *)(arg1)->Indent();
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlPrinter_set_line_break(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlPrinter *arg1 = (TiXmlPrinter *) 0 ;
+  char *arg2 = (char *) 0 ;
+  
+  SWIG_check_num_args("TiXmlPrinter::SetLineBreak",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlPrinter::SetLineBreak",1,"TiXmlPrinter *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("TiXmlPrinter::SetLineBreak",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlPrinter,0))){
+    SWIG_fail_ptr("TiXmlPrinter_set_line_break",1,SWIGTYPE_p_TiXmlPrinter);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  (arg1)->SetLineBreak((char const *)arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlPrinter_line_break(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlPrinter *arg1 = (TiXmlPrinter *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlPrinter::LineBreak",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlPrinter::LineBreak",1,"TiXmlPrinter *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlPrinter,0))){
+    SWIG_fail_ptr("TiXmlPrinter_line_break",1,SWIGTYPE_p_TiXmlPrinter);
+  }
+  
+  result = (char *)(arg1)->LineBreak();
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlPrinter_set_stream_printing(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlPrinter *arg1 = (TiXmlPrinter *) 0 ;
+  
+  SWIG_check_num_args("TiXmlPrinter::SetStreamPrinting",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlPrinter::SetStreamPrinting",1,"TiXmlPrinter *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlPrinter,0))){
+    SWIG_fail_ptr("TiXmlPrinter_set_stream_printing",1,SWIGTYPE_p_TiXmlPrinter);
+  }
+  
+  (arg1)->SetStreamPrinting();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlPrinter_cstr(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlPrinter *arg1 = (TiXmlPrinter *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlPrinter::CStr",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlPrinter::CStr",1,"TiXmlPrinter *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlPrinter,0))){
+    SWIG_fail_ptr("TiXmlPrinter_cstr",1,SWIGTYPE_p_TiXmlPrinter);
+  }
+  
+  result = (char *)(arg1)->CStr();
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlPrinter_size(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlPrinter *arg1 = (TiXmlPrinter *) 0 ;
+  size_t result;
+  
+  SWIG_check_num_args("TiXmlPrinter::Size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlPrinter::Size",1,"TiXmlPrinter *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlPrinter,0))){
+    SWIG_fail_ptr("TiXmlPrinter_size",1,SWIGTYPE_p_TiXmlPrinter);
+  }
+  
+  result = (arg1)->Size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_TiXmlPrinter_str(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlPrinter *arg1 = (TiXmlPrinter *) 0 ;
+  std::string *result = 0 ;
+  
+  SWIG_check_num_args("TiXmlPrinter::Str",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("TiXmlPrinter::Str",1,"TiXmlPrinter *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlPrinter,0))){
+    SWIG_fail_ptr("TiXmlPrinter_str",1,SWIGTYPE_p_TiXmlPrinter);
+  }
+  
+  result = (std::string *) &(arg1)->Str();
+  lua_pushlstring(L,result->data(),result->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_TiXmlPrinter(void *obj) {
+TiXmlPrinter *arg1 = (TiXmlPrinter *) obj;
+delete arg1;
+}
+static swig_lua_method swig_TiXmlPrinter_methods[] = {
+    {"visit_enter", _wrap_TiXmlPrinter_visit_enter}, 
+    {"visit_exit", _wrap_TiXmlPrinter_visit_exit}, 
+    {"visit", _wrap_TiXmlPrinter_visit}, 
+    {"set_indent", _wrap_TiXmlPrinter_set_indent}, 
+    {"indent", _wrap_TiXmlPrinter_indent}, 
+    {"set_line_break", _wrap_TiXmlPrinter_set_line_break}, 
+    {"line_break", _wrap_TiXmlPrinter_line_break}, 
+    {"set_stream_printing", _wrap_TiXmlPrinter_set_stream_printing}, 
+    {"cstr", _wrap_TiXmlPrinter_cstr}, 
+    {"size", _wrap_TiXmlPrinter_size}, 
+    {"str", _wrap_TiXmlPrinter_str}, 
+    {0,0}
+};
+static swig_lua_attribute swig_TiXmlPrinter_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_TiXmlPrinter_bases[] = {0,0};
+static const char *swig_TiXmlPrinter_base_names[] = {"TiXmlVisitor *",0};
+static swig_lua_class _wrap_class_TiXmlPrinter = { "TiXmlPrinter", &SWIGTYPE_p_TiXmlPrinter,_wrap_new_TiXmlPrinter, swig_delete_TiXmlPrinter, swig_TiXmlPrinter_methods, swig_TiXmlPrinter_attributes, swig_TiXmlPrinter_bases, swig_TiXmlPrinter_base_names };
+
+static int _wrap_Base_to_string(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Base *arg1 = (ticpp::Base *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  std::string result;
+  
+  SWIG_check_num_args("ticpp::Base::ToString",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Base::ToString",1,"ticpp::Base const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Base::ToString",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Base,0))){
+    SWIG_fail_ptr("Base_to_string",1,SWIGTYPE_p_ticpp__Base);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = ((ticpp::Base const *)arg1)->ToString((std::string const &)*arg2);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Base_from_string(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Base *arg1 = (ticpp::Base *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string *arg3 = (std::string *) 0 ;
+  std::string temp2 ;
+  
+  SWIG_check_num_args("ticpp::Base::FromString",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Base::FromString",1,"ticpp::Base const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Base::FromString",2,"std::string const &");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ticpp::Base::FromString",3,"std::string *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Base,0))){
+    SWIG_fail_ptr("Base_from_string",1,SWIGTYPE_p_ticpp__Base);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_std__string,0))){
+    SWIG_fail_ptr("Base_from_string",3,SWIGTYPE_p_std__string);
+  }
+  
+  ((ticpp::Base const *)arg1)->FromString((std::string const &)*arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Base_row(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Base *arg1 = (ticpp::Base *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("ticpp::Base::Row",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Base::Row",1,"ticpp::Base const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Base,0))){
+    SWIG_fail_ptr("Base_row",1,SWIGTYPE_p_ticpp__Base);
+  }
+  
+  result = (int)((ticpp::Base const *)arg1)->Row();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Base_column(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Base *arg1 = (ticpp::Base *) 0 ;
+  int result;
+  
+  SWIG_check_num_args("ticpp::Base::Column",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Base::Column",1,"ticpp::Base const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Base,0))){
+    SWIG_fail_ptr("Base_column",1,SWIGTYPE_p_ticpp__Base);
+  }
+  
+  result = (int)((ticpp::Base const *)arg1)->Column();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Base___eq(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Base *arg1 = (ticpp::Base *) 0 ;
+  ticpp::Base *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("ticpp::Base::operator ==",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Base::operator ==",1,"ticpp::Base const *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ticpp::Base::operator ==",2,"ticpp::Base const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Base,0))){
+    SWIG_fail_ptr("Base___eq",1,SWIGTYPE_p_ticpp__Base);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ticpp__Base,0))){
+    SWIG_fail_ptr("Base___eq",2,SWIGTYPE_p_ticpp__Base);
+  }
+  
+  result = (bool)((ticpp::Base const *)arg1)->operator ==((ticpp::Base const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Base_build_detailed_error_string(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Base *arg1 = (ticpp::Base *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("ticpp::Base::BuildDetailedErrorString",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Base::BuildDetailedErrorString",1,"ticpp::Base const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Base,0))){
+    SWIG_fail_ptr("Base_build_detailed_error_string",1,SWIGTYPE_p_ticpp__Base);
+  }
+  
+  result = ((ticpp::Base const *)arg1)->BuildDetailedErrorString();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_Base(void *obj) {
+ticpp::Base *arg1 = (ticpp::Base *) obj;
+delete arg1;
+}
+static swig_lua_method swig_ticpp_Base_methods[] = {
+    {"to_string", _wrap_Base_to_string}, 
+    {"from_string", _wrap_Base_from_string}, 
+    {"row", _wrap_Base_row}, 
+    {"column", _wrap_Base_column}, 
+    {"__eq", _wrap_Base___eq}, 
+    {"build_detailed_error_string", _wrap_Base_build_detailed_error_string}, 
+    {0,0}
+};
+static swig_lua_attribute swig_ticpp_Base_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_ticpp_Base_bases[] = {0};
+static const char *swig_ticpp_Base_base_names[] = {0};
+static swig_lua_class _wrap_class_ticpp_Base = { "Base", &SWIGTYPE_p_ticpp__Base,0, swig_delete_Base, swig_ticpp_Base_methods, swig_ticpp_Base_attributes, swig_ticpp_Base_bases, swig_ticpp_Base_base_names };
+
+static int _wrap_new_Attribute__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Attribute *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Attribute::Attribute",0,0)
+  result = (ticpp::Attribute *)new ticpp::Attribute();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Attribute,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Attribute__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp1 ;
+  std::string temp2 ;
+  ticpp::Attribute *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Attribute::Attribute",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ticpp::Attribute::Attribute",1,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Attribute::Attribute",2,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (ticpp::Attribute *)new ticpp::Attribute((std::string const &)*arg1,(std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Attribute,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Attribute__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlAttribute *arg1 = (TiXmlAttribute *) 0 ;
+  ticpp::Attribute *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Attribute::Attribute",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Attribute::Attribute",1,"TiXmlAttribute *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("new_Attribute",1,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  result = (ticpp::Attribute *)new ticpp::Attribute(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Attribute,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Attribute_value(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Attribute *arg1 = (ticpp::Attribute *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("ticpp::Attribute::Value",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Attribute::Value",1,"ticpp::Attribute const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Attribute,0))){
+    SWIG_fail_ptr("Attribute_value",1,SWIGTYPE_p_ticpp__Attribute);
+  }
+  
+  result = ((ticpp::Attribute const *)arg1)->Value();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Attribute_name(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Attribute *arg1 = (ticpp::Attribute *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("ticpp::Attribute::Name",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Attribute::Name",1,"ticpp::Attribute const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Attribute,0))){
+    SWIG_fail_ptr("Attribute_name",1,SWIGTYPE_p_ticpp__Attribute);
+  }
+  
+  result = ((ticpp::Attribute const *)arg1)->Name();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Attribute__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Attribute *arg1 = 0 ;
+  ticpp::Attribute *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Attribute::Attribute",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ticpp::Attribute::Attribute",1,"ticpp::Attribute const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Attribute,0))){
+    SWIG_fail_ptr("new_Attribute",1,SWIGTYPE_p_ticpp__Attribute);
+  }
+  
+  result = (ticpp::Attribute *)new ticpp::Attribute((ticpp::Attribute const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Attribute,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Attribute(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 0) {
+    return _wrap_new_Attribute__SWIG_0(L);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlAttribute, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_new_Attribute__SWIG_2(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Attribute, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_new_Attribute__SWIG_3(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      _v = lua_isstring(L,argv[0]);
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_new_Attribute__SWIG_1(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_Attribute'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Attribute::Attribute()\n"
+    "    ticpp::Attribute::Attribute(std::string const &,std::string const &)\n"
+    "    ticpp::Attribute::Attribute(TiXmlAttribute *)\n"
+    "    ticpp::Attribute::Attribute(ticpp::Attribute const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Attribute_next__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Attribute *arg1 = (ticpp::Attribute *) 0 ;
+  bool arg2 ;
+  ticpp::Attribute *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Attribute::Next",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Attribute::Next",1,"ticpp::Attribute const *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ticpp::Attribute::Next",2,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Attribute,0))){
+    SWIG_fail_ptr("Attribute_next",1,SWIGTYPE_p_ticpp__Attribute);
+  }
+  
+  arg2 = (lua_toboolean(L, 2)!=0);
+  result = (ticpp::Attribute *)((ticpp::Attribute const *)arg1)->Next(arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Attribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Attribute_next__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Attribute *arg1 = (ticpp::Attribute *) 0 ;
+  ticpp::Attribute *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Attribute::Next",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Attribute::Next",1,"ticpp::Attribute const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Attribute,0))){
+    SWIG_fail_ptr("Attribute_next",1,SWIGTYPE_p_ticpp__Attribute);
+  }
+  
+  result = (ticpp::Attribute *)((ticpp::Attribute const *)arg1)->Next();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Attribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Attribute_next(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Attribute, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_Attribute_next__SWIG_1(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Attribute, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isboolean(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Attribute_next__SWIG_0(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Attribute_next'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Attribute::Next(bool) const\n"
+    "    ticpp::Attribute::Next() const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Attribute_previous__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Attribute *arg1 = (ticpp::Attribute *) 0 ;
+  bool arg2 ;
+  ticpp::Attribute *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Attribute::Previous",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Attribute::Previous",1,"ticpp::Attribute const *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ticpp::Attribute::Previous",2,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Attribute,0))){
+    SWIG_fail_ptr("Attribute_previous",1,SWIGTYPE_p_ticpp__Attribute);
+  }
+  
+  arg2 = (lua_toboolean(L, 2)!=0);
+  result = (ticpp::Attribute *)((ticpp::Attribute const *)arg1)->Previous(arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Attribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Attribute_previous__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Attribute *arg1 = (ticpp::Attribute *) 0 ;
+  ticpp::Attribute *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Attribute::Previous",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Attribute::Previous",1,"ticpp::Attribute const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Attribute,0))){
+    SWIG_fail_ptr("Attribute_previous",1,SWIGTYPE_p_ticpp__Attribute);
+  }
+  
+  result = (ticpp::Attribute *)((ticpp::Attribute const *)arg1)->Previous();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Attribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Attribute_previous(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Attribute, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_Attribute_previous__SWIG_1(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Attribute, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isboolean(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Attribute_previous__SWIG_0(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Attribute_previous'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Attribute::Previous(bool) const\n"
+    "    ticpp::Attribute::Previous() const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Attribute_iterate_next(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Attribute *arg1 = (ticpp::Attribute *) 0 ;
+  std::string *arg2 = 0 ;
+  ticpp::Attribute **arg3 = (ticpp::Attribute **) 0 ;
+  std::string temp2 ;
+  
+  SWIG_check_num_args("ticpp::Attribute::IterateNext",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Attribute::IterateNext",1,"ticpp::Attribute const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Attribute::IterateNext",2,"std::string const &");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ticpp::Attribute::IterateNext",3,"ticpp::Attribute **");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Attribute,0))){
+    SWIG_fail_ptr("Attribute_iterate_next",1,SWIGTYPE_p_ticpp__Attribute);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_p_ticpp__Attribute,0))){
+    SWIG_fail_ptr("Attribute_iterate_next",3,SWIGTYPE_p_p_ticpp__Attribute);
+  }
+  
+  ((ticpp::Attribute const *)arg1)->IterateNext((std::string const &)*arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Attribute_iterate_previous(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Attribute *arg1 = (ticpp::Attribute *) 0 ;
+  std::string *arg2 = 0 ;
+  ticpp::Attribute **arg3 = (ticpp::Attribute **) 0 ;
+  std::string temp2 ;
+  
+  SWIG_check_num_args("ticpp::Attribute::IteratePrevious",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Attribute::IteratePrevious",1,"ticpp::Attribute const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Attribute::IteratePrevious",2,"std::string const &");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ticpp::Attribute::IteratePrevious",3,"ticpp::Attribute **");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Attribute,0))){
+    SWIG_fail_ptr("Attribute_iterate_previous",1,SWIGTYPE_p_ticpp__Attribute);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_p_ticpp__Attribute,0))){
+    SWIG_fail_ptr("Attribute_iterate_previous",3,SWIGTYPE_p_p_ticpp__Attribute);
+  }
+  
+  ((ticpp::Attribute const *)arg1)->IteratePrevious((std::string const &)*arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Attribute_print(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Attribute *arg1 = (ticpp::Attribute *) 0 ;
+  FILE *arg2 = (FILE *) 0 ;
+  int arg3 ;
+  
+  SWIG_check_num_args("ticpp::Attribute::Print",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Attribute::Print",1,"ticpp::Attribute const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ticpp::Attribute::Print",2,"FILE *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ticpp::Attribute::Print",3,"int");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Attribute,0))){
+    SWIG_fail_ptr("Attribute_print",1,SWIGTYPE_p_ticpp__Attribute);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_FILE,0))){
+    SWIG_fail_ptr("Attribute_print",2,SWIGTYPE_p_FILE);
+  }
+  
+  arg3 = (int)lua_tonumber(L, 3);
+  ((ticpp::Attribute const *)arg1)->Print(arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_Attribute(void *obj) {
+ticpp::Attribute *arg1 = (ticpp::Attribute *) obj;
+delete arg1;
+}
+static swig_lua_method swig_ticpp_Attribute_methods[] = {
+    {"value", _wrap_Attribute_value}, 
+    {"name", _wrap_Attribute_name}, 
+    {"next", _wrap_Attribute_next}, 
+    {"previous", _wrap_Attribute_previous}, 
+    {"iterate_next", _wrap_Attribute_iterate_next}, 
+    {"iterate_previous", _wrap_Attribute_iterate_previous}, 
+    {"print", _wrap_Attribute_print}, 
+    {0,0}
+};
+static swig_lua_attribute swig_ticpp_Attribute_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_ticpp_Attribute_bases[] = {0,0};
+static const char *swig_ticpp_Attribute_base_names[] = {"ticpp::Base *",0};
+static swig_lua_class _wrap_class_ticpp_Attribute = { "Attribute", &SWIGTYPE_p_ticpp__Attribute,_wrap_new_Attribute, swig_delete_Attribute, swig_ticpp_Attribute_methods, swig_ticpp_Attribute_attributes, swig_ticpp_Attribute_bases, swig_ticpp_Attribute_base_names };
+
+static int _wrap_Node_value(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("ticpp::Node::Value",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::Value",1,"ticpp::Node const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_value",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = ((ticpp::Node const *)arg1)->Value();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_clear(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::Clear",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::Clear",1,"ticpp::Node *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_clear",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  (arg1)->Clear();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_parent__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  bool arg2 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::Parent",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::Parent",1,"ticpp::Node const *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ticpp::Node::Parent",2,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_parent",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (lua_toboolean(L, 2)!=0);
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->Parent(arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_parent__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::Parent",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::Parent",1,"ticpp::Node const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_parent",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->Parent();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_parent(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_Node_parent__SWIG_1(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isboolean(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Node_parent__SWIG_0(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Node_parent'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Node::Parent(bool) const\n"
+    "    ticpp::Node::Parent() const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Node_first_child__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  bool arg2 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::FirstChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::FirstChild",1,"ticpp::Node const *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ticpp::Node::FirstChild",2,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_first_child",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (lua_toboolean(L, 2)!=0);
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->FirstChild(arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_first_child__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::FirstChild",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::FirstChild",1,"ticpp::Node const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_first_child",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->FirstChild();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_first_child__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  char *arg2 = (char *) 0 ;
+  bool arg3 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::FirstChild",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::FirstChild",1,"ticpp::Node const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ticpp::Node::FirstChild",2,"char const *");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ticpp::Node::FirstChild",3,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_first_child",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (lua_toboolean(L, 3)!=0);
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->FirstChild((char const *)arg2,arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_first_child__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  char *arg2 = (char *) 0 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::FirstChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::FirstChild",1,"ticpp::Node const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ticpp::Node::FirstChild",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_first_child",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->FirstChild((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_first_child(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_Node_first_child__SWIG_1(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isboolean(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Node_first_child__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Node_first_child__SWIG_3(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isboolean(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_Node_first_child__SWIG_2(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Node_first_child'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Node::FirstChild(bool) const\n"
+    "    ticpp::Node::FirstChild() const\n"
+    "    ticpp::Node::FirstChild(char const *,bool) const\n"
+    "    ticpp::Node::FirstChild(char const *) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Node_last_child__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  bool arg2 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::LastChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::LastChild",1,"ticpp::Node const *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ticpp::Node::LastChild",2,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_last_child",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (lua_toboolean(L, 2)!=0);
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->LastChild(arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_last_child__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::LastChild",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::LastChild",1,"ticpp::Node const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_last_child",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->LastChild();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_last_child__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  char *arg2 = (char *) 0 ;
+  bool arg3 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::LastChild",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::LastChild",1,"ticpp::Node const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ticpp::Node::LastChild",2,"char const *");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ticpp::Node::LastChild",3,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_last_child",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (lua_toboolean(L, 3)!=0);
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->LastChild((char const *)arg2,arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_last_child__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  char *arg2 = (char *) 0 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::LastChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::LastChild",1,"ticpp::Node const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ticpp::Node::LastChild",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_last_child",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->LastChild((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_last_child(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_Node_last_child__SWIG_1(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isboolean(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Node_last_child__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Node_last_child__SWIG_3(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isboolean(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_Node_last_child__SWIG_2(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Node_last_child'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Node::LastChild(bool) const\n"
+    "    ticpp::Node::LastChild() const\n"
+    "    ticpp::Node::LastChild(char const *,bool) const\n"
+    "    ticpp::Node::LastChild(char const *) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Node_iterate_children__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Node *arg2 = (ticpp::Node *) 0 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::IterateChildren",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::IterateChildren",1,"ticpp::Node const *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ticpp::Node::IterateChildren",2,"ticpp::Node *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_iterate_children",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_iterate_children",2,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->IterateChildren(arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_iterate_children__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  std::string *arg2 = 0 ;
+  ticpp::Node *arg3 = (ticpp::Node *) 0 ;
+  std::string temp2 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::IterateChildren",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::IterateChildren",1,"ticpp::Node const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Node::IterateChildren",2,"std::string const &");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ticpp::Node::IterateChildren",3,"ticpp::Node *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_iterate_children",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_iterate_children",3,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->IterateChildren((std::string const &)*arg2,arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_iterate_children(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_Node_iterate_children__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          return _wrap_Node_iterate_children__SWIG_1(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Node_iterate_children'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Node::IterateChildren(ticpp::Node *) const\n"
+    "    ticpp::Node::IterateChildren(std::string const &,ticpp::Node *) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Node_insert_end_child(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Node *arg2 = 0 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::InsertEndChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::InsertEndChild",1,"ticpp::Node *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ticpp::Node::InsertEndChild",2,"ticpp::Node &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_insert_end_child",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_insert_end_child",2,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Node *)(arg1)->InsertEndChild(*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_link_end_child(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Node *arg2 = (ticpp::Node *) 0 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::LinkEndChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::LinkEndChild",1,"ticpp::Node *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ticpp::Node::LinkEndChild",2,"ticpp::Node *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_link_end_child",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_link_end_child",2,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Node *)(arg1)->LinkEndChild(arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_insert_before_child(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Node *arg2 = (ticpp::Node *) 0 ;
+  ticpp::Node *arg3 = 0 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::InsertBeforeChild",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::InsertBeforeChild",1,"ticpp::Node *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ticpp::Node::InsertBeforeChild",2,"ticpp::Node *");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ticpp::Node::InsertBeforeChild",3,"ticpp::Node &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_insert_before_child",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_insert_before_child",2,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_insert_before_child",3,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Node *)(arg1)->InsertBeforeChild(arg2,*arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_insert_after_child(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Node *arg2 = (ticpp::Node *) 0 ;
+  ticpp::Node *arg3 = 0 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::InsertAfterChild",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::InsertAfterChild",1,"ticpp::Node *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ticpp::Node::InsertAfterChild",2,"ticpp::Node *");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ticpp::Node::InsertAfterChild",3,"ticpp::Node &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_insert_after_child",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_insert_after_child",2,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_insert_after_child",3,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Node *)(arg1)->InsertAfterChild(arg2,*arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_replace_child(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Node *arg2 = (ticpp::Node *) 0 ;
+  ticpp::Node *arg3 = 0 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::ReplaceChild",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::ReplaceChild",1,"ticpp::Node *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ticpp::Node::ReplaceChild",2,"ticpp::Node *");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ticpp::Node::ReplaceChild",3,"ticpp::Node &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_replace_child",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_replace_child",2,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_replace_child",3,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Node *)(arg1)->ReplaceChild(arg2,*arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_remove_child(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Node *arg2 = (ticpp::Node *) 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::RemoveChild",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::RemoveChild",1,"ticpp::Node *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ticpp::Node::RemoveChild",2,"ticpp::Node *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_remove_child",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_remove_child",2,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  (arg1)->RemoveChild(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_previous_sibling__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  bool arg2 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::PreviousSibling",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::PreviousSibling",1,"ticpp::Node const *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ticpp::Node::PreviousSibling",2,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_previous_sibling",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (lua_toboolean(L, 2)!=0);
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->PreviousSibling(arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_previous_sibling__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::PreviousSibling",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::PreviousSibling",1,"ticpp::Node const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_previous_sibling",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->PreviousSibling();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_previous_sibling__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  char *arg2 = (char *) 0 ;
+  bool arg3 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::PreviousSibling",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::PreviousSibling",1,"ticpp::Node const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ticpp::Node::PreviousSibling",2,"char const *");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ticpp::Node::PreviousSibling",3,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_previous_sibling",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (lua_toboolean(L, 3)!=0);
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->PreviousSibling((char const *)arg2,arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_previous_sibling__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  char *arg2 = (char *) 0 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::PreviousSibling",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::PreviousSibling",1,"ticpp::Node const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ticpp::Node::PreviousSibling",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_previous_sibling",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->PreviousSibling((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_previous_sibling(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_Node_previous_sibling__SWIG_1(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isboolean(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Node_previous_sibling__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Node_previous_sibling__SWIG_3(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isboolean(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_Node_previous_sibling__SWIG_2(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Node_previous_sibling'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Node::PreviousSibling(bool) const\n"
+    "    ticpp::Node::PreviousSibling() const\n"
+    "    ticpp::Node::PreviousSibling(char const *,bool) const\n"
+    "    ticpp::Node::PreviousSibling(char const *) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Node_next_sibling__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  bool arg2 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::NextSibling",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::NextSibling",1,"ticpp::Node const *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ticpp::Node::NextSibling",2,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_next_sibling",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (lua_toboolean(L, 2)!=0);
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->NextSibling(arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_next_sibling__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::NextSibling",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::NextSibling",1,"ticpp::Node const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_next_sibling",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->NextSibling();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_next_sibling__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  char *arg2 = (char *) 0 ;
+  bool arg3 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::NextSibling",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::NextSibling",1,"ticpp::Node const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ticpp::Node::NextSibling",2,"char const *");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ticpp::Node::NextSibling",3,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_next_sibling",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (lua_toboolean(L, 3)!=0);
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->NextSibling((char const *)arg2,arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_next_sibling__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  char *arg2 = (char *) 0 ;
+  ticpp::Node *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::NextSibling",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::NextSibling",1,"ticpp::Node const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ticpp::Node::NextSibling",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_next_sibling",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (ticpp::Node *)((ticpp::Node const *)arg1)->NextSibling((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Node,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_next_sibling(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_Node_next_sibling__SWIG_1(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isboolean(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Node_next_sibling__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Node_next_sibling__SWIG_3(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isboolean(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_Node_next_sibling__SWIG_2(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Node_next_sibling'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Node::NextSibling(bool) const\n"
+    "    ticpp::Node::NextSibling() const\n"
+    "    ticpp::Node::NextSibling(char const *,bool) const\n"
+    "    ticpp::Node::NextSibling(char const *) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Node_iterate_first(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  std::string *arg2 = 0 ;
+  ticpp::Attribute **arg3 = (ticpp::Attribute **) 0 ;
+  std::string temp2 ;
+  
+  SWIG_check_num_args("ticpp::Node::IterateFirst",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::IterateFirst",1,"ticpp::Node const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Node::IterateFirst",2,"std::string const &");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ticpp::Node::IterateFirst",3,"ticpp::Attribute **");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_iterate_first",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_p_ticpp__Attribute,0))){
+    SWIG_fail_ptr("Node_iterate_first",3,SWIGTYPE_p_p_ticpp__Attribute);
+  }
+  
+  ((ticpp::Node const *)arg1)->IterateFirst((std::string const &)*arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_next_sibling_element__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  bool arg2 ;
+  ticpp::Element *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::NextSiblingElement",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::NextSiblingElement",1,"ticpp::Node const *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ticpp::Node::NextSiblingElement",2,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_next_sibling_element",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (lua_toboolean(L, 2)!=0);
+  result = (ticpp::Element *)((ticpp::Node const *)arg1)->NextSiblingElement(arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Element,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_next_sibling_element__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Element *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::NextSiblingElement",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::NextSiblingElement",1,"ticpp::Node const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_next_sibling_element",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Element *)((ticpp::Node const *)arg1)->NextSiblingElement();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Element,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_next_sibling_element__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  char *arg2 = (char *) 0 ;
+  bool arg3 ;
+  ticpp::Element *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::NextSiblingElement",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::NextSiblingElement",1,"ticpp::Node const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ticpp::Node::NextSiblingElement",2,"char const *");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ticpp::Node::NextSiblingElement",3,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_next_sibling_element",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (lua_toboolean(L, 3)!=0);
+  result = (ticpp::Element *)((ticpp::Node const *)arg1)->NextSiblingElement((char const *)arg2,arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Element,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_next_sibling_element__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  char *arg2 = (char *) 0 ;
+  ticpp::Element *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::NextSiblingElement",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::NextSiblingElement",1,"ticpp::Node const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ticpp::Node::NextSiblingElement",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_next_sibling_element",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (ticpp::Element *)((ticpp::Node const *)arg1)->NextSiblingElement((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Element,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_next_sibling_element(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_Node_next_sibling_element__SWIG_1(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isboolean(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Node_next_sibling_element__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Node_next_sibling_element__SWIG_3(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isboolean(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_Node_next_sibling_element__SWIG_2(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Node_next_sibling_element'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Node::NextSiblingElement(bool) const\n"
+    "    ticpp::Node::NextSiblingElement() const\n"
+    "    ticpp::Node::NextSiblingElement(char const *,bool) const\n"
+    "    ticpp::Node::NextSiblingElement(char const *) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Node_first_child_element__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  bool arg2 ;
+  ticpp::Element *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::FirstChildElement",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::FirstChildElement",1,"ticpp::Node const *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ticpp::Node::FirstChildElement",2,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_first_child_element",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (lua_toboolean(L, 2)!=0);
+  result = (ticpp::Element *)((ticpp::Node const *)arg1)->FirstChildElement(arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Element,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_first_child_element__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Element *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::FirstChildElement",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::FirstChildElement",1,"ticpp::Node const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_first_child_element",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Element *)((ticpp::Node const *)arg1)->FirstChildElement();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Element,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_first_child_element__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  char *arg2 = (char *) 0 ;
+  bool arg3 ;
+  ticpp::Element *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::FirstChildElement",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::FirstChildElement",1,"ticpp::Node const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ticpp::Node::FirstChildElement",2,"char const *");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ticpp::Node::FirstChildElement",3,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_first_child_element",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (lua_toboolean(L, 3)!=0);
+  result = (ticpp::Element *)((ticpp::Node const *)arg1)->FirstChildElement((char const *)arg2,arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Element,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_first_child_element__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  char *arg2 = (char *) 0 ;
+  ticpp::Element *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::FirstChildElement",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::FirstChildElement",1,"ticpp::Node const *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ticpp::Node::FirstChildElement",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_first_child_element",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  result = (ticpp::Element *)((ticpp::Node const *)arg1)->FirstChildElement((char const *)arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Element,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_first_child_element(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_Node_first_child_element__SWIG_1(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isboolean(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Node_first_child_element__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Node_first_child_element__SWIG_3(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isboolean(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_Node_first_child_element__SWIG_2(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Node_first_child_element'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Node::FirstChildElement(bool) const\n"
+    "    ticpp::Node::FirstChildElement() const\n"
+    "    ticpp::Node::FirstChildElement(char const *,bool) const\n"
+    "    ticpp::Node::FirstChildElement(char const *) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Node_get_document__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  bool arg2 ;
+  ticpp::Document *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::GetDocument",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::GetDocument",1,"ticpp::Node const *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ticpp::Node::GetDocument",2,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_get_document",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  arg2 = (lua_toboolean(L, 2)!=0);
+  result = (ticpp::Document *)((ticpp::Node const *)arg1)->GetDocument(arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Document,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_get_document__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Document *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::GetDocument",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::GetDocument",1,"ticpp::Node const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_get_document",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Document *)((ticpp::Node const *)arg1)->GetDocument();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Document,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_get_document(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_Node_get_document__SWIG_1(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Node, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isboolean(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Node_get_document__SWIG_0(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Node_get_document'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Node::GetDocument(bool) const\n"
+    "    ticpp::Node::GetDocument() const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Node_to_document(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Document *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::ToDocument",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::ToDocument",1,"ticpp::Node const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_to_document",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Document *)((ticpp::Node const *)arg1)->ToDocument();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Document,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_to_element(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Element *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::ToElement",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::ToElement",1,"ticpp::Node const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_to_element",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Element *)((ticpp::Node const *)arg1)->ToElement();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Element,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_to_comment(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Comment *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::ToComment",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::ToComment",1,"ticpp::Node const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_to_comment",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Comment *)((ticpp::Node const *)arg1)->ToComment();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Comment,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_to_text(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Text *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::ToText",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::ToText",1,"ticpp::Node const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_to_text",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Text *)((ticpp::Node const *)arg1)->ToText();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Text,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_to_declaration(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::Declaration *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::ToDeclaration",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::ToDeclaration",1,"ticpp::Node const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_to_declaration",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::Declaration *)((ticpp::Node const *)arg1)->ToDeclaration();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Declaration,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Node_to_stylesheet_reference(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Node *arg1 = (ticpp::Node *) 0 ;
+  ticpp::StylesheetReference *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Node::ToStylesheetReference",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Node::ToStylesheetReference",1,"ticpp::Node const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Node,0))){
+    SWIG_fail_ptr("Node_to_stylesheet_reference",1,SWIGTYPE_p_ticpp__Node);
+  }
+  
+  result = (ticpp::StylesheetReference *)((ticpp::Node const *)arg1)->ToStylesheetReference();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__StylesheetReference,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_Node(void *obj) {
+ticpp::Node *arg1 = (ticpp::Node *) obj;
+delete arg1;
+}
+static swig_lua_method swig_ticpp_Node_methods[] = {
+    {"value", _wrap_Node_value}, 
+    {"clear", _wrap_Node_clear}, 
+    {"parent", _wrap_Node_parent}, 
+    {"first_child", _wrap_Node_first_child}, 
+    {"last_child", _wrap_Node_last_child}, 
+    {"iterate_children", _wrap_Node_iterate_children}, 
+    {"insert_end_child", _wrap_Node_insert_end_child}, 
+    {"link_end_child", _wrap_Node_link_end_child}, 
+    {"insert_before_child", _wrap_Node_insert_before_child}, 
+    {"insert_after_child", _wrap_Node_insert_after_child}, 
+    {"replace_child", _wrap_Node_replace_child}, 
+    {"remove_child", _wrap_Node_remove_child}, 
+    {"previous_sibling", _wrap_Node_previous_sibling}, 
+    {"next_sibling", _wrap_Node_next_sibling}, 
+    {"iterate_first", _wrap_Node_iterate_first}, 
+    {"next_sibling_element", _wrap_Node_next_sibling_element}, 
+    {"first_child_element", _wrap_Node_first_child_element}, 
+    {"get_document", _wrap_Node_get_document}, 
+    {"to_document", _wrap_Node_to_document}, 
+    {"to_element", _wrap_Node_to_element}, 
+    {"to_comment", _wrap_Node_to_comment}, 
+    {"to_text", _wrap_Node_to_text}, 
+    {"to_declaration", _wrap_Node_to_declaration}, 
+    {"to_stylesheet_reference", _wrap_Node_to_stylesheet_reference}, 
+    {0,0}
+};
+static swig_lua_attribute swig_ticpp_Node_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_ticpp_Node_bases[] = {0,0};
+static const char *swig_ticpp_Node_base_names[] = {"ticpp::Base *",0};
+static swig_lua_class _wrap_class_ticpp_Node = { "Node", &SWIGTYPE_p_ticpp__Node,0, swig_delete_Node, swig_ticpp_Node_methods, swig_ticpp_Node_attributes, swig_ticpp_Node_bases, swig_ticpp_Node_base_names };
+
+static void swig_delete_NodeImpComment(void *obj) {
+ticpp::NodeImp< TiXmlComment > *arg1 = (ticpp::NodeImp< TiXmlComment > *) obj;
+delete arg1;
+}
+static swig_lua_method swig_ticpp_NodeImp_Sl_TiXmlComment_Sg__methods[] = {
+    {0,0}
+};
+static swig_lua_attribute swig_ticpp_NodeImp_Sl_TiXmlComment_Sg__attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_ticpp_NodeImp_Sl_TiXmlComment_Sg__bases[] = {0,0};
+static const char *swig_ticpp_NodeImp_Sl_TiXmlComment_Sg__base_names[] = {"ticpp::Node *",0};
+static swig_lua_class _wrap_class_ticpp_NodeImp_Sl_TiXmlComment_Sg_ = { "NodeImpComment", &SWIGTYPE_p_ticpp__NodeImpT_TiXmlComment_t,0, swig_delete_NodeImpComment, swig_ticpp_NodeImp_Sl_TiXmlComment_Sg__methods, swig_ticpp_NodeImp_Sl_TiXmlComment_Sg__attributes, swig_ticpp_NodeImp_Sl_TiXmlComment_Sg__bases, swig_ticpp_NodeImp_Sl_TiXmlComment_Sg__base_names };
+
+static void swig_delete_NodeImpText(void *obj) {
+ticpp::NodeImp< TiXmlText > *arg1 = (ticpp::NodeImp< TiXmlText > *) obj;
+delete arg1;
+}
+static swig_lua_method swig_ticpp_NodeImp_Sl_TiXmlText_Sg__methods[] = {
+    {0,0}
+};
+static swig_lua_attribute swig_ticpp_NodeImp_Sl_TiXmlText_Sg__attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_ticpp_NodeImp_Sl_TiXmlText_Sg__bases[] = {0,0};
+static const char *swig_ticpp_NodeImp_Sl_TiXmlText_Sg__base_names[] = {"ticpp::Node *",0};
+static swig_lua_class _wrap_class_ticpp_NodeImp_Sl_TiXmlText_Sg_ = { "NodeImpText", &SWIGTYPE_p_ticpp__NodeImpT_TiXmlText_t,0, swig_delete_NodeImpText, swig_ticpp_NodeImp_Sl_TiXmlText_Sg__methods, swig_ticpp_NodeImp_Sl_TiXmlText_Sg__attributes, swig_ticpp_NodeImp_Sl_TiXmlText_Sg__bases, swig_ticpp_NodeImp_Sl_TiXmlText_Sg__base_names };
+
+static void swig_delete_NodeImpDocument(void *obj) {
+ticpp::NodeImp< TiXmlDocument > *arg1 = (ticpp::NodeImp< TiXmlDocument > *) obj;
+delete arg1;
+}
+static swig_lua_method swig_ticpp_NodeImp_Sl_TiXmlDocument_Sg__methods[] = {
+    {0,0}
+};
+static swig_lua_attribute swig_ticpp_NodeImp_Sl_TiXmlDocument_Sg__attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_ticpp_NodeImp_Sl_TiXmlDocument_Sg__bases[] = {0,0};
+static const char *swig_ticpp_NodeImp_Sl_TiXmlDocument_Sg__base_names[] = {"ticpp::Node *",0};
+static swig_lua_class _wrap_class_ticpp_NodeImp_Sl_TiXmlDocument_Sg_ = { "NodeImpDocument", &SWIGTYPE_p_ticpp__NodeImpT_TiXmlDocument_t,0, swig_delete_NodeImpDocument, swig_ticpp_NodeImp_Sl_TiXmlDocument_Sg__methods, swig_ticpp_NodeImp_Sl_TiXmlDocument_Sg__attributes, swig_ticpp_NodeImp_Sl_TiXmlDocument_Sg__bases, swig_ticpp_NodeImp_Sl_TiXmlDocument_Sg__base_names };
+
+static void swig_delete_NodeImpElement(void *obj) {
+ticpp::NodeImp< TiXmlElement > *arg1 = (ticpp::NodeImp< TiXmlElement > *) obj;
+delete arg1;
+}
+static swig_lua_method swig_ticpp_NodeImp_Sl_TiXmlElement_Sg__methods[] = {
+    {0,0}
+};
+static swig_lua_attribute swig_ticpp_NodeImp_Sl_TiXmlElement_Sg__attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_ticpp_NodeImp_Sl_TiXmlElement_Sg__bases[] = {0,0};
+static const char *swig_ticpp_NodeImp_Sl_TiXmlElement_Sg__base_names[] = {"ticpp::Node *",0};
+static swig_lua_class _wrap_class_ticpp_NodeImp_Sl_TiXmlElement_Sg_ = { "NodeImpElement", &SWIGTYPE_p_ticpp__NodeImpT_TiXmlElement_t,0, swig_delete_NodeImpElement, swig_ticpp_NodeImp_Sl_TiXmlElement_Sg__methods, swig_ticpp_NodeImp_Sl_TiXmlElement_Sg__attributes, swig_ticpp_NodeImp_Sl_TiXmlElement_Sg__bases, swig_ticpp_NodeImp_Sl_TiXmlElement_Sg__base_names };
+
+static void swig_delete_NodeImpDeclaration(void *obj) {
+ticpp::NodeImp< TiXmlDeclaration > *arg1 = (ticpp::NodeImp< TiXmlDeclaration > *) obj;
+delete arg1;
+}
+static swig_lua_method swig_ticpp_NodeImp_Sl_TiXmlDeclaration_Sg__methods[] = {
+    {0,0}
+};
+static swig_lua_attribute swig_ticpp_NodeImp_Sl_TiXmlDeclaration_Sg__attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_ticpp_NodeImp_Sl_TiXmlDeclaration_Sg__bases[] = {0,0};
+static const char *swig_ticpp_NodeImp_Sl_TiXmlDeclaration_Sg__base_names[] = {"ticpp::Node *",0};
+static swig_lua_class _wrap_class_ticpp_NodeImp_Sl_TiXmlDeclaration_Sg_ = { "NodeImpDeclaration", &SWIGTYPE_p_ticpp__NodeImpT_TiXmlDeclaration_t,0, swig_delete_NodeImpDeclaration, swig_ticpp_NodeImp_Sl_TiXmlDeclaration_Sg__methods, swig_ticpp_NodeImp_Sl_TiXmlDeclaration_Sg__attributes, swig_ticpp_NodeImp_Sl_TiXmlDeclaration_Sg__bases, swig_ticpp_NodeImp_Sl_TiXmlDeclaration_Sg__base_names };
+
+static void swig_delete_NodeImpStylesheetReference(void *obj) {
+ticpp::NodeImp< TiXmlStylesheetReference > *arg1 = (ticpp::NodeImp< TiXmlStylesheetReference > *) obj;
+delete arg1;
+}
+static swig_lua_method swig_ticpp_NodeImp_Sl_TiXmlStylesheetReference_Sg__methods[] = {
+    {0,0}
+};
+static swig_lua_attribute swig_ticpp_NodeImp_Sl_TiXmlStylesheetReference_Sg__attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_ticpp_NodeImp_Sl_TiXmlStylesheetReference_Sg__bases[] = {0,0};
+static const char *swig_ticpp_NodeImp_Sl_TiXmlStylesheetReference_Sg__base_names[] = {"ticpp::Node *",0};
+static swig_lua_class _wrap_class_ticpp_NodeImp_Sl_TiXmlStylesheetReference_Sg_ = { "NodeImpStylesheetReference", &SWIGTYPE_p_ticpp__NodeImpT_TiXmlStylesheetReference_t,0, swig_delete_NodeImpStylesheetReference, swig_ticpp_NodeImp_Sl_TiXmlStylesheetReference_Sg__methods, swig_ticpp_NodeImp_Sl_TiXmlStylesheetReference_Sg__attributes, swig_ticpp_NodeImp_Sl_TiXmlStylesheetReference_Sg__bases, swig_ticpp_NodeImp_Sl_TiXmlStylesheetReference_Sg__base_names };
+
+static int _wrap_new_Exception(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = 0 ;
+  std::string temp1 ;
+  ticpp::Exception *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Exception::Exception",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ticpp::Exception::Exception",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
+  result = (ticpp::Exception *)new ticpp::Exception((std::string const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Exception,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Exception_what(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Exception *arg1 = (ticpp::Exception *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Exception::what",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Exception::what",1,"ticpp::Exception const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Exception,0))){
+    SWIG_fail_ptr("Exception_what",1,SWIGTYPE_p_ticpp__Exception);
+  }
+  
+  result = (char *)((ticpp::Exception const *)arg1)->what();
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Exception_m_details_set(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Exception *arg1 = (ticpp::Exception *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  
+  SWIG_check_num_args("ticpp::Exception::m_details",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Exception::m_details",1,"ticpp::Exception *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Exception::m_details",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Exception,0))){
+    SWIG_fail_ptr("Exception_m_details_set",1,SWIGTYPE_p_ticpp__Exception);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  if (arg1) (arg1)->m_details = *arg2;
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Exception_m_details_get(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Exception *arg1 = (ticpp::Exception *) 0 ;
+  std::string *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Exception::m_details",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Exception::m_details",1,"ticpp::Exception *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Exception,0))){
+    SWIG_fail_ptr("Exception_m_details_get",1,SWIGTYPE_p_ticpp__Exception);
+  }
+  
+  result = (std::string *) & ((arg1)->m_details);
+  lua_pushlstring(L,result->data(),result->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_Exception(void *obj) {
+ticpp::Exception *arg1 = (ticpp::Exception *) obj;
+delete arg1;
+}
+static swig_lua_method swig_ticpp_Exception_methods[] = {
+    {"what", _wrap_Exception_what}, 
+    {0,0}
+};
+static swig_lua_attribute swig_ticpp_Exception_attributes[] = {
+    { "m_details", _wrap_Exception_m_details_get, _wrap_Exception_m_details_set},
+    {0,0,0}
+};
+static swig_lua_class *swig_ticpp_Exception_bases[] = {0};
+static const char *swig_ticpp_Exception_base_names[] = {0};
+static swig_lua_class _wrap_class_ticpp_Exception = { "Exception", &SWIGTYPE_p_ticpp__Exception,_wrap_new_Exception, swig_delete_Exception, swig_ticpp_Exception_methods, swig_ticpp_Exception_attributes, swig_ticpp_Exception_bases, swig_ticpp_Exception_base_names };
+
+static int _wrap_Visitor_visit_enter__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Visitor *arg1 = (ticpp::Visitor *) 0 ;
+  TiXmlDocument *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("ticpp::Visitor::VisitEnter",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Visitor::VisitEnter",1,"ticpp::Visitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ticpp::Visitor::VisitEnter",2,"TiXmlDocument const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Visitor,0))){
+    SWIG_fail_ptr("Visitor_visit_enter",1,SWIGTYPE_p_ticpp__Visitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("Visitor_visit_enter",2,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (bool)(arg1)->VisitEnter((TiXmlDocument const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Visitor_visit_exit__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Visitor *arg1 = (ticpp::Visitor *) 0 ;
+  TiXmlDocument *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("ticpp::Visitor::VisitExit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Visitor::VisitExit",1,"ticpp::Visitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ticpp::Visitor::VisitExit",2,"TiXmlDocument const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Visitor,0))){
+    SWIG_fail_ptr("Visitor_visit_exit",1,SWIGTYPE_p_ticpp__Visitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("Visitor_visit_exit",2,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (bool)(arg1)->VisitExit((TiXmlDocument const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Visitor_visit_enter__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Visitor *arg1 = (ticpp::Visitor *) 0 ;
+  TiXmlElement *arg2 = 0 ;
+  TiXmlAttribute *arg3 = (TiXmlAttribute *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("ticpp::Visitor::VisitEnter",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Visitor::VisitEnter",1,"ticpp::Visitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ticpp::Visitor::VisitEnter",2,"TiXmlElement const &");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ticpp::Visitor::VisitEnter",3,"TiXmlAttribute const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Visitor,0))){
+    SWIG_fail_ptr("Visitor_visit_enter",1,SWIGTYPE_p_ticpp__Visitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("Visitor_visit_enter",2,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_TiXmlAttribute,0))){
+    SWIG_fail_ptr("Visitor_visit_enter",3,SWIGTYPE_p_TiXmlAttribute);
+  }
+  
+  result = (bool)(arg1)->VisitEnter((TiXmlElement const &)*arg2,(TiXmlAttribute const *)arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Visitor_visit_exit__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Visitor *arg1 = (ticpp::Visitor *) 0 ;
+  TiXmlElement *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("ticpp::Visitor::VisitExit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Visitor::VisitExit",1,"ticpp::Visitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ticpp::Visitor::VisitExit",2,"TiXmlElement const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Visitor,0))){
+    SWIG_fail_ptr("Visitor_visit_exit",1,SWIGTYPE_p_ticpp__Visitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("Visitor_visit_exit",2,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  result = (bool)(arg1)->VisitExit((TiXmlElement const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Visitor_visit__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Visitor *arg1 = (ticpp::Visitor *) 0 ;
+  TiXmlDeclaration *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("ticpp::Visitor::Visit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Visitor::Visit",1,"ticpp::Visitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ticpp::Visitor::Visit",2,"TiXmlDeclaration const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Visitor,0))){
+    SWIG_fail_ptr("Visitor_visit",1,SWIGTYPE_p_ticpp__Visitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlDeclaration,0))){
+    SWIG_fail_ptr("Visitor_visit",2,SWIGTYPE_p_TiXmlDeclaration);
+  }
+  
+  result = (bool)(arg1)->Visit((TiXmlDeclaration const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Visitor_visit__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Visitor *arg1 = (ticpp::Visitor *) 0 ;
+  TiXmlStylesheetReference *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("ticpp::Visitor::Visit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Visitor::Visit",1,"ticpp::Visitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ticpp::Visitor::Visit",2,"TiXmlStylesheetReference const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Visitor,0))){
+    SWIG_fail_ptr("Visitor_visit",1,SWIGTYPE_p_ticpp__Visitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlStylesheetReference,0))){
+    SWIG_fail_ptr("Visitor_visit",2,SWIGTYPE_p_TiXmlStylesheetReference);
+  }
+  
+  result = (bool)(arg1)->Visit((TiXmlStylesheetReference const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Visitor_visit__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Visitor *arg1 = (ticpp::Visitor *) 0 ;
+  TiXmlText *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("ticpp::Visitor::Visit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Visitor::Visit",1,"ticpp::Visitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ticpp::Visitor::Visit",2,"TiXmlText const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Visitor,0))){
+    SWIG_fail_ptr("Visitor_visit",1,SWIGTYPE_p_ticpp__Visitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlText,0))){
+    SWIG_fail_ptr("Visitor_visit",2,SWIGTYPE_p_TiXmlText);
+  }
+  
+  result = (bool)(arg1)->Visit((TiXmlText const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Visitor_visit__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Visitor *arg1 = (ticpp::Visitor *) 0 ;
+  TiXmlComment *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("ticpp::Visitor::Visit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Visitor::Visit",1,"ticpp::Visitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ticpp::Visitor::Visit",2,"TiXmlComment const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Visitor,0))){
+    SWIG_fail_ptr("Visitor_visit",1,SWIGTYPE_p_ticpp__Visitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TiXmlComment,0))){
+    SWIG_fail_ptr("Visitor_visit",2,SWIGTYPE_p_TiXmlComment);
+  }
+  
+  result = (bool)(arg1)->Visit((TiXmlComment const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Visitor_visit_enter__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Visitor *arg1 = (ticpp::Visitor *) 0 ;
+  ticpp::Document *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("ticpp::Visitor::VisitEnter",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Visitor::VisitEnter",1,"ticpp::Visitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ticpp::Visitor::VisitEnter",2,"ticpp::Document const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Visitor,0))){
+    SWIG_fail_ptr("Visitor_visit_enter",1,SWIGTYPE_p_ticpp__Visitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ticpp__Document,0))){
+    SWIG_fail_ptr("Visitor_visit_enter",2,SWIGTYPE_p_ticpp__Document);
+  }
+  
+  result = (bool)(arg1)->VisitEnter((ticpp::Document const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Visitor_visit_exit__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Visitor *arg1 = (ticpp::Visitor *) 0 ;
+  ticpp::Document *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("ticpp::Visitor::VisitExit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Visitor::VisitExit",1,"ticpp::Visitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ticpp::Visitor::VisitExit",2,"ticpp::Document const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Visitor,0))){
+    SWIG_fail_ptr("Visitor_visit_exit",1,SWIGTYPE_p_ticpp__Visitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ticpp__Document,0))){
+    SWIG_fail_ptr("Visitor_visit_exit",2,SWIGTYPE_p_ticpp__Document);
+  }
+  
+  result = (bool)(arg1)->VisitExit((ticpp::Document const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Visitor_visit_enter__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Visitor *arg1 = (ticpp::Visitor *) 0 ;
+  ticpp::Element *arg2 = 0 ;
+  ticpp::Attribute *arg3 = (ticpp::Attribute *) 0 ;
+  bool result;
+  
+  SWIG_check_num_args("ticpp::Visitor::VisitEnter",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Visitor::VisitEnter",1,"ticpp::Visitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ticpp::Visitor::VisitEnter",2,"ticpp::Element const &");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ticpp::Visitor::VisitEnter",3,"ticpp::Attribute const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Visitor,0))){
+    SWIG_fail_ptr("Visitor_visit_enter",1,SWIGTYPE_p_ticpp__Visitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ticpp__Element,0))){
+    SWIG_fail_ptr("Visitor_visit_enter",2,SWIGTYPE_p_ticpp__Element);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ticpp__Attribute,0))){
+    SWIG_fail_ptr("Visitor_visit_enter",3,SWIGTYPE_p_ticpp__Attribute);
+  }
+  
+  result = (bool)(arg1)->VisitEnter((ticpp::Element const &)*arg2,(ticpp::Attribute const *)arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Visitor_visit_enter(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Visitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_Visitor_visit_enter__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Visitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ticpp__Document, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_Visitor_visit_enter__SWIG_2(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Visitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_TiXmlAttribute, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          return _wrap_Visitor_visit_enter__SWIG_1(L);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Visitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ticpp__Element, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        {
+          void *ptr;
+          if (SWIG_isptrtype(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_ticpp__Attribute, 0)) {
+            _v = 0;
+          } else {
+            _v = 1;
+          }
+        }
+        if (_v) {
+          return _wrap_Visitor_visit_enter__SWIG_3(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Visitor_visit_enter'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Visitor::VisitEnter(TiXmlDocument const &)\n"
+    "    ticpp::Visitor::VisitEnter(TiXmlElement const &,TiXmlAttribute const *)\n"
+    "    ticpp::Visitor::VisitEnter(ticpp::Document const &)\n"
+    "    ticpp::Visitor::VisitEnter(ticpp::Element const &,ticpp::Attribute const *)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Visitor_visit_exit__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Visitor *arg1 = (ticpp::Visitor *) 0 ;
+  ticpp::Element *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("ticpp::Visitor::VisitExit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Visitor::VisitExit",1,"ticpp::Visitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ticpp::Visitor::VisitExit",2,"ticpp::Element const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Visitor,0))){
+    SWIG_fail_ptr("Visitor_visit_exit",1,SWIGTYPE_p_ticpp__Visitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ticpp__Element,0))){
+    SWIG_fail_ptr("Visitor_visit_exit",2,SWIGTYPE_p_ticpp__Element);
+  }
+  
+  result = (bool)(arg1)->VisitExit((ticpp::Element const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Visitor_visit_exit(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Visitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_Visitor_visit_exit__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Visitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_Visitor_visit_exit__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Visitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ticpp__Document, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_Visitor_visit_exit__SWIG_2(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Visitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ticpp__Element, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_Visitor_visit_exit__SWIG_3(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Visitor_visit_exit'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Visitor::VisitExit(TiXmlDocument const &)\n"
+    "    ticpp::Visitor::VisitExit(TiXmlElement const &)\n"
+    "    ticpp::Visitor::VisitExit(ticpp::Document const &)\n"
+    "    ticpp::Visitor::VisitExit(ticpp::Element const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Visitor_visit__SWIG_4(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Visitor *arg1 = (ticpp::Visitor *) 0 ;
+  ticpp::Declaration *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("ticpp::Visitor::Visit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Visitor::Visit",1,"ticpp::Visitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ticpp::Visitor::Visit",2,"ticpp::Declaration const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Visitor,0))){
+    SWIG_fail_ptr("Visitor_visit",1,SWIGTYPE_p_ticpp__Visitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ticpp__Declaration,0))){
+    SWIG_fail_ptr("Visitor_visit",2,SWIGTYPE_p_ticpp__Declaration);
+  }
+  
+  result = (bool)(arg1)->Visit((ticpp::Declaration const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Visitor_visit__SWIG_5(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Visitor *arg1 = (ticpp::Visitor *) 0 ;
+  ticpp::StylesheetReference *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("ticpp::Visitor::Visit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Visitor::Visit",1,"ticpp::Visitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ticpp::Visitor::Visit",2,"ticpp::StylesheetReference const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Visitor,0))){
+    SWIG_fail_ptr("Visitor_visit",1,SWIGTYPE_p_ticpp__Visitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ticpp__StylesheetReference,0))){
+    SWIG_fail_ptr("Visitor_visit",2,SWIGTYPE_p_ticpp__StylesheetReference);
+  }
+  
+  result = (bool)(arg1)->Visit((ticpp::StylesheetReference const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Visitor_visit__SWIG_6(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Visitor *arg1 = (ticpp::Visitor *) 0 ;
+  ticpp::Text *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("ticpp::Visitor::Visit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Visitor::Visit",1,"ticpp::Visitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ticpp::Visitor::Visit",2,"ticpp::Text const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Visitor,0))){
+    SWIG_fail_ptr("Visitor_visit",1,SWIGTYPE_p_ticpp__Visitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ticpp__Text,0))){
+    SWIG_fail_ptr("Visitor_visit",2,SWIGTYPE_p_ticpp__Text);
+  }
+  
+  result = (bool)(arg1)->Visit((ticpp::Text const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Visitor_visit__SWIG_7(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Visitor *arg1 = (ticpp::Visitor *) 0 ;
+  ticpp::Comment *arg2 = 0 ;
+  bool result;
+  
+  SWIG_check_num_args("ticpp::Visitor::Visit",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Visitor::Visit",1,"ticpp::Visitor *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ticpp::Visitor::Visit",2,"ticpp::Comment const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Visitor,0))){
+    SWIG_fail_ptr("Visitor_visit",1,SWIGTYPE_p_ticpp__Visitor);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ticpp__Comment,0))){
+    SWIG_fail_ptr("Visitor_visit",2,SWIGTYPE_p_ticpp__Comment);
+  }
+  
+  result = (bool)(arg1)->Visit((ticpp::Comment const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Visitor_visit(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Visitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlDeclaration, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_Visitor_visit__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Visitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlStylesheetReference, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_Visitor_visit__SWIG_1(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Visitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlText, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_Visitor_visit__SWIG_2(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Visitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TiXmlComment, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_Visitor_visit__SWIG_3(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Visitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ticpp__Declaration, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_Visitor_visit__SWIG_4(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Visitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ticpp__StylesheetReference, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_Visitor_visit__SWIG_5(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Visitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ticpp__Text, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_Visitor_visit__SWIG_6(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Visitor, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ticpp__Comment, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_Visitor_visit__SWIG_7(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Visitor_visit'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Visitor::Visit(TiXmlDeclaration const &)\n"
+    "    ticpp::Visitor::Visit(TiXmlStylesheetReference const &)\n"
+    "    ticpp::Visitor::Visit(TiXmlText const &)\n"
+    "    ticpp::Visitor::Visit(TiXmlComment const &)\n"
+    "    ticpp::Visitor::Visit(ticpp::Declaration const &)\n"
+    "    ticpp::Visitor::Visit(ticpp::StylesheetReference const &)\n"
+    "    ticpp::Visitor::Visit(ticpp::Text const &)\n"
+    "    ticpp::Visitor::Visit(ticpp::Comment const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_new_Visitor(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Visitor *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Visitor::Visitor",0,0)
+  result = (ticpp::Visitor *)new ticpp::Visitor();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Visitor,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_Visitor(void *obj) {
+ticpp::Visitor *arg1 = (ticpp::Visitor *) obj;
+delete arg1;
+}
+static swig_lua_method swig_ticpp_Visitor_methods[] = {
+    {"visit_enter", _wrap_Visitor_visit_enter}, 
+    {"visit_exit", _wrap_Visitor_visit_exit}, 
+    {"visit", _wrap_Visitor_visit}, 
+    {0,0}
+};
+static swig_lua_attribute swig_ticpp_Visitor_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_ticpp_Visitor_bases[] = {0,0};
+static const char *swig_ticpp_Visitor_base_names[] = {"TiXmlVisitor *",0};
+static swig_lua_class _wrap_class_ticpp_Visitor = { "Visitor", &SWIGTYPE_p_ticpp__Visitor,_wrap_new_Visitor, swig_delete_Visitor, swig_ticpp_Visitor_methods, swig_ticpp_Visitor_attributes, swig_ticpp_Visitor_bases, swig_ticpp_Visitor_base_names };
+
+static int _wrap_new_Comment__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Comment *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Comment::Comment",0,0)
+  result = (ticpp::Comment *)new ticpp::Comment();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Comment,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Comment__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlComment *arg1 = (TiXmlComment *) 0 ;
+  ticpp::Comment *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Comment::Comment",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Comment::Comment",1,"TiXmlComment *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlComment,0))){
+    SWIG_fail_ptr("new_Comment",1,SWIGTYPE_p_TiXmlComment);
+  }
+  
+  result = (ticpp::Comment *)new ticpp::Comment(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Comment,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Comment__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = 0 ;
+  std::string temp1 ;
+  ticpp::Comment *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Comment::Comment",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ticpp::Comment::Comment",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
+  result = (ticpp::Comment *)new ticpp::Comment((std::string const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Comment,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Comment(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 0) {
+    return _wrap_new_Comment__SWIG_0(L);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlComment, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_new_Comment__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      _v = lua_isstring(L,argv[0]);
+    }
+    if (_v) {
+      return _wrap_new_Comment__SWIG_2(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_Comment'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Comment::Comment()\n"
+    "    ticpp::Comment::Comment(TiXmlComment *)\n"
+    "    ticpp::Comment::Comment(std::string const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static void swig_delete_Comment(void *obj) {
+ticpp::Comment *arg1 = (ticpp::Comment *) obj;
+delete arg1;
+}
+static swig_lua_method swig_ticpp_Comment_methods[] = {
+    {0,0}
+};
+static swig_lua_attribute swig_ticpp_Comment_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_ticpp_Comment_bases[] = {0,0};
+static const char *swig_ticpp_Comment_base_names[] = {"ticpp::NodeImp< TiXmlComment > *",0};
+static swig_lua_class _wrap_class_ticpp_Comment = { "Comment", &SWIGTYPE_p_ticpp__Comment,_wrap_new_Comment, swig_delete_Comment, swig_ticpp_Comment_methods, swig_ticpp_Comment_attributes, swig_ticpp_Comment_bases, swig_ticpp_Comment_base_names };
+
+static int _wrap_new_Text__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Text *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Text::Text",0,0)
+  result = (ticpp::Text *)new ticpp::Text();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Text,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Text__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlText *arg1 = (TiXmlText *) 0 ;
+  ticpp::Text *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Text::Text",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Text::Text",1,"TiXmlText *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlText,0))){
+    SWIG_fail_ptr("new_Text",1,SWIGTYPE_p_TiXmlText);
+  }
+  
+  result = (ticpp::Text *)new ticpp::Text(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Text,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Text__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = 0 ;
+  std::string temp1 ;
+  ticpp::Text *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Text::Text",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ticpp::Text::Text",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
+  result = (ticpp::Text *)new ticpp::Text((std::string const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Text,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Text(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 0) {
+    return _wrap_new_Text__SWIG_0(L);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlText, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_new_Text__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      _v = lua_isstring(L,argv[0]);
+    }
+    if (_v) {
+      return _wrap_new_Text__SWIG_2(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_Text'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Text::Text()\n"
+    "    ticpp::Text::Text(TiXmlText *)\n"
+    "    ticpp::Text::Text(std::string const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static void swig_delete_Text(void *obj) {
+ticpp::Text *arg1 = (ticpp::Text *) obj;
+delete arg1;
+}
+static swig_lua_method swig_ticpp_Text_methods[] = {
+    {0,0}
+};
+static swig_lua_attribute swig_ticpp_Text_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_ticpp_Text_bases[] = {0,0};
+static const char *swig_ticpp_Text_base_names[] = {"ticpp::NodeImp< TiXmlText > *",0};
+static swig_lua_class _wrap_class_ticpp_Text = { "Text", &SWIGTYPE_p_ticpp__Text,_wrap_new_Text, swig_delete_Text, swig_ticpp_Text_methods, swig_ticpp_Text_attributes, swig_ticpp_Text_bases, swig_ticpp_Text_base_names };
+
+static int _wrap_new_Document__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Document *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Document::Document",0,0)
+  result = (ticpp::Document *)new ticpp::Document();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Document,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Document__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDocument *arg1 = (TiXmlDocument *) 0 ;
+  ticpp::Document *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Document::Document",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Document::Document",1,"TiXmlDocument *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDocument,0))){
+    SWIG_fail_ptr("new_Document",1,SWIGTYPE_p_TiXmlDocument);
+  }
+  
+  result = (ticpp::Document *)new ticpp::Document(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Document,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Document__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  char *arg1 = (char *) 0 ;
+  ticpp::Document *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Document::Document",1,1)
+  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ticpp::Document::Document",1,"char const *");
+  arg1 = (char *)lua_tostring(L, 1);
+  result = (ticpp::Document *)new ticpp::Document((char const *)arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Document,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Document__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = 0 ;
+  std::string temp1 ;
+  ticpp::Document *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Document::Document",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ticpp::Document::Document",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
+  result = (ticpp::Document *)new ticpp::Document((std::string const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Document,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Document(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 0) {
+    return _wrap_new_Document__SWIG_0(L);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDocument, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_new_Document__SWIG_1(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      _v = SWIG_lua_isnilstring(L,argv[0]);
+    }
+    if (_v) {
+      return _wrap_new_Document__SWIG_2(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      _v = lua_isstring(L,argv[0]);
+    }
+    if (_v) {
+      return _wrap_new_Document__SWIG_3(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_Document'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Document::Document()\n"
+    "    ticpp::Document::Document(TiXmlDocument *)\n"
+    "    ticpp::Document::Document(char const *)\n"
+    "    ticpp::Document::Document(std::string const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Document_load_file__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Document *arg1 = (ticpp::Document *) 0 ;
+  TiXmlEncoding arg2 ;
+  
+  SWIG_check_num_args("ticpp::Document::LoadFile",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Document::LoadFile",1,"ticpp::Document *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ticpp::Document::LoadFile",2,"TiXmlEncoding");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Document,0))){
+    SWIG_fail_ptr("Document_load_file",1,SWIGTYPE_p_ticpp__Document);
+  }
+  
+  arg2 = (TiXmlEncoding)(int)lua_tonumber(L, 2);
+  (arg1)->LoadFile(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Document_load_file__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Document *arg1 = (ticpp::Document *) 0 ;
+  
+  SWIG_check_num_args("ticpp::Document::LoadFile",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Document::LoadFile",1,"ticpp::Document *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Document,0))){
+    SWIG_fail_ptr("Document_load_file",1,SWIGTYPE_p_ticpp__Document);
+  }
+  
+  (arg1)->LoadFile();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Document_save_file__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Document *arg1 = (ticpp::Document *) 0 ;
+  
+  SWIG_check_num_args("ticpp::Document::SaveFile",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Document::SaveFile",1,"ticpp::Document const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Document,0))){
+    SWIG_fail_ptr("Document_save_file",1,SWIGTYPE_p_ticpp__Document);
+  }
+  
+  ((ticpp::Document const *)arg1)->SaveFile();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Document_load_file__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Document *arg1 = (ticpp::Document *) 0 ;
+  std::string *arg2 = 0 ;
+  TiXmlEncoding arg3 ;
+  std::string temp2 ;
+  
+  SWIG_check_num_args("ticpp::Document::LoadFile",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Document::LoadFile",1,"ticpp::Document *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Document::LoadFile",2,"std::string const &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ticpp::Document::LoadFile",3,"TiXmlEncoding");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Document,0))){
+    SWIG_fail_ptr("Document_load_file",1,SWIGTYPE_p_ticpp__Document);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  arg3 = (TiXmlEncoding)(int)lua_tonumber(L, 3);
+  (arg1)->LoadFile((std::string const &)*arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Document_load_file__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Document *arg1 = (ticpp::Document *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  
+  SWIG_check_num_args("ticpp::Document::LoadFile",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Document::LoadFile",1,"ticpp::Document *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Document::LoadFile",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Document,0))){
+    SWIG_fail_ptr("Document_load_file",1,SWIGTYPE_p_ticpp__Document);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  (arg1)->LoadFile((std::string const &)*arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Document_load_file__SWIG_4(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Document *arg1 = (ticpp::Document *) 0 ;
+  char *arg2 = (char *) 0 ;
+  TiXmlEncoding arg3 ;
+  
+  SWIG_check_num_args("ticpp::Document::LoadFile",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Document::LoadFile",1,"ticpp::Document *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ticpp::Document::LoadFile",2,"char const *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ticpp::Document::LoadFile",3,"TiXmlEncoding");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Document,0))){
+    SWIG_fail_ptr("Document_load_file",1,SWIGTYPE_p_ticpp__Document);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  arg3 = (TiXmlEncoding)(int)lua_tonumber(L, 3);
+  (arg1)->LoadFile((char const *)arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Document_load_file__SWIG_5(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Document *arg1 = (ticpp::Document *) 0 ;
+  char *arg2 = (char *) 0 ;
+  
+  SWIG_check_num_args("ticpp::Document::LoadFile",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Document::LoadFile",1,"ticpp::Document *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ticpp::Document::LoadFile",2,"char const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Document,0))){
+    SWIG_fail_ptr("Document_load_file",1,SWIGTYPE_p_ticpp__Document);
+  }
+  
+  arg2 = (char *)lua_tostring(L, 2);
+  (arg1)->LoadFile((char const *)arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Document_load_file(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Document, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_Document_load_file__SWIG_1(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Document, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isnumber(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Document_load_file__SWIG_0(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Document, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Document_load_file__SWIG_3(L);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Document, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Document_load_file__SWIG_5(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Document, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = SWIG_lua_isnilstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_Document_load_file__SWIG_4(L);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Document, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isnumber(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_Document_load_file__SWIG_2(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Document_load_file'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Document::LoadFile(TiXmlEncoding)\n"
+    "    ticpp::Document::LoadFile()\n"
+    "    ticpp::Document::LoadFile(std::string const &,TiXmlEncoding)\n"
+    "    ticpp::Document::LoadFile(std::string const &)\n"
+    "    ticpp::Document::LoadFile(char const *,TiXmlEncoding)\n"
+    "    ticpp::Document::LoadFile(char const *)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Document_save_file__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Document *arg1 = (ticpp::Document *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  
+  SWIG_check_num_args("ticpp::Document::SaveFile",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Document::SaveFile",1,"ticpp::Document const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Document::SaveFile",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Document,0))){
+    SWIG_fail_ptr("Document_save_file",1,SWIGTYPE_p_ticpp__Document);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  ((ticpp::Document const *)arg1)->SaveFile((std::string const &)*arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Document_save_file(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Document, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_Document_save_file__SWIG_0(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Document, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Document_save_file__SWIG_1(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Document_save_file'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Document::SaveFile() const\n"
+    "    ticpp::Document::SaveFile(std::string const &) const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Document_parse__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Document *arg1 = (ticpp::Document *) 0 ;
+  std::string *arg2 = 0 ;
+  bool arg3 ;
+  TiXmlEncoding arg4 ;
+  std::string temp2 ;
+  
+  SWIG_check_num_args("ticpp::Document::Parse",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Document::Parse",1,"ticpp::Document *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Document::Parse",2,"std::string const &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ticpp::Document::Parse",3,"bool");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("ticpp::Document::Parse",4,"TiXmlEncoding");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Document,0))){
+    SWIG_fail_ptr("Document_parse",1,SWIGTYPE_p_ticpp__Document);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  arg3 = (lua_toboolean(L, 3)!=0);
+  arg4 = (TiXmlEncoding)(int)lua_tonumber(L, 4);
+  (arg1)->Parse((std::string const &)*arg2,arg3,arg4);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Document_parse__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Document *arg1 = (ticpp::Document *) 0 ;
+  std::string *arg2 = 0 ;
+  bool arg3 ;
+  std::string temp2 ;
+  
+  SWIG_check_num_args("ticpp::Document::Parse",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Document::Parse",1,"ticpp::Document *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Document::Parse",2,"std::string const &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ticpp::Document::Parse",3,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Document,0))){
+    SWIG_fail_ptr("Document_parse",1,SWIGTYPE_p_ticpp__Document);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  arg3 = (lua_toboolean(L, 3)!=0);
+  (arg1)->Parse((std::string const &)*arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Document_parse__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Document *arg1 = (ticpp::Document *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  
+  SWIG_check_num_args("ticpp::Document::Parse",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Document::Parse",1,"ticpp::Document *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Document::Parse",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Document,0))){
+    SWIG_fail_ptr("Document_parse",1,SWIGTYPE_p_ticpp__Document);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  (arg1)->Parse((std::string const &)*arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Document_parse(lua_State* L) {
+  int argc;
+  int argv[5]={
+    1,2,3,4,5
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Document, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Document_parse__SWIG_2(L);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Document, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isboolean(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_Document_parse__SWIG_1(L);
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Document, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isboolean(L,argv[2]);
+        }
+        if (_v) {
+          {
+            _v = lua_isnumber(L,argv[3]);
+          }
+          if (_v) {
+            return _wrap_Document_parse__SWIG_0(L);
+          }
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Document_parse'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Document::Parse(std::string const &,bool,TiXmlEncoding)\n"
+    "    ticpp::Document::Parse(std::string const &,bool)\n"
+    "    ticpp::Document::Parse(std::string const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static void swig_delete_Document(void *obj) {
+ticpp::Document *arg1 = (ticpp::Document *) obj;
+delete arg1;
+}
+static swig_lua_method swig_ticpp_Document_methods[] = {
+    {"load_file", _wrap_Document_load_file}, 
+    {"save_file", _wrap_Document_save_file}, 
+    {"parse", _wrap_Document_parse}, 
+    {0,0}
+};
+static swig_lua_attribute swig_ticpp_Document_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_ticpp_Document_bases[] = {0,0};
+static const char *swig_ticpp_Document_base_names[] = {"ticpp::NodeImp< TiXmlDocument > *",0};
+static swig_lua_class _wrap_class_ticpp_Document = { "Document", &SWIGTYPE_p_ticpp__Document,_wrap_new_Document, swig_delete_Document, swig_ticpp_Document_methods, swig_ticpp_Document_attributes, swig_ticpp_Document_bases, swig_ticpp_Document_base_names };
+
+static int _wrap_new_Element__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Element *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Element::Element",0,0)
+  result = (ticpp::Element *)new ticpp::Element();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Element,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Element__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = 0 ;
+  std::string temp1 ;
+  ticpp::Element *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Element::Element",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ticpp::Element::Element",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
+  result = (ticpp::Element *)new ticpp::Element((std::string const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Element,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Element__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  char *arg1 = (char *) 0 ;
+  ticpp::Element *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Element::Element",1,1)
+  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ticpp::Element::Element",1,"char const *");
+  arg1 = (char *)lua_tostring(L, 1);
+  result = (ticpp::Element *)new ticpp::Element((char const *)arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Element,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Element__SWIG_3(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlElement *arg1 = (TiXmlElement *) 0 ;
+  ticpp::Element *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Element::Element",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Element::Element",1,"TiXmlElement *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlElement,0))){
+    SWIG_fail_ptr("new_Element",1,SWIGTYPE_p_TiXmlElement);
+  }
+  
+  result = (ticpp::Element *)new ticpp::Element(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Element,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Element(lua_State* L) {
+  int argc;
+  int argv[2]={
+    1,2
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 0) {
+    return _wrap_new_Element__SWIG_0(L);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlElement, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_new_Element__SWIG_3(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      _v = SWIG_lua_isnilstring(L,argv[0]);
+    }
+    if (_v) {
+      return _wrap_new_Element__SWIG_2(L);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      _v = lua_isstring(L,argv[0]);
+    }
+    if (_v) {
+      return _wrap_new_Element__SWIG_1(L);
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_Element'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Element::Element()\n"
+    "    ticpp::Element::Element(std::string const &)\n"
+    "    ticpp::Element::Element(char const *)\n"
+    "    ticpp::Element::Element(TiXmlElement *)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Element_first_attribute__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Element *arg1 = (ticpp::Element *) 0 ;
+  bool arg2 ;
+  ticpp::Attribute *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Element::FirstAttribute",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Element::FirstAttribute",1,"ticpp::Element const *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ticpp::Element::FirstAttribute",2,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
+    SWIG_fail_ptr("Element_first_attribute",1,SWIGTYPE_p_ticpp__Element);
+  }
+  
+  arg2 = (lua_toboolean(L, 2)!=0);
+  result = (ticpp::Attribute *)((ticpp::Element const *)arg1)->FirstAttribute(arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Attribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Element_first_attribute__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Element *arg1 = (ticpp::Element *) 0 ;
+  ticpp::Attribute *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Element::FirstAttribute",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Element::FirstAttribute",1,"ticpp::Element const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
+    SWIG_fail_ptr("Element_first_attribute",1,SWIGTYPE_p_ticpp__Element);
+  }
+  
+  result = (ticpp::Attribute *)((ticpp::Element const *)arg1)->FirstAttribute();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Attribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Element_first_attribute(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Element, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_Element_first_attribute__SWIG_1(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Element, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isboolean(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Element_first_attribute__SWIG_0(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Element_first_attribute'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Element::FirstAttribute(bool) const\n"
+    "    ticpp::Element::FirstAttribute() const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Element_last_attribute__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Element *arg1 = (ticpp::Element *) 0 ;
+  bool arg2 ;
+  ticpp::Attribute *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Element::LastAttribute",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Element::LastAttribute",1,"ticpp::Element const *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ticpp::Element::LastAttribute",2,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
+    SWIG_fail_ptr("Element_last_attribute",1,SWIGTYPE_p_ticpp__Element);
+  }
+  
+  arg2 = (lua_toboolean(L, 2)!=0);
+  result = (ticpp::Attribute *)((ticpp::Element const *)arg1)->LastAttribute(arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Attribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Element_last_attribute__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Element *arg1 = (ticpp::Element *) 0 ;
+  ticpp::Attribute *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Element::LastAttribute",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Element::LastAttribute",1,"ticpp::Element const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
+    SWIG_fail_ptr("Element_last_attribute",1,SWIGTYPE_p_ticpp__Element);
+  }
+  
+  result = (ticpp::Attribute *)((ticpp::Element const *)arg1)->LastAttribute();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Attribute,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Element_last_attribute(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Element, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_Element_last_attribute__SWIG_1(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Element, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isboolean(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Element_last_attribute__SWIG_0(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Element_last_attribute'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Element::LastAttribute(bool) const\n"
+    "    ticpp::Element::LastAttribute() const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Element_iterate_first(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Element *arg1 = (ticpp::Element *) 0 ;
+  std::string *arg2 = 0 ;
+  ticpp::Attribute **arg3 = (ticpp::Attribute **) 0 ;
+  std::string temp2 ;
+  
+  SWIG_check_num_args("ticpp::Element::IterateFirst",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Element::IterateFirst",1,"ticpp::Element const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Element::IterateFirst",2,"std::string const &");
+  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ticpp::Element::IterateFirst",3,"ticpp::Attribute **");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
+    SWIG_fail_ptr("Element_iterate_first",1,SWIGTYPE_p_ticpp__Element);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_p_ticpp__Attribute,0))){
+    SWIG_fail_ptr("Element_iterate_first",3,SWIGTYPE_p_p_ticpp__Attribute);
+  }
+  
+  ((ticpp::Element const *)arg1)->IterateFirst((std::string const &)*arg2,arg3);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Element_get_text__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Element *arg1 = (ticpp::Element *) 0 ;
+  bool arg2 ;
+  std::string result;
+  
+  SWIG_check_num_args("ticpp::Element::GetText",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Element::GetText",1,"ticpp::Element const *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ticpp::Element::GetText",2,"bool");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
+    SWIG_fail_ptr("Element_get_text",1,SWIGTYPE_p_ticpp__Element);
+  }
+  
+  arg2 = (lua_toboolean(L, 2)!=0);
+  result = ((ticpp::Element const *)arg1)->GetText(arg2);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Element_get_text__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Element *arg1 = (ticpp::Element *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("ticpp::Element::GetText",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Element::GetText",1,"ticpp::Element const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
+    SWIG_fail_ptr("Element_get_text",1,SWIGTYPE_p_ticpp__Element);
+  }
+  
+  result = ((ticpp::Element const *)arg1)->GetText();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Element_get_text(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Element, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_Element_get_text__SWIG_1(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ticpp__Element, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      {
+        _v = lua_isboolean(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_Element_get_text__SWIG_0(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'Element_get_text'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Element::GetText(bool) const\n"
+    "    ticpp::Element::GetText() const\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Element_get_text_or_default(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Element *arg1 = (ticpp::Element *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  std::string result;
+  
+  SWIG_check_num_args("ticpp::Element::GetTextOrDefault",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Element::GetTextOrDefault",1,"ticpp::Element const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Element::GetTextOrDefault",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
+    SWIG_fail_ptr("Element_get_text_or_default",1,SWIGTYPE_p_ticpp__Element);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = ((ticpp::Element const *)arg1)->GetTextOrDefault((std::string const &)*arg2);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Element_get_attribute_or_default(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Element *arg1 = (ticpp::Element *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string *arg3 = 0 ;
+  std::string temp2 ;
+  std::string temp3 ;
+  std::string result;
+  
+  SWIG_check_num_args("ticpp::Element::GetAttributeOrDefault",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Element::GetAttributeOrDefault",1,"ticpp::Element const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Element::GetAttributeOrDefault",2,"std::string const &");
+  if(!lua_isstring(L,3)) SWIG_fail_arg("ticpp::Element::GetAttributeOrDefault",3,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
+    SWIG_fail_ptr("Element_get_attribute_or_default",1,SWIGTYPE_p_ticpp__Element);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  temp3.assign(lua_tostring(L,3),lua_strlen(L,3)); arg3=&temp3;
+  result = ((ticpp::Element const *)arg1)->GetAttributeOrDefault((std::string const &)*arg2,(std::string const &)*arg3);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Element_get_attribute(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Element *arg1 = (ticpp::Element *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  std::string result;
+  
+  SWIG_check_num_args("ticpp::Element::GetAttribute",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Element::GetAttribute",1,"ticpp::Element const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Element::GetAttribute",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
+    SWIG_fail_ptr("Element_get_attribute",1,SWIGTYPE_p_ticpp__Element);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = ((ticpp::Element const *)arg1)->GetAttribute((std::string const &)*arg2);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Element_has_attribute(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Element *arg1 = (ticpp::Element *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  bool result;
+  
+  SWIG_check_num_args("ticpp::Element::HasAttribute",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Element::HasAttribute",1,"ticpp::Element const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Element::HasAttribute",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
+    SWIG_fail_ptr("Element_has_attribute",1,SWIGTYPE_p_ticpp__Element);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (bool)((ticpp::Element const *)arg1)->HasAttribute((std::string const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Element_remove_attribute(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Element *arg1 = (ticpp::Element *) 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
+  
+  SWIG_check_num_args("ticpp::Element::RemoveAttribute",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Element::RemoveAttribute",1,"ticpp::Element *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Element::RemoveAttribute",2,"std::string const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
+    SWIG_fail_ptr("Element_remove_attribute",1,SWIGTYPE_p_ticpp__Element);
+  }
+  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  (arg1)->RemoveAttribute((std::string const &)*arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_Element(void *obj) {
+ticpp::Element *arg1 = (ticpp::Element *) obj;
+delete arg1;
+}
+static swig_lua_method swig_ticpp_Element_methods[] = {
+    {"first_attribute", _wrap_Element_first_attribute}, 
+    {"last_attribute", _wrap_Element_last_attribute}, 
+    {"iterate_first", _wrap_Element_iterate_first}, 
+    {"get_text", _wrap_Element_get_text}, 
+    {"get_text_or_default", _wrap_Element_get_text_or_default}, 
+    {"get_attribute_or_default", _wrap_Element_get_attribute_or_default}, 
+    {"get_attribute", _wrap_Element_get_attribute}, 
+    {"has_attribute", _wrap_Element_has_attribute}, 
+    {"remove_attribute", _wrap_Element_remove_attribute}, 
+    {0,0}
+};
+static swig_lua_attribute swig_ticpp_Element_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_ticpp_Element_bases[] = {0,0};
+static const char *swig_ticpp_Element_base_names[] = {"ticpp::NodeImp< TiXmlElement > *",0};
+static swig_lua_class _wrap_class_ticpp_Element = { "Element", &SWIGTYPE_p_ticpp__Element,_wrap_new_Element, swig_delete_Element, swig_ticpp_Element_methods, swig_ticpp_Element_attributes, swig_ticpp_Element_bases, swig_ticpp_Element_base_names };
+
+static int _wrap_new_Declaration__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Declaration *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Declaration::Declaration",0,0)
+  result = (ticpp::Declaration *)new ticpp::Declaration();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Declaration,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Declaration__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlDeclaration *arg1 = (TiXmlDeclaration *) 0 ;
+  ticpp::Declaration *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Declaration::Declaration",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Declaration::Declaration",1,"TiXmlDeclaration *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlDeclaration,0))){
+    SWIG_fail_ptr("new_Declaration",1,SWIGTYPE_p_TiXmlDeclaration);
+  }
+  
+  result = (ticpp::Declaration *)new ticpp::Declaration(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Declaration,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Declaration__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = 0 ;
+  std::string *arg2 = 0 ;
+  std::string *arg3 = 0 ;
+  std::string temp1 ;
+  std::string temp2 ;
+  std::string temp3 ;
+  ticpp::Declaration *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::Declaration::Declaration",3,3)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ticpp::Declaration::Declaration",1,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::Declaration::Declaration",2,"std::string const &");
+  if(!lua_isstring(L,3)) SWIG_fail_arg("ticpp::Declaration::Declaration",3,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  temp3.assign(lua_tostring(L,3),lua_strlen(L,3)); arg3=&temp3;
+  result = (ticpp::Declaration *)new ticpp::Declaration((std::string const &)*arg1,(std::string const &)*arg2,(std::string const &)*arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Declaration,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_Declaration(lua_State* L) {
+  int argc;
+  int argv[4]={
+    1,2,3,4
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 0) {
+    return _wrap_new_Declaration__SWIG_0(L);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlDeclaration, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_new_Declaration__SWIG_1(L);
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      _v = lua_isstring(L,argv[0]);
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        {
+          _v = lua_isstring(L,argv[2]);
+        }
+        if (_v) {
+          return _wrap_new_Declaration__SWIG_2(L);
+        }
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_Declaration'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::Declaration::Declaration()\n"
+    "    ticpp::Declaration::Declaration(TiXmlDeclaration *)\n"
+    "    ticpp::Declaration::Declaration(std::string const &,std::string const &,std::string const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_Declaration_version(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Declaration *arg1 = (ticpp::Declaration *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("ticpp::Declaration::Version",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Declaration::Version",1,"ticpp::Declaration const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Declaration,0))){
+    SWIG_fail_ptr("Declaration_version",1,SWIGTYPE_p_ticpp__Declaration);
+  }
+  
+  result = ((ticpp::Declaration const *)arg1)->Version();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Declaration_encoding(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Declaration *arg1 = (ticpp::Declaration *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("ticpp::Declaration::Encoding",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Declaration::Encoding",1,"ticpp::Declaration const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Declaration,0))){
+    SWIG_fail_ptr("Declaration_encoding",1,SWIGTYPE_p_ticpp__Declaration);
+  }
+  
+  result = ((ticpp::Declaration const *)arg1)->Encoding();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Declaration_standalone(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::Declaration *arg1 = (ticpp::Declaration *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("ticpp::Declaration::Standalone",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::Declaration::Standalone",1,"ticpp::Declaration const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Declaration,0))){
+    SWIG_fail_ptr("Declaration_standalone",1,SWIGTYPE_p_ticpp__Declaration);
+  }
+  
+  result = ((ticpp::Declaration const *)arg1)->Standalone();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_Declaration(void *obj) {
+ticpp::Declaration *arg1 = (ticpp::Declaration *) obj;
+delete arg1;
+}
+static swig_lua_method swig_ticpp_Declaration_methods[] = {
+    {"version", _wrap_Declaration_version}, 
+    {"encoding", _wrap_Declaration_encoding}, 
+    {"standalone", _wrap_Declaration_standalone}, 
+    {0,0}
+};
+static swig_lua_attribute swig_ticpp_Declaration_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_ticpp_Declaration_bases[] = {0,0};
+static const char *swig_ticpp_Declaration_base_names[] = {"ticpp::NodeImp< TiXmlDeclaration > *",0};
+static swig_lua_class _wrap_class_ticpp_Declaration = { "Declaration", &SWIGTYPE_p_ticpp__Declaration,_wrap_new_Declaration, swig_delete_Declaration, swig_ticpp_Declaration_methods, swig_ticpp_Declaration_attributes, swig_ticpp_Declaration_bases, swig_ticpp_Declaration_base_names };
+
+static int _wrap_new_StylesheetReference__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::StylesheetReference *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::StylesheetReference::StylesheetReference",0,0)
+  result = (ticpp::StylesheetReference *)new ticpp::StylesheetReference();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__StylesheetReference,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_StylesheetReference__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  TiXmlStylesheetReference *arg1 = (TiXmlStylesheetReference *) 0 ;
+  ticpp::StylesheetReference *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::StylesheetReference::StylesheetReference",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::StylesheetReference::StylesheetReference",1,"TiXmlStylesheetReference *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_TiXmlStylesheetReference,0))){
+    SWIG_fail_ptr("new_StylesheetReference",1,SWIGTYPE_p_TiXmlStylesheetReference);
+  }
+  
+  result = (ticpp::StylesheetReference *)new ticpp::StylesheetReference(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__StylesheetReference,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_StylesheetReference__SWIG_2(lua_State* L) {
+  int SWIG_arg = 0;
+  std::string *arg1 = 0 ;
+  std::string *arg2 = 0 ;
+  std::string temp1 ;
+  std::string temp2 ;
+  ticpp::StylesheetReference *result = 0 ;
+  
+  SWIG_check_num_args("ticpp::StylesheetReference::StylesheetReference",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ticpp::StylesheetReference::StylesheetReference",1,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ticpp::StylesheetReference::StylesheetReference",2,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  result = (ticpp::StylesheetReference *)new ticpp::StylesheetReference((std::string const &)*arg1,(std::string const &)*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__StylesheetReference,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_StylesheetReference(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 0) {
+    return _wrap_new_StylesheetReference__SWIG_0(L);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_TiXmlStylesheetReference, 0)) {
+        _v = 0;
+      } else {
+        _v = 1;
+      }
+    }
+    if (_v) {
+      return _wrap_new_StylesheetReference__SWIG_1(L);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      _v = lua_isstring(L,argv[0]);
+    }
+    if (_v) {
+      {
+        _v = lua_isstring(L,argv[1]);
+      }
+      if (_v) {
+        return _wrap_new_StylesheetReference__SWIG_2(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_StylesheetReference'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ticpp::StylesheetReference::StylesheetReference()\n"
+    "    ticpp::StylesheetReference::StylesheetReference(TiXmlStylesheetReference *)\n"
+    "    ticpp::StylesheetReference::StylesheetReference(std::string const &,std::string const &)\n");
+  lua_error(L);return 0;
+}
+
+
+static int _wrap_StylesheetReference_type(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::StylesheetReference *arg1 = (ticpp::StylesheetReference *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("ticpp::StylesheetReference::Type",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::StylesheetReference::Type",1,"ticpp::StylesheetReference const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__StylesheetReference,0))){
+    SWIG_fail_ptr("StylesheetReference_type",1,SWIGTYPE_p_ticpp__StylesheetReference);
+  }
+  
+  result = ((ticpp::StylesheetReference const *)arg1)->Type();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_StylesheetReference_href(lua_State* L) {
+  int SWIG_arg = 0;
+  ticpp::StylesheetReference *arg1 = (ticpp::StylesheetReference *) 0 ;
+  std::string result;
+  
+  SWIG_check_num_args("ticpp::StylesheetReference::Href",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ticpp::StylesheetReference::Href",1,"ticpp::StylesheetReference const *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__StylesheetReference,0))){
+    SWIG_fail_ptr("StylesheetReference_href",1,SWIGTYPE_p_ticpp__StylesheetReference);
+  }
+  
+  result = ((ticpp::StylesheetReference const *)arg1)->Href();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_StylesheetReference(void *obj) {
+ticpp::StylesheetReference *arg1 = (ticpp::StylesheetReference *) obj;
+delete arg1;
+}
+static swig_lua_method swig_ticpp_StylesheetReference_methods[] = {
+    {"type", _wrap_StylesheetReference_type}, 
+    {"href", _wrap_StylesheetReference_href}, 
+    {0,0}
+};
+static swig_lua_attribute swig_ticpp_StylesheetReference_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_ticpp_StylesheetReference_bases[] = {0,0};
+static const char *swig_ticpp_StylesheetReference_base_names[] = {"ticpp::NodeImp< TiXmlStylesheetReference > *",0};
+static swig_lua_class _wrap_class_ticpp_StylesheetReference = { "StylesheetReference", &SWIGTYPE_p_ticpp__StylesheetReference,_wrap_new_StylesheetReference, swig_delete_StylesheetReference, swig_ticpp_StylesheetReference_methods, swig_ticpp_StylesheetReference_attributes, swig_ticpp_StylesheetReference_bases, swig_ticpp_StylesheetReference_base_names };
 
 static int _wrap_new_ArgosException__SWIG_0(lua_State* L) {
   int SWIG_arg = 0;
   std::string *arg1 = 0 ;
   std::exception *arg2 = (std::exception *) 0 ;
+  std::string temp1 ;
   argos::CARGoSException *result = 0 ;
   
   SWIG_check_num_args("argos::CARGoSException::CARGoSException",2,2)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::CARGoSException::CARGoSException",1,"std::string const &");
+  if(!lua_isstring(L,1)) SWIG_fail_arg("argos::CARGoSException::CARGoSException",1,"std::string const &");
   if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("argos::CARGoSException::CARGoSException",2,"std::exception *");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("new_ArgosException",1,SWIGTYPE_p_std__string);
-  }
-  
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__exception,0))){
     SWIG_fail_ptr("new_ArgosException",2,SWIGTYPE_p_std__exception);
@@ -2010,15 +21882,12 @@ fail:
 static int _wrap_new_ArgosException__SWIG_1(lua_State* L) {
   int SWIG_arg = 0;
   std::string *arg1 = 0 ;
+  std::string temp1 ;
   argos::CARGoSException *result = 0 ;
   
   SWIG_check_num_args("argos::CARGoSException::CARGoSException",1,1)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::CARGoSException::CARGoSException",1,"std::string const &");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("new_ArgosException",1,SWIGTYPE_p_std__string);
-  }
-  
+  if(!lua_isstring(L,1)) SWIG_fail_arg("argos::CARGoSException::CARGoSException",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
   result = (argos::CARGoSException *)new argos::CARGoSException((std::string const &)*arg1);
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CARGoSException,1); SWIG_arg++; 
   return SWIG_arg;
@@ -2041,12 +21910,7 @@ static int _wrap_new_ArgosException(lua_State* L) {
   if (argc == 1) {
     int _v;
     {
-      void *ptr;
-      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
-        _v = 0;
-      } else {
-        _v = 1;
-      }
+      _v = lua_isstring(L,argv[0]);
     }
     if (_v) {
       return _wrap_new_ArgosException__SWIG_1(L);
@@ -2055,12 +21919,7 @@ static int _wrap_new_ArgosException(lua_State* L) {
   if (argc == 2) {
     int _v;
     {
-      void *ptr;
-      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
-        _v = 0;
-      } else {
-        _v = 1;
-      }
+      _v = lua_isstring(L,argv[0]);
     }
     if (_v) {
       {
@@ -2120,29 +21979,26 @@ static swig_lua_method swig_argos_CARGoSException_methods[] = {
 static swig_lua_attribute swig_argos_CARGoSException_attributes[] = {
     {0,0,0}
 };
-static swig_lua_class *swig_argos_CARGoSException_bases[] = {0,0};
-static const char *swig_argos_CARGoSException_base_names[] = {"std::exception *",0};
+static swig_lua_class *swig_argos_CARGoSException_bases[] = {0};
+static const char *swig_argos_CARGoSException_base_names[] = {0};
 static swig_lua_class _wrap_class_argos_CARGoSException = { "ArgosException", &SWIGTYPE_p_argos__CARGoSException,_wrap_new_ArgosException, swig_delete_ArgosException, swig_argos_CARGoSException_methods, swig_argos_CARGoSException_attributes, swig_argos_CARGoSException_bases, swig_argos_CARGoSException_base_names };
 
 static int _wrap_node_exists(lua_State* L) {
   int SWIG_arg = 0;
   argos::TConfigurationNode *arg1 = 0 ;
   std::string *arg2 = 0 ;
+  std::string temp2 ;
   bool result;
   
   SWIG_check_num_args("argos::NodeExists",2,2)
   if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::NodeExists",1,"argos::TConfigurationNode &");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::NodeExists",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::NodeExists",2,"std::string const &");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
     SWIG_fail_ptr("node_exists",1,SWIGTYPE_p_ticpp__Element);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("node_exists",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   result = (bool)argos::NodeExists(*arg1,(std::string const &)*arg2);
   lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
   return SWIG_arg;
@@ -2159,21 +22015,18 @@ static int _wrap_get_node(lua_State* L) {
   int SWIG_arg = 0;
   argos::TConfigurationNode *arg1 = 0 ;
   std::string *arg2 = 0 ;
+  std::string temp2 ;
   argos::TConfigurationNode *result = 0 ;
   
   SWIG_check_num_args("argos::GetNode",2,2)
   if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::GetNode",1,"argos::TConfigurationNode &");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::GetNode",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::GetNode",2,"std::string const &");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
     SWIG_fail_ptr("get_node",1,SWIGTYPE_p_ticpp__Element);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("get_node",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   result = (argos::TConfigurationNode *) &argos::GetNode(*arg1,(std::string const &)*arg2);
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ticpp__Element,0); SWIG_arg++; 
   return SWIG_arg;
@@ -2220,21 +22073,18 @@ static int _wrap_node_attribute_exists(lua_State* L) {
   int SWIG_arg = 0;
   argos::TConfigurationNode *arg1 = 0 ;
   std::string *arg2 = 0 ;
+  std::string temp2 ;
   bool result;
   
   SWIG_check_num_args("argos::NodeAttributeExists",2,2)
   if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::NodeAttributeExists",1,"argos::TConfigurationNode &");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::NodeAttributeExists",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::NodeAttributeExists",2,"std::string const &");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
     SWIG_fail_ptr("node_attribute_exists",1,SWIGTYPE_p_ticpp__Element);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("node_attribute_exists",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   result = (bool)argos::NodeAttributeExists(*arg1,(std::string const &)*arg2);
   lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
   return SWIG_arg;
@@ -2252,21 +22102,18 @@ static int _wrap_get_node_attribute__SWIG_0(lua_State* L) {
   argos::TConfigurationNode *arg1 = 0 ;
   std::string *arg2 = 0 ;
   bool *arg3 = 0 ;
+  std::string temp2 ;
   
   SWIG_check_num_args("argos::GetNodeAttribute",3,3)
   if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::GetNodeAttribute",1,"argos::TConfigurationNode &");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::GetNodeAttribute",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::GetNodeAttribute",2,"std::string const &");
   if(!lua_isuserdata(L,3)) SWIG_fail_arg("argos::GetNodeAttribute",3,"bool &");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
     SWIG_fail_ptr("get_node_attribute",1,SWIGTYPE_p_ticpp__Element);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("get_node_attribute",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_bool,0))){
     SWIG_fail_ptr("get_node_attribute",3,SWIGTYPE_p_bool);
@@ -2289,21 +22136,18 @@ static int _wrap_get_node_attribute__SWIG_1(lua_State* L) {
   argos::TConfigurationNode *arg1 = 0 ;
   std::string *arg2 = 0 ;
   argos::UInt8 *arg3 = 0 ;
+  std::string temp2 ;
   
   SWIG_check_num_args("argos::GetNodeAttribute",3,3)
   if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::GetNodeAttribute",1,"argos::TConfigurationNode &");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::GetNodeAttribute",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::GetNodeAttribute",2,"std::string const &");
   if(!lua_isuserdata(L,3)) SWIG_fail_arg("argos::GetNodeAttribute",3,"argos::UInt8 &");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
     SWIG_fail_ptr("get_node_attribute",1,SWIGTYPE_p_ticpp__Element);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("get_node_attribute",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_unsigned_char,0))){
     SWIG_fail_ptr("get_node_attribute",3,SWIGTYPE_p_unsigned_char);
@@ -2326,21 +22170,18 @@ static int _wrap_get_node_attribute__SWIG_2(lua_State* L) {
   argos::TConfigurationNode *arg1 = 0 ;
   std::string *arg2 = 0 ;
   argos::SInt8 *arg3 = 0 ;
+  std::string temp2 ;
   
   SWIG_check_num_args("argos::GetNodeAttribute",3,3)
   if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::GetNodeAttribute",1,"argos::TConfigurationNode &");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::GetNodeAttribute",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::GetNodeAttribute",2,"std::string const &");
   if(!lua_isuserdata(L,3)) SWIG_fail_arg("argos::GetNodeAttribute",3,"argos::SInt8 &");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
     SWIG_fail_ptr("get_node_attribute",1,SWIGTYPE_p_ticpp__Element);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("get_node_attribute",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_signed_char,0))){
     SWIG_fail_ptr("get_node_attribute",3,SWIGTYPE_p_signed_char);
@@ -2377,12 +22218,7 @@ static int _wrap_get_node_attribute(lua_State* L) {
     }
     if (_v) {
       {
-        void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
-          _v = 0;
-        } else {
-          _v = 1;
-        }
+        _v = lua_isstring(L,argv[1]);
       }
       if (_v) {
         {
@@ -2411,12 +22247,7 @@ static int _wrap_get_node_attribute(lua_State* L) {
     }
     if (_v) {
       {
-        void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
-          _v = 0;
-        } else {
-          _v = 1;
-        }
+        _v = lua_isstring(L,argv[1]);
       }
       if (_v) {
         {
@@ -2445,12 +22276,7 @@ static int _wrap_get_node_attribute(lua_State* L) {
     }
     if (_v) {
       {
-        void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
-          _v = 0;
-        } else {
-          _v = 1;
-        }
+        _v = lua_isstring(L,argv[1]);
       }
       if (_v) {
         {
@@ -2483,10 +22309,11 @@ static int _wrap_get_node_attribute_or_default__SWIG_0(lua_State* L) {
   std::string *arg2 = 0 ;
   bool *arg3 = 0 ;
   bool arg4 ;
+  std::string temp2 ;
   
   SWIG_check_num_args("argos::GetNodeAttributeOrDefault",4,4)
   if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::GetNodeAttributeOrDefault",1,"argos::TConfigurationNode &");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::GetNodeAttributeOrDefault",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::GetNodeAttributeOrDefault",2,"std::string const &");
   if(!lua_isuserdata(L,3)) SWIG_fail_arg("argos::GetNodeAttributeOrDefault",3,"bool &");
   if(!lua_isboolean(L,4)) SWIG_fail_arg("argos::GetNodeAttributeOrDefault",4,"bool const");
   
@@ -2494,11 +22321,7 @@ static int _wrap_get_node_attribute_or_default__SWIG_0(lua_State* L) {
     SWIG_fail_ptr("get_node_attribute_or_default",1,SWIGTYPE_p_ticpp__Element);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("get_node_attribute_or_default",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_bool,0))){
     SWIG_fail_ptr("get_node_attribute_or_default",3,SWIGTYPE_p_bool);
@@ -2523,10 +22346,11 @@ static int _wrap_get_node_attribute_or_default__SWIG_1(lua_State* L) {
   std::string *arg2 = 0 ;
   argos::UInt8 *arg3 = 0 ;
   argos::UInt8 arg4 ;
+  std::string temp2 ;
   
   SWIG_check_num_args("argos::GetNodeAttributeOrDefault",4,4)
   if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::GetNodeAttributeOrDefault",1,"argos::TConfigurationNode &");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::GetNodeAttributeOrDefault",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::GetNodeAttributeOrDefault",2,"std::string const &");
   if(!lua_isuserdata(L,3)) SWIG_fail_arg("argos::GetNodeAttributeOrDefault",3,"argos::UInt8 &");
   if(!lua_isnumber(L,4)) SWIG_fail_arg("argos::GetNodeAttributeOrDefault",4,"argos::UInt8 const");
   
@@ -2534,11 +22358,7 @@ static int _wrap_get_node_attribute_or_default__SWIG_1(lua_State* L) {
     SWIG_fail_ptr("get_node_attribute_or_default",1,SWIGTYPE_p_ticpp__Element);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("get_node_attribute_or_default",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_unsigned_char,0))){
     SWIG_fail_ptr("get_node_attribute_or_default",3,SWIGTYPE_p_unsigned_char);
@@ -2564,10 +22384,11 @@ static int _wrap_get_node_attribute_or_default__SWIG_2(lua_State* L) {
   std::string *arg2 = 0 ;
   argos::SInt8 *arg3 = 0 ;
   argos::SInt8 arg4 ;
+  std::string temp2 ;
   
   SWIG_check_num_args("argos::GetNodeAttributeOrDefault",4,4)
   if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::GetNodeAttributeOrDefault",1,"argos::TConfigurationNode &");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::GetNodeAttributeOrDefault",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::GetNodeAttributeOrDefault",2,"std::string const &");
   if(!lua_isuserdata(L,3)) SWIG_fail_arg("argos::GetNodeAttributeOrDefault",3,"argos::SInt8 &");
   if(!lua_isnumber(L,4)) SWIG_fail_arg("argos::GetNodeAttributeOrDefault",4,"argos::SInt8 const");
   
@@ -2575,11 +22396,7 @@ static int _wrap_get_node_attribute_or_default__SWIG_2(lua_State* L) {
     SWIG_fail_ptr("get_node_attribute_or_default",1,SWIGTYPE_p_ticpp__Element);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("get_node_attribute_or_default",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_signed_char,0))){
     SWIG_fail_ptr("get_node_attribute_or_default",3,SWIGTYPE_p_signed_char);
@@ -2617,12 +22434,7 @@ static int _wrap_get_node_attribute_or_default(lua_State* L) {
     }
     if (_v) {
       {
-        void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
-          _v = 0;
-        } else {
-          _v = 1;
-        }
+        _v = lua_isstring(L,argv[1]);
       }
       if (_v) {
         {
@@ -2656,12 +22468,7 @@ static int _wrap_get_node_attribute_or_default(lua_State* L) {
     }
     if (_v) {
       {
-        void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
-          _v = 0;
-        } else {
-          _v = 1;
-        }
+        _v = lua_isstring(L,argv[1]);
       }
       if (_v) {
         {
@@ -2695,12 +22502,7 @@ static int _wrap_get_node_attribute_or_default(lua_State* L) {
     }
     if (_v) {
       {
-        void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
-          _v = 0;
-        } else {
-          _v = 1;
-        }
+        _v = lua_isstring(L,argv[1]);
       }
       if (_v) {
         {
@@ -2737,21 +22539,18 @@ static int _wrap_set_node_attribute__SWIG_0(lua_State* L) {
   argos::TConfigurationNode *arg1 = 0 ;
   std::string *arg2 = 0 ;
   bool arg3 ;
+  std::string temp2 ;
   
   SWIG_check_num_args("argos::SetNodeAttribute",3,3)
   if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::SetNodeAttribute",1,"argos::TConfigurationNode &");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::SetNodeAttribute",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::SetNodeAttribute",2,"std::string const &");
   if(!lua_isboolean(L,3)) SWIG_fail_arg("argos::SetNodeAttribute",3,"bool const");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
     SWIG_fail_ptr("set_node_attribute",1,SWIGTYPE_p_ticpp__Element);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("set_node_attribute",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   arg3 = (lua_toboolean(L, 3)!=0);
   argos::SetNodeAttribute(*arg1,(std::string const &)*arg2,arg3);
   
@@ -2770,21 +22569,18 @@ static int _wrap_set_node_attribute__SWIG_1(lua_State* L) {
   argos::TConfigurationNode *arg1 = 0 ;
   std::string *arg2 = 0 ;
   argos::UInt8 arg3 ;
+  std::string temp2 ;
   
   SWIG_check_num_args("argos::SetNodeAttribute",3,3)
   if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::SetNodeAttribute",1,"argos::TConfigurationNode &");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::SetNodeAttribute",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::SetNodeAttribute",2,"std::string const &");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("argos::SetNodeAttribute",3,"argos::UInt8 const");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ticpp__Element,0))){
     SWIG_fail_ptr("set_node_attribute",1,SWIGTYPE_p_ticpp__Element);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("set_node_attribute",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   SWIG_contract_assert((lua_tonumber(L,3)>=0),"number must not be negative")
   arg3 = (argos::UInt8 const)lua_tonumber(L, 3);
   argos::SetNodeAttribute(*arg1,(std::string const &)*arg2,arg3);
@@ -2818,12 +22614,7 @@ static int _wrap_set_node_attribute(lua_State* L) {
     }
     if (_v) {
       {
-        void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
-          _v = 0;
-        } else {
-          _v = 1;
-        }
+        _v = lua_isstring(L,argv[1]);
       }
       if (_v) {
         {
@@ -2847,12 +22638,7 @@ static int _wrap_set_node_attribute(lua_State* L) {
     }
     if (_v) {
       {
-        void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
-          _v = 0;
-        } else {
-          _v = 1;
-        }
+        _v = lua_isstring(L,argv[1]);
       }
       if (_v) {
         {
@@ -3024,25 +22810,21 @@ static int _wrap_tokenize(lua_State* L) {
   std::vector< std::string > *arg2 = 0 ;
   std::string const &arg3_defvalue = " " ;
   std::string *arg3 = (std::string *) &arg3_defvalue ;
+  std::string temp1 ;
+  std::string temp3 ;
   
   SWIG_check_num_args("argos::Tokenize",2,3)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::Tokenize",1,"std::string const &");
+  if(!lua_isstring(L,1)) SWIG_fail_arg("argos::Tokenize",1,"std::string const &");
   if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::Tokenize",2,"std::vector< std::string > &");
-  if(lua_gettop(L)>=3 && !lua_isuserdata(L,3)) SWIG_fail_arg("argos::Tokenize",3,"std::string const &");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("tokenize",1,SWIGTYPE_p_std__string);
-  }
-  
+  if(lua_gettop(L)>=3 && !lua_isstring(L,3)) SWIG_fail_arg("argos::Tokenize",3,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_std__string_t,0))){
     SWIG_fail_ptr("tokenize",2,SWIGTYPE_p_std__vectorT_std__string_t);
   }
   
   if(lua_gettop(L)>=3){
-    if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_std__string,0))){
-      SWIG_fail_ptr("tokenize",3,SWIGTYPE_p_std__string);
-    }
+    temp3.assign(lua_tostring(L,3),lua_strlen(L,3)); arg3=&temp3;
   }
   argos::Tokenize((std::string const &)*arg1,*arg2,(std::string const &)*arg3);
   
@@ -3059,20 +22841,14 @@ fail:
 static int _wrap_string_to_upper_case(lua_State* L) {
   int SWIG_arg = 0;
   std::string *arg1 = 0 ;
+  std::string temp1 ;
   std::string result;
   
   SWIG_check_num_args("argos::StringToUpperCase",1,1)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::StringToUpperCase",1,"std::string const &");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("string_to_upper_case",1,SWIGTYPE_p_std__string);
-  }
-  
+  if(!lua_isstring(L,1)) SWIG_fail_arg("argos::StringToUpperCase",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
   result = argos::StringToUpperCase((std::string const &)*arg1);
-  {
-    std::string * resultptr = new std::string((const std::string &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__string,1); SWIG_arg++;
-  }
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
   return SWIG_arg;
   
   if(0) SWIG_fail;
@@ -3086,20 +22862,14 @@ fail:
 static int _wrap_string_to_lower_case(lua_State* L) {
   int SWIG_arg = 0;
   std::string *arg1 = 0 ;
+  std::string temp1 ;
   std::string result;
   
   SWIG_check_num_args("argos::StringToLowerCase",1,1)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::StringToLowerCase",1,"std::string const &");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("string_to_lower_case",1,SWIGTYPE_p_std__string);
-  }
-  
+  if(!lua_isstring(L,1)) SWIG_fail_arg("argos::StringToLowerCase",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
   result = argos::StringToLowerCase((std::string const &)*arg1);
-  {
-    std::string * resultptr = new std::string((const std::string &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__string,1); SWIG_arg++;
-  }
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
   return SWIG_arg;
   
   if(0) SWIG_fail;
@@ -3113,20 +22883,14 @@ fail:
 static int _wrap_expand_argo_sinstall_dir(lua_State* L) {
   int SWIG_arg = 0;
   std::string *arg1 = 0 ;
+  std::string temp1 ;
   std::string result;
   
   SWIG_check_num_args("argos::ExpandARGoSInstallDir",1,1)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::ExpandARGoSInstallDir",1,"std::string const &");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("expand_argo_sinstall_dir",1,SWIGTYPE_p_std__string);
-  }
-  
+  if(!lua_isstring(L,1)) SWIG_fail_arg("argos::ExpandARGoSInstallDir",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
   result = argos::ExpandARGoSInstallDir((std::string const &)*arg1);
-  {
-    std::string * resultptr = new std::string((const std::string &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__string,1); SWIG_arg++;
-  }
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
   return SWIG_arg;
   
   if(0) SWIG_fail;
@@ -3142,26 +22906,20 @@ static int _wrap_replace(lua_State* L) {
   std::string *arg1 = 0 ;
   std::string *arg2 = 0 ;
   std::string *arg3 = 0 ;
+  std::string temp2 ;
+  std::string temp3 ;
   
   SWIG_check_num_args("argos::Replace",3,3)
   if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::Replace",1,"std::string &");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::Replace",2,"std::string const &");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("argos::Replace",3,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::Replace",2,"std::string const &");
+  if(!lua_isstring(L,3)) SWIG_fail_arg("argos::Replace",3,"std::string const &");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
     SWIG_fail_ptr("replace",1,SWIGTYPE_p_std__string);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("replace",2,SWIGTYPE_p_std__string);
-  }
-  
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("replace",3,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  temp3.assign(lua_tostring(L,3),lua_strlen(L,3)); arg3=&temp3;
   argos::Replace(*arg1,(std::string const &)*arg2,(std::string const &)*arg3);
   
   return SWIG_arg;
@@ -3178,23 +22936,14 @@ static int _wrap_match_pattern(lua_State* L) {
   int SWIG_arg = 0;
   std::string *arg1 = 0 ;
   std::string arg2 ;
-  std::string *argp2 ;
+  std::string temp1 ;
   bool result;
   
   SWIG_check_num_args("argos::MatchPattern",2,2)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::MatchPattern",1,"std::string const &");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::MatchPattern",2,"std::string const");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("match_pattern",1,SWIGTYPE_p_std__string);
-  }
-  
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("match_pattern",2,SWIGTYPE_p_std__string);
-  }
-  arg2 = *argp2;
-  
+  if(!lua_isstring(L,1)) SWIG_fail_arg("argos::MatchPattern",1,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::MatchPattern",2,"std::string const");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
+  (&arg2)->assign(lua_tostring(L,2),lua_strlen(L,2));
   result = (bool)argos::MatchPattern((std::string const &)*arg1,arg2);
   lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
   return SWIG_arg;
@@ -9237,18 +28986,15 @@ static int _wrap_new_CRNG__SWIG_0(lua_State* L) {
   int SWIG_arg = 0;
   argos::UInt32 arg1 ;
   std::string *arg2 = 0 ;
+  std::string temp2 ;
   argos::CRNG *result = 0 ;
   
   SWIG_check_num_args("argos::CRNG::CRNG",2,2)
   if(!lua_isnumber(L,1)) SWIG_fail_arg("argos::CRNG::CRNG",1,"argos::UInt32");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::CRNG::CRNG",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::CRNG::CRNG",2,"std::string const &");
   SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative")
   arg1 = (argos::UInt32)lua_tonumber(L, 1);
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("new_CRNG",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   result = (argos::CRNG *)new argos::CRNG(arg1,(std::string const &)*arg2);
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CRNG,1); SWIG_arg++; 
   return SWIG_arg;
@@ -9381,12 +29127,7 @@ static int _wrap_new_CRNG(lua_State* L) {
     }
     if (_v) {
       {
-        void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
-          _v = 0;
-        } else {
-          _v = 1;
-        }
+        _v = lua_isstring(L,argv[1]);
       }
       if (_v) {
         return _wrap_new_CRNG__SWIG_0(L);
@@ -9468,10 +29209,7 @@ static int _wrap_CRNG_get_type(lua_State* L) {
   }
   
   result = ((argos::CRNG const *)arg1)->GetType();
-  {
-    std::string * resultptr = new std::string((const std::string &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__string,1); SWIG_arg++;
-  }
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
   return SWIG_arg;
   
   if(0) SWIG_fail;
@@ -9486,20 +29224,17 @@ static int _wrap_CRNG_set_type(lua_State* L) {
   int SWIG_arg = 0;
   argos::CRNG *arg1 = (argos::CRNG *) 0 ;
   std::string *arg2 = 0 ;
+  std::string temp2 ;
   
   SWIG_check_num_args("argos::CRNG::SetType",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CRNG::SetType",1,"argos::CRNG *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::CRNG::SetType",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::CRNG::SetType",2,"std::string const &");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CRNG,0))){
     SWIG_fail_ptr("CRNG_set_type",1,SWIGTYPE_p_argos__CRNG);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("CRNG_set_type",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   (arg1)->SetType((std::string const &)*arg2);
   
   return SWIG_arg;
@@ -10108,16 +29843,13 @@ static int _wrap_new_CCategory__SWIG_0(lua_State* L) {
   int SWIG_arg = 0;
   std::string *arg1 = 0 ;
   argos::UInt32 arg2 ;
+  std::string temp1 ;
   argos::CCategory *result = 0 ;
   
   SWIG_check_num_args("argos::CCategory::CCategory",2,2)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::CCategory::CCategory",1,"std::string const &");
+  if(!lua_isstring(L,1)) SWIG_fail_arg("argos::CCategory::CCategory",1,"std::string const &");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("argos::CCategory::CCategory",2,"argos::UInt32");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("new_CCategory",1,SWIGTYPE_p_std__string);
-  }
-  
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative")
   arg2 = (argos::UInt32)lua_tonumber(L, 2);
   result = (argos::CCategory *)new argos::CCategory((std::string const &)*arg1,arg2);
@@ -10180,12 +29912,7 @@ static int _wrap_new_CCategory(lua_State* L) {
   if (argc == 2) {
     int _v;
     {
-      void *ptr;
-      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
-        _v = 0;
-      } else {
-        _v = 1;
-      }
+      _v = lua_isstring(L,argv[0]);
     }
     if (_v) {
       {
@@ -10218,7 +29945,7 @@ static int _wrap_CCategory_get_id(lua_State* L) {
   }
   
   result = (std::string *) &((argos::CCategory const *)arg1)->GetId();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__string,0); SWIG_arg++; 
+  lua_pushlstring(L,result->data(),result->size()); SWIG_arg++;
   return SWIG_arg;
   
   if(0) SWIG_fail;
@@ -10233,20 +29960,17 @@ static int _wrap_CCategory_set_id(lua_State* L) {
   int SWIG_arg = 0;
   argos::CCategory *arg1 = (argos::CCategory *) 0 ;
   std::string *arg2 = 0 ;
+  std::string temp2 ;
   
   SWIG_check_num_args("argos::CCategory::SetId",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCategory::SetId",1,"argos::CCategory *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::CCategory::SetId",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::CCategory::SetId",2,"std::string const &");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCategory,0))){
     SWIG_fail_ptr("CCategory_set_id",1,SWIGTYPE_p_argos__CCategory);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("CCategory_set_id",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   (arg1)->SetId((std::string const &)*arg2);
   
   return SWIG_arg;
@@ -10374,21 +30098,18 @@ static int _wrap_CCategory_create_rng__SWIG_0(lua_State* L) {
   int SWIG_arg = 0;
   argos::CCategory *arg1 = (argos::CCategory *) 0 ;
   std::string *arg2 = 0 ;
+  std::string temp2 ;
   argos::CRNG *result = 0 ;
   
   SWIG_check_num_args("argos::CCategory::CreateRNG",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCategory::CreateRNG",1,"argos::CCategory *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::CCategory::CreateRNG",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::CCategory::CreateRNG",2,"std::string const &");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCategory,0))){
     SWIG_fail_ptr("CCategory_create_rng",1,SWIGTYPE_p_argos__CCategory);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("CCategory_create_rng",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   result = (argos::CRNG *)(arg1)->CreateRNG((std::string const &)*arg2);
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CRNG,0); SWIG_arg++; 
   return SWIG_arg;
@@ -10458,12 +30179,7 @@ static int _wrap_CCategory_create_rng(lua_State* L) {
     }
     if (_v) {
       {
-        void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
-          _v = 0;
-        } else {
-          _v = 1;
-        }
+        _v = lua_isstring(L,argv[1]);
       }
       if (_v) {
         return _wrap_CCategory_create_rng__SWIG_0(L);
@@ -10552,16 +30268,13 @@ static int _wrap_Random_create_category(lua_State* L) {
   int SWIG_arg = 0;
   std::string *arg1 = 0 ;
   argos::UInt32 arg2 ;
+  std::string temp1 ;
   bool result;
   
   SWIG_check_num_args("argos::CARGoSRandom::CreateCategory",2,2)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::CARGoSRandom::CreateCategory",1,"std::string const &");
+  if(!lua_isstring(L,1)) SWIG_fail_arg("argos::CARGoSRandom::CreateCategory",1,"std::string const &");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("argos::CARGoSRandom::CreateCategory",2,"argos::UInt32");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("Random_create_category",1,SWIGTYPE_p_std__string);
-  }
-  
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative")
   arg2 = (argos::UInt32)lua_tonumber(L, 2);
   result = (bool)argos::CARGoSRandom::CreateCategory((std::string const &)*arg1,arg2);
@@ -10579,15 +30292,12 @@ fail:
 static int _wrap_Random_get_category(lua_State* L) {
   int SWIG_arg = 0;
   std::string *arg1 = 0 ;
+  std::string temp1 ;
   argos::CCategory *result = 0 ;
   
   SWIG_check_num_args("argos::CARGoSRandom::GetCategory",1,1)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::CARGoSRandom::GetCategory",1,"std::string const &");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("Random_get_category",1,SWIGTYPE_p_std__string);
-  }
-  
+  if(!lua_isstring(L,1)) SWIG_fail_arg("argos::CARGoSRandom::GetCategory",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
   result = (argos::CCategory *) &argos::CARGoSRandom::GetCategory((std::string const &)*arg1);
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CCategory,0); SWIG_arg++; 
   return SWIG_arg;
@@ -10603,14 +30313,11 @@ fail:
 static int _wrap_Random_remove_category(lua_State* L) {
   int SWIG_arg = 0;
   std::string *arg1 = 0 ;
+  std::string temp1 ;
   
   SWIG_check_num_args("argos::CARGoSRandom::RemoveCategory",1,1)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::CARGoSRandom::RemoveCategory",1,"std::string const &");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("Random_remove_category",1,SWIGTYPE_p_std__string);
-  }
-  
+  if(!lua_isstring(L,1)) SWIG_fail_arg("argos::CARGoSRandom::RemoveCategory",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
   argos::CARGoSRandom::RemoveCategory((std::string const &)*arg1);
   
   return SWIG_arg;
@@ -10627,21 +30334,15 @@ static int _wrap_Random_create_rng__SWIG_0(lua_State* L) {
   int SWIG_arg = 0;
   std::string *arg1 = 0 ;
   std::string *arg2 = 0 ;
+  std::string temp1 ;
+  std::string temp2 ;
   argos::CRNG *result = 0 ;
   
   SWIG_check_num_args("argos::CARGoSRandom::CreateRNG",2,2)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::CARGoSRandom::CreateRNG",1,"std::string const &");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::CARGoSRandom::CreateRNG",2,"std::string const &");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("Random_create_rng",1,SWIGTYPE_p_std__string);
-  }
-  
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("Random_create_rng",2,SWIGTYPE_p_std__string);
-  }
-  
+  if(!lua_isstring(L,1)) SWIG_fail_arg("argos::CARGoSRandom::CreateRNG",1,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::CARGoSRandom::CreateRNG",2,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   result = (argos::CRNG *)argos::CARGoSRandom::CreateRNG((std::string const &)*arg1,(std::string const &)*arg2);
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CRNG,0); SWIG_arg++; 
   return SWIG_arg;
@@ -10657,15 +30358,12 @@ fail:
 static int _wrap_Random_create_rng__SWIG_1(lua_State* L) {
   int SWIG_arg = 0;
   std::string *arg1 = 0 ;
+  std::string temp1 ;
   argos::CRNG *result = 0 ;
   
   SWIG_check_num_args("argos::CARGoSRandom::CreateRNG",1,1)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::CARGoSRandom::CreateRNG",1,"std::string const &");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("Random_create_rng",1,SWIGTYPE_p_std__string);
-  }
-  
+  if(!lua_isstring(L,1)) SWIG_fail_arg("argos::CARGoSRandom::CreateRNG",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
   result = (argos::CRNG *)argos::CARGoSRandom::CreateRNG((std::string const &)*arg1);
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CRNG,0); SWIG_arg++; 
   return SWIG_arg;
@@ -10688,12 +30386,7 @@ static int _wrap_Random_create_rng(lua_State* L) {
   if (argc == 1) {
     int _v;
     {
-      void *ptr;
-      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
-        _v = 0;
-      } else {
-        _v = 1;
-      }
+      _v = lua_isstring(L,argv[0]);
     }
     if (_v) {
       return _wrap_Random_create_rng__SWIG_1(L);
@@ -10702,21 +30395,11 @@ static int _wrap_Random_create_rng(lua_State* L) {
   if (argc == 2) {
     int _v;
     {
-      void *ptr;
-      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
-        _v = 0;
-      } else {
-        _v = 1;
-      }
+      _v = lua_isstring(L,argv[0]);
     }
     if (_v) {
       {
-        void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__string, 0)) {
-          _v = 0;
-        } else {
-          _v = 1;
-        }
+        _v = lua_isstring(L,argv[1]);
       }
       if (_v) {
         return _wrap_Random_create_rng__SWIG_0(L);
@@ -10735,15 +30418,12 @@ static int _wrap_Random_create_rng(lua_State* L) {
 static int _wrap_Random_get_seed_of(lua_State* L) {
   int SWIG_arg = 0;
   std::string *arg1 = 0 ;
+  std::string temp1 ;
   argos::UInt32 result;
   
   SWIG_check_num_args("argos::CARGoSRandom::GetSeedOf",1,1)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::CARGoSRandom::GetSeedOf",1,"std::string const &");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("Random_get_seed_of",1,SWIGTYPE_p_std__string);
-  }
-  
+  if(!lua_isstring(L,1)) SWIG_fail_arg("argos::CARGoSRandom::GetSeedOf",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
   result = (argos::UInt32)argos::CARGoSRandom::GetSeedOf((std::string const &)*arg1);
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
   return SWIG_arg;
@@ -10760,15 +30440,12 @@ static int _wrap_Random_set_seed_of(lua_State* L) {
   int SWIG_arg = 0;
   std::string *arg1 = 0 ;
   argos::UInt32 arg2 ;
+  std::string temp1 ;
   
   SWIG_check_num_args("argos::CARGoSRandom::SetSeedOf",2,2)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::CARGoSRandom::SetSeedOf",1,"std::string const &");
+  if(!lua_isstring(L,1)) SWIG_fail_arg("argos::CARGoSRandom::SetSeedOf",1,"std::string const &");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("argos::CARGoSRandom::SetSeedOf",2,"argos::UInt32");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("Random_set_seed_of",1,SWIGTYPE_p_std__string);
-  }
-  
+  temp1.assign(lua_tostring(L,1),lua_strlen(L,1)); arg1=&temp1;
   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative")
   arg2 = (argos::UInt32)lua_tonumber(L, 2);
   argos::CARGoSRandom::SetSeedOf((std::string const &)*arg1,arg2);
@@ -11188,21 +30865,18 @@ static int _wrap_Robot_insert_actuator(lua_State* L) {
   int SWIG_arg = 0;
   argos::CCI_Robot *arg1 = (argos::CCI_Robot *) 0 ;
   std::string *arg2 = 0 ;
+  std::string temp2 ;
   argos::CCI_Actuator *result = 0 ;
   
   SWIG_check_num_args("argos::CCI_Robot::InsertActuator",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_Robot::InsertActuator",1,"argos::CCI_Robot *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::CCI_Robot::InsertActuator",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::CCI_Robot::InsertActuator",2,"std::string const &");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_Robot,0))){
     SWIG_fail_ptr("Robot_insert_actuator",1,SWIGTYPE_p_argos__CCI_Robot);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("Robot_insert_actuator",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   result = (argos::CCI_Actuator *)(arg1)->InsertActuator((std::string const &)*arg2);
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CCI_Actuator,0); SWIG_arg++; 
   return SWIG_arg;
@@ -11219,21 +30893,18 @@ static int _wrap_Robot_insert_sensor(lua_State* L) {
   int SWIG_arg = 0;
   argos::CCI_Robot *arg1 = (argos::CCI_Robot *) 0 ;
   std::string *arg2 = 0 ;
+  std::string temp2 ;
   argos::CCI_Sensor *result = 0 ;
   
   SWIG_check_num_args("argos::CCI_Robot::InsertSensor",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_Robot::InsertSensor",1,"argos::CCI_Robot *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::CCI_Robot::InsertSensor",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::CCI_Robot::InsertSensor",2,"std::string const &");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_Robot,0))){
     SWIG_fail_ptr("Robot_insert_sensor",1,SWIGTYPE_p_argos__CCI_Robot);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("Robot_insert_sensor",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   result = (argos::CCI_Sensor *)(arg1)->InsertSensor((std::string const &)*arg2);
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CCI_Sensor,0); SWIG_arg++; 
   return SWIG_arg;
@@ -11250,21 +30921,18 @@ static int _wrap_Robot_get_actuator(lua_State* L) {
   int SWIG_arg = 0;
   argos::CCI_Robot *arg1 = (argos::CCI_Robot *) 0 ;
   std::string *arg2 = 0 ;
+  std::string temp2 ;
   argos::CCI_Actuator *result = 0 ;
   
   SWIG_check_num_args("argos::CCI_Robot::GetActuator",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_Robot::GetActuator",1,"argos::CCI_Robot *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::CCI_Robot::GetActuator",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::CCI_Robot::GetActuator",2,"std::string const &");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_Robot,0))){
     SWIG_fail_ptr("Robot_get_actuator",1,SWIGTYPE_p_argos__CCI_Robot);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("Robot_get_actuator",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   result = (argos::CCI_Actuator *)(arg1)->GetActuator((std::string const &)*arg2);
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CCI_Actuator,0); SWIG_arg++; 
   return SWIG_arg;
@@ -11281,21 +30949,18 @@ static int _wrap_Robot_get_sensor(lua_State* L) {
   int SWIG_arg = 0;
   argos::CCI_Robot *arg1 = (argos::CCI_Robot *) 0 ;
   std::string *arg2 = 0 ;
+  std::string temp2 ;
   argos::CCI_Sensor *result = 0 ;
   
   SWIG_check_num_args("argos::CCI_Robot::GetSensor",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_Robot::GetSensor",1,"argos::CCI_Robot *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::CCI_Robot::GetSensor",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::CCI_Robot::GetSensor",2,"std::string const &");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_Robot,0))){
     SWIG_fail_ptr("Robot_get_sensor",1,SWIGTYPE_p_argos__CCI_Robot);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("Robot_get_sensor",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   result = (argos::CCI_Sensor *)(arg1)->GetSensor((std::string const &)*arg2);
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CCI_Sensor,0); SWIG_arg++; 
   return SWIG_arg;
@@ -11361,21 +31026,18 @@ static int _wrap_Robot_add_actuator(lua_State* L) {
   argos::CCI_Robot *arg1 = (argos::CCI_Robot *) 0 ;
   std::string *arg2 = 0 ;
   argos::CCI_Actuator *arg3 = (argos::CCI_Actuator *) 0 ;
+  std::string temp2 ;
   
   SWIG_check_num_args("argos::CCI_Robot::AddActuator",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_Robot::AddActuator",1,"argos::CCI_Robot *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::CCI_Robot::AddActuator",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::CCI_Robot::AddActuator",2,"std::string const &");
   if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("argos::CCI_Robot::AddActuator",3,"argos::CCI_Actuator *");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_Robot,0))){
     SWIG_fail_ptr("Robot_add_actuator",1,SWIGTYPE_p_argos__CCI_Robot);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("Robot_add_actuator",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_argos__CCI_Actuator,0))){
     SWIG_fail_ptr("Robot_add_actuator",3,SWIGTYPE_p_argos__CCI_Actuator);
@@ -11398,21 +31060,18 @@ static int _wrap_Robot_add_sensor(lua_State* L) {
   argos::CCI_Robot *arg1 = (argos::CCI_Robot *) 0 ;
   std::string *arg2 = 0 ;
   argos::CCI_Sensor *arg3 = (argos::CCI_Sensor *) 0 ;
+  std::string temp2 ;
   
   SWIG_check_num_args("argos::CCI_Robot::AddSensor",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_Robot::AddSensor",1,"argos::CCI_Robot *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::CCI_Robot::AddSensor",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::CCI_Robot::AddSensor",2,"std::string const &");
   if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("argos::CCI_Robot::AddSensor",3,"argos::CCI_Sensor *");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_Robot,0))){
     SWIG_fail_ptr("Robot_add_sensor",1,SWIGTYPE_p_argos__CCI_Robot);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("Robot_add_sensor",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_argos__CCI_Sensor,0))){
     SWIG_fail_ptr("Robot_add_sensor",3,SWIGTYPE_p_argos__CCI_Sensor);
@@ -11443,7 +31102,7 @@ static int _wrap_Robot_get_robot_id(lua_State* L) {
   }
   
   result = (std::string *) &((argos::CCI_Robot const *)arg1)->GetRobotId();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__string,0); SWIG_arg++; 
+  lua_pushlstring(L,result->data(),result->size()); SWIG_arg++;
   return SWIG_arg;
   
   if(0) SWIG_fail;
@@ -11458,20 +31117,17 @@ static int _wrap_Robot_set_robot_id(lua_State* L) {
   int SWIG_arg = 0;
   argos::CCI_Robot *arg1 = (argos::CCI_Robot *) 0 ;
   std::string *arg2 = 0 ;
+  std::string temp2 ;
   
   SWIG_check_num_args("argos::CCI_Robot::SetRobotId",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_Robot::SetRobotId",1,"argos::CCI_Robot *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::CCI_Robot::SetRobotId",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::CCI_Robot::SetRobotId",2,"std::string const &");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_Robot,0))){
     SWIG_fail_ptr("Robot_set_robot_id",1,SWIGTYPE_p_argos__CCI_Robot);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("Robot_set_robot_id",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   (arg1)->SetRobotId((std::string const &)*arg2);
   
   return SWIG_arg;
@@ -11759,7 +31415,7 @@ static int _wrap_Controller_get_controller_id(lua_State* L) {
   }
   
   result = (std::string *) &((argos::CCI_Controller const *)arg1)->GetControllerId();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__string,0); SWIG_arg++; 
+  lua_pushlstring(L,result->data(),result->size()); SWIG_arg++;
   return SWIG_arg;
   
   if(0) SWIG_fail;
@@ -11774,20 +31430,17 @@ static int _wrap_Controller_set_controller_id(lua_State* L) {
   int SWIG_arg = 0;
   argos::CCI_Controller *arg1 = (argos::CCI_Controller *) 0 ;
   std::string *arg2 = 0 ;
+  std::string temp2 ;
   
   SWIG_check_num_args("argos::CCI_Controller::SetControllerId",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_Controller::SetControllerId",1,"argos::CCI_Controller *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::CCI_Controller::SetControllerId",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::CCI_Controller::SetControllerId",2,"std::string const &");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_Controller,0))){
     SWIG_fail_ptr("Controller_set_controller_id",1,SWIGTYPE_p_argos__CCI_Controller);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("Controller_set_controller_id",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   (arg1)->SetControllerId((std::string const &)*arg2);
   
   return SWIG_arg;
@@ -11946,18 +31599,16 @@ static swig_lua_class _wrap_class_argos_CCI_Controller = { "Controller", &SWIGTY
 
 static int _wrap_mapControllerFactory_set(lua_State* L) {
   int SWIG_arg = 0;
-  std::map< std::string,CCI_Controller_Maker *,std::less< std::string > > arg1 ;
-  std::map< std::string,CCI_Controller_Maker *,std::less< std::string > > *argp1 ;
+  std::map< std::string,CCI_Controller_Maker *,std::less< std::string > > *arg1 = (std::map< std::string,CCI_Controller_Maker *,std::less< std::string > > *) 0 ;
   
   SWIG_check_num_args("mapControllerFactory",1,1)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("mapControllerFactory",1,"std::map< std::string,CCI_Controller_Maker *,std::less< std::string > >");
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("mapControllerFactory",1,"std::map< std::string,CCI_Controller_Maker *,std::less< std::string > > *");
   
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&argp1,SWIGTYPE_p_std__mapT_std__string_argos__CCI_Controller_pfpFfF_std__lessT_std__string_t_t,0))){
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__mapT_std__string_argos__CCI_Controller_pfpFfF_std__lessT_std__string_t_t,0))){
     SWIG_fail_ptr("mapControllerFactory_set",1,SWIGTYPE_p_std__mapT_std__string_argos__CCI_Controller_pfpFfF_std__lessT_std__string_t_t);
   }
-  arg1 = *argp1;
   
-  mapControllerFactory = arg1;
+  mapControllerFactory = *arg1;
   
   return SWIG_arg;
   
@@ -11971,14 +31622,11 @@ fail:
 
 static int _wrap_mapControllerFactory_get(lua_State* L) {
   int SWIG_arg = 0;
-  std::map< std::string,CCI_Controller_Maker *,std::less< std::string > > result;
+  std::map< std::string,CCI_Controller_Maker *,std::less< std::string > > *result = 0 ;
   
   SWIG_check_num_args("mapControllerFactory",0,0)
-  result = mapControllerFactory;
-  {
-    std::map< std::string,CCI_Controller_Maker *,std::less< std::string > > * resultptr = new std::map< std::string,CCI_Controller_Maker *,std::less< std::string > >((const std::map< std::string,CCI_Controller_Maker *,std::less< std::string > > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__mapT_std__string_argos__CCI_Controller_pfpFfF_std__lessT_std__string_t_t,1); SWIG_arg++;
-  }
+  result = (std::map< std::string,CCI_Controller_Maker *,std::less< std::string > > *)&mapControllerFactory;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__mapT_std__string_argos__CCI_Controller_pfpFfF_std__lessT_std__string_t_t,0); SWIG_arg++; 
   return SWIG_arg;
   
   if(0) SWIG_fail;
@@ -12634,24 +32282,19 @@ static swig_lua_class _wrap_class_argos_CCI_FootBotProximitySensor = { "FootBotP
 static int _wrap_RangeAndBearingReceivedPacket_RobotId_set(lua_State* L) {
   int SWIG_arg = 0;
   argos::TRangeAndBearingReceivedPacket *arg1 = (argos::TRangeAndBearingReceivedPacket *) 0 ;
-  std::string arg2 ;
-  std::string *argp2 ;
+  std::string *arg2 = 0 ;
+  std::string temp2 ;
   
   SWIG_check_num_args("argos::TRangeAndBearingReceivedPacket::RobotId",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::TRangeAndBearingReceivedPacket::RobotId",1,"argos::TRangeAndBearingReceivedPacket *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::TRangeAndBearingReceivedPacket::RobotId",2,"std::string");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::TRangeAndBearingReceivedPacket::RobotId",2,"std::string const &");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__TRangeAndBearingReceivedPacket,0))){
     SWIG_fail_ptr("RangeAndBearingReceivedPacket_RobotId_set",1,SWIGTYPE_p_argos__TRangeAndBearingReceivedPacket);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("RangeAndBearingReceivedPacket_RobotId_set",2,SWIGTYPE_p_std__string);
-  }
-  arg2 = *argp2;
-  
-  if (arg1) (arg1)->RobotId = arg2;
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
+  if (arg1) (arg1)->RobotId = *arg2;
   
   return SWIG_arg;
   
@@ -12666,7 +32309,7 @@ fail:
 static int _wrap_RangeAndBearingReceivedPacket_RobotId_get(lua_State* L) {
   int SWIG_arg = 0;
   argos::TRangeAndBearingReceivedPacket *arg1 = (argos::TRangeAndBearingReceivedPacket *) 0 ;
-  std::string result;
+  std::string *result = 0 ;
   
   SWIG_check_num_args("argos::TRangeAndBearingReceivedPacket::RobotId",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::TRangeAndBearingReceivedPacket::RobotId",1,"argos::TRangeAndBearingReceivedPacket *");
@@ -12675,11 +32318,8 @@ static int _wrap_RangeAndBearingReceivedPacket_RobotId_get(lua_State* L) {
     SWIG_fail_ptr("RangeAndBearingReceivedPacket_RobotId_get",1,SWIGTYPE_p_argos__TRangeAndBearingReceivedPacket);
   }
   
-  result =  ((arg1)->RobotId);
-  {
-    std::string * resultptr = new std::string((const std::string &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__string,1); SWIG_arg++;
-  }
+  result = (std::string *) & ((arg1)->RobotId);
+  lua_pushlstring(L,result->data(),result->size()); SWIG_arg++;
   return SWIG_arg;
   
   if(0) SWIG_fail;
@@ -13184,21 +32824,18 @@ static int _wrap_RangeAndBearingSensor_get_rab_id_from_robot_id(lua_State* L) {
   int SWIG_arg = 0;
   argos::CCI_RangeAndBearingSensor *arg1 = (argos::CCI_RangeAndBearingSensor *) 0 ;
   std::string *arg2 = 0 ;
+  std::string temp2 ;
   argos::UInt16 result;
   
   SWIG_check_num_args("argos::CCI_RangeAndBearingSensor::GetRabIdFromRobotId",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_RangeAndBearingSensor::GetRabIdFromRobotId",1,"argos::CCI_RangeAndBearingSensor *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("argos::CCI_RangeAndBearingSensor::GetRabIdFromRobotId",2,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("argos::CCI_RangeAndBearingSensor::GetRabIdFromRobotId",2,"std::string const &");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_RangeAndBearingSensor,0))){
     SWIG_fail_ptr("RangeAndBearingSensor_get_rab_id_from_robot_id",1,SWIGTYPE_p_argos__CCI_RangeAndBearingSensor);
   }
   
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__string,0))){
-    SWIG_fail_ptr("RangeAndBearingSensor_get_rab_id_from_robot_id",2,SWIGTYPE_p_std__string);
-  }
-  
+  temp2.assign(lua_tostring(L,2),lua_strlen(L,2)); arg2=&temp2;
   result = (argos::UInt16)(arg1)->GetRabIdFromRobotId((std::string const &)*arg2);
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
   return SWIG_arg;
@@ -13228,7 +32865,7 @@ static int _wrap_RangeAndBearingSensor_get_robot_id_from_rab_id(lua_State* L) {
   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative")
   arg2 = (argos::UInt16)lua_tonumber(L, 2);
   result = (std::string *) &(arg1)->GetRobotIdFromRabId(arg2);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__string,0); SWIG_arg++; 
+  lua_pushlstring(L,result->data(),result->size()); SWIG_arg++;
   return SWIG_arg;
   
   if(0) SWIG_fail;
@@ -13881,6 +33518,9 @@ static swig_lua_class _wrap_class_argos_CCI_FootBotMotorGroundSensor = { "FootBo
 #endif
 
 static const struct luaL_reg swig_commands[] = {
+    { "TiXmlBase_set_condense_white_space", _wrap_TiXmlBase_set_condense_white_space},
+    { "TiXmlBase_is_white_space_condensed", _wrap_TiXmlBase_is_white_space_condensed},
+    { "TiXmlBase_encode_string", _wrap_TiXmlBase_encode_string},
     { "node_exists", _wrap_node_exists},
     { "get_node", _wrap_get_node},
     { "add_child_node", _wrap_add_child_node},
@@ -13922,6 +33562,11 @@ static const struct luaL_reg swig_commands[] = {
 };
 
 static swig_lua_var_info swig_variables[] = {
+    { "TIXML_MAJOR_VERSION", _wrap_TIXML_MAJOR_VERSION_get, SWIG_Lua_set_immutable },
+    { "TIXML_MINOR_VERSION", _wrap_TIXML_MINOR_VERSION_get, SWIG_Lua_set_immutable },
+    { "TIXML_PATCH_VERSION", _wrap_TIXML_PATCH_VERSION_get, SWIG_Lua_set_immutable },
+    { "TIXML_DEFAULT_ENCODING", _wrap_TIXML_DEFAULT_ENCODING_get, SWIG_Lua_set_immutable },
+    { "TiXmlBase_utf8ByteTable", _wrap_TiXmlBase_utf8ByteTable_get, SWIG_Lua_set_immutable },
     { "Color_BLACK", _wrap_Color_BLACK_get, _wrap_Color_BLACK_set },
     { "Color_WHITE", _wrap_Color_WHITE_get, _wrap_Color_WHITE_set },
     { "Color_RED", _wrap_Color_RED_get, _wrap_Color_RED_set },
@@ -13972,15 +33617,86 @@ static swig_lua_var_info swig_variables[] = {
 };
 
 static swig_lua_const_info swig_constants[] = {
-{ SWIG_LUA_INT,     (char *)"_GLIBCXX_STRING", (long) 1, 0, 0, 0},
-{ SWIG_LUA_INT,     (char *)"_GLIBCXX_VECTOR", (long) 1, 0, 0, 0},
-{ SWIG_LUA_INT,     (char *)"_GLIBCXX_MAP", (long) 1, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TIXML_SUCCESS", (long) TIXML_SUCCESS, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TIXML_NO_ATTRIBUTE", (long) TIXML_NO_ATTRIBUTE, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TIXML_WRONG_TYPE", (long) TIXML_WRONG_TYPE, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TIXML_ENCODING_UNKNOWN", (long) TIXML_ENCODING_UNKNOWN, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TIXML_ENCODING_UTF8", (long) TIXML_ENCODING_UTF8, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TIXML_ENCODING_LEGACY", (long) TIXML_ENCODING_LEGACY, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlBase_TIXML_NO_ERROR", (long) TiXmlBase::TIXML_NO_ERROR, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlBase_TIXML_ERROR", (long) TiXmlBase::TIXML_ERROR, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlBase_TIXML_ERROR_OPENING_FILE", (long) TiXmlBase::TIXML_ERROR_OPENING_FILE, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlBase_TIXML_ERROR_OUT_OF_MEMORY", (long) TiXmlBase::TIXML_ERROR_OUT_OF_MEMORY, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlBase_TIXML_ERROR_PARSING_ELEMENT", (long) TiXmlBase::TIXML_ERROR_PARSING_ELEMENT, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlBase_TIXML_ERROR_FAILED_TO_READ_ELEMENT_NAME", (long) TiXmlBase::TIXML_ERROR_FAILED_TO_READ_ELEMENT_NAME, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlBase_TIXML_ERROR_READING_ELEMENT_VALUE", (long) TiXmlBase::TIXML_ERROR_READING_ELEMENT_VALUE, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlBase_TIXML_ERROR_READING_ATTRIBUTES", (long) TiXmlBase::TIXML_ERROR_READING_ATTRIBUTES, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlBase_TIXML_ERROR_PARSING_EMPTY", (long) TiXmlBase::TIXML_ERROR_PARSING_EMPTY, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlBase_TIXML_ERROR_READING_END_TAG", (long) TiXmlBase::TIXML_ERROR_READING_END_TAG, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlBase_TIXML_ERROR_PARSING_UNKNOWN", (long) TiXmlBase::TIXML_ERROR_PARSING_UNKNOWN, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlBase_TIXML_ERROR_PARSING_COMMENT", (long) TiXmlBase::TIXML_ERROR_PARSING_COMMENT, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlBase_TIXML_ERROR_PARSING_DECLARATION", (long) TiXmlBase::TIXML_ERROR_PARSING_DECLARATION, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlBase_TIXML_ERROR_DOCUMENT_EMPTY", (long) TiXmlBase::TIXML_ERROR_DOCUMENT_EMPTY, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlBase_TIXML_ERROR_EMBEDDED_NULL", (long) TiXmlBase::TIXML_ERROR_EMBEDDED_NULL, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlBase_TIXML_ERROR_PARSING_CDATA", (long) TiXmlBase::TIXML_ERROR_PARSING_CDATA, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlBase_TIXML_ERROR_DOCUMENT_TOP_ONLY", (long) TiXmlBase::TIXML_ERROR_DOCUMENT_TOP_ONLY, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlBase_TIXML_ERROR_STRING_COUNT", (long) TiXmlBase::TIXML_ERROR_STRING_COUNT, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlNode_DOCUMENT", (long) TiXmlNode::DOCUMENT, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlNode_ELEMENT", (long) TiXmlNode::ELEMENT, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlNode_COMMENT", (long) TiXmlNode::COMMENT, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlNode_UNKNOWN", (long) TiXmlNode::UNKNOWN, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlNode_TEXT", (long) TiXmlNode::TEXT, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlNode_DECLARATION", (long) TiXmlNode::DECLARATION, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlNode_STYLESHEETREFERENCE", (long) TiXmlNode::STYLESHEETREFERENCE, 0, 0, 0},
+{ SWIG_LUA_INT,     (char *)"TiXmlNode_TYPECOUNT", (long) TiXmlNode::TYPECOUNT, 0, 0, 0},
 { SWIG_LUA_FLOAT,   (char *)"ARGOS_PI", 0, (double) 3.14159265358979323846264338327950288, 0, 0},
     {0,0,0,0,0,0}
 };
 
 /* -------- TYPE CONVERSION AND EQUIVALENCE RULES (BEGIN) -------- */
 
+static void *_p_ticpp__NodeTo_p_ticpp__Base(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Base *)  ((ticpp::Node *) x));
+}
+static void *_p_ticpp__NodeImpT_TiXmlText_tTo_p_ticpp__Base(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Base *) (ticpp::Node *) ((ticpp::NodeImp< TiXmlText > *) x));
+}
+static void *_p_ticpp__StylesheetReferenceTo_p_ticpp__Base(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Base *) (ticpp::Node *)(ticpp::NodeImp< TiXmlStylesheetReference > *) ((ticpp::StylesheetReference *) x));
+}
+static void *_p_ticpp__TextTo_p_ticpp__Base(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Base *) (ticpp::Node *)(ticpp::NodeImp< TiXmlText > *) ((ticpp::Text *) x));
+}
+static void *_p_ticpp__AttributeTo_p_ticpp__Base(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Base *)  ((ticpp::Attribute *) x));
+}
+static void *_p_ticpp__NodeImpT_TiXmlDeclaration_tTo_p_ticpp__Base(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Base *) (ticpp::Node *) ((ticpp::NodeImp< TiXmlDeclaration > *) x));
+}
+static void *_p_ticpp__CommentTo_p_ticpp__Base(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Base *) (ticpp::Node *)(ticpp::NodeImp< TiXmlComment > *) ((ticpp::Comment *) x));
+}
+static void *_p_ticpp__DocumentTo_p_ticpp__Base(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Base *) (ticpp::Node *)(ticpp::NodeImp< TiXmlDocument > *) ((ticpp::Document *) x));
+}
+static void *_p_ticpp__ElementTo_p_ticpp__Base(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Base *) (ticpp::Node *)(ticpp::NodeImp< TiXmlElement > *) ((ticpp::Element *) x));
+}
+static void *_p_ticpp__NodeImpT_TiXmlStylesheetReference_tTo_p_ticpp__Base(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Base *) (ticpp::Node *) ((ticpp::NodeImp< TiXmlStylesheetReference > *) x));
+}
+static void *_p_ticpp__NodeImpT_TiXmlElement_tTo_p_ticpp__Base(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Base *) (ticpp::Node *) ((ticpp::NodeImp< TiXmlElement > *) x));
+}
+static void *_p_ticpp__NodeImpT_TiXmlDocument_tTo_p_ticpp__Base(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Base *) (ticpp::Node *) ((ticpp::NodeImp< TiXmlDocument > *) x));
+}
+static void *_p_ticpp__NodeImpT_TiXmlComment_tTo_p_ticpp__Base(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Base *) (ticpp::Node *) ((ticpp::NodeImp< TiXmlComment > *) x));
+}
+static void *_p_ticpp__DeclarationTo_p_ticpp__Base(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Base *) (ticpp::Node *)(ticpp::NodeImp< TiXmlDeclaration > *) ((ticpp::Declaration *) x));
+}
 static void *_p_argos__CCI_ControllerTo_p_argos__CMemento(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((argos::CMemento *)  ((argos::CCI_Controller *) x));
 }
@@ -14017,6 +33733,66 @@ static void *_p_argos__CCI_FootBotProximitySensorTo_p_argos__CMemento(void *x, i
 static void *_p_argos__CCI_RangeAndBearingSensorTo_p_argos__CMemento(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((argos::CMemento *) (argos::CCI_Sensor *) ((argos::CCI_RangeAndBearingSensor *) x));
 }
+static void *_p_TiXmlElementTo_p_TiXmlNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiXmlNode *)  ((TiXmlElement *) x));
+}
+static void *_p_TiXmlDeclarationTo_p_TiXmlNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiXmlNode *)  ((TiXmlDeclaration *) x));
+}
+static void *_p_TiXmlUnknownTo_p_TiXmlNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiXmlNode *)  ((TiXmlUnknown *) x));
+}
+static void *_p_TiXmlCommentTo_p_TiXmlNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiXmlNode *)  ((TiXmlComment *) x));
+}
+static void *_p_TiXmlTextTo_p_TiXmlNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiXmlNode *)  ((TiXmlText *) x));
+}
+static void *_p_TiXmlStylesheetReferenceTo_p_TiXmlNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiXmlNode *)  ((TiXmlStylesheetReference *) x));
+}
+static void *_p_TiXmlDocumentTo_p_TiXmlNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiXmlNode *)  ((TiXmlDocument *) x));
+}
+static void *_p_ticpp__DeclarationTo_p_ticpp__NodeImpT_TiXmlDeclaration_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::NodeImp< TiXmlDeclaration > *)  ((ticpp::Declaration *) x));
+}
+static void *_p_ticpp__ElementTo_p_ticpp__NodeImpT_TiXmlElement_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::NodeImp< TiXmlElement > *)  ((ticpp::Element *) x));
+}
+static void *_p_ticpp__DocumentTo_p_ticpp__NodeImpT_TiXmlDocument_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::NodeImp< TiXmlDocument > *)  ((ticpp::Document *) x));
+}
+static void *_p_ticpp__CommentTo_p_ticpp__NodeImpT_TiXmlComment_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::NodeImp< TiXmlComment > *)  ((ticpp::Comment *) x));
+}
+static void *_p_TiXmlNodeTo_p_TiXmlBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiXmlBase *)  ((TiXmlNode *) x));
+}
+static void *_p_TiXmlElementTo_p_TiXmlBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiXmlBase *) (TiXmlNode *) ((TiXmlElement *) x));
+}
+static void *_p_TiXmlDeclarationTo_p_TiXmlBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiXmlBase *) (TiXmlNode *) ((TiXmlDeclaration *) x));
+}
+static void *_p_TiXmlUnknownTo_p_TiXmlBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiXmlBase *) (TiXmlNode *) ((TiXmlUnknown *) x));
+}
+static void *_p_TiXmlAttributeTo_p_TiXmlBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiXmlBase *)  ((TiXmlAttribute *) x));
+}
+static void *_p_TiXmlCommentTo_p_TiXmlBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiXmlBase *) (TiXmlNode *) ((TiXmlComment *) x));
+}
+static void *_p_TiXmlTextTo_p_TiXmlBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiXmlBase *) (TiXmlNode *) ((TiXmlText *) x));
+}
+static void *_p_TiXmlStylesheetReferenceTo_p_TiXmlBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiXmlBase *) (TiXmlNode *) ((TiXmlStylesheetReference *) x));
+}
+static void *_p_TiXmlDocumentTo_p_TiXmlBase(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiXmlBase *) (TiXmlNode *) ((TiXmlDocument *) x));
+}
 static void *_p_argos__CCI_FootBotWheelsActuatorTo_p_argos__CCI_Actuator(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((argos::CCI_Actuator *)  ((argos::CCI_FootBotWheelsActuator *) x));
 }
@@ -14026,8 +33802,17 @@ static void *_p_argos__CCI_FootBotLedsActuatorTo_p_argos__CCI_Actuator(void *x, 
 static void *_p_argos__CCI_RangeAndBearingActuatorTo_p_argos__CCI_Actuator(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((argos::CCI_Actuator *)  ((argos::CCI_RangeAndBearingActuator *) x));
 }
+static void *_p_ticpp__ExceptionTo_p_std__exception(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((std::exception *)  ((ticpp::Exception *) x));
+}
 static void *_p_argos__CARGoSExceptionTo_p_std__exception(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((std::exception *)  ((argos::CARGoSException *) x));
+}
+static void *_p_ticpp__TextTo_p_ticpp__NodeImpT_TiXmlText_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::NodeImp< TiXmlText > *)  ((ticpp::Text *) x));
+}
+static void *_p_ticpp__StylesheetReferenceTo_p_ticpp__NodeImpT_TiXmlStylesheetReference_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::NodeImp< TiXmlStylesheetReference > *)  ((ticpp::StylesheetReference *) x));
 }
 static void *_p_argos__CCI_ControllerTo_p_argos__CBaseConfigurableResource(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((argos::CBaseConfigurableResource *)  ((argos::CCI_Controller *) x));
@@ -14071,11 +33856,102 @@ static void *_p_argos__CCI_FootBotProximitySensorTo_p_argos__CCI_Sensor(void *x,
 static void *_p_argos__CCI_RangeAndBearingSensorTo_p_argos__CCI_Sensor(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((argos::CCI_Sensor *)  ((argos::CCI_RangeAndBearingSensor *) x));
 }
+static void *_p_TiXmlNodeTo_p_TiCppRC(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiCppRC *) (TiXmlBase *) ((TiXmlNode *) x));
+}
+static void *_p_TiXmlElementTo_p_TiCppRC(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiCppRC *) (TiXmlBase *)(TiXmlNode *) ((TiXmlElement *) x));
+}
+static void *_p_TiXmlDeclarationTo_p_TiCppRC(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiCppRC *) (TiXmlBase *)(TiXmlNode *) ((TiXmlDeclaration *) x));
+}
+static void *_p_TiXmlUnknownTo_p_TiCppRC(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiCppRC *) (TiXmlBase *)(TiXmlNode *) ((TiXmlUnknown *) x));
+}
+static void *_p_TiXmlAttributeTo_p_TiCppRC(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiCppRC *) (TiXmlBase *) ((TiXmlAttribute *) x));
+}
+static void *_p_TiXmlCommentTo_p_TiCppRC(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiCppRC *) (TiXmlBase *)(TiXmlNode *) ((TiXmlComment *) x));
+}
+static void *_p_TiXmlTextTo_p_TiCppRC(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiCppRC *) (TiXmlBase *)(TiXmlNode *) ((TiXmlText *) x));
+}
+static void *_p_TiXmlStylesheetReferenceTo_p_TiCppRC(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiCppRC *) (TiXmlBase *)(TiXmlNode *) ((TiXmlStylesheetReference *) x));
+}
+static void *_p_TiXmlDocumentTo_p_TiCppRC(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiCppRC *) (TiXmlBase *)(TiXmlNode *) ((TiXmlDocument *) x));
+}
+static void *_p_TiXmlBaseTo_p_TiCppRC(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiCppRC *)  ((TiXmlBase *) x));
+}
+static void *_p_ticpp__NodeImpT_TiXmlText_tTo_p_ticpp__Node(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Node *)  ((ticpp::NodeImp< TiXmlText > *) x));
+}
+static void *_p_ticpp__ElementTo_p_ticpp__Node(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Node *) (ticpp::NodeImp< TiXmlElement > *) ((ticpp::Element *) x));
+}
+static void *_p_ticpp__NodeImpT_TiXmlDeclaration_tTo_p_ticpp__Node(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Node *)  ((ticpp::NodeImp< TiXmlDeclaration > *) x));
+}
+static void *_p_ticpp__DeclarationTo_p_ticpp__Node(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Node *) (ticpp::NodeImp< TiXmlDeclaration > *) ((ticpp::Declaration *) x));
+}
+static void *_p_ticpp__CommentTo_p_ticpp__Node(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Node *) (ticpp::NodeImp< TiXmlComment > *) ((ticpp::Comment *) x));
+}
+static void *_p_ticpp__NodeImpT_TiXmlComment_tTo_p_ticpp__Node(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Node *)  ((ticpp::NodeImp< TiXmlComment > *) x));
+}
+static void *_p_ticpp__NodeImpT_TiXmlDocument_tTo_p_ticpp__Node(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Node *)  ((ticpp::NodeImp< TiXmlDocument > *) x));
+}
+static void *_p_ticpp__NodeImpT_TiXmlElement_tTo_p_ticpp__Node(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Node *)  ((ticpp::NodeImp< TiXmlElement > *) x));
+}
+static void *_p_ticpp__DocumentTo_p_ticpp__Node(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Node *) (ticpp::NodeImp< TiXmlDocument > *) ((ticpp::Document *) x));
+}
+static void *_p_ticpp__StylesheetReferenceTo_p_ticpp__Node(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Node *) (ticpp::NodeImp< TiXmlStylesheetReference > *) ((ticpp::StylesheetReference *) x));
+}
+static void *_p_ticpp__NodeImpT_TiXmlStylesheetReference_tTo_p_ticpp__Node(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Node *)  ((ticpp::NodeImp< TiXmlStylesheetReference > *) x));
+}
+static void *_p_ticpp__TextTo_p_ticpp__Node(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ticpp::Node *) (ticpp::NodeImp< TiXmlText > *) ((ticpp::Text *) x));
+}
+static void *_p_TiXmlPrinterTo_p_TiXmlVisitor(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiXmlVisitor *)  ((TiXmlPrinter *) x));
+}
+static void *_p_ticpp__VisitorTo_p_TiXmlVisitor(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((TiXmlVisitor *)  ((ticpp::Visitor *) x));
+}
+static swig_type_info _swigt__p_FILE = {"_p_FILE", "FILE *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_TLastReceivedPackets = {"_p_TLastReceivedPackets", "TLastReceivedPackets *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_TLedSettings = {"_p_TLedSettings", "TLedSettings *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_TRangeAndBearingData = {"_p_TRangeAndBearingData", "TRangeAndBearingData *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_TRawValues = {"_p_TRawValues", "TRawValues *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_TReadings = {"_p_TReadings", "TReadings *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_TiCppRC = {"_p_TiCppRC", "TiCppRC *", 0, 0, (void*)&_wrap_class_TiCppRC, 0};
+static swig_type_info _swigt__p_TiCppRCImp = {"_p_TiCppRCImp", "TiCppRCImp *", 0, 0, (void*)&_wrap_class_TiCppRCImp, 0};
+static swig_type_info _swigt__p_TiXmlAttribute = {"_p_TiXmlAttribute", "TiXmlAttribute *", 0, 0, (void*)&_wrap_class_TiXmlAttribute, 0};
+static swig_type_info _swigt__p_TiXmlAttributeSet = {"_p_TiXmlAttributeSet", "TiXmlAttributeSet *", 0, 0, (void*)&_wrap_class_TiXmlAttributeSet, 0};
+static swig_type_info _swigt__p_TiXmlBase = {"_p_TiXmlBase", "TiXmlBase *", 0, 0, (void*)&_wrap_class_TiXmlBase, 0};
+static swig_type_info _swigt__p_TiXmlComment = {"_p_TiXmlComment", "TiXmlComment *", 0, 0, (void*)&_wrap_class_TiXmlComment, 0};
+static swig_type_info _swigt__p_TiXmlCursor = {"_p_TiXmlCursor", "TiXmlCursor *", 0, 0, (void*)&_wrap_class_TiXmlCursor, 0};
+static swig_type_info _swigt__p_TiXmlDeclaration = {"_p_TiXmlDeclaration", "TiXmlDeclaration *", 0, 0, (void*)&_wrap_class_TiXmlDeclaration, 0};
+static swig_type_info _swigt__p_TiXmlDocument = {"_p_TiXmlDocument", "TiXmlDocument *", 0, 0, (void*)&_wrap_class_TiXmlDocument, 0};
+static swig_type_info _swigt__p_TiXmlElement = {"_p_TiXmlElement", "TiXmlElement *", 0, 0, (void*)&_wrap_class_TiXmlElement, 0};
+static swig_type_info _swigt__p_TiXmlHandle = {"_p_TiXmlHandle", "TiXmlHandle *", 0, 0, (void*)&_wrap_class_TiXmlHandle, 0};
+static swig_type_info _swigt__p_TiXmlNode = {"_p_TiXmlNode", "TiXmlNode *", 0, 0, (void*)&_wrap_class_TiXmlNode, 0};
+static swig_type_info _swigt__p_TiXmlParsingData = {"_p_TiXmlParsingData", "TiXmlParsingData *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_TiXmlPrinter = {"_p_TiXmlPrinter", "TiXmlPrinter *", 0, 0, (void*)&_wrap_class_TiXmlPrinter, 0};
+static swig_type_info _swigt__p_TiXmlStylesheetReference = {"_p_TiXmlStylesheetReference", "TiXmlStylesheetReference *", 0, 0, (void*)&_wrap_class_TiXmlStylesheetReference, 0};
+static swig_type_info _swigt__p_TiXmlText = {"_p_TiXmlText", "TiXmlText *", 0, 0, (void*)&_wrap_class_TiXmlText, 0};
+static swig_type_info _swigt__p_TiXmlUnknown = {"_p_TiXmlUnknown", "TiXmlUnknown *", 0, 0, (void*)&_wrap_class_TiXmlUnknown, 0};
+static swig_type_info _swigt__p_TiXmlVisitor = {"_p_TiXmlVisitor", "TiXmlVisitor *", 0, 0, (void*)&_wrap_class_TiXmlVisitor, 0};
 static swig_type_info _swigt__p_argos__CARGoSException = {"_p_argos__CARGoSException", "argos::CARGoSException *", 0, 0, (void*)&_wrap_class_argos_CARGoSException, 0};
 static swig_type_info _swigt__p_argos__CARGoSRandom = {"_p_argos__CARGoSRandom", "argos::CARGoSRandom *", 0, 0, (void*)&_wrap_class_argos_CARGoSRandom, 0};
 static swig_type_info _swigt__p_argos__CBaseConfigurableResource = {"_p_argos__CBaseConfigurableResource", "argos::CBaseConfigurableResource *", 0, 0, (void*)&_wrap_class_argos_CBaseConfigurableResource, 0};
@@ -14109,6 +33985,7 @@ static swig_type_info _swigt__p_argos__MotorGroundSensorReading = {"_p_argos__Mo
 static swig_type_info _swigt__p_argos__ProximitySensorReading = {"_p_argos__ProximitySensorReading", "argos::ProximitySensorReading *", 0, 0, (void*)&_wrap_class_argos_ProximitySensorReading, 0};
 static swig_type_info _swigt__p_argos__TRangeAndBearingReceivedPacket = {"_p_argos__TRangeAndBearingReceivedPacket", "argos::TRangeAndBearingReceivedPacket *", 0, 0, (void*)&_wrap_class_argos_TRangeAndBearingReceivedPacket, 0};
 static swig_type_info _swigt__p_bool = {"_p_bool", "bool *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_double = {"_p_double", "double *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_f___p_argos__CCI_Controller = {"_p_f___p_argos__CCI_Controller", "argos::CCI_Controller *(*)()|CCI_Controller_Maker *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_f_p_void__double = {"_p_f_p_void__double", "double (*)(void *)", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_f_p_void__unsigned_long = {"_p_f_p_void__unsigned_long", "unsigned long (*)(void *)", 0, 0, (void*)0, 0};
@@ -14119,19 +33996,37 @@ static swig_type_info _swigt__p_gsl_rng_type = {"_p_gsl_rng_type", "gsl_rng_type
 static swig_type_info _swigt__p_int = {"_p_int", "int *|argos::SInt32 *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_long_long = {"_p_long_long", "argos::SInt64 *|long long *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_gsl_rng_type = {"_p_p_gsl_rng_type", "gsl_rng_type **", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_p_ticpp__Attribute = {"_p_p_ticpp__Attribute", "ticpp::Attribute **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_short = {"_p_short", "argos::SInt16 *|short *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_signed_char = {"_p_signed_char", "signed char *|argos::SInt8 *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__exception = {"_p_std__exception", "std::exception *", 0, 0, (void*)&_wrap_class_std_exception, 0};
+static swig_type_info _swigt__p_std__exception = {"_p_std__exception", "std::exception *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__mapT_std__string_argos__CCI_Actuator_p_std__lessT_std__string_t_t = {"_p_std__mapT_std__string_argos__CCI_Actuator_p_std__lessT_std__string_t_t", "std::map< std::string,argos::CCI_Actuator *,std::less< std::string > > *|argos::TActuatorMap *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__mapT_std__string_argos__CCI_Controller_pfpFfF_std__lessT_std__string_t_t = {"_p_std__mapT_std__string_argos__CCI_Controller_pfpFfF_std__lessT_std__string_t_t", "std::map< std::string,argos::CCI_Controller *(*)(),std::less< std::string > > *|std::map< std::string,CCI_Controller_Maker *,std::less< std::string > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__mapT_std__string_argos__CCI_Sensor_p_std__lessT_std__string_t_t = {"_p_std__mapT_std__string_argos__CCI_Sensor_p_std__lessT_std__string_t_t", "argos::TSensorMap *|std::map< std::string,argos::CCI_Sensor *,std::less< std::string > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__mapT_std__string_argos__TRangeAndBearingReceivedPacket_t = {"_p_std__mapT_std__string_argos__TRangeAndBearingReceivedPacket_t", "std::map< std::string,argos::TRangeAndBearingReceivedPacket > *|argos::CCI_RangeAndBearingSensor::TLastReceivedPackets *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__string = {"_p_std__string", "std::string *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__string = {"_p_std__string", "std::string *", 0, 0, (void*)&_wrap_class_std_string, 0};
 static swig_type_info _swigt__p_std__vectorT_SReading_t = {"_p_std__vectorT_SReading_t", "std::vector< SReading > *|argos::CCI_FootBotMotorGroundSensor::TReadings *|argos::CCI_FootBotProximitySensor::TReadings *|argos::CCI_FootBotLightSensor::TReadings *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_argos__CColor_t = {"_p_std__vectorT_argos__CColor_t", "std::vector< argos::CColor > *|argos::CCI_FootBotLedsActuator::TLedSettings *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_std__string_t = {"_p_std__vectorT_std__string_t", "std::vector< std::string > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_ticpp__Element = {"_p_ticpp__Element", "ticpp::Element *|argos::TConfigurationNode *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_ticpp__Base_p_t = {"_p_std__vectorT_ticpp__Base_p_t", "std::vector< ticpp::Base * > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_ticpp__Attribute = {"_p_ticpp__Attribute", "ticpp::Attribute *", 0, 0, (void*)&_wrap_class_ticpp_Attribute, 0};
+static swig_type_info _swigt__p_ticpp__Base = {"_p_ticpp__Base", "ticpp::Base *", 0, 0, (void*)&_wrap_class_ticpp_Base, 0};
+static swig_type_info _swigt__p_ticpp__Comment = {"_p_ticpp__Comment", "ticpp::Comment *", 0, 0, (void*)&_wrap_class_ticpp_Comment, 0};
+static swig_type_info _swigt__p_ticpp__Declaration = {"_p_ticpp__Declaration", "ticpp::Declaration *", 0, 0, (void*)&_wrap_class_ticpp_Declaration, 0};
+static swig_type_info _swigt__p_ticpp__Document = {"_p_ticpp__Document", "ticpp::Document *", 0, 0, (void*)&_wrap_class_ticpp_Document, 0};
+static swig_type_info _swigt__p_ticpp__Element = {"_p_ticpp__Element", "ticpp::Element *|argos::TConfigurationNode *", 0, 0, (void*)&_wrap_class_ticpp_Element, 0};
+static swig_type_info _swigt__p_ticpp__Exception = {"_p_ticpp__Exception", "ticpp::Exception *", 0, 0, (void*)&_wrap_class_ticpp_Exception, 0};
 static swig_type_info _swigt__p_ticpp__IteratorT_ticpp__Element_t = {"_p_ticpp__IteratorT_ticpp__Element_t", "argos::TConfigurationNodeIterator *|ticpp::Iterator< ticpp::Element > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_ticpp__Node = {"_p_ticpp__Node", "ticpp::Node *", 0, 0, (void*)&_wrap_class_ticpp_Node, 0};
+static swig_type_info _swigt__p_ticpp__NodeImpT_TiXmlComment_t = {"_p_ticpp__NodeImpT_TiXmlComment_t", "ticpp::NodeImp< TiXmlComment > *", 0, 0, (void*)&_wrap_class_ticpp_NodeImp_Sl_TiXmlComment_Sg_, 0};
+static swig_type_info _swigt__p_ticpp__NodeImpT_TiXmlDeclaration_t = {"_p_ticpp__NodeImpT_TiXmlDeclaration_t", "ticpp::NodeImp< TiXmlDeclaration > *", 0, 0, (void*)&_wrap_class_ticpp_NodeImp_Sl_TiXmlDeclaration_Sg_, 0};
+static swig_type_info _swigt__p_ticpp__NodeImpT_TiXmlDocument_t = {"_p_ticpp__NodeImpT_TiXmlDocument_t", "ticpp::NodeImp< TiXmlDocument > *", 0, 0, (void*)&_wrap_class_ticpp_NodeImp_Sl_TiXmlDocument_Sg_, 0};
+static swig_type_info _swigt__p_ticpp__NodeImpT_TiXmlElement_t = {"_p_ticpp__NodeImpT_TiXmlElement_t", "ticpp::NodeImp< TiXmlElement > *", 0, 0, (void*)&_wrap_class_ticpp_NodeImp_Sl_TiXmlElement_Sg_, 0};
+static swig_type_info _swigt__p_ticpp__NodeImpT_TiXmlStylesheetReference_t = {"_p_ticpp__NodeImpT_TiXmlStylesheetReference_t", "ticpp::NodeImp< TiXmlStylesheetReference > *", 0, 0, (void*)&_wrap_class_ticpp_NodeImp_Sl_TiXmlStylesheetReference_Sg_, 0};
+static swig_type_info _swigt__p_ticpp__NodeImpT_TiXmlText_t = {"_p_ticpp__NodeImpT_TiXmlText_t", "ticpp::NodeImp< TiXmlText > *", 0, 0, (void*)&_wrap_class_ticpp_NodeImp_Sl_TiXmlText_Sg_, 0};
+static swig_type_info _swigt__p_ticpp__StylesheetReference = {"_p_ticpp__StylesheetReference", "ticpp::StylesheetReference *", 0, 0, (void*)&_wrap_class_ticpp_StylesheetReference, 0};
+static swig_type_info _swigt__p_ticpp__Text = {"_p_ticpp__Text", "ticpp::Text *", 0, 0, (void*)&_wrap_class_ticpp_Text, 0};
+static swig_type_info _swigt__p_ticpp__Visitor = {"_p_ticpp__Visitor", "ticpp::Visitor *", 0, 0, (void*)&_wrap_class_ticpp_Visitor, 0};
 static swig_type_info _swigt__p_unsigned_char = {"_p_unsigned_char", "unsigned char *|argos::UInt8 *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_int = {"_p_unsigned_int", "argos::UInt32 *|unsigned int *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_long_long = {"_p_unsigned_long_long", "argos::UInt64 *|unsigned long long *", 0, 0, (void*)0, 0};
@@ -14139,11 +34034,30 @@ static swig_type_info _swigt__p_unsigned_short = {"_p_unsigned_short", "argos::U
 static swig_type_info _swigt__p_void = {"_p_void", "void *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
+  &_swigt__p_FILE,
   &_swigt__p_TLastReceivedPackets,
   &_swigt__p_TLedSettings,
   &_swigt__p_TRangeAndBearingData,
   &_swigt__p_TRawValues,
   &_swigt__p_TReadings,
+  &_swigt__p_TiCppRC,
+  &_swigt__p_TiCppRCImp,
+  &_swigt__p_TiXmlAttribute,
+  &_swigt__p_TiXmlAttributeSet,
+  &_swigt__p_TiXmlBase,
+  &_swigt__p_TiXmlComment,
+  &_swigt__p_TiXmlCursor,
+  &_swigt__p_TiXmlDeclaration,
+  &_swigt__p_TiXmlDocument,
+  &_swigt__p_TiXmlElement,
+  &_swigt__p_TiXmlHandle,
+  &_swigt__p_TiXmlNode,
+  &_swigt__p_TiXmlParsingData,
+  &_swigt__p_TiXmlPrinter,
+  &_swigt__p_TiXmlStylesheetReference,
+  &_swigt__p_TiXmlText,
+  &_swigt__p_TiXmlUnknown,
+  &_swigt__p_TiXmlVisitor,
   &_swigt__p_argos__CARGoSException,
   &_swigt__p_argos__CARGoSRandom,
   &_swigt__p_argos__CBaseConfigurableResource,
@@ -14177,6 +34091,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_argos__ProximitySensorReading,
   &_swigt__p_argos__TRangeAndBearingReceivedPacket,
   &_swigt__p_bool,
+  &_swigt__p_double,
   &_swigt__p_f___p_argos__CCI_Controller,
   &_swigt__p_f_p_void__double,
   &_swigt__p_f_p_void__unsigned_long,
@@ -14187,6 +34102,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_int,
   &_swigt__p_long_long,
   &_swigt__p_p_gsl_rng_type,
+  &_swigt__p_p_ticpp__Attribute,
   &_swigt__p_short,
   &_swigt__p_signed_char,
   &_swigt__p_std__exception,
@@ -14198,8 +34114,25 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__vectorT_SReading_t,
   &_swigt__p_std__vectorT_argos__CColor_t,
   &_swigt__p_std__vectorT_std__string_t,
+  &_swigt__p_std__vectorT_ticpp__Base_p_t,
+  &_swigt__p_ticpp__Attribute,
+  &_swigt__p_ticpp__Base,
+  &_swigt__p_ticpp__Comment,
+  &_swigt__p_ticpp__Declaration,
+  &_swigt__p_ticpp__Document,
   &_swigt__p_ticpp__Element,
+  &_swigt__p_ticpp__Exception,
   &_swigt__p_ticpp__IteratorT_ticpp__Element_t,
+  &_swigt__p_ticpp__Node,
+  &_swigt__p_ticpp__NodeImpT_TiXmlComment_t,
+  &_swigt__p_ticpp__NodeImpT_TiXmlDeclaration_t,
+  &_swigt__p_ticpp__NodeImpT_TiXmlDocument_t,
+  &_swigt__p_ticpp__NodeImpT_TiXmlElement_t,
+  &_swigt__p_ticpp__NodeImpT_TiXmlStylesheetReference_t,
+  &_swigt__p_ticpp__NodeImpT_TiXmlText_t,
+  &_swigt__p_ticpp__StylesheetReference,
+  &_swigt__p_ticpp__Text,
+  &_swigt__p_ticpp__Visitor,
   &_swigt__p_unsigned_char,
   &_swigt__p_unsigned_int,
   &_swigt__p_unsigned_long_long,
@@ -14207,11 +34140,30 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_void,
 };
 
+static swig_cast_info _swigc__p_FILE[] = {  {&_swigt__p_FILE, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_TLastReceivedPackets[] = {  {&_swigt__p_TLastReceivedPackets, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_TLedSettings[] = {  {&_swigt__p_TLedSettings, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_TRangeAndBearingData[] = {  {&_swigt__p_TRangeAndBearingData, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_TRawValues[] = {  {&_swigt__p_TRawValues, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_TReadings[] = {  {&_swigt__p_TReadings, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TiCppRC[] = {  {&_swigt__p_TiXmlNode, _p_TiXmlNodeTo_p_TiCppRC, 0, 0},  {&_swigt__p_TiXmlElement, _p_TiXmlElementTo_p_TiCppRC, 0, 0},  {&_swigt__p_TiXmlDeclaration, _p_TiXmlDeclarationTo_p_TiCppRC, 0, 0},  {&_swigt__p_TiXmlUnknown, _p_TiXmlUnknownTo_p_TiCppRC, 0, 0},  {&_swigt__p_TiCppRC, 0, 0, 0},  {&_swigt__p_TiXmlComment, _p_TiXmlCommentTo_p_TiCppRC, 0, 0},  {&_swigt__p_TiXmlAttribute, _p_TiXmlAttributeTo_p_TiCppRC, 0, 0},  {&_swigt__p_TiXmlText, _p_TiXmlTextTo_p_TiCppRC, 0, 0},  {&_swigt__p_TiXmlStylesheetReference, _p_TiXmlStylesheetReferenceTo_p_TiCppRC, 0, 0},  {&_swigt__p_TiXmlDocument, _p_TiXmlDocumentTo_p_TiCppRC, 0, 0},  {&_swigt__p_TiXmlBase, _p_TiXmlBaseTo_p_TiCppRC, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TiCppRCImp[] = {  {&_swigt__p_TiCppRCImp, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TiXmlAttribute[] = {  {&_swigt__p_TiXmlAttribute, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TiXmlAttributeSet[] = {  {&_swigt__p_TiXmlAttributeSet, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TiXmlBase[] = {  {&_swigt__p_TiXmlNode, _p_TiXmlNodeTo_p_TiXmlBase, 0, 0},  {&_swigt__p_TiXmlElement, _p_TiXmlElementTo_p_TiXmlBase, 0, 0},  {&_swigt__p_TiXmlDeclaration, _p_TiXmlDeclarationTo_p_TiXmlBase, 0, 0},  {&_swigt__p_TiXmlUnknown, _p_TiXmlUnknownTo_p_TiXmlBase, 0, 0},  {&_swigt__p_TiXmlComment, _p_TiXmlCommentTo_p_TiXmlBase, 0, 0},  {&_swigt__p_TiXmlAttribute, _p_TiXmlAttributeTo_p_TiXmlBase, 0, 0},  {&_swigt__p_TiXmlText, _p_TiXmlTextTo_p_TiXmlBase, 0, 0},  {&_swigt__p_TiXmlStylesheetReference, _p_TiXmlStylesheetReferenceTo_p_TiXmlBase, 0, 0},  {&_swigt__p_TiXmlDocument, _p_TiXmlDocumentTo_p_TiXmlBase, 0, 0},  {&_swigt__p_TiXmlBase, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TiXmlComment[] = {  {&_swigt__p_TiXmlComment, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TiXmlCursor[] = {  {&_swigt__p_TiXmlCursor, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TiXmlDeclaration[] = {  {&_swigt__p_TiXmlDeclaration, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TiXmlDocument[] = {  {&_swigt__p_TiXmlDocument, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TiXmlElement[] = {  {&_swigt__p_TiXmlElement, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TiXmlHandle[] = {  {&_swigt__p_TiXmlHandle, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TiXmlNode[] = {  {&_swigt__p_TiXmlNode, 0, 0, 0},  {&_swigt__p_TiXmlElement, _p_TiXmlElementTo_p_TiXmlNode, 0, 0},  {&_swigt__p_TiXmlDeclaration, _p_TiXmlDeclarationTo_p_TiXmlNode, 0, 0},  {&_swigt__p_TiXmlUnknown, _p_TiXmlUnknownTo_p_TiXmlNode, 0, 0},  {&_swigt__p_TiXmlComment, _p_TiXmlCommentTo_p_TiXmlNode, 0, 0},  {&_swigt__p_TiXmlText, _p_TiXmlTextTo_p_TiXmlNode, 0, 0},  {&_swigt__p_TiXmlStylesheetReference, _p_TiXmlStylesheetReferenceTo_p_TiXmlNode, 0, 0},  {&_swigt__p_TiXmlDocument, _p_TiXmlDocumentTo_p_TiXmlNode, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TiXmlParsingData[] = {  {&_swigt__p_TiXmlParsingData, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TiXmlPrinter[] = {  {&_swigt__p_TiXmlPrinter, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TiXmlStylesheetReference[] = {  {&_swigt__p_TiXmlStylesheetReference, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TiXmlText[] = {  {&_swigt__p_TiXmlText, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TiXmlUnknown[] = {  {&_swigt__p_TiXmlUnknown, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TiXmlVisitor[] = {  {&_swigt__p_TiXmlPrinter, _p_TiXmlPrinterTo_p_TiXmlVisitor, 0, 0},  {&_swigt__p_TiXmlVisitor, 0, 0, 0},  {&_swigt__p_ticpp__Visitor, _p_ticpp__VisitorTo_p_TiXmlVisitor, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_argos__CARGoSException[] = {  {&_swigt__p_argos__CARGoSException, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_argos__CARGoSRandom[] = {  {&_swigt__p_argos__CARGoSRandom, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_argos__CBaseConfigurableResource[] = {  {&_swigt__p_argos__CCI_Controller, _p_argos__CCI_ControllerTo_p_argos__CBaseConfigurableResource, 0, 0},  {&_swigt__p_argos__CBaseConfigurableResource, 0, 0, 0},  {&_swigt__p_argos__CCI_Actuator, _p_argos__CCI_ActuatorTo_p_argos__CBaseConfigurableResource, 0, 0},  {&_swigt__p_argos__CCI_FootBotWheelsActuator, _p_argos__CCI_FootBotWheelsActuatorTo_p_argos__CBaseConfigurableResource, 0, 0},  {&_swigt__p_argos__CCI_FootBotLedsActuator, _p_argos__CCI_FootBotLedsActuatorTo_p_argos__CBaseConfigurableResource, 0, 0},  {&_swigt__p_argos__CCI_RangeAndBearingActuator, _p_argos__CCI_RangeAndBearingActuatorTo_p_argos__CBaseConfigurableResource, 0, 0},  {&_swigt__p_argos__CCI_FootBotLightSensor, _p_argos__CCI_FootBotLightSensorTo_p_argos__CBaseConfigurableResource, 0, 0},  {&_swigt__p_argos__CCI_FootBotMotorGroundSensor, _p_argos__CCI_FootBotMotorGroundSensorTo_p_argos__CBaseConfigurableResource, 0, 0},  {&_swigt__p_argos__CCI_Sensor, _p_argos__CCI_SensorTo_p_argos__CBaseConfigurableResource, 0, 0},  {&_swigt__p_argos__CCI_FootBotProximitySensor, _p_argos__CCI_FootBotProximitySensorTo_p_argos__CBaseConfigurableResource, 0, 0},  {&_swigt__p_argos__CCI_RangeAndBearingSensor, _p_argos__CCI_RangeAndBearingSensorTo_p_argos__CBaseConfigurableResource, 0, 0},{0, 0, 0, 0}};
@@ -14245,6 +34197,7 @@ static swig_cast_info _swigc__p_argos__MotorGroundSensorReading[] = {  {&_swigt_
 static swig_cast_info _swigc__p_argos__ProximitySensorReading[] = {  {&_swigt__p_argos__ProximitySensorReading, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_argos__TRangeAndBearingReceivedPacket[] = {  {&_swigt__p_argos__TRangeAndBearingReceivedPacket, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_bool[] = {  {&_swigt__p_bool, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_double[] = {  {&_swigt__p_double, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_f___p_argos__CCI_Controller[] = {  {&_swigt__p_f___p_argos__CCI_Controller, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_f_p_void__double[] = {  {&_swigt__p_f_p_void__double, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_f_p_void__unsigned_long[] = {  {&_swigt__p_f_p_void__unsigned_long, 0, 0, 0},{0, 0, 0, 0}};
@@ -14255,9 +34208,10 @@ static swig_cast_info _swigc__p_gsl_rng_type[] = {  {&_swigt__p_gsl_rng_type, 0,
 static swig_cast_info _swigc__p_int[] = {  {&_swigt__p_int, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_long_long[] = {  {&_swigt__p_long_long, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_p_gsl_rng_type[] = {  {&_swigt__p_p_gsl_rng_type, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_p_ticpp__Attribute[] = {  {&_swigt__p_p_ticpp__Attribute, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_short[] = {  {&_swigt__p_short, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_signed_char[] = {  {&_swigt__p_signed_char, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__exception[] = {  {&_swigt__p_std__exception, 0, 0, 0},  {&_swigt__p_argos__CARGoSException, _p_argos__CARGoSExceptionTo_p_std__exception, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__exception[] = {  {&_swigt__p_std__exception, 0, 0, 0},  {&_swigt__p_ticpp__Exception, _p_ticpp__ExceptionTo_p_std__exception, 0, 0},  {&_swigt__p_argos__CARGoSException, _p_argos__CARGoSExceptionTo_p_std__exception, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__mapT_std__string_argos__CCI_Actuator_p_std__lessT_std__string_t_t[] = {  {&_swigt__p_std__mapT_std__string_argos__CCI_Actuator_p_std__lessT_std__string_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__mapT_std__string_argos__CCI_Controller_pfpFfF_std__lessT_std__string_t_t[] = {  {&_swigt__p_std__mapT_std__string_argos__CCI_Controller_pfpFfF_std__lessT_std__string_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__mapT_std__string_argos__CCI_Sensor_p_std__lessT_std__string_t_t[] = {  {&_swigt__p_std__mapT_std__string_argos__CCI_Sensor_p_std__lessT_std__string_t_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -14266,8 +34220,25 @@ static swig_cast_info _swigc__p_std__string[] = {  {&_swigt__p_std__string, 0, 0
 static swig_cast_info _swigc__p_std__vectorT_SReading_t[] = {  {&_swigt__p_std__vectorT_SReading_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_argos__CColor_t[] = {  {&_swigt__p_std__vectorT_argos__CColor_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_std__string_t[] = {  {&_swigt__p_std__vectorT_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_ticpp__Base_p_t[] = {  {&_swigt__p_std__vectorT_ticpp__Base_p_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ticpp__Attribute[] = {  {&_swigt__p_ticpp__Attribute, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ticpp__Base[] = {  {&_swigt__p_ticpp__Text, _p_ticpp__TextTo_p_ticpp__Base, 0, 0},  {&_swigt__p_ticpp__Base, 0, 0, 0},  {&_swigt__p_ticpp__StylesheetReference, _p_ticpp__StylesheetReferenceTo_p_ticpp__Base, 0, 0},  {&_swigt__p_ticpp__Attribute, _p_ticpp__AttributeTo_p_ticpp__Base, 0, 0},  {&_swigt__p_ticpp__NodeImpT_TiXmlDeclaration_t, _p_ticpp__NodeImpT_TiXmlDeclaration_tTo_p_ticpp__Base, 0, 0},  {&_swigt__p_ticpp__Node, _p_ticpp__NodeTo_p_ticpp__Base, 0, 0},  {&_swigt__p_ticpp__Comment, _p_ticpp__CommentTo_p_ticpp__Base, 0, 0},  {&_swigt__p_ticpp__NodeImpT_TiXmlStylesheetReference_t, _p_ticpp__NodeImpT_TiXmlStylesheetReference_tTo_p_ticpp__Base, 0, 0},  {&_swigt__p_ticpp__NodeImpT_TiXmlElement_t, _p_ticpp__NodeImpT_TiXmlElement_tTo_p_ticpp__Base, 0, 0},  {&_swigt__p_ticpp__NodeImpT_TiXmlDocument_t, _p_ticpp__NodeImpT_TiXmlDocument_tTo_p_ticpp__Base, 0, 0},  {&_swigt__p_ticpp__NodeImpT_TiXmlComment_t, _p_ticpp__NodeImpT_TiXmlComment_tTo_p_ticpp__Base, 0, 0},  {&_swigt__p_ticpp__Document, _p_ticpp__DocumentTo_p_ticpp__Base, 0, 0},  {&_swigt__p_ticpp__Element, _p_ticpp__ElementTo_p_ticpp__Base, 0, 0},  {&_swigt__p_ticpp__NodeImpT_TiXmlText_t, _p_ticpp__NodeImpT_TiXmlText_tTo_p_ticpp__Base, 0, 0},  {&_swigt__p_ticpp__Declaration, _p_ticpp__DeclarationTo_p_ticpp__Base, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ticpp__Comment[] = {  {&_swigt__p_ticpp__Comment, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ticpp__Declaration[] = {  {&_swigt__p_ticpp__Declaration, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ticpp__Document[] = {  {&_swigt__p_ticpp__Document, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ticpp__Element[] = {  {&_swigt__p_ticpp__Element, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ticpp__Exception[] = {  {&_swigt__p_ticpp__Exception, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ticpp__IteratorT_ticpp__Element_t[] = {  {&_swigt__p_ticpp__IteratorT_ticpp__Element_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ticpp__Node[] = {  {&_swigt__p_ticpp__Element, _p_ticpp__ElementTo_p_ticpp__Node, 0, 0},  {&_swigt__p_ticpp__NodeImpT_TiXmlComment_t, _p_ticpp__NodeImpT_TiXmlComment_tTo_p_ticpp__Node, 0, 0},  {&_swigt__p_ticpp__NodeImpT_TiXmlDocument_t, _p_ticpp__NodeImpT_TiXmlDocument_tTo_p_ticpp__Node, 0, 0},  {&_swigt__p_ticpp__NodeImpT_TiXmlElement_t, _p_ticpp__NodeImpT_TiXmlElement_tTo_p_ticpp__Node, 0, 0},  {&_swigt__p_ticpp__Text, _p_ticpp__TextTo_p_ticpp__Node, 0, 0},  {&_swigt__p_ticpp__Declaration, _p_ticpp__DeclarationTo_p_ticpp__Node, 0, 0},  {&_swigt__p_ticpp__NodeImpT_TiXmlStylesheetReference_t, _p_ticpp__NodeImpT_TiXmlStylesheetReference_tTo_p_ticpp__Node, 0, 0},  {&_swigt__p_ticpp__Comment, _p_ticpp__CommentTo_p_ticpp__Node, 0, 0},  {&_swigt__p_ticpp__Node, 0, 0, 0},  {&_swigt__p_ticpp__Document, _p_ticpp__DocumentTo_p_ticpp__Node, 0, 0},  {&_swigt__p_ticpp__StylesheetReference, _p_ticpp__StylesheetReferenceTo_p_ticpp__Node, 0, 0},  {&_swigt__p_ticpp__NodeImpT_TiXmlText_t, _p_ticpp__NodeImpT_TiXmlText_tTo_p_ticpp__Node, 0, 0},  {&_swigt__p_ticpp__NodeImpT_TiXmlDeclaration_t, _p_ticpp__NodeImpT_TiXmlDeclaration_tTo_p_ticpp__Node, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ticpp__NodeImpT_TiXmlComment_t[] = {  {&_swigt__p_ticpp__NodeImpT_TiXmlComment_t, 0, 0, 0},  {&_swigt__p_ticpp__Comment, _p_ticpp__CommentTo_p_ticpp__NodeImpT_TiXmlComment_t, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ticpp__NodeImpT_TiXmlDeclaration_t[] = {  {&_swigt__p_ticpp__Declaration, _p_ticpp__DeclarationTo_p_ticpp__NodeImpT_TiXmlDeclaration_t, 0, 0},  {&_swigt__p_ticpp__NodeImpT_TiXmlDeclaration_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ticpp__NodeImpT_TiXmlDocument_t[] = {  {&_swigt__p_ticpp__NodeImpT_TiXmlDocument_t, 0, 0, 0},  {&_swigt__p_ticpp__Document, _p_ticpp__DocumentTo_p_ticpp__NodeImpT_TiXmlDocument_t, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ticpp__NodeImpT_TiXmlElement_t[] = {  {&_swigt__p_ticpp__Element, _p_ticpp__ElementTo_p_ticpp__NodeImpT_TiXmlElement_t, 0, 0},  {&_swigt__p_ticpp__NodeImpT_TiXmlElement_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ticpp__NodeImpT_TiXmlStylesheetReference_t[] = {  {&_swigt__p_ticpp__NodeImpT_TiXmlStylesheetReference_t, 0, 0, 0},  {&_swigt__p_ticpp__StylesheetReference, _p_ticpp__StylesheetReferenceTo_p_ticpp__NodeImpT_TiXmlStylesheetReference_t, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ticpp__NodeImpT_TiXmlText_t[] = {  {&_swigt__p_ticpp__Text, _p_ticpp__TextTo_p_ticpp__NodeImpT_TiXmlText_t, 0, 0},  {&_swigt__p_ticpp__NodeImpT_TiXmlText_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ticpp__StylesheetReference[] = {  {&_swigt__p_ticpp__StylesheetReference, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ticpp__Text[] = {  {&_swigt__p_ticpp__Text, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ticpp__Visitor[] = {  {&_swigt__p_ticpp__Visitor, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_char[] = {  {&_swigt__p_unsigned_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_int[] = {  {&_swigt__p_unsigned_int, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_long_long[] = {  {&_swigt__p_unsigned_long_long, 0, 0, 0},{0, 0, 0, 0}};
@@ -14275,11 +34246,30 @@ static swig_cast_info _swigc__p_unsigned_short[] = {  {&_swigt__p_unsigned_short
 static swig_cast_info _swigc__p_void[] = {  {&_swigt__p_void, 0, 0, 0},{0, 0, 0, 0}};
 
 static swig_cast_info *swig_cast_initial[] = {
+  _swigc__p_FILE,
   _swigc__p_TLastReceivedPackets,
   _swigc__p_TLedSettings,
   _swigc__p_TRangeAndBearingData,
   _swigc__p_TRawValues,
   _swigc__p_TReadings,
+  _swigc__p_TiCppRC,
+  _swigc__p_TiCppRCImp,
+  _swigc__p_TiXmlAttribute,
+  _swigc__p_TiXmlAttributeSet,
+  _swigc__p_TiXmlBase,
+  _swigc__p_TiXmlComment,
+  _swigc__p_TiXmlCursor,
+  _swigc__p_TiXmlDeclaration,
+  _swigc__p_TiXmlDocument,
+  _swigc__p_TiXmlElement,
+  _swigc__p_TiXmlHandle,
+  _swigc__p_TiXmlNode,
+  _swigc__p_TiXmlParsingData,
+  _swigc__p_TiXmlPrinter,
+  _swigc__p_TiXmlStylesheetReference,
+  _swigc__p_TiXmlText,
+  _swigc__p_TiXmlUnknown,
+  _swigc__p_TiXmlVisitor,
   _swigc__p_argos__CARGoSException,
   _swigc__p_argos__CARGoSRandom,
   _swigc__p_argos__CBaseConfigurableResource,
@@ -14313,6 +34303,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_argos__ProximitySensorReading,
   _swigc__p_argos__TRangeAndBearingReceivedPacket,
   _swigc__p_bool,
+  _swigc__p_double,
   _swigc__p_f___p_argos__CCI_Controller,
   _swigc__p_f_p_void__double,
   _swigc__p_f_p_void__unsigned_long,
@@ -14323,6 +34314,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_int,
   _swigc__p_long_long,
   _swigc__p_p_gsl_rng_type,
+  _swigc__p_p_ticpp__Attribute,
   _swigc__p_short,
   _swigc__p_signed_char,
   _swigc__p_std__exception,
@@ -14334,8 +34326,25 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__vectorT_SReading_t,
   _swigc__p_std__vectorT_argos__CColor_t,
   _swigc__p_std__vectorT_std__string_t,
+  _swigc__p_std__vectorT_ticpp__Base_p_t,
+  _swigc__p_ticpp__Attribute,
+  _swigc__p_ticpp__Base,
+  _swigc__p_ticpp__Comment,
+  _swigc__p_ticpp__Declaration,
+  _swigc__p_ticpp__Document,
   _swigc__p_ticpp__Element,
+  _swigc__p_ticpp__Exception,
   _swigc__p_ticpp__IteratorT_ticpp__Element_t,
+  _swigc__p_ticpp__Node,
+  _swigc__p_ticpp__NodeImpT_TiXmlComment_t,
+  _swigc__p_ticpp__NodeImpT_TiXmlDeclaration_t,
+  _swigc__p_ticpp__NodeImpT_TiXmlDocument_t,
+  _swigc__p_ticpp__NodeImpT_TiXmlElement_t,
+  _swigc__p_ticpp__NodeImpT_TiXmlStylesheetReference_t,
+  _swigc__p_ticpp__NodeImpT_TiXmlText_t,
+  _swigc__p_ticpp__StylesheetReference,
+  _swigc__p_ticpp__Text,
+  _swigc__p_ticpp__Visitor,
   _swigc__p_unsigned_char,
   _swigc__p_unsigned_int,
   _swigc__p_unsigned_long_long,

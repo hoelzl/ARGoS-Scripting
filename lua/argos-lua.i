@@ -29,9 +29,11 @@
 
 %rename("%(undercase)s", %$isfunction) "";
 
-%include <string>
-%include <vector>
-%include <map>
+%include "std_string.i"
+%apply const std::string& {std::string* foo};
+
+%include "std_vector.i"
+%include "std_map.i"
 
 %ignore operator<<;
 %ignore operator>>;
@@ -54,7 +56,203 @@ class std::exception
   virtual const char* what() const throw();
 };
 
-// %include <argos2/common/utility/tinyxml-cpp/ticpp.h>
+
+%warnfilter (509) TiXmlNode::SetValue;
+%warnfilter (509) TiXmlNode::FirstChild;
+%warnfilter (509) TiXmlNode::LastChild;
+%warnfilter (509) TiXmlNode::IterateChildren;
+%warnfilter (509) TiXmlNode::PreviousSibling;
+%warnfilter (509) TiXmlNode::NextSibling;
+%warnfilter (509) TiXmlNode::NextSiblingElement;
+%warnfilter (509) TiXmlNode::FirstChildElement;
+%warnfilter (509) TiXmlAttribute::TiXmlAttribute;
+%warnfilter (509) TiXmlAttribute::SetName;
+%warnfilter (509) TiXmlAttribute::SetValue;
+%warnfilter (509) TiXmlAttributeSet::Find;
+%warnfilter (509) TiXmlElement::TiXmlElement;
+%warnfilter (509) TiXmlElement::Attribute;
+%warnfilter (509) TiXmlElement::QueryIntAttribute;
+%warnfilter (509) TiXmlElement::QueryDoubleAttribute;
+%warnfilter (509) TiXmlElement::SetAttribute;
+%warnfilter (509) TiXmlElement::RemoveAttribute;
+%warnfilter (509) TiXmlText::TiXmlText;
+%warnfilter (509) TiXmlDeclaration::TiXmlDeclaration;
+%warnfilter (509) TiXmlStylesheetReference::TiXmlStylesheetReference;
+%warnfilter (509) TiXmlDocument::TiXmlDocument;
+%warnfilter (509) TiXmlDocument::LoadFile;
+%warnfilter (509) TiXmlDocument::SaveFile;
+%warnfilter (509) TiXmlHandle::FirstChild;
+%warnfilter (509) TiXmlHandle::FirstChildElement;
+%warnfilter (509) TiXmlHandle::ChildElement;
+%warnfilter (509) TiXmlHandle::Child;
+%warnfilter (509) ticpp::Document::Document;
+%warnfilter (509) ticpp::Document::LoadFile;
+%warnfilter (509) ticpp::Element::Element;
+
+
+%include <argos2/common/utility/tinyxml-cpp/ticpprc.h>
+%include <argos2/common/utility/tinyxml-cpp/tinyxml.h>
+
+%nodefaultctor ticpp::Base;
+namespace ticpp {
+  class Element;
+  class Document;
+  class Comment;
+  class Text;
+  class Declaration;
+  class StylesheetReference;
+
+  class Base {
+  public:
+    template < class T > 
+      std::string ToString( const T& value ) const;
+    std::string ToString( const std::string& value ) const;
+    template < class T > 
+      void FromString( const std::string& temp, T* out ) const;
+    void FromString( const std::string& temp, std::string* out ) const;
+    int Row() const;
+    int Column() const;
+    bool operator == ( const Base& rhs ) const;
+    bool operator != ( const Base& rhs ) const;
+    std::string BuildDetailedErrorString() const;
+    virtual ~Base();
+  protected:
+    TiCppRCImp* m_impRC;
+    void SetImpRC( TiXmlBase* node );
+    void ValidatePointer() const;
+    virtual TiXmlBase* GetBasePointer() const;
+  };
+
+  class Attribute : public Base {
+  private:
+    TiXmlAttribute* m_tiXmlPointer;
+    TiXmlBase* GetBasePointer() const;
+  public:
+    Attribute();
+    Attribute( const std::string& name, const std::string& value );
+    Attribute( TiXmlAttribute* attribute );
+    template < class T >
+      void GetValue( T* value ) const;
+    std::string Value() const;
+    template < class T >
+      void SetValue( const T& value );
+    template < class T >
+      void GetName( T* name ) const;
+    std::string Name() const;
+    template < class T >
+      void SetName( const T& name );
+    void operator=( const Attribute& copy );
+    Attribute( const Attribute& copy );
+    ~Attribute();
+    Attribute* Next( bool throwIfNoAttribute = true ) const;
+    Attribute* Previous( bool throwIfNoAttribute = true ) const;
+    void IterateNext( const std::string&, Attribute** next ) const;
+    void IteratePrevious( const std::string&, Attribute** previous ) const;
+    virtual void Print( FILE* file, int depth ) const;
+  private:
+    void SetTiXmlPointer( TiXmlAttribute* newPointer );
+  };
+
+  class Node : public Base {
+  public:
+    template < class T >
+      void GetValue( T* value) const;
+    std::string Value() const;
+    template < class T >
+      void SetValue( const T& value );
+    void Clear();
+    Node* Parent( bool throwIfNoParent = true ) const;
+    Node* FirstChild( bool throwIfNoChildren = true ) const;
+    Node* FirstChild( const char* value, bool throwIfNoChildren = true ) const;
+    // Node* FirstChild( const std::string& value, bool throwIfNoChildren = true ) const;
+    Node* LastChild( bool throwIfNoChildren = true ) const;
+    Node* LastChild( const char* value, bool throwIfNoChildren = true ) const;
+    // Node* LastChild( const std::string& value, bool throwIfNoChildren = true ) const;
+    Node* IterateChildren( Node* previous ) const;
+    Node* IterateChildren( const std::string& value, Node* previous ) const;
+    Node* InsertEndChild( Node& addThis );
+    Node* LinkEndChild( Node* childNode );
+    Node* InsertBeforeChild( Node* beforeThis, Node& addThis );
+    Node* InsertAfterChild( Node* afterThis, Node& addThis );
+    Node* ReplaceChild( Node* replaceThis, Node& withThis );
+    void RemoveChild( Node* removeThis );
+    Node* PreviousSibling( bool throwIfNoSiblings = true ) const;
+    // Node* PreviousSibling( const std::string& value, bool throwIfNoSiblings = true ) const;
+    Node* PreviousSibling( const char* value, bool throwIfNoSiblings = true ) const;
+    Node* NextSibling( bool throwIfNoSiblings = true ) const;
+    // Node* NextSibling( const std::string& value, bool throwIfNoSiblings = true ) const;
+    Node* NextSibling( const char* value, bool throwIfNoSiblings = true ) const;
+    template < class T >
+      void IterateFirst( const std::string& value, T** first ) const;
+    virtual void IterateFirst( const std::string&, Attribute** ) const;
+    template < class T >
+      void IterateNext( const std::string& value, T** next ) const;
+    template < class T >
+      void IteratePrevious( const std::string& value, T** previous  ) const;
+    Element* NextSiblingElement( bool throwIfNoSiblings = true ) const;
+    // Element* NextSiblingElement( const std::string& value, bool throwIfNoSiblings = true ) const;
+    Element* NextSiblingElement( const char* value, bool throwIfNoSiblings = true ) const;
+    Element* FirstChildElement( bool throwIfNoChildren = true ) const;
+    Element* FirstChildElement( const char* value, bool throwIfNoChildren = true ) const;
+    // Element* FirstChildElement( const std::string& value, bool throwIfNoChildren = true ) const;
+    Document* GetDocument( bool throwIfNoDocument = true ) const;
+    template < class T >
+      T* To() const;
+    Document* ToDocument() const;
+    Element* ToElement() const;
+    Comment* ToComment() const;
+    Text* ToText() const;
+    Declaration* ToDeclaration() const;
+    StylesheetReference* ToStylesheetReference() const;
+    // std::auto_ptr< Node > Clone() const;
+    friend std::istream& operator >>( std::istream& in, Node& base );
+    friend std::ostream& operator <<( std::ostream& out, const Node& base );
+  protected:
+    virtual TiXmlNode* GetTiXmlPointer() const = 0;
+    Node* NodeFactory( TiXmlNode* tiXmlNode, bool throwIfNull = true, bool rememberSpawnedWrapper = true ) const;
+    
+  };
+  
+  template < class T = Node > class Iterator {
+  private:
+    T* m_p;
+    std::string m_value;
+  public:
+    T* begin( const Node* parent ) const;
+    T* end() const;
+    Iterator( const std::string& value = "" );
+    Iterator( T* node, const std::string& value = "" );
+    Iterator( const Iterator& it );
+    T* Get() const;
+  };
+  
+  template < class T > class NodeImp : public Node {
+   protected:
+     T* m_tiXmlPointer;
+     TiXmlNode* GetTiXmlPointer() const;
+     void SetTiXmlPointer( T* newPointer );
+     NodeImp( T* tiXmlPointer );
+     virtual void operator=( const NodeImp<T>& copy );
+     NodeImp( const NodeImp<T>& copy ) : Node( copy );
+   public:
+     virtual ~NodeImp();
+   };
+}
+
+%template (NodeImpComment) ticpp::NodeImp<TiXmlComment>;
+%template (NodeImpText) ticpp::NodeImp<TiXmlText>;
+%template (NodeImpDocument) ticpp::NodeImp<TiXmlDocument>;
+%template (NodeImpElement) ticpp::NodeImp<TiXmlElement>;
+%template (NodeImpDeclaration) ticpp::NodeImp<TiXmlDeclaration>;
+%template (NodeImpStylesheetReference) ticpp::NodeImp<TiXmlStylesheetReference>;
+
+%warnfilter(302) ticpp::Base;
+%warnfilter(302) ticpp::Attribute;
+%warnfilter(302) ticpp::Node;
+%warnfilter(302) ticpp::Iterator;
+%warnfilter(302) ticpp::NodeImp;
+%include <argos2/common/utility/tinyxml-cpp/ticpp.h>
+
 
 %rename(ArgosException) CARGoSException;
 %include <argos2/common/utility/configuration/argos_exception.h>

@@ -38,6 +38,10 @@ end
 function init(configuration_node, controller)
    state.uuid = argos_utils.uuid()
    write_init_log_message()
+   print("configuration: has alpha?", 
+	 configuration_node:has_attribute("alpha"))
+   print("configuration: alpha value:",
+	 configuration_node:get_attribute("alpha"))
    initialize_sensors_and_actuators()
 end
 

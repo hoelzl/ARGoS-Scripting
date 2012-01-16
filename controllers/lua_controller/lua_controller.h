@@ -14,6 +14,7 @@
 #include "lua.hpp"
 #include "lauxlib.h"
 #include "lualib.h"
+#include "lua_wrapper.h"
 
 using namespace argos;
 
@@ -31,10 +32,30 @@ public:
 private:
    void InitializeLuaInterpreter(std::string LuaSource);
 
+   inline void PrintModuleState() {
+     swig_module_info *moduleInfo = SWIG_GetModule(LuaState);
+     std::cerr << "Module: " << moduleInfo
+	       << ", " << moduleInfo->size
+	       << std::endl;
+     for (unsigned int i = 0; i < moduleInfo->size; ++i) {
+       std::cerr << "Type: " << moduleInfo->types[i]->name << std::endl;
+     }
+   }
+
    inline void CallLuaInitFunction(TConfigurationNode *configurationNode,
 				   CCI_Controller *controller) {
      lua_getglobal(LuaState, "init");
-     if (lua_pcall(LuaState, 0, 0, 0)) {
+
+     // TConfigurationNode is an abbreviation for ticpp::Element
+     swig_type_info *configNodeType
+       = SWIG_TypeQuery(LuaState, "_p_ticpp__Element");
+     if (configNodeType) {
+       SWIG_Lua_NewPointerObj(LuaState, configurationNode, configNodeType, 0);
+     }
+     else {
+       std::cerr << "Type info for TConfigurationNode not found." << std::endl;
+     }
+     if (lua_pcall(LuaState, 1, 0, 0)) {
        std::cerr << "Error when calling Lua init function:" 
 		 << std::endl
 		 << lua_tostring(LuaState, -1)
