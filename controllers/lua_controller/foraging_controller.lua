@@ -22,7 +22,14 @@ end
 -- use a global variable to store the robot's state.
 state = {}
 
-function write_init_log_message()
+function init (configuration_node, controller)
+   state.uuid = argos_utils.uuid()
+   write_init_log_message()
+   initialize_sensors_and_actuators(controller)
+   initialize_configuration_data(configuration_node)
+end
+
+function write_init_log_message ()
    local log = argos_utils.log
    log("Initializing robot %s", state.uuid)
    if jit then
@@ -30,34 +37,41 @@ function write_init_log_message()
    end
 end
 
-function initialize_sensors_and_actuators()
+function initialize_sensors_and_actuators (controller)
    local log = argos_utils.log
-   -- log("Robot: %s", argos.get_robot())
-end
-
-function init(configuration_node, controller)
-   state.uuid = argos_utils.uuid()
-   write_init_log_message()
-   print("configuration type", swig_type(configuration_node))
-   print("configuration: has alpha?", 
-	 configuration_node:has_attribute("alpha"))
-   print("configuration: alpha value:",
-	 configuration_node:get_attribute("alpha"))
-   print("controller type", swig_type(controller))
    local robot = controller:get_robot()
-   print("robot type", swig_type(robot))
-   local actuator = robot:get_actuator("footbot_wheels")
-   print("wheel type", swig_type(actuator))
-   actuator = actuator:as_foot_bot_wheels_actuator()
-   print("wheel type", swig_type(actuator))
-   initialize_sensors_and_actuators()
+   state.robot = robot
+   state.actuators = {}
+   state.sensors = {}
+   local tmp = robot:get_actuator("footbot_wheels")
+   state.actuators.wheels = tmp:as_foot_bot_wheels_actuator()
+   log("Added actuator: %s", swig_type(state.actuators.wheels))
+   tmp = robot:get_actuator("footbot_leds")
+   state.actuators.leds = tmp:as_foot_bot_leds_actuator()
+   log("Added actuator: %s", swig_type(state.actuators.leds))
+   tmp = robot:get_sensor("footbot_proximity")
+   state.sensors.proximity = tmp:as_foot_bot_proximity_sensor()
+   log("Added sensor: %s", swig_type(state.sensors.proximity))
 end
 
-function control_step()
-   argos_utils.log("Control step for robot %s", state.uuid)
+function initialize_configuration_data (configuration_node)
+   local log = argos_utils.log
+   state.alpha = configuration_node:get_attribute("alpha") or 7.5
+   log("alpha = %s", state.alpha)
+   state.delta = configuration_node:get_attribute("delta") or 0.1
+   log("delta = %s", state.delta)
+   state.velocity = configuration_node:get_attribute("velocity") or 5
+   log("velocity = %s", state.velocity)
 end
 
-function reset()
+function control_step ()
+   local log = argos_utils.log
+   log("Control step for robot %s", state.uuid)
+   local proximity_readings = state.sensors.proximity:get_readings()
+   log("proximity_readings: %s", swig_type(proximity_readings))
+end
+
+function reset ()
    argos_utils.log_error("Resetting %s", state.uuid)
 end
 
