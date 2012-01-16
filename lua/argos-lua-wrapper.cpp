@@ -10815,27 +10815,6 @@ fail:
 }
 
 
-static int _wrap_new_Random(lua_State* L) {
-  int SWIG_arg = 0;
-  argos::CARGoSRandom *result = 0 ;
-  
-  SWIG_check_num_args("argos::CARGoSRandom::CARGoSRandom",0,0)
-  result = (argos::CARGoSRandom *)new argos::CARGoSRandom();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CARGoSRandom,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static void swig_delete_Random(void *obj) {
-argos::CARGoSRandom *arg1 = (argos::CARGoSRandom *) obj;
-delete arg1;
-}
 static swig_lua_method swig_argos_CARGoSRandom_methods[] = {
     {"save_state", _wrap_Random_save_state}, 
     {"load_state", _wrap_Random_load_state}, 
@@ -10846,7 +10825,7 @@ static swig_lua_attribute swig_argos_CARGoSRandom_attributes[] = {
 };
 static swig_lua_class *swig_argos_CARGoSRandom_bases[] = {0};
 static const char *swig_argos_CARGoSRandom_base_names[] = {0};
-static swig_lua_class _wrap_class_argos_CARGoSRandom = { "Random", &SWIGTYPE_p_argos__CARGoSRandom,_wrap_new_Random, swig_delete_Random, swig_argos_CARGoSRandom_methods, swig_argos_CARGoSRandom_attributes, swig_argos_CARGoSRandom_bases, swig_argos_CARGoSRandom_base_names };
+static swig_lua_class _wrap_class_argos_CARGoSRandom = { "Random", &SWIGTYPE_p_argos__CARGoSRandom,0,0, swig_argos_CARGoSRandom_methods, swig_argos_CARGoSRandom_attributes, swig_argos_CARGoSRandom_bases, swig_argos_CARGoSRandom_base_names };
 
 static int _wrap_Actuator_init(lua_State* L) {
   int SWIG_arg = 0;

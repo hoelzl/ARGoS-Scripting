@@ -206,6 +206,8 @@ namespace argos {
 %}
 
 %rename(Random) CARGoSRandom;
+%nodefaultctor CARGoSRandom;
+%ignore ~CARGoSRandom;
 %include <argos2/common/utility/argos_random.h>
 
 %rename(Actuator) CCI_Actuator;
