@@ -38,10 +38,18 @@ end
 function init(configuration_node, controller)
    state.uuid = argos_utils.uuid()
    write_init_log_message()
+   print("configuration type", swig_type(configuration_node))
    print("configuration: has alpha?", 
 	 configuration_node:has_attribute("alpha"))
    print("configuration: alpha value:",
 	 configuration_node:get_attribute("alpha"))
+   print("controller type", swig_type(controller))
+   local robot = controller:get_robot()
+   print("robot type", swig_type(robot))
+   local actuator = robot:get_actuator("footbot_wheels")
+   print("wheel type", swig_type(actuator))
+   actuator = actuator:as_foot_bot_wheels_actuator()
+   print("wheel type", swig_type(actuator))
    initialize_sensors_and_actuators()
 end
 

@@ -1721,6 +1721,27 @@ extern "C" bool argos::MatchPattern(std::string const &,std::string const);
     typedef argos::CARGoSRandom::CCategory CCategory;
   }
 
+SWIGINTERN argos::CCI_FootBotWheelsActuator *argos_CCI_Actuator_AsFootBotWheelsActuator(argos::CCI_Actuator *self){
+      return dynamic_cast<argos::CCI_FootBotWheelsActuator *>(self);
+  }
+SWIGINTERN argos::CCI_FootBotLedsActuator *argos_CCI_Actuator_AsFootBotLedsActuator(argos::CCI_Actuator *self){
+      return dynamic_cast<argos::CCI_FootBotLedsActuator *>(self);
+  }
+SWIGINTERN argos::CCI_RangeAndBearingActuator *argos_CCI_Actuator_AsRangeAndBearingActuator(argos::CCI_Actuator *self){
+      return dynamic_cast<argos::CCI_RangeAndBearingActuator *>(self);
+  }
+SWIGINTERN argos::CCI_FootBotProximitySensor *argos_CCI_Sensor_AsFootBotProximitySensor(argos::CCI_Sensor *self){
+      return dynamic_cast<argos::CCI_FootBotProximitySensor *>(self);
+  }
+SWIGINTERN argos::CCI_RangeAndBearingSensor *argos_CCI_Sensor_AsRangeAndBearingSensor(argos::CCI_Sensor *self){
+      return dynamic_cast<argos::CCI_RangeAndBearingSensor *>(self);
+  }
+SWIGINTERN argos::CCI_FootBotLightSensor *argos_CCI_Sensor_AsFootBotLightSensor(argos::CCI_Sensor *self){
+      return dynamic_cast<argos::CCI_FootBotLightSensor *>(self);
+  }
+SWIGINTERN argos::CCI_FootBotMotorGroundSensor *argos_CCI_Sensor_AsFootBotMotorGroundSensor(argos::CCI_Sensor *self){
+      return dynamic_cast<argos::CCI_FootBotMotorGroundSensor *>(self);
+  }
 extern std::map< std::string,CCI_Controller_Maker *,std::less< std::string > > mapControllerFactory;
 
   namespace argos {
@@ -30678,6 +30699,78 @@ fail:
 }
 
 
+static int _wrap_Actuator_as_foot_bot_wheels_actuator(lua_State* L) {
+  int SWIG_arg = 0;
+  argos::CCI_Actuator *arg1 = (argos::CCI_Actuator *) 0 ;
+  argos::CCI_FootBotWheelsActuator *result = 0 ;
+  
+  SWIG_check_num_args("argos::CCI_Actuator::AsFootBotWheelsActuator",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_Actuator::AsFootBotWheelsActuator",1,"argos::CCI_Actuator *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_Actuator,0))){
+    SWIG_fail_ptr("Actuator_as_foot_bot_wheels_actuator",1,SWIGTYPE_p_argos__CCI_Actuator);
+  }
+  
+  result = (argos::CCI_FootBotWheelsActuator *)argos_CCI_Actuator_AsFootBotWheelsActuator(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CCI_FootBotWheelsActuator,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Actuator_as_foot_bot_leds_actuator(lua_State* L) {
+  int SWIG_arg = 0;
+  argos::CCI_Actuator *arg1 = (argos::CCI_Actuator *) 0 ;
+  argos::CCI_FootBotLedsActuator *result = 0 ;
+  
+  SWIG_check_num_args("argos::CCI_Actuator::AsFootBotLedsActuator",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_Actuator::AsFootBotLedsActuator",1,"argos::CCI_Actuator *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_Actuator,0))){
+    SWIG_fail_ptr("Actuator_as_foot_bot_leds_actuator",1,SWIGTYPE_p_argos__CCI_Actuator);
+  }
+  
+  result = (argos::CCI_FootBotLedsActuator *)argos_CCI_Actuator_AsFootBotLedsActuator(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CCI_FootBotLedsActuator,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Actuator_as_range_and_bearing_actuator(lua_State* L) {
+  int SWIG_arg = 0;
+  argos::CCI_Actuator *arg1 = (argos::CCI_Actuator *) 0 ;
+  argos::CCI_RangeAndBearingActuator *result = 0 ;
+  
+  SWIG_check_num_args("argos::CCI_Actuator::AsRangeAndBearingActuator",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_Actuator::AsRangeAndBearingActuator",1,"argos::CCI_Actuator *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_Actuator,0))){
+    SWIG_fail_ptr("Actuator_as_range_and_bearing_actuator",1,SWIGTYPE_p_argos__CCI_Actuator);
+  }
+  
+  result = (argos::CCI_RangeAndBearingActuator *)argos_CCI_Actuator_AsRangeAndBearingActuator(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CCI_RangeAndBearingActuator,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static int _wrap_new_Actuator(lua_State* L) {
   int SWIG_arg = 0;
   argos::CCI_Actuator *result = 0 ;
@@ -30704,6 +30797,9 @@ static swig_lua_method swig_argos_CCI_Actuator_methods[] = {
     {"destroy", _wrap_Actuator_destroy}, 
     {"save_state", _wrap_Actuator_save_state}, 
     {"load_state", _wrap_Actuator_load_state}, 
+    {"as_foot_bot_wheels_actuator", _wrap_Actuator_as_foot_bot_wheels_actuator}, 
+    {"as_foot_bot_leds_actuator", _wrap_Actuator_as_foot_bot_leds_actuator}, 
+    {"as_range_and_bearing_actuator", _wrap_Actuator_as_range_and_bearing_actuator}, 
     {0,0}
 };
 static swig_lua_attribute swig_argos_CCI_Actuator_attributes[] = {
@@ -30826,6 +30922,102 @@ fail:
 }
 
 
+static int _wrap_Sensor_as_foot_bot_proximity_sensor(lua_State* L) {
+  int SWIG_arg = 0;
+  argos::CCI_Sensor *arg1 = (argos::CCI_Sensor *) 0 ;
+  argos::CCI_FootBotProximitySensor *result = 0 ;
+  
+  SWIG_check_num_args("argos::CCI_Sensor::AsFootBotProximitySensor",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_Sensor::AsFootBotProximitySensor",1,"argos::CCI_Sensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_Sensor,0))){
+    SWIG_fail_ptr("Sensor_as_foot_bot_proximity_sensor",1,SWIGTYPE_p_argos__CCI_Sensor);
+  }
+  
+  result = (argos::CCI_FootBotProximitySensor *)argos_CCI_Sensor_AsFootBotProximitySensor(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CCI_FootBotProximitySensor,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Sensor_as_range_and_bearing_sensor(lua_State* L) {
+  int SWIG_arg = 0;
+  argos::CCI_Sensor *arg1 = (argos::CCI_Sensor *) 0 ;
+  argos::CCI_RangeAndBearingSensor *result = 0 ;
+  
+  SWIG_check_num_args("argos::CCI_Sensor::AsRangeAndBearingSensor",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_Sensor::AsRangeAndBearingSensor",1,"argos::CCI_Sensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_Sensor,0))){
+    SWIG_fail_ptr("Sensor_as_range_and_bearing_sensor",1,SWIGTYPE_p_argos__CCI_Sensor);
+  }
+  
+  result = (argos::CCI_RangeAndBearingSensor *)argos_CCI_Sensor_AsRangeAndBearingSensor(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CCI_RangeAndBearingSensor,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Sensor_as_foot_bot_light_sensor(lua_State* L) {
+  int SWIG_arg = 0;
+  argos::CCI_Sensor *arg1 = (argos::CCI_Sensor *) 0 ;
+  argos::CCI_FootBotLightSensor *result = 0 ;
+  
+  SWIG_check_num_args("argos::CCI_Sensor::AsFootBotLightSensor",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_Sensor::AsFootBotLightSensor",1,"argos::CCI_Sensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_Sensor,0))){
+    SWIG_fail_ptr("Sensor_as_foot_bot_light_sensor",1,SWIGTYPE_p_argos__CCI_Sensor);
+  }
+  
+  result = (argos::CCI_FootBotLightSensor *)argos_CCI_Sensor_AsFootBotLightSensor(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CCI_FootBotLightSensor,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Sensor_as_foot_bot_motor_ground_sensor(lua_State* L) {
+  int SWIG_arg = 0;
+  argos::CCI_Sensor *arg1 = (argos::CCI_Sensor *) 0 ;
+  argos::CCI_FootBotMotorGroundSensor *result = 0 ;
+  
+  SWIG_check_num_args("argos::CCI_Sensor::AsFootBotMotorGroundSensor",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_Sensor::AsFootBotMotorGroundSensor",1,"argos::CCI_Sensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_Sensor,0))){
+    SWIG_fail_ptr("Sensor_as_foot_bot_motor_ground_sensor",1,SWIGTYPE_p_argos__CCI_Sensor);
+  }
+  
+  result = (argos::CCI_FootBotMotorGroundSensor *)argos_CCI_Sensor_AsFootBotMotorGroundSensor(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CCI_FootBotMotorGroundSensor,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static int _wrap_new_Sensor(lua_State* L) {
   int SWIG_arg = 0;
   argos::CCI_Sensor *result = 0 ;
@@ -30852,6 +31044,10 @@ static swig_lua_method swig_argos_CCI_Sensor_methods[] = {
     {"destroy", _wrap_Sensor_destroy}, 
     {"save_state", _wrap_Sensor_save_state}, 
     {"load_state", _wrap_Sensor_load_state}, 
+    {"as_foot_bot_proximity_sensor", _wrap_Sensor_as_foot_bot_proximity_sensor}, 
+    {"as_range_and_bearing_sensor", _wrap_Sensor_as_range_and_bearing_sensor}, 
+    {"as_foot_bot_light_sensor", _wrap_Sensor_as_foot_bot_light_sensor}, 
+    {"as_foot_bot_motor_ground_sensor", _wrap_Sensor_as_foot_bot_motor_ground_sensor}, 
     {0,0}
 };
 static swig_lua_attribute swig_argos_CCI_Sensor_attributes[] = {

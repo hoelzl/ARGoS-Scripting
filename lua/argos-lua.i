@@ -515,3 +515,38 @@ namespace argos {
 %}
 
 %include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_motor_ground_sensor.h>
+
+%extend argos::CCI_Actuator {
+  argos::CCI_FootBotWheelsActuator *
+    AsFootBotWheelsActuator() {
+      return dynamic_cast<argos::CCI_FootBotWheelsActuator *>($self);
+  }
+  argos::CCI_FootBotLedsActuator *
+    AsFootBotLedsActuator() {
+      return dynamic_cast<argos::CCI_FootBotLedsActuator *>($self);
+  }
+  argos::CCI_RangeAndBearingActuator *
+    AsRangeAndBearingActuator() {
+      return dynamic_cast<argos::CCI_RangeAndBearingActuator *>($self);
+  }
+}
+
+%extend argos::CCI_Sensor {
+  argos::CCI_FootBotProximitySensor *
+    AsFootBotProximitySensor() {
+      return dynamic_cast<argos::CCI_FootBotProximitySensor *>($self);
+  }
+  argos::CCI_RangeAndBearingSensor *
+    AsRangeAndBearingSensor() {
+      return dynamic_cast<argos::CCI_RangeAndBearingSensor *>($self);
+  }
+  argos::CCI_FootBotLightSensor *
+    AsFootBotLightSensor() {
+      return dynamic_cast<argos::CCI_FootBotLightSensor *>($self);
+  }
+  argos::CCI_FootBotMotorGroundSensor *
+    AsFootBotMotorGroundSensor() {
+      return dynamic_cast<argos::CCI_FootBotMotorGroundSensor *>($self);
+  }
+
+}

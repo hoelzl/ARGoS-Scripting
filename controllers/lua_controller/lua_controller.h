@@ -42,20 +42,25 @@ private:
      }
    }
 
+   inline void PushItem(void *item, const char *type) {
+     swig_type_info *itemType = SWIG_TypeQuery(LuaState, type);
+     if (itemType) {
+       SWIG_Lua_NewPointerObj(LuaState, item, itemType, 0);
+     }
+     else {
+       luaL_error(LuaState, "type info for %s not found",
+		  type);
+     }
+   }
+
    inline void CallLuaInitFunction(TConfigurationNode *configurationNode,
 				   CCI_Controller *controller) {
      lua_getglobal(LuaState, "init");
 
-     // TConfigurationNode is an abbreviation for ticpp::Element
-     swig_type_info *configNodeType
-       = SWIG_TypeQuery(LuaState, "_p_ticpp__Element");
-     if (configNodeType) {
-       SWIG_Lua_NewPointerObj(LuaState, configurationNode, configNodeType, 0);
-     }
-     else {
-       std::cerr << "Type info for TConfigurationNode not found." << std::endl;
-     }
-     if (lua_pcall(LuaState, 1, 0, 0)) {
+     PushItem(configurationNode, "argos::TConfigurationNode *");
+     PushItem(controller, "argos::CCI_Controller *");
+
+     if (lua_pcall(LuaState, 2, 0, 0)) {
        std::cerr << "Error when calling Lua init function:" 
 		 << std::endl
 		 << lua_tostring(LuaState, -1)
