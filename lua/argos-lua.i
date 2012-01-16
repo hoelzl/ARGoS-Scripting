@@ -84,8 +84,8 @@ class std::exception
 %rename(Range) CRange;
 %include <argos2/common/utility/math/range.h>
 
-%ignore argos::ToDegrees;
-%ignore argos::ToRadians;
+%warnfilter(503) argos::ToRadians;
+%warnfilter(503) argos::ToDegrees;
 %rename(Radians) CRadians;
 %rename(Degrees) CDegrees;
 %include <argos2/common/utility/math/angles.h>

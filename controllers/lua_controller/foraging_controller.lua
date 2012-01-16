@@ -23,8 +23,16 @@ end
 state = {}
 
 function init(configuration_node)
+   local log = argos_utils.log
    state.uuid = argos_utils.uuid()
-   argos_utils.log("Init for robot %s", state.uuid)
+   log("Initializing robot %s", state.uuid)
+   if jit then
+      log("    Running %s on %s", jit.version, jit.os)
+   end
+end
+
+function control_step()
+   argos_utils.log("Control step for robot %s", state.uuid)
    -- Some stupid examples.
    -- print("sin(pi)     = ", argos.sin(argos.Radians_PI))
    -- print("sin(2_pi/2) = ", argos.sin(argos.Radians_TWO_PI/2.0))
@@ -33,10 +41,10 @@ function init(configuration_node)
    -- This does not work, unfortunately, but for understandable
    -- reasons.
    -- print("sin(2*pi)   = ", argos.sin(2.0 * argos.Radians_PI))
-end
-
-function control_step()
-   argos_utils.log("Control step for robot %s", state.uuid)
+   -- print("sin(pi<radians>)",  
+   -- 	 argos.sin(argos.Radians(3.14159265)))
+   -- print("sin(180<degrees>)", 
+   -- 	 argos.sin(argos.to_radians(argos.Degrees(180))))
 end
 
 function reset()

@@ -6183,6 +6183,60 @@ static swig_lua_class *swig_argos_CDegrees_bases[] = {0};
 static const char *swig_argos_CDegrees_base_names[] = {0};
 static swig_lua_class _wrap_class_argos_CDegrees = { "Degrees", &SWIGTYPE_p_argos__CDegrees,_wrap_new_Degrees, swig_delete_Degrees, swig_argos_CDegrees_methods, swig_argos_CDegrees_attributes, swig_argos_CDegrees_bases, swig_argos_CDegrees_base_names };
 
+static int _wrap_to_degrees(lua_State* L) {
+  int SWIG_arg = 0;
+  argos::CRadians *arg1 = 0 ;
+  argos::CDegrees result;
+  
+  SWIG_check_num_args("argos::ToDegrees",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::ToDegrees",1,"argos::CRadians const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CRadians,0))){
+    SWIG_fail_ptr("to_degrees",1,SWIGTYPE_p_argos__CRadians);
+  }
+  
+  result = argos::ToDegrees((argos::CRadians const &)*arg1);
+  {
+    argos::CDegrees * resultptr = new argos::CDegrees((const argos::CDegrees &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_argos__CDegrees,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_to_radians(lua_State* L) {
+  int SWIG_arg = 0;
+  argos::CDegrees *arg1 = 0 ;
+  argos::CRadians result;
+  
+  SWIG_check_num_args("argos::ToRadians",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("argos::ToRadians",1,"argos::CDegrees const &");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CDegrees,0))){
+    SWIG_fail_ptr("to_radians",1,SWIGTYPE_p_argos__CDegrees);
+  }
+  
+  result = argos::ToRadians((argos::CDegrees const &)*arg1);
+  {
+    argos::CRadians * resultptr = new argos::CRadians((const argos::CRadians &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_argos__CRadians,1); SWIG_arg++;
+  }
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static int _wrap_sin(lua_State* L) {
   int SWIG_arg = 0;
   argos::CRadians *arg1 = 0 ;
@@ -13839,6 +13893,8 @@ static const struct luaL_reg swig_commands[] = {
     { "round_closest_to_zero", _wrap_round_closest_to_zero},
     { "double_eq_absolute", _wrap_double_eq_absolute},
     { "double_eq", _wrap_double_eq},
+    { "to_degrees", _wrap_to_degrees},
+    { "to_radians", _wrap_to_radians},
     { "sin", _wrap_sin},
     { "cos", _wrap_cos},
     { "tan", _wrap_tan},
