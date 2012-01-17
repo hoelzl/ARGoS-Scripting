@@ -8,17 +8,20 @@ ARGoS is done using the SWIG interface generator.
 Complation Notes
 ----------------
 
-The makefiles in this repository assume that you have LuaJIT
-installed.  If you want to use the traditional Lua implementation,
-just change the file `controllers/lua_controller/CMakeLists.txt` from
+The makefiles in this repository assume that you have the traditional
+Lua implementation installed and that your linker can find it in the
+standard paths.
 
-	target_link_libraries(lua_controller luajit-5.1 uuid)
-
-to
+If you want to use the fabulous LuaJIT, just change the file
+`controllers/lua_controller/CMakeLists.txt` from
 
 	target_link_libraries(lua_controller lua uuid)
 
-and everything will continue to work (albeit more slowly).
+to
+
+	target_link_libraries(lua_controller luajit-5.1 uuid)
+
+and everything should continue to work (albeit more quickly).
 
 For using LuaJIT on 64-bit Mac OS X you have to compile the ARGoS
 simulator with the following linker flags: `-Wl,-pagezero_size,10000

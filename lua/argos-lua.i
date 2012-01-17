@@ -463,7 +463,11 @@ namespace argos {
 %rename(FootBotLedsActuator) CCI_FootBotLedsActuator;
 %include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_leds_actuator.h>
 
-namespace argos {
+ // %nestedworkaround argos::CCI_FootBotProximitySensor::SReading;
+%rename(FootBotProximitySensor) CCI_FootBotProximitySensor;
+%include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_proximity_sensor.h>
+
+%inline %{
   struct ProximitySensorReading {
     argos::Real Value;
     argos::CRadians Angle;  
@@ -475,18 +479,14 @@ namespace argos {
 			   const argos::CRadians& c_angle) :
       Value(f_value),
       Angle(c_angle) {}
+
+    ProximitySensorReading(argos::CCI_FootBotProximitySensor::SReading *reading) {
+      Value = reading->Value;
+      Angle = reading->Angle;
+    }
   };
-}
-%nestedworkaround argos::CCI_FootBotProximitySensor::SReading;
-%rename(FootBotProximitySensor) CCI_FootBotProximitySensor;
-
-%include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_proximity_sensor.h>
-%{
-  namespace argos {
-    typedef argos::CCI_FootBotProximitySensor::SReading ProximitySensorReading;
-  }
 %}
-
+%template(ProximitySensorReadings) std::vector<ProximitySensorReading>;
 
 %rename(RangeAndBearingSensor) CCI_RangeAndBearingSensor;
 %rename(RangeAndBearingReceivedPacket) TRangeAndBearingReceivedPacket;
