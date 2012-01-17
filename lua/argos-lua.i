@@ -42,7 +42,9 @@
 %ignore operator<<;
 %ignore operator>>;
 
+
 // Tools to allow debugging the generated bindings from Lua.
+#ifdef SWIG_LUA
 %native (print_module_types) print_module_types;
 %native (find_module_type) find_module_type;
 %{
@@ -77,6 +79,7 @@
     return 1;
   }
 %}
+#endif
 
 // For some reason the definitions for UInt8 and SInt8 are not picked
 // up by SWIG...

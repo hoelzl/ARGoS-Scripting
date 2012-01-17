@@ -35,5 +35,5 @@ to
 
 	target_link_libraries(argos argos2_simulator -Wl,-pagezero_size,10000 -Wl,-image_base,100000000)
 
-If you don't want to compile ARGoS yourself you'll have to use the
-standard Lua interpreter as described above.
+If you don't want to compile ARGoS yourself you'll have to stay with
+the standard Lua interpreter for the time being.
