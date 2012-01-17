@@ -4,6 +4,8 @@
 -- SCEL
 -------
 
+components = {}
+
 initial_component = {
    interface = {
       get = function (self, pattern, location)
@@ -28,6 +30,7 @@ initial_component = {
 	    policy = policy,
 	    process = process
 	 }
+	 components[#components] = new_component
 	 return new_component
       end,
       resolve_location = function (location)
@@ -49,6 +52,8 @@ initial_component = {
    processes = {},
    tuples = {}
 }
+
+components[1] = initial_component
 
 function local_put (self, tuple, sender)
    -- Put 'tuple' into the local tuple space if the policy allows it.
@@ -187,6 +192,13 @@ function control_step ()
 	 wheel_actuator:set_linear_velocity(v, 0)
       end
    end
+
+   -- Set the LEDs.
+   local leds = state.actuators.leds
+   leds:set_all_colors(argos.Color_BLACK)
+   angle:unsigned_normalize()
+   local led_index = angle / argos.Radians_TWO_PI * 12
+   leds:set_single_color(led_index, argos.Color_RED)
 end
 
 function reset ()
