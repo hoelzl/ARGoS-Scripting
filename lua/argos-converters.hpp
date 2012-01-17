@@ -23,6 +23,6 @@
 extern
 std::vector<ProximitySensorReading>
 to_proximity_sensor_reading_vector
-(std::vector<argos::CCI_FootBotProximitySensor::SReading> readings);
+(std::vector<argos::CCI_FootBotProximitySensor::SReading> &readings);
 
 #endif

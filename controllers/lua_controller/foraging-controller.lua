@@ -67,9 +67,15 @@ end
 function control_step ()
    local log = argos_utils.log
    log("Control step for robot %s", state.uuid)
-   argos.print_module_types()
-   local proximity_readings = state.sensors.proximity:get_readings()
-   log("proximity_readings: %s", swig_type(proximity_readings))
+   -- argos.print_module_types()
+   local proximity_sensor = state.sensors.proximity
+   local proximity_readings = proximity_sensor:get_readings()
+   log("Proximity size: %s", tostring(proximity_readings:size()))
+   for i=1,proximity_readings:size() do
+      log("Value of proximity reading %u:\t%f",
+	  i,
+	  proximity_readings[i].value)
+   end
 end
 
 function reset ()

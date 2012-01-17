@@ -485,6 +485,7 @@ namespace argos {
 %rename(RangeAndBearingReceivedPacket) TRangeAndBearingReceivedPacket;
 %rename(RangeAndBearingData) TRangeAndBearingData;
 %rename(RawValuesArray) TRawValues;
+%rename(get_readings_internal) argos::CCI_RangeAndBearingSensor::GetReadings;
 %{
   namespace argos {
     typedef argos::UInt8 TRangeAndBearingData[10];
@@ -515,6 +516,7 @@ namespace argos {
 
 %nestedworkaround argos::CCI_FootBotLightSensor::SReading;
 %rename(FootBotLightSensor) CCI_FootBotLightSensor;
+%rename(get_readings_internal) argos::CCI_FootBotLightSensor::GetReadings;
 
 %include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_light_sensor.h>
 
@@ -541,6 +543,7 @@ namespace argos {
  }
 %nestedworkaround argos::CCI_FootBotMotorGroundSensor::SReading;
 %rename(FootBotMotorGroundSensor) CCI_FootBotMotorGroundSensor;
+%rename(get_readings_internal) argos::CCI_FootBotMotorGroundSensor::GetReadings;
 
 %include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_motor_ground_sensor.h>
 
@@ -592,7 +595,38 @@ namespace argos {
   std::vector<ProximitySensorReading>
     get_readings() {
       argos::CCI_FootBotProximitySensor::TReadings original_readings
-	= $self->GetReadings();
+  	= $self->GetReadings();
       return to_proximity_sensor_reading_vector(original_readings);
+  }
+}
+
+%extend argos::CCI_RangeAndBearingSensor {
+  // Re-implement the shadowed get_readings method.  Use the lower
+  // case name to avoid matchint the %ignore directive.
+  const char *
+    get_readings() {
+      return "RangeAndBearingSensor";
+  }
+}
+
+%extend argos::CCI_FootBotLightSensor {
+  // Re-implement the shadowed get_readings method.  Use the lower
+  // case name to avoid matchint the %ignore directive.
+  const char *
+    get_readings() {
+      // argos::CCI_FootBotLightSensor::TReadings original_readings
+      // 	= $self->GetReadings();
+      return "FootBotLightSensor";
+  }
+}
+
+%extend argos::CCI_FootBotMotorGroundSensor {
+  // Re-implement the shadowed get_readings method.  Use the lower
+  // case name to avoid matchint the %ignore directive.
+  const char *
+    get_readings() {
+      // argos::CCI_FootBotMotorGroundSensor::TReadings original_readings
+      // 	= $self->GetReadings();
+      return "FootBotMotorGroundSensor";
   }
 }

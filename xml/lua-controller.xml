@@ -18,7 +18,7 @@
   <controllers>
     <lua_controller
 	id="foraging_controller"
-	library="build/controllers/lua_controller/liblua_controller.so">
+	library="build/controllers/lua_controller/liblua-controller.so">
       <actuators>
         <footbot_wheels implementation="default" />
         <footbot_leds   implementation="default" />

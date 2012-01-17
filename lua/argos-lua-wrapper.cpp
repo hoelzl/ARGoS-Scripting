@@ -1781,7 +1781,7 @@ SWIGINTERN argos::CCI_FootBotMotorGroundSensor *argos_CCI_Sensor_AsFootBotMotorG
   }
 SWIGINTERN std::vector< ProximitySensorReading > argos_CCI_FootBotProximitySensor_get_readings(argos::CCI_FootBotProximitySensor *self){
       argos::CCI_FootBotProximitySensor::TReadings original_readings
-	= self->GetReadings();
+  	= self->GetReadings();
       return to_proximity_sensor_reading_vector(original_readings);
   }
 SWIGINTERN ProximitySensorReading std_vector_Sl_ProximitySensorReading_Sg____getitem__(std::vector< ProximitySensorReading > *self,unsigned int idx){
@@ -1800,6 +1800,9 @@ SWIGINTERN void std_vector_Sl_ProximitySensorReading_Sg____setitem__(std::vector
     typedef argos::UInt16 TRawValues[12];
   }
 
+SWIGINTERN char const *argos_CCI_RangeAndBearingSensor_get_readings(argos::CCI_RangeAndBearingSensor *self){
+      return "RangeAndBearingSensor";
+  }
 SWIGINTERN argos::TRangeAndBearingReceivedPacket const &std_map_Sl_std_string_Sc_argos_TRangeAndBearingReceivedPacket_Sg__get(std::map< std::string,argos::TRangeAndBearingReceivedPacket > *self,std::string const &key){
                 std::map<std::string,argos::TRangeAndBearingReceivedPacket >::iterator i = self->find(key);
                 if (i != self->end())
@@ -1821,6 +1824,11 @@ SWIGINTERN bool std_map_Sl_std_string_Sc_argos_TRangeAndBearingReceivedPacket_Sg
                 std::map<std::string,argos::TRangeAndBearingReceivedPacket >::iterator i = self->find(key);
                 return i != self->end();
             }
+SWIGINTERN char const *argos_CCI_FootBotLightSensor_get_readings(argos::CCI_FootBotLightSensor *self){
+      // argos::CCI_FootBotLightSensor::TReadings original_readings
+      // 	= self->GetReadings();
+      return "FootBotLightSensor";
+  }
 
   namespace argos {
     typedef argos::CCI_FootBotLightSensor::SReading LightSensorReading;
@@ -1836,6 +1844,11 @@ SWIGINTERN void std_vector_Sl_argos_LightSensorReading_Sg____setitem__(std::vect
 					throw std::out_of_range("in vector::__setitem__()");
 				(*self)[idx]=val;
 			}
+SWIGINTERN char const *argos_CCI_FootBotMotorGroundSensor_get_readings(argos::CCI_FootBotMotorGroundSensor *self){
+      // argos::CCI_FootBotMotorGroundSensor::TReadings original_readings
+      // 	= self->GetReadings();
+      return "FootBotMotorGroundSensor";
+  }
 
   namespace argos {
     typedef argos::CCI_FootBotMotorGroundSensor::SReading MotorGroundSensorReading;
@@ -33649,6 +33662,30 @@ fail:
 }
 
 
+static int _wrap_RangeAndBearingSensor_get_readings(lua_State* L) {
+  int SWIG_arg = 0;
+  argos::CCI_RangeAndBearingSensor *arg1 = (argos::CCI_RangeAndBearingSensor *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("argos::CCI_RangeAndBearingSensor::get_readings",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_RangeAndBearingSensor::get_readings",1,"argos::CCI_RangeAndBearingSensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_RangeAndBearingSensor,0))){
+    SWIG_fail_ptr("RangeAndBearingSensor_get_readings",1,SWIGTYPE_p_argos__CCI_RangeAndBearingSensor);
+  }
+  
+  result = (char *)argos_CCI_RangeAndBearingSensor_get_readings(arg1);
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
 static void swig_delete_RangeAndBearingSensor(void *obj) {
 argos::CCI_RangeAndBearingSensor *arg1 = (argos::CCI_RangeAndBearingSensor *) obj;
 delete arg1;
@@ -33659,6 +33696,7 @@ static swig_lua_method swig_argos_CCI_RangeAndBearingSensor_methods[] = {
     {"get_latest_packet_id", _wrap_RangeAndBearingSensor_get_latest_packet_id}, 
     {"get_rab_id_from_robot_id", _wrap_RangeAndBearingSensor_get_rab_id_from_robot_id}, 
     {"get_robot_id_from_rab_id", _wrap_RangeAndBearingSensor_get_robot_id_from_rab_id}, 
+    {"get_readings", _wrap_RangeAndBearingSensor_get_readings}, 
     {0,0}
 };
 static swig_lua_attribute swig_argos_CCI_RangeAndBearingSensor_attributes[] = {
@@ -34267,7 +34305,7 @@ fail:
 }
 
 
-static int _wrap_FootBotLightSensor_get_readings(lua_State* L) {
+static int _wrap_FootBotLightSensor_get_readings_internal(lua_State* L) {
   int SWIG_arg = 0;
   argos::CCI_FootBotLightSensor *arg1 = (argos::CCI_FootBotLightSensor *) 0 ;
   argos::CCI_FootBotLightSensor::TReadings *result = 0 ;
@@ -34276,11 +34314,35 @@ static int _wrap_FootBotLightSensor_get_readings(lua_State* L) {
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_FootBotLightSensor::GetReadings",1,"argos::CCI_FootBotLightSensor const *");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_FootBotLightSensor,0))){
-    SWIG_fail_ptr("FootBotLightSensor_get_readings",1,SWIGTYPE_p_argos__CCI_FootBotLightSensor);
+    SWIG_fail_ptr("FootBotLightSensor_get_readings_internal",1,SWIGTYPE_p_argos__CCI_FootBotLightSensor);
   }
   
   result = (argos::CCI_FootBotLightSensor::TReadings *) &((argos::CCI_FootBotLightSensor const *)arg1)->GetReadings();
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_SReading_t,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_FootBotLightSensor_get_readings(lua_State* L) {
+  int SWIG_arg = 0;
+  argos::CCI_FootBotLightSensor *arg1 = (argos::CCI_FootBotLightSensor *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("argos::CCI_FootBotLightSensor::get_readings",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_FootBotLightSensor::get_readings",1,"argos::CCI_FootBotLightSensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_FootBotLightSensor,0))){
+    SWIG_fail_ptr("FootBotLightSensor_get_readings",1,SWIGTYPE_p_argos__CCI_FootBotLightSensor);
+  }
+  
+  result = (char *)argos_CCI_FootBotLightSensor_get_readings(arg1);
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
   return SWIG_arg;
   
   if(0) SWIG_fail;
@@ -34296,6 +34358,7 @@ argos::CCI_FootBotLightSensor *arg1 = (argos::CCI_FootBotLightSensor *) obj;
 delete arg1;
 }
 static swig_lua_method swig_argos_CCI_FootBotLightSensor_methods[] = {
+    {"get_readings_internal", _wrap_FootBotLightSensor_get_readings_internal}, 
     {"get_readings", _wrap_FootBotLightSensor_get_readings}, 
     {0,0}
 };
@@ -35004,7 +35067,7 @@ fail:
 }
 
 
-static int _wrap_FootBotMotorGroundSensor_get_readings(lua_State* L) {
+static int _wrap_FootBotMotorGroundSensor_get_readings_internal(lua_State* L) {
   int SWIG_arg = 0;
   argos::CCI_FootBotMotorGroundSensor *arg1 = (argos::CCI_FootBotMotorGroundSensor *) 0 ;
   argos::CCI_FootBotMotorGroundSensor::TReadings *result = 0 ;
@@ -35013,11 +35076,35 @@ static int _wrap_FootBotMotorGroundSensor_get_readings(lua_State* L) {
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_FootBotMotorGroundSensor::GetReadings",1,"argos::CCI_FootBotMotorGroundSensor const *");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_FootBotMotorGroundSensor,0))){
-    SWIG_fail_ptr("FootBotMotorGroundSensor_get_readings",1,SWIGTYPE_p_argos__CCI_FootBotMotorGroundSensor);
+    SWIG_fail_ptr("FootBotMotorGroundSensor_get_readings_internal",1,SWIGTYPE_p_argos__CCI_FootBotMotorGroundSensor);
   }
   
   result = (argos::CCI_FootBotMotorGroundSensor::TReadings *) &((argos::CCI_FootBotMotorGroundSensor const *)arg1)->GetReadings();
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_SReading_t,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_FootBotMotorGroundSensor_get_readings(lua_State* L) {
+  int SWIG_arg = 0;
+  argos::CCI_FootBotMotorGroundSensor *arg1 = (argos::CCI_FootBotMotorGroundSensor *) 0 ;
+  char *result = 0 ;
+  
+  SWIG_check_num_args("argos::CCI_FootBotMotorGroundSensor::get_readings",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_FootBotMotorGroundSensor::get_readings",1,"argos::CCI_FootBotMotorGroundSensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_FootBotMotorGroundSensor,0))){
+    SWIG_fail_ptr("FootBotMotorGroundSensor_get_readings",1,SWIGTYPE_p_argos__CCI_FootBotMotorGroundSensor);
+  }
+  
+  result = (char *)argos_CCI_FootBotMotorGroundSensor_get_readings(arg1);
+  lua_pushstring(L,(const char *)result); SWIG_arg++;
   return SWIG_arg;
   
   if(0) SWIG_fail;
@@ -35033,6 +35120,7 @@ argos::CCI_FootBotMotorGroundSensor *arg1 = (argos::CCI_FootBotMotorGroundSensor
 delete arg1;
 }
 static swig_lua_method swig_argos_CCI_FootBotMotorGroundSensor_methods[] = {
+    {"get_readings_internal", _wrap_FootBotMotorGroundSensor_get_readings_internal}, 
     {"get_readings", _wrap_FootBotMotorGroundSensor_get_readings}, 
     {0,0}
 };
