@@ -37,6 +37,43 @@
 
 %ignore operator<<;
 %ignore operator>>;
+
+// Tools to allow debugging the generated bindings from Lua.
+%native (print_module_types) print_module_types;
+%native (find_module_type) find_module_type;
+%{
+  int print_module_types(lua_State *L) {
+    swig_module_info *module = SWIG_GetModule(L);
+    if (!module) {
+      luaL_error(L, "could not get module");
+    }
+    std::cout << "Module: " << module
+	      << ", " << module->size
+	      << std::endl;
+    for (unsigned int i = 0; i < module->size; ++i) {
+      std::cout << "Type: " << module->types[i]->name << std::endl;
+    }
+    return 0;
+  }
+
+  int find_module_type(lua_State *L) {
+    swig_module_info *module = SWIG_GetModule(L);
+    if (!module) {
+      luaL_error(L, "could not get module");
+      return 0;
+    }
+    const char *type_name = luaL_checkstring(L, 1);
+    swig_type_info *type = SWIG_TypeQuery(type_name);
+    if (!type) {
+      lua_pushfstring(L, "no such type: %s", type_name);
+    }
+    else {
+      lua_pushstring(L, type->name);
+    }
+    return 1;
+  }
+%}
+
 // For some reason the definitions for UInt8 and SInt8 are not picked
 // up by SWIG...
 %{
@@ -462,6 +499,7 @@ namespace argos {
   }
 %}
 %include <argos2/common/control_interface/swarmanoid/ci_range_and_bearing_sensor.h>
+%template(RangeAndBearingPackets) std::map<std::string, argos::TRangeAndBearingReceivedPacket>;
 
 %rename(RangeAndBearingActuator) CCI_RangeAndBearingActuator;
 %include <argos2/common/control_interface/swarmanoid/ci_range_and_bearing_actuator.h>
@@ -484,13 +522,15 @@ namespace argos {
 
 %nestedworkaround argos::CCI_FootBotLightSensor::SReading;
 %rename(FootBotLightSensor) CCI_FootBotLightSensor;
+
+%include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_light_sensor.h>
+
 %{
   namespace argos {
     typedef argos::CCI_FootBotLightSensor::SReading LightSensorReading;
   }
 %}
-
-%include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_light_sensor.h>
+%template (LightSensorReadings) std::vector<argos::LightSensorReading>;
 
 namespace argos {
   struct MotorGroundSensorReading {
@@ -508,13 +548,16 @@ namespace argos {
  }
 %nestedworkaround argos::CCI_FootBotMotorGroundSensor::SReading;
 %rename(FootBotMotorGroundSensor) CCI_FootBotMotorGroundSensor;
+
+%include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_motor_ground_sensor.h>
+
 %{
   namespace argos {
     typedef argos::CCI_FootBotMotorGroundSensor::SReading MotorGroundSensorReading;
   }
 %}
+%template (MotorGroundSensorReadings) std::vector<argos::MotorGroundSensorReading>;
 
-%include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_motor_ground_sensor.h>
 
 %extend argos::CCI_Actuator {
   argos::CCI_FootBotWheelsActuator *

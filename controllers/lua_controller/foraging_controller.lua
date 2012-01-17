@@ -67,6 +67,8 @@ end
 function control_step ()
    local log = argos_utils.log
    log("Control step for robot %s", state.uuid)
+   local type = argos.find_module_type("argos::ProximitySensorReading *")
+   log("Type name for argos::ProximitySensorReading *: %s", type)
    local proximity_readings = state.sensors.proximity:get_readings()
    log("proximity_readings: %s", swig_type(proximity_readings))
 end
