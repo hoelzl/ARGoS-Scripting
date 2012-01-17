@@ -1,6 +1,9 @@
 -- foraging-controller.lua
 -- A controller that forages for food.
 
+-- Well, currently it just performs diffusion, but it will forage
+-- eventually...
+
 
 -- Utility Functions.
 --------------------
@@ -105,10 +108,11 @@ function control_step ()
 end
 
 function reset ()
-   argos_utils.log_error("Resetting %s", state.uuid)
+   argos_utils.log("Resetting %s", state.uuid)
+   -- Nothing to do
 end
 
 function destroy()
    argos_utils.log_error("Destroying %s", state.uuid)
-   print("Goodbye")
+   print("Goodbye!")
 end
