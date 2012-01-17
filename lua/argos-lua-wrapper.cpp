@@ -1558,86 +1558,84 @@ SWIG_Lua_dostring(lua_State *L, const char* str) {
 #define SWIGTYPE_p_argos__CCI_FootBotLightSensor swig_types[32]
 #define SWIGTYPE_p_argos__CCI_FootBotMotorGroundSensor swig_types[33]
 #define SWIGTYPE_p_argos__CCI_FootBotProximitySensor swig_types[34]
-#define SWIGTYPE_p_argos__CCI_FootBotProximitySensor__SReading swig_types[35]
-#define SWIGTYPE_p_argos__CCI_FootBotWheelsActuator swig_types[36]
-#define SWIGTYPE_p_argos__CCI_RangeAndBearingActuator swig_types[37]
-#define SWIGTYPE_p_argos__CCI_RangeAndBearingSensor swig_types[38]
-#define SWIGTYPE_p_argos__CCI_Robot swig_types[39]
-#define SWIGTYPE_p_argos__CCI_Sensor swig_types[40]
-#define SWIGTYPE_p_argos__CCategory swig_types[41]
-#define SWIGTYPE_p_argos__CColor swig_types[42]
-#define SWIGTYPE_p_argos__CDegrees swig_types[43]
-#define SWIGTYPE_p_argos__CMemento swig_types[44]
-#define SWIGTYPE_p_argos__CQuaternion swig_types[45]
-#define SWIGTYPE_p_argos__CRNG swig_types[46]
-#define SWIGTYPE_p_argos__CRadians swig_types[47]
-#define SWIGTYPE_p_argos__CRangeT_argos__CRadians_t swig_types[48]
-#define SWIGTYPE_p_argos__CRangeT_float_t swig_types[49]
-#define SWIGTYPE_p_argos__CRangeT_int_t swig_types[50]
-#define SWIGTYPE_p_argos__CRangeT_unsigned_int_t swig_types[51]
-#define SWIGTYPE_p_argos__CVector2 swig_types[52]
-#define SWIGTYPE_p_argos__CVector3 swig_types[53]
-#define SWIGTYPE_p_argos__LightSensorReading swig_types[54]
-#define SWIGTYPE_p_argos__MotorGroundSensorReading swig_types[55]
-#define SWIGTYPE_p_argos__TRangeAndBearingReceivedPacket swig_types[56]
-#define SWIGTYPE_p_bool swig_types[57]
-#define SWIGTYPE_p_difference_type swig_types[58]
-#define SWIGTYPE_p_double swig_types[59]
-#define SWIGTYPE_p_f___p_argos__CCI_Controller swig_types[60]
-#define SWIGTYPE_p_f_p_void__double swig_types[61]
-#define SWIGTYPE_p_f_p_void__unsigned_long swig_types[62]
-#define SWIGTYPE_p_f_p_void_unsigned_long__void swig_types[63]
-#define SWIGTYPE_p_float swig_types[64]
-#define SWIGTYPE_p_gsl_rng swig_types[65]
-#define SWIGTYPE_p_gsl_rng_type swig_types[66]
-#define SWIGTYPE_p_int swig_types[67]
-#define SWIGTYPE_p_key_type swig_types[68]
-#define SWIGTYPE_p_long_long swig_types[69]
-#define SWIGTYPE_p_mapped_type swig_types[70]
-#define SWIGTYPE_p_p_gsl_rng_type swig_types[71]
-#define SWIGTYPE_p_p_ticpp__Attribute swig_types[72]
-#define SWIGTYPE_p_short swig_types[73]
-#define SWIGTYPE_p_signed_char swig_types[74]
-#define SWIGTYPE_p_size_type swig_types[75]
-#define SWIGTYPE_p_std__exception swig_types[76]
-#define SWIGTYPE_p_std__mapT_std__string_argos__CCI_Actuator_p_std__lessT_std__string_t_t swig_types[77]
-#define SWIGTYPE_p_std__mapT_std__string_argos__CCI_Controller_pfpFfF_std__lessT_std__string_t_t swig_types[78]
-#define SWIGTYPE_p_std__mapT_std__string_argos__CCI_Sensor_p_std__lessT_std__string_t_t swig_types[79]
-#define SWIGTYPE_p_std__mapT_std__string_argos__TRangeAndBearingReceivedPacket_t swig_types[80]
-#define SWIGTYPE_p_std__string swig_types[81]
-#define SWIGTYPE_p_std__vectorT_ProximitySensorReading_t swig_types[82]
-#define SWIGTYPE_p_std__vectorT_SReading_t swig_types[83]
-#define SWIGTYPE_p_std__vectorT_argos__CColor_t swig_types[84]
-#define SWIGTYPE_p_std__vectorT_argos__LightSensorReading_t swig_types[85]
-#define SWIGTYPE_p_std__vectorT_argos__MotorGroundSensorReading_t swig_types[86]
-#define SWIGTYPE_p_std__vectorT_argos__SReading_t swig_types[87]
-#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[88]
-#define SWIGTYPE_p_std__vectorT_ticpp__Base_p_t swig_types[89]
-#define SWIGTYPE_p_ticpp__Attribute swig_types[90]
-#define SWIGTYPE_p_ticpp__Base swig_types[91]
-#define SWIGTYPE_p_ticpp__Comment swig_types[92]
-#define SWIGTYPE_p_ticpp__Declaration swig_types[93]
-#define SWIGTYPE_p_ticpp__Document swig_types[94]
-#define SWIGTYPE_p_ticpp__Element swig_types[95]
-#define SWIGTYPE_p_ticpp__Exception swig_types[96]
-#define SWIGTYPE_p_ticpp__IteratorT_ticpp__Element_t swig_types[97]
-#define SWIGTYPE_p_ticpp__Node swig_types[98]
-#define SWIGTYPE_p_ticpp__NodeImpT_TiXmlComment_t swig_types[99]
-#define SWIGTYPE_p_ticpp__NodeImpT_TiXmlDeclaration_t swig_types[100]
-#define SWIGTYPE_p_ticpp__NodeImpT_TiXmlDocument_t swig_types[101]
-#define SWIGTYPE_p_ticpp__NodeImpT_TiXmlElement_t swig_types[102]
-#define SWIGTYPE_p_ticpp__NodeImpT_TiXmlStylesheetReference_t swig_types[103]
-#define SWIGTYPE_p_ticpp__NodeImpT_TiXmlText_t swig_types[104]
-#define SWIGTYPE_p_ticpp__StylesheetReference swig_types[105]
-#define SWIGTYPE_p_ticpp__Text swig_types[106]
-#define SWIGTYPE_p_ticpp__Visitor swig_types[107]
-#define SWIGTYPE_p_unsigned_char swig_types[108]
-#define SWIGTYPE_p_unsigned_int swig_types[109]
-#define SWIGTYPE_p_unsigned_long_long swig_types[110]
-#define SWIGTYPE_p_unsigned_short swig_types[111]
-#define SWIGTYPE_p_void swig_types[112]
-static swig_type_info *swig_types[114];
-static swig_module_info swig_module = {swig_types, 113, 0, 0, 0, 0};
+#define SWIGTYPE_p_argos__CCI_FootBotWheelsActuator swig_types[35]
+#define SWIGTYPE_p_argos__CCI_RangeAndBearingActuator swig_types[36]
+#define SWIGTYPE_p_argos__CCI_RangeAndBearingSensor swig_types[37]
+#define SWIGTYPE_p_argos__CCI_Robot swig_types[38]
+#define SWIGTYPE_p_argos__CCI_Sensor swig_types[39]
+#define SWIGTYPE_p_argos__CCategory swig_types[40]
+#define SWIGTYPE_p_argos__CColor swig_types[41]
+#define SWIGTYPE_p_argos__CDegrees swig_types[42]
+#define SWIGTYPE_p_argos__CMemento swig_types[43]
+#define SWIGTYPE_p_argos__CQuaternion swig_types[44]
+#define SWIGTYPE_p_argos__CRNG swig_types[45]
+#define SWIGTYPE_p_argos__CRadians swig_types[46]
+#define SWIGTYPE_p_argos__CRangeT_argos__CRadians_t swig_types[47]
+#define SWIGTYPE_p_argos__CRangeT_float_t swig_types[48]
+#define SWIGTYPE_p_argos__CRangeT_int_t swig_types[49]
+#define SWIGTYPE_p_argos__CRangeT_unsigned_int_t swig_types[50]
+#define SWIGTYPE_p_argos__CVector2 swig_types[51]
+#define SWIGTYPE_p_argos__CVector3 swig_types[52]
+#define SWIGTYPE_p_argos__LightSensorReading swig_types[53]
+#define SWIGTYPE_p_argos__MotorGroundSensorReading swig_types[54]
+#define SWIGTYPE_p_argos__TRangeAndBearingReceivedPacket swig_types[55]
+#define SWIGTYPE_p_bool swig_types[56]
+#define SWIGTYPE_p_difference_type swig_types[57]
+#define SWIGTYPE_p_double swig_types[58]
+#define SWIGTYPE_p_f___p_argos__CCI_Controller swig_types[59]
+#define SWIGTYPE_p_f_p_void__double swig_types[60]
+#define SWIGTYPE_p_f_p_void__unsigned_long swig_types[61]
+#define SWIGTYPE_p_f_p_void_unsigned_long__void swig_types[62]
+#define SWIGTYPE_p_float swig_types[63]
+#define SWIGTYPE_p_gsl_rng swig_types[64]
+#define SWIGTYPE_p_gsl_rng_type swig_types[65]
+#define SWIGTYPE_p_int swig_types[66]
+#define SWIGTYPE_p_key_type swig_types[67]
+#define SWIGTYPE_p_long_long swig_types[68]
+#define SWIGTYPE_p_mapped_type swig_types[69]
+#define SWIGTYPE_p_p_gsl_rng_type swig_types[70]
+#define SWIGTYPE_p_p_ticpp__Attribute swig_types[71]
+#define SWIGTYPE_p_short swig_types[72]
+#define SWIGTYPE_p_signed_char swig_types[73]
+#define SWIGTYPE_p_size_type swig_types[74]
+#define SWIGTYPE_p_std__exception swig_types[75]
+#define SWIGTYPE_p_std__mapT_std__string_argos__CCI_Actuator_p_std__lessT_std__string_t_t swig_types[76]
+#define SWIGTYPE_p_std__mapT_std__string_argos__CCI_Controller_pfpFfF_std__lessT_std__string_t_t swig_types[77]
+#define SWIGTYPE_p_std__mapT_std__string_argos__CCI_Sensor_p_std__lessT_std__string_t_t swig_types[78]
+#define SWIGTYPE_p_std__mapT_std__string_argos__TRangeAndBearingReceivedPacket_t swig_types[79]
+#define SWIGTYPE_p_std__string swig_types[80]
+#define SWIGTYPE_p_std__vectorT_ProximitySensorReading_t swig_types[81]
+#define SWIGTYPE_p_std__vectorT_SReading_t swig_types[82]
+#define SWIGTYPE_p_std__vectorT_argos__CColor_t swig_types[83]
+#define SWIGTYPE_p_std__vectorT_argos__LightSensorReading_t swig_types[84]
+#define SWIGTYPE_p_std__vectorT_argos__MotorGroundSensorReading_t swig_types[85]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[86]
+#define SWIGTYPE_p_std__vectorT_ticpp__Base_p_t swig_types[87]
+#define SWIGTYPE_p_ticpp__Attribute swig_types[88]
+#define SWIGTYPE_p_ticpp__Base swig_types[89]
+#define SWIGTYPE_p_ticpp__Comment swig_types[90]
+#define SWIGTYPE_p_ticpp__Declaration swig_types[91]
+#define SWIGTYPE_p_ticpp__Document swig_types[92]
+#define SWIGTYPE_p_ticpp__Element swig_types[93]
+#define SWIGTYPE_p_ticpp__Exception swig_types[94]
+#define SWIGTYPE_p_ticpp__IteratorT_ticpp__Element_t swig_types[95]
+#define SWIGTYPE_p_ticpp__Node swig_types[96]
+#define SWIGTYPE_p_ticpp__NodeImpT_TiXmlComment_t swig_types[97]
+#define SWIGTYPE_p_ticpp__NodeImpT_TiXmlDeclaration_t swig_types[98]
+#define SWIGTYPE_p_ticpp__NodeImpT_TiXmlDocument_t swig_types[99]
+#define SWIGTYPE_p_ticpp__NodeImpT_TiXmlElement_t swig_types[100]
+#define SWIGTYPE_p_ticpp__NodeImpT_TiXmlStylesheetReference_t swig_types[101]
+#define SWIGTYPE_p_ticpp__NodeImpT_TiXmlText_t swig_types[102]
+#define SWIGTYPE_p_ticpp__StylesheetReference swig_types[103]
+#define SWIGTYPE_p_ticpp__Text swig_types[104]
+#define SWIGTYPE_p_ticpp__Visitor swig_types[105]
+#define SWIGTYPE_p_unsigned_char swig_types[106]
+#define SWIGTYPE_p_unsigned_int swig_types[107]
+#define SWIGTYPE_p_unsigned_long_long swig_types[108]
+#define SWIGTYPE_p_unsigned_short swig_types[109]
+#define SWIGTYPE_p_void swig_types[110]
+static swig_type_info *swig_types[112];
+static swig_module_info swig_module = {swig_types, 111, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -1654,6 +1652,8 @@ namespace swig {
 typedef struct{} LANGUAGE_OBJ;
 }
 
+
+#include "argos-fixups.hpp"
 
 #include <gsl/gsl_rng.h>
 #include <argos2/common/utility/datatypes/datatypes.h>
@@ -1680,6 +1680,8 @@ typedef struct{} LANGUAGE_OBJ;
 #include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_proximity_sensor.h>
 #include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_light_sensor.h>
 #include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_motor_ground_sensor.h>
+
+#include "argos-converters.hpp"
 
 
 	#include <string>
@@ -1746,12 +1748,6 @@ SWIGINTERN int SWIG_lua_isnilstring(lua_State *L, int idx) {
   typedef signed char SInt8; 
   typedef unsigned char UInt8;
 
-extern "C" void argos::Tokenize(std::string const &,std::vector< std::string > &,std::string const &);
-extern "C" std::string argos::StringToUpperCase(std::string const &);
-extern "C" std::string argos::StringToLowerCase(std::string const &);
-extern "C" std::string argos::ExpandARGoSInstallDir(std::string const &);
-extern "C" void argos::Replace(std::string &,std::string const &,std::string const &);
-extern "C" bool argos::MatchPattern(std::string const &,std::string const);
 
   namespace argos {
     typedef argos::CARGoSRandom::CRNG CRNG;
@@ -1783,26 +1779,11 @@ SWIGINTERN argos::CCI_FootBotLightSensor *argos_CCI_Sensor_AsFootBotLightSensor(
 SWIGINTERN argos::CCI_FootBotMotorGroundSensor *argos_CCI_Sensor_AsFootBotMotorGroundSensor(argos::CCI_Sensor *self){
       return dynamic_cast<argos::CCI_FootBotMotorGroundSensor *>(self);
   }
-extern std::map< std::string,CCI_Controller_Maker *,std::less< std::string > > mapControllerFactory;
-
-  struct ProximitySensorReading {
-    argos::Real Value;
-    argos::CRadians Angle;  
-    
-    ProximitySensorReading() :
-      Value(0.0f) {}
-  
-    ProximitySensorReading(argos::Real f_value,
-			   const argos::CRadians& c_angle) :
-      Value(f_value),
-      Angle(c_angle) {}
-
-    ProximitySensorReading(argos::CCI_FootBotProximitySensor::SReading *reading) {
-      Value = reading->Value;
-      Angle = reading->Angle;
-    }
-  };
-
+SWIGINTERN std::vector< ProximitySensorReading > argos_CCI_FootBotProximitySensor_get_readings(argos::CCI_FootBotProximitySensor *self){
+      argos::CCI_FootBotProximitySensor::TReadings original_readings
+	= self->GetReadings();
+      return to_proximity_sensor_reading_vector(original_readings);
+  }
 SWIGINTERN ProximitySensorReading std_vector_Sl_ProximitySensorReading_Sg____getitem__(std::vector< ProximitySensorReading > *self,unsigned int idx){
 				if (idx>=self->size())
 					throw std::out_of_range("in vector::__getitem__()");
@@ -30692,6 +30673,208 @@ static swig_lua_class *swig_argos_CARGoSRandom_bases[] = {0};
 static const char *swig_argos_CARGoSRandom_base_names[] = {0};
 static swig_lua_class _wrap_class_argos_CARGoSRandom = { "Random", &SWIGTYPE_p_argos__CARGoSRandom,0,0, swig_argos_CARGoSRandom_methods, swig_argos_CARGoSRandom_attributes, swig_argos_CARGoSRandom_bases, swig_argos_CARGoSRandom_base_names };
 
+static int _wrap_ProximitySensorReading_value_set(lua_State* L) {
+  int SWIG_arg = 0;
+  ProximitySensorReading *arg1 = (ProximitySensorReading *) 0 ;
+  argos::Real arg2 ;
+  
+  SWIG_check_num_args("ProximitySensorReading::value",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ProximitySensorReading::value",1,"ProximitySensorReading *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ProximitySensorReading::value",2,"argos::Real");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ProximitySensorReading,0))){
+    SWIG_fail_ptr("ProximitySensorReading_value_set",1,SWIGTYPE_p_ProximitySensorReading);
+  }
+  
+  arg2 = (argos::Real)lua_tonumber(L, 2);
+  if (arg1) (arg1)->value = arg2;
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_ProximitySensorReading_value_get(lua_State* L) {
+  int SWIG_arg = 0;
+  ProximitySensorReading *arg1 = (ProximitySensorReading *) 0 ;
+  argos::Real result;
+  
+  SWIG_check_num_args("ProximitySensorReading::value",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ProximitySensorReading::value",1,"ProximitySensorReading *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ProximitySensorReading,0))){
+    SWIG_fail_ptr("ProximitySensorReading_value_get",1,SWIGTYPE_p_ProximitySensorReading);
+  }
+  
+  result = (argos::Real) ((arg1)->value);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_ProximitySensorReading_angle_set(lua_State* L) {
+  int SWIG_arg = 0;
+  ProximitySensorReading *arg1 = (ProximitySensorReading *) 0 ;
+  argos::CRadians *arg2 = (argos::CRadians *) 0 ;
+  
+  SWIG_check_num_args("ProximitySensorReading::angle",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ProximitySensorReading::angle",1,"ProximitySensorReading *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ProximitySensorReading::angle",2,"argos::CRadians *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ProximitySensorReading,0))){
+    SWIG_fail_ptr("ProximitySensorReading_angle_set",1,SWIGTYPE_p_ProximitySensorReading);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_argos__CRadians,0))){
+    SWIG_fail_ptr("ProximitySensorReading_angle_set",2,SWIGTYPE_p_argos__CRadians);
+  }
+  
+  if (arg1) (arg1)->angle = *arg2;
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_ProximitySensorReading_angle_get(lua_State* L) {
+  int SWIG_arg = 0;
+  ProximitySensorReading *arg1 = (ProximitySensorReading *) 0 ;
+  argos::CRadians *result = 0 ;
+  
+  SWIG_check_num_args("ProximitySensorReading::angle",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ProximitySensorReading::angle",1,"ProximitySensorReading *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ProximitySensorReading,0))){
+    SWIG_fail_ptr("ProximitySensorReading_angle_get",1,SWIGTYPE_p_ProximitySensorReading);
+  }
+  
+  result = (argos::CRadians *)& ((arg1)->angle);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CRadians,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_ProximitySensorReading__SWIG_0(lua_State* L) {
+  int SWIG_arg = 0;
+  ProximitySensorReading *result = 0 ;
+  
+  SWIG_check_num_args("ProximitySensorReading::ProximitySensorReading",0,0)
+  result = (ProximitySensorReading *)new ProximitySensorReading();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ProximitySensorReading,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_ProximitySensorReading__SWIG_1(lua_State* L) {
+  int SWIG_arg = 0;
+  argos::Real arg1 ;
+  argos::CRadians *arg2 = 0 ;
+  ProximitySensorReading *result = 0 ;
+  
+  SWIG_check_num_args("ProximitySensorReading::ProximitySensorReading",2,2)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("ProximitySensorReading::ProximitySensorReading",1,"argos::Real");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ProximitySensorReading::ProximitySensorReading",2,"argos::CRadians &");
+  arg1 = (argos::Real)lua_tonumber(L, 1);
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_argos__CRadians,0))){
+    SWIG_fail_ptr("new_ProximitySensorReading",2,SWIGTYPE_p_argos__CRadians);
+  }
+  
+  result = (ProximitySensorReading *)new ProximitySensorReading(arg1,*arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ProximitySensorReading,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_new_ProximitySensorReading(lua_State* L) {
+  int argc;
+  int argv[3]={
+    1,2,3
+  };
+  
+  argc = lua_gettop(L);
+  if (argc == 0) {
+    return _wrap_new_ProximitySensorReading__SWIG_0(L);
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      _v = lua_isnumber(L,argv[0]);
+    }
+    if (_v) {
+      {
+        void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_argos__CRadians, 0)) {
+          _v = 0;
+        } else {
+          _v = 1;
+        }
+      }
+      if (_v) {
+        return _wrap_new_ProximitySensorReading__SWIG_1(L);
+      }
+    }
+  }
+  
+  lua_pushstring(L,"Wrong arguments for overloaded function 'new_ProximitySensorReading'\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    ProximitySensorReading::ProximitySensorReading()\n"
+    "    ProximitySensorReading::ProximitySensorReading(argos::Real,argos::CRadians &)\n");
+  lua_error(L);return 0;
+}
+
+
+static void swig_delete_ProximitySensorReading(void *obj) {
+ProximitySensorReading *arg1 = (ProximitySensorReading *) obj;
+delete arg1;
+}
+static swig_lua_method swig_ProximitySensorReading_methods[] = {
+    {0,0}
+};
+static swig_lua_attribute swig_ProximitySensorReading_attributes[] = {
+    { "value", _wrap_ProximitySensorReading_value_get, _wrap_ProximitySensorReading_value_set},
+    { "angle", _wrap_ProximitySensorReading_angle_get, _wrap_ProximitySensorReading_angle_set},
+    {0,0,0}
+};
+static swig_lua_class *swig_ProximitySensorReading_bases[] = {0};
+static const char *swig_ProximitySensorReading_base_names[] = {0};
+static swig_lua_class _wrap_class_ProximitySensorReading = { "ProximitySensorReading", &SWIGTYPE_p_ProximitySensorReading,_wrap_new_ProximitySensorReading, swig_delete_ProximitySensorReading, swig_ProximitySensorReading_methods, swig_ProximitySensorReading_attributes, swig_ProximitySensorReading_bases, swig_ProximitySensorReading_base_names };
+
 static int _wrap_Actuator_init(lua_State* L) {
   int SWIG_arg = 0;
   argos::CCI_Actuator *arg1 = (argos::CCI_Actuator *) 0 ;
@@ -32340,7 +32523,7 @@ fail:
 }
 
 
-static int _wrap_FootBotProximitySensor_get_readings(lua_State* L) {
+static int _wrap_FootBotProximitySensor_get_readings_internal(lua_State* L) {
   int SWIG_arg = 0;
   argos::CCI_FootBotProximitySensor *arg1 = (argos::CCI_FootBotProximitySensor *) 0 ;
   argos::CCI_FootBotProximitySensor::TReadings *result = 0 ;
@@ -32349,11 +32532,38 @@ static int _wrap_FootBotProximitySensor_get_readings(lua_State* L) {
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_FootBotProximitySensor::GetReadings",1,"argos::CCI_FootBotProximitySensor const *");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_FootBotProximitySensor,0))){
-    SWIG_fail_ptr("FootBotProximitySensor_get_readings",1,SWIGTYPE_p_argos__CCI_FootBotProximitySensor);
+    SWIG_fail_ptr("FootBotProximitySensor_get_readings_internal",1,SWIGTYPE_p_argos__CCI_FootBotProximitySensor);
   }
   
   result = (argos::CCI_FootBotProximitySensor::TReadings *) &((argos::CCI_FootBotProximitySensor const *)arg1)->GetReadings();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_argos__SReading_t,0); SWIG_arg++; 
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_SReading_t,0); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_FootBotProximitySensor_get_readings(lua_State* L) {
+  int SWIG_arg = 0;
+  argos::CCI_FootBotProximitySensor *arg1 = (argos::CCI_FootBotProximitySensor *) 0 ;
+  std::vector< ProximitySensorReading > result;
+  
+  SWIG_check_num_args("argos::CCI_FootBotProximitySensor::get_readings",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("argos::CCI_FootBotProximitySensor::get_readings",1,"argos::CCI_FootBotProximitySensor *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_FootBotProximitySensor,0))){
+    SWIG_fail_ptr("FootBotProximitySensor_get_readings",1,SWIGTYPE_p_argos__CCI_FootBotProximitySensor);
+  }
+  
+  result = argos_CCI_FootBotProximitySensor_get_readings(arg1);
+  {
+    std::vector< ProximitySensorReading > * resultptr = new std::vector< ProximitySensorReading >((const std::vector< ProximitySensorReading > &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_ProximitySensorReading_t,1); SWIG_arg++;
+  }
   return SWIG_arg;
   
   if(0) SWIG_fail;
@@ -32369,6 +32579,7 @@ argos::CCI_FootBotProximitySensor *arg1 = (argos::CCI_FootBotProximitySensor *) 
 delete arg1;
 }
 static swig_lua_method swig_argos_CCI_FootBotProximitySensor_methods[] = {
+    {"get_readings_internal", _wrap_FootBotProximitySensor_get_readings_internal}, 
     {"get_readings", _wrap_FootBotProximitySensor_get_readings}, 
     {0,0}
 };
@@ -32378,247 +32589,6 @@ static swig_lua_attribute swig_argos_CCI_FootBotProximitySensor_attributes[] = {
 static swig_lua_class *swig_argos_CCI_FootBotProximitySensor_bases[] = {0,0};
 static const char *swig_argos_CCI_FootBotProximitySensor_base_names[] = {"argos::CCI_Sensor *",0};
 static swig_lua_class _wrap_class_argos_CCI_FootBotProximitySensor = { "FootBotProximitySensor", &SWIGTYPE_p_argos__CCI_FootBotProximitySensor,_wrap_new_FootBotProximitySensor, swig_delete_FootBotProximitySensor, swig_argos_CCI_FootBotProximitySensor_methods, swig_argos_CCI_FootBotProximitySensor_attributes, swig_argos_CCI_FootBotProximitySensor_bases, swig_argos_CCI_FootBotProximitySensor_base_names };
-
-static int _wrap_ProximitySensorReading_Value_set(lua_State* L) {
-  int SWIG_arg = 0;
-  ProximitySensorReading *arg1 = (ProximitySensorReading *) 0 ;
-  argos::Real arg2 ;
-  
-  SWIG_check_num_args("ProximitySensorReading::Value",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ProximitySensorReading::Value",1,"ProximitySensorReading *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ProximitySensorReading::Value",2,"argos::Real");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ProximitySensorReading,0))){
-    SWIG_fail_ptr("ProximitySensorReading_Value_set",1,SWIGTYPE_p_ProximitySensorReading);
-  }
-  
-  arg2 = (argos::Real)lua_tonumber(L, 2);
-  if (arg1) (arg1)->Value = arg2;
-  
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_ProximitySensorReading_Value_get(lua_State* L) {
-  int SWIG_arg = 0;
-  ProximitySensorReading *arg1 = (ProximitySensorReading *) 0 ;
-  argos::Real result;
-  
-  SWIG_check_num_args("ProximitySensorReading::Value",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ProximitySensorReading::Value",1,"ProximitySensorReading *");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ProximitySensorReading,0))){
-    SWIG_fail_ptr("ProximitySensorReading_Value_get",1,SWIGTYPE_p_ProximitySensorReading);
-  }
-  
-  result = (argos::Real) ((arg1)->Value);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_ProximitySensorReading_Angle_set(lua_State* L) {
-  int SWIG_arg = 0;
-  ProximitySensorReading *arg1 = (ProximitySensorReading *) 0 ;
-  argos::CRadians *arg2 = (argos::CRadians *) 0 ;
-  
-  SWIG_check_num_args("ProximitySensorReading::Angle",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ProximitySensorReading::Angle",1,"ProximitySensorReading *");
-  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ProximitySensorReading::Angle",2,"argos::CRadians *");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ProximitySensorReading,0))){
-    SWIG_fail_ptr("ProximitySensorReading_Angle_set",1,SWIGTYPE_p_ProximitySensorReading);
-  }
-  
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_argos__CRadians,0))){
-    SWIG_fail_ptr("ProximitySensorReading_Angle_set",2,SWIGTYPE_p_argos__CRadians);
-  }
-  
-  if (arg1) (arg1)->Angle = *arg2;
-  
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_ProximitySensorReading_Angle_get(lua_State* L) {
-  int SWIG_arg = 0;
-  ProximitySensorReading *arg1 = (ProximitySensorReading *) 0 ;
-  argos::CRadians *result = 0 ;
-  
-  SWIG_check_num_args("ProximitySensorReading::Angle",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ProximitySensorReading::Angle",1,"ProximitySensorReading *");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ProximitySensorReading,0))){
-    SWIG_fail_ptr("ProximitySensorReading_Angle_get",1,SWIGTYPE_p_ProximitySensorReading);
-  }
-  
-  result = (argos::CRadians *)& ((arg1)->Angle);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_argos__CRadians,0); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_new_ProximitySensorReading__SWIG_0(lua_State* L) {
-  int SWIG_arg = 0;
-  ProximitySensorReading *result = 0 ;
-  
-  SWIG_check_num_args("ProximitySensorReading::ProximitySensorReading",0,0)
-  result = (ProximitySensorReading *)new ProximitySensorReading();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ProximitySensorReading,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_new_ProximitySensorReading__SWIG_1(lua_State* L) {
-  int SWIG_arg = 0;
-  argos::Real arg1 ;
-  argos::CRadians *arg2 = 0 ;
-  ProximitySensorReading *result = 0 ;
-  
-  SWIG_check_num_args("ProximitySensorReading::ProximitySensorReading",2,2)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("ProximitySensorReading::ProximitySensorReading",1,"argos::Real");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ProximitySensorReading::ProximitySensorReading",2,"argos::CRadians const &");
-  arg1 = (argos::Real)lua_tonumber(L, 1);
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_argos__CRadians,0))){
-    SWIG_fail_ptr("new_ProximitySensorReading",2,SWIGTYPE_p_argos__CRadians);
-  }
-  
-  result = (ProximitySensorReading *)new ProximitySensorReading(arg1,(argos::CRadians const &)*arg2);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ProximitySensorReading,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_new_ProximitySensorReading__SWIG_2(lua_State* L) {
-  int SWIG_arg = 0;
-  argos::CCI_FootBotProximitySensor::SReading *arg1 = (argos::CCI_FootBotProximitySensor::SReading *) 0 ;
-  ProximitySensorReading *result = 0 ;
-  
-  SWIG_check_num_args("ProximitySensorReading::ProximitySensorReading",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ProximitySensorReading::ProximitySensorReading",1,"argos::CCI_FootBotProximitySensor::SReading *");
-  
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_argos__CCI_FootBotProximitySensor__SReading,0))){
-    SWIG_fail_ptr("new_ProximitySensorReading",1,SWIGTYPE_p_argos__CCI_FootBotProximitySensor__SReading);
-  }
-  
-  result = (ProximitySensorReading *)new ProximitySensorReading(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ProximitySensorReading,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_new_ProximitySensorReading(lua_State* L) {
-  int argc;
-  int argv[3]={
-    1,2,3
-  };
-  
-  argc = lua_gettop(L);
-  if (argc == 0) {
-    return _wrap_new_ProximitySensorReading__SWIG_0(L);
-  }
-  if (argc == 1) {
-    int _v;
-    {
-      void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_argos__CCI_FootBotProximitySensor__SReading, 0)) {
-        _v = 0;
-      } else {
-        _v = 1;
-      }
-    }
-    if (_v) {
-      return _wrap_new_ProximitySensorReading__SWIG_2(L);
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    {
-      _v = lua_isnumber(L,argv[0]);
-    }
-    if (_v) {
-      {
-        void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_argos__CRadians, 0)) {
-          _v = 0;
-        } else {
-          _v = 1;
-        }
-      }
-      if (_v) {
-        return _wrap_new_ProximitySensorReading__SWIG_1(L);
-      }
-    }
-  }
-  
-  lua_pushstring(L,"Wrong arguments for overloaded function 'new_ProximitySensorReading'\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    ProximitySensorReading::ProximitySensorReading()\n"
-    "    ProximitySensorReading::ProximitySensorReading(argos::Real,argos::CRadians const &)\n"
-    "    ProximitySensorReading::ProximitySensorReading(argos::CCI_FootBotProximitySensor::SReading *)\n");
-  lua_error(L);return 0;
-}
-
-
-static void swig_delete_ProximitySensorReading(void *obj) {
-ProximitySensorReading *arg1 = (ProximitySensorReading *) obj;
-delete arg1;
-}
-static swig_lua_method swig_ProximitySensorReading_methods[] = {
-    {0,0}
-};
-static swig_lua_attribute swig_ProximitySensorReading_attributes[] = {
-    { "Value", _wrap_ProximitySensorReading_Value_get, _wrap_ProximitySensorReading_Value_set},
-    { "Angle", _wrap_ProximitySensorReading_Angle_get, _wrap_ProximitySensorReading_Angle_set},
-    {0,0,0}
-};
-static swig_lua_class *swig_ProximitySensorReading_bases[] = {0};
-static const char *swig_ProximitySensorReading_base_names[] = {0};
-static swig_lua_class _wrap_class_ProximitySensorReading = { "ProximitySensorReading", &SWIGTYPE_p_ProximitySensorReading,_wrap_new_ProximitySensorReading, swig_delete_ProximitySensorReading, swig_ProximitySensorReading_methods, swig_ProximitySensorReading_attributes, swig_ProximitySensorReading_bases, swig_ProximitySensorReading_base_names };
 
 static int _wrap_new_ProximitySensorReadings__SWIG_0(lua_State* L) {
   int SWIG_arg = 0;
@@ -35987,7 +35957,6 @@ static swig_type_info _swigt__p_argos__CCI_FootBotLedsActuator = {"_p_argos__CCI
 static swig_type_info _swigt__p_argos__CCI_FootBotLightSensor = {"_p_argos__CCI_FootBotLightSensor", "argos::CCI_FootBotLightSensor *", 0, 0, (void*)&_wrap_class_argos_CCI_FootBotLightSensor, 0};
 static swig_type_info _swigt__p_argos__CCI_FootBotMotorGroundSensor = {"_p_argos__CCI_FootBotMotorGroundSensor", "argos::CCI_FootBotMotorGroundSensor *", 0, 0, (void*)&_wrap_class_argos_CCI_FootBotMotorGroundSensor, 0};
 static swig_type_info _swigt__p_argos__CCI_FootBotProximitySensor = {"_p_argos__CCI_FootBotProximitySensor", "argos::CCI_FootBotProximitySensor *", 0, 0, (void*)&_wrap_class_argos_CCI_FootBotProximitySensor, 0};
-static swig_type_info _swigt__p_argos__CCI_FootBotProximitySensor__SReading = {"_p_argos__CCI_FootBotProximitySensor__SReading", "argos::CCI_FootBotProximitySensor::SReading *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_argos__CCI_FootBotWheelsActuator = {"_p_argos__CCI_FootBotWheelsActuator", "argos::CCI_FootBotWheelsActuator *", 0, 0, (void*)&_wrap_class_argos_CCI_FootBotWheelsActuator, 0};
 static swig_type_info _swigt__p_argos__CCI_RangeAndBearingActuator = {"_p_argos__CCI_RangeAndBearingActuator", "argos::CCI_RangeAndBearingActuator *", 0, 0, (void*)&_wrap_class_argos_CCI_RangeAndBearingActuator, 0};
 static swig_type_info _swigt__p_argos__CCI_RangeAndBearingSensor = {"_p_argos__CCI_RangeAndBearingSensor", "argos::CCI_RangeAndBearingSensor *", 0, 0, (void*)&_wrap_class_argos_CCI_RangeAndBearingSensor, 0};
@@ -36035,11 +36004,10 @@ static swig_type_info _swigt__p_std__mapT_std__string_argos__CCI_Sensor_p_std__l
 static swig_type_info _swigt__p_std__mapT_std__string_argos__TRangeAndBearingReceivedPacket_t = {"_p_std__mapT_std__string_argos__TRangeAndBearingReceivedPacket_t", "std::map< std::string,argos::TRangeAndBearingReceivedPacket > *|argos::CCI_RangeAndBearingSensor::TLastReceivedPackets *", 0, 0, (void*)&_wrap_class_std_map_Sl_std_string_Sc_argos_TRangeAndBearingReceivedPacket_Sg_, 0};
 static swig_type_info _swigt__p_std__string = {"_p_std__string", "std::string *", 0, 0, (void*)&_wrap_class_std_string, 0};
 static swig_type_info _swigt__p_std__vectorT_ProximitySensorReading_t = {"_p_std__vectorT_ProximitySensorReading_t", "std::vector< ProximitySensorReading > *", 0, 0, (void*)&_wrap_class_std_vector_Sl_ProximitySensorReading_Sg_, 0};
-static swig_type_info _swigt__p_std__vectorT_SReading_t = {"_p_std__vectorT_SReading_t", "std::vector< SReading > *|argos::CCI_FootBotMotorGroundSensor::TReadings *|argos::CCI_FootBotLightSensor::TReadings *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_SReading_t = {"_p_std__vectorT_SReading_t", "std::vector< SReading > *|argos::CCI_FootBotMotorGroundSensor::TReadings *|argos::CCI_FootBotProximitySensor::TReadings *|argos::CCI_FootBotLightSensor::TReadings *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_argos__CColor_t = {"_p_std__vectorT_argos__CColor_t", "std::vector< argos::CColor > *|argos::CCI_FootBotLedsActuator::TLedSettings *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_argos__LightSensorReading_t = {"_p_std__vectorT_argos__LightSensorReading_t", "std::vector< argos::LightSensorReading > *", 0, 0, (void*)&_wrap_class_std_vector_Sl_argos_LightSensorReading_Sg_, 0};
 static swig_type_info _swigt__p_std__vectorT_argos__MotorGroundSensorReading_t = {"_p_std__vectorT_argos__MotorGroundSensorReading_t", "std::vector< argos::MotorGroundSensorReading > *", 0, 0, (void*)&_wrap_class_std_vector_Sl_argos_MotorGroundSensorReading_Sg_, 0};
-static swig_type_info _swigt__p_std__vectorT_argos__SReading_t = {"_p_std__vectorT_argos__SReading_t", "std::vector< argos::CCI_FootBotProximitySensor::SReading > *|argos::CCI_FootBotProximitySensor::TReadings *|std::vector< argos::SReading > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_std__string_t = {"_p_std__vectorT_std__string_t", "std::vector< std::string > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ticpp__Base_p_t = {"_p_std__vectorT_ticpp__Base_p_t", "std::vector< ticpp::Base * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ticpp__Attribute = {"_p_ticpp__Attribute", "ticpp::Attribute *", 0, 0, (void*)&_wrap_class_ticpp_Attribute, 0};
@@ -36102,7 +36070,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_argos__CCI_FootBotLightSensor,
   &_swigt__p_argos__CCI_FootBotMotorGroundSensor,
   &_swigt__p_argos__CCI_FootBotProximitySensor,
-  &_swigt__p_argos__CCI_FootBotProximitySensor__SReading,
   &_swigt__p_argos__CCI_FootBotWheelsActuator,
   &_swigt__p_argos__CCI_RangeAndBearingActuator,
   &_swigt__p_argos__CCI_RangeAndBearingSensor,
@@ -36154,7 +36121,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__vectorT_argos__CColor_t,
   &_swigt__p_std__vectorT_argos__LightSensorReading_t,
   &_swigt__p_std__vectorT_argos__MotorGroundSensorReading_t,
-  &_swigt__p_std__vectorT_argos__SReading_t,
   &_swigt__p_std__vectorT_std__string_t,
   &_swigt__p_std__vectorT_ticpp__Base_p_t,
   &_swigt__p_ticpp__Attribute,
@@ -36217,7 +36183,6 @@ static swig_cast_info _swigc__p_argos__CCI_FootBotLedsActuator[] = {  {&_swigt__
 static swig_cast_info _swigc__p_argos__CCI_FootBotLightSensor[] = {  {&_swigt__p_argos__CCI_FootBotLightSensor, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_argos__CCI_FootBotMotorGroundSensor[] = {  {&_swigt__p_argos__CCI_FootBotMotorGroundSensor, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_argos__CCI_FootBotProximitySensor[] = {  {&_swigt__p_argos__CCI_FootBotProximitySensor, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_argos__CCI_FootBotProximitySensor__SReading[] = {  {&_swigt__p_argos__CCI_FootBotProximitySensor__SReading, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_argos__CCI_FootBotWheelsActuator[] = {  {&_swigt__p_argos__CCI_FootBotWheelsActuator, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_argos__CCI_RangeAndBearingActuator[] = {  {&_swigt__p_argos__CCI_RangeAndBearingActuator, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_argos__CCI_RangeAndBearingSensor[] = {  {&_swigt__p_argos__CCI_RangeAndBearingSensor, 0, 0, 0},{0, 0, 0, 0}};
@@ -36269,7 +36234,6 @@ static swig_cast_info _swigc__p_std__vectorT_SReading_t[] = {  {&_swigt__p_std__
 static swig_cast_info _swigc__p_std__vectorT_argos__CColor_t[] = {  {&_swigt__p_std__vectorT_argos__CColor_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_argos__LightSensorReading_t[] = {  {&_swigt__p_std__vectorT_argos__LightSensorReading_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_argos__MotorGroundSensorReading_t[] = {  {&_swigt__p_std__vectorT_argos__MotorGroundSensorReading_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__vectorT_argos__SReading_t[] = {  {&_swigt__p_std__vectorT_argos__SReading_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_std__string_t[] = {  {&_swigt__p_std__vectorT_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_ticpp__Base_p_t[] = {  {&_swigt__p_std__vectorT_ticpp__Base_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ticpp__Attribute[] = {  {&_swigt__p_ticpp__Attribute, 0, 0, 0},{0, 0, 0, 0}};
@@ -36332,7 +36296,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_argos__CCI_FootBotLightSensor,
   _swigc__p_argos__CCI_FootBotMotorGroundSensor,
   _swigc__p_argos__CCI_FootBotProximitySensor,
-  _swigc__p_argos__CCI_FootBotProximitySensor__SReading,
   _swigc__p_argos__CCI_FootBotWheelsActuator,
   _swigc__p_argos__CCI_RangeAndBearingActuator,
   _swigc__p_argos__CCI_RangeAndBearingSensor,
@@ -36384,7 +36347,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__vectorT_argos__CColor_t,
   _swigc__p_std__vectorT_argos__LightSensorReading_t,
   _swigc__p_std__vectorT_argos__MotorGroundSensorReading_t,
-  _swigc__p_std__vectorT_argos__SReading_t,
   _swigc__p_std__vectorT_std__string_t,
   _swigc__p_std__vectorT_ticpp__Base_p_t,
   _swigc__p_ticpp__Attribute,

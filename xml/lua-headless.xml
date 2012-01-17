@@ -29,7 +29,7 @@
       </sensors>
       <parameters
 	  alpha="7.5" delta="0.1" velocity="5"
-	  lua_source="controllers/lua_controller/foraging_controller.lua" />
+	  lua_source="controllers/lua_controller/foraging-controller.lua" />
     </lua_controller>
 
   </controllers>

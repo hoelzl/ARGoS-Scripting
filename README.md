@@ -15,11 +15,11 @@ standard paths.
 If you want to use the fabulous LuaJIT, just change the file
 `controllers/lua_controller/CMakeLists.txt` from
 
-	target_link_libraries(lua_controller lua uuid)
+	target_link_libraries(lua-controller lua uuid)
 
 to
 
-	target_link_libraries(lua_controller luajit-5.1 uuid)
+	target_link_libraries(lua-controller luajit-5.1 uuid)
 
 and everything should continue to work (albeit more quickly).
 

@@ -14,7 +14,7 @@
 #include "lua.hpp"
 #include "lauxlib.h"
 #include "lualib.h"
-#include "lua_wrapper.h"
+#include "lua-wrapper.h"
 
 using namespace argos;
 

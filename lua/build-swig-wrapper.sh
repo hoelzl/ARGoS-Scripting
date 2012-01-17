@@ -6,9 +6,9 @@ LINK="-llua -largos2_simulator -largos2_common_utility -largos2_simulator_sensor
 #CC=/opt/local/bin/c++-mp-4.7
 CC=c++
 
-swig -v -c++ -lua -external-runtime argos-lua-wrapper.h
-swig -v $SWIG_INCLUDE_DIRS $DEFINES -c++ -lua -oh argos-lua-wrapper.h -o argos-lua-wrapper.cpp -addextern argos-lua.i 
-echo "Compiling with " `$CC --version`
+swig -c++ -lua -external-runtime argos-lua-wrapper.h
+swig -v $SWIG_INCLUDE_DIRS $DEFINES -c++ -lua -oh argos-lua-wrapper.h -o argos-lua-wrapper.cpp argos-lua.i 
+# echo "Compiling with " `$CC --version`
 # $CC $C_INCLUDE_DIRS $DEFINES $LINK -o argos-lua-wrapper.o argos-lua-wrapper.cpp
-$CC $C_INCLUDE_DIRS $DEFINES -c argos-lua-wrapper.cpp
+# $CC $C_INCLUDE_DIRS $DEFINES -c argos-lua-wrapper.cpp
 echo "Done"

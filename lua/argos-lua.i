@@ -1,5 +1,7 @@
 %module argos
 %{
+#include "argos-fixups.hpp"
+
 #include <gsl/gsl_rng.h>
 #include <argos2/common/utility/datatypes/datatypes.h>
 #include <argos2/common/utility/datatypes/color.h>
@@ -25,6 +27,8 @@
 #include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_proximity_sensor.h>
 #include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_light_sensor.h>
 #include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_motor_ground_sensor.h>
+
+#include "argos-converters.hpp"
 %}
 
 %rename("%(undercase)s", %$isfunction) "";
@@ -445,6 +449,13 @@ namespace argos {
 %ignore ~CARGoSRandom;
 %include <argos2/common/utility/argos_random.h>
 
+////////////////////////////////////////////////////////////////////////
+ // Sensors and Actuators
+////////////////////////////////////////////////////////////////////////
+
+// First thing we need it the fixups for nested classes.
+%include argos-fixups.hpp
+
 %rename(Actuator) CCI_Actuator;
 %include <argos2/common/control_interface/ci_actuator.h>
 
@@ -463,29 +474,11 @@ namespace argos {
 %rename(FootBotLedsActuator) CCI_FootBotLedsActuator;
 %include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_leds_actuator.h>
 
- // %nestedworkaround argos::CCI_FootBotProximitySensor::SReading;
-%rename(FootBotProximitySensor) CCI_FootBotProximitySensor;
+%nestedworkaround argos::CCI_FootBotProximitySensor::SReading;
+%rename(FootBotProximitySensor) argos::CCI_FootBotProximitySensor;
+%rename(get_readings_internal) argos::CCI_FootBotProximitySensor::GetReadings;
 %include <argos2/common/control_interface/swarmanoid/footbot/ci_footbot_proximity_sensor.h>
 
-%inline %{
-  struct ProximitySensorReading {
-    argos::Real Value;
-    argos::CRadians Angle;  
-    
-    ProximitySensorReading() :
-      Value(0.0f) {}
-  
-    ProximitySensorReading(argos::Real f_value,
-			   const argos::CRadians& c_angle) :
-      Value(f_value),
-      Angle(c_angle) {}
-
-    ProximitySensorReading(argos::CCI_FootBotProximitySensor::SReading *reading) {
-      Value = reading->Value;
-      Angle = reading->Angle;
-    }
-  };
-%}
 %template(ProximitySensorReadings) std::vector<ProximitySensorReading>;
 
 %rename(RangeAndBearingSensor) CCI_RangeAndBearingSensor;
@@ -591,5 +584,15 @@ namespace argos {
     AsFootBotMotorGroundSensor() {
       return dynamic_cast<argos::CCI_FootBotMotorGroundSensor *>($self);
   }
+}
 
+%extend argos::CCI_FootBotProximitySensor {
+  // Re-implement the shadowed get_readings method.  Use the lower
+  // case name to avoid matchint the %ignore directive.
+  std::vector<ProximitySensorReading>
+    get_readings() {
+      argos::CCI_FootBotProximitySensor::TReadings original_readings
+	= $self->GetReadings();
+      return to_proximity_sensor_reading_vector(original_readings);
+  }
 }
