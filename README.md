@@ -11,7 +11,7 @@ Compilation Notes
 To rebuild the wrapper for your ARGoS installation change to the `lua`
 directory and execute `build-swig-wapper.sh`:
 
-	  cd lua; ./build-swig-wrapper.sh; cd ..
+          cd lua; ./build-swig-wrapper.sh; cd ..
 
 This should result in output similar to the following:
 
@@ -19,12 +19,12 @@ This should result in output similar to the following:
     Search paths:
         ./
         /usr/include/
-	/opt/local/include/
-	/usr/include/c++/4.2.1/
- 	./swig_lib/lua/
- 	/opt/local/share/swig/2.0.4/lua/
- 	./swig_lib/
- 	/opt/local/share/swig/2.0.4/
+        /opt/local/include/
+        /usr/include/c++/4.2.1/
+        ./swig_lib/lua/
+        /opt/local/share/swig/2.0.4/lua/
+        ./swig_lib/
+        /opt/local/share/swig/2.0.4/
     Preprocessing...
     Starting language-specific parse...
     Processing types...
@@ -46,11 +46,11 @@ standard paths.
 If you want to use the fabulous LuaJIT, just change the file
 `controllers/lua_controller/CMakeLists.txt` from
 
-	target_link_libraries(lua-controller lua uuid)
+        target_link_libraries(lua-controller lua uuid)
 
 to
 
-	target_link_libraries(lua-controller luajit-5.1 uuid)
+        target_link_libraries(lua-controller luajit-5.1 uuid)
 
 and everything should continue to work (albeit more quickly).
 
@@ -60,11 +60,11 @@ simulator with the following linker flags: `-Wl,-pagezero_size,10000
 to modify the file `argos2/simulator/CMakeLists.txt` by changing the
 line
 
-	target_link_libraries(argos argos2_simulator)
+        target_link_libraries(argos argos2_simulator)
 
 to
 
-	target_link_libraries(argos argos2_simulator -Wl,-pagezero_size,10000 -Wl,-image_base,100000000)
+        target_link_libraries(argos argos2_simulator -Wl,-pagezero_size,10000 -Wl,-image_base,100000000)
 
 If you don't want to compile ARGoS yourself you'll have to stay with
 the standard Lua interpreter for the time being.
