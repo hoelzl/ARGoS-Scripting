@@ -5,8 +5,39 @@ This is a small experiment to test the integration of scripting
 languages into the ARGoS simulator for robot swarms.  The wrapping of
 ARGoS is done using the SWIG interface generator.
 
-Complation Notes
-----------------
+Compilation Notes
+-----------------
+
+To rebuild the wrapper for your ARGoS installation change to the `lua`
+directory and execute `build-swig-wapper.sh`:
+
+	  cd lua; ./build-swig-wrapper.sh; cd ..
+
+This should result in output similar to the following:
+
+    Language subdirectory: lua
+    Search paths:
+        ./
+        /usr/include/
+	/opt/local/include/
+	/usr/include/c++/4.2.1/
+ 	./swig_lib/lua/
+ 	/opt/local/share/swig/2.0.4/lua/
+ 	./swig_lib/
+ 	/opt/local/share/swig/2.0.4/
+    Preprocessing...
+    Starting language-specific parse...
+    Processing types...
+    C++ analysis...
+    Generating wrappers...
+    Done
+
+Then create a `build` directory, switch to that directory, run `cmake
+..` and finally run `make`.  To invoke the lua controller run
+
+    launch_argos -nc xml/lua-controller.xml
+
+from the root directory.
 
 The makefiles in this repository assume that you have the traditional
 Lua implementation installed and that your linker can find it in the
