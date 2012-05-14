@@ -26,22 +26,8 @@ static int lua_uuid(lua_State *L) {
   return 1;
 }
 
-static int lua_log(lua_State *L) {
-  luaL_checkstring(L, 1);
-  LOG << lua_tostring(L, 1) << endl;
-  return 0;
-}
-
-static int lua_log_error(lua_State *L) {
-  luaL_checkstring(L, 1);
-  LOGERR << lua_tostring(L, 1) << endl;
-  return 0;
-}
-
 static const struct luaL_Reg argos_utils[] = {
   {"uuid", lua_uuid},
-  {"log_internal", lua_log},
-  {"log_error_internal", lua_log_error},
   {NULL, NULL}
 };
 

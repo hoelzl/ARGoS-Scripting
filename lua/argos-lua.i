@@ -4,6 +4,7 @@
 
 #include <gsl/gsl_rng.h>
 #include <argos2/common/utility/datatypes/datatypes.h>
+#include <argos2/common/utility/logging/argos_log.h>
 #include <argos2/common/utility/datatypes/color.h>
 
 #include <argos2/common/utility/math/general.h>
@@ -11,6 +12,7 @@
 #include <argos2/common/utility/math/angles.h>
 #include <argos2/common/utility/math/vector2.h>
 #include <argos2/common/utility/math/vector3.h>
+#include <argos2/common/utility/math/matrix2x2.h>
 
 #include <argos2/common/utility/argos_random.h>
 
@@ -88,6 +90,18 @@
   typedef unsigned char UInt8;
 %}
 %include <argos2/common/utility/datatypes/datatypes.h>
+
+%include <argos2/common/utility/logging/argos_log.h>
+
+%inline %{
+  void log (char *message) {
+    argos::LOG << message << std::endl;
+  }
+
+  void logError (char *message) {
+    argos::LOGERR << message << std::endl;
+  }
+%}
 
 %rename(ByteArray) CByteArray;
 %include <argos2/common/utility/datatypes/byte_array.h>
@@ -332,11 +346,16 @@ namespace ticpp {
 %rename(Degrees) CDegrees;
 %include <argos2/common/utility/math/angles.h>
 
+%ignore argos::CMatrix2x2::operator();
+%rename(Matrix2x2) CMatrix2x2;
+%include <argos2/common/utility/math/matrix2x2.h>
+
 %rename(Vector2) CVector2;
 %include <argos2/common/utility/math/vector2.h>
 
 %rename(Vector3) CVector3;
 %include <argos2/common/utility/math/vector3.h>
+
 
 typedef struct  {
   // Originally const char *name, but this leads to a warning about
