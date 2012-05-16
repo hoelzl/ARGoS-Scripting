@@ -11,13 +11,13 @@
 -- The Lua part of the utility functions.  This should go somewhere
 -- else.
 
-function argos_utils.log (...)
-   argos_utils.log_internal(string.format(...))
-end
+-- function argos_utils.log (...)
+--    argos_utils.log_internal(string.format(...))
+-- end
 
-function argos_utils.log_error (...)
-   argos_utils.log_error_internal(string.format(...))
-end
+-- function argos_utils.log_error (...)
+--    argos_utils.log_error_internal(string.format(...))
+-- end
 
 -- The Controller.
 -----------------

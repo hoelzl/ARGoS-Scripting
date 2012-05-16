@@ -963,20 +963,20 @@ SWIGINTERN int SWIG_Lua_module_get(lua_State* L)
 */
   /* get the metatable */
 #if ((SWIG_LUA_TARGET == SWIG_LUA_FLAVOR_ELUA) || (SWIG_LUA_TARGET == SWIG_LUA_FLAVOR_ELUAC))
-  assert(lua_istable(L,1)); /* just in case */
+  assert(lua_isrotable(L,1)); /* just in case */
 #else
   assert(lua_istable(L,1)); /* default Lua action */
 #endif
   lua_getmetatable(L,1);  /* get the metatable */
 #if ((SWIG_LUA_TARGET == SWIG_LUA_FLAVOR_ELUA) || (SWIG_LUA_TARGET == SWIG_LUA_FLAVOR_ELUAC))
-  assert(lua_istable(L,-1));  /* just in case */
+  assert(lua_isrotable(L,-1));  /* just in case */
 #else
   assert(lua_istable(L,-1));
 #endif
   SWIG_Lua_get_table(L,".get");  /* get the .get table */
   lua_remove(L,3);  /* remove metatable */
 #if ((SWIG_LUA_TARGET == SWIG_LUA_FLAVOR_ELUA) || (SWIG_LUA_TARGET == SWIG_LUA_FLAVOR_ELUAC))
-  if (lua_istable(L,-1))
+  if (lua_isrotable(L,-1))
 #else
   if (lua_istable(L,-1))
 #endif
@@ -1007,20 +1007,20 @@ SWIGINTERN int SWIG_Lua_module_set(lua_State* L)
 */
   /* get the metatable */
 #if ((SWIG_LUA_TARGET == SWIG_LUA_FLAVOR_ELUA) || (SWIG_LUA_TARGET == SWIG_LUA_FLAVOR_ELUAC))
-  assert(lua_istable(L,1));  /* just in case */
+  assert(lua_isrotable(L,1));  /* just in case */
 #else
   assert(lua_istable(L,1)); /* default Lua action */
 #endif
   lua_getmetatable(L,1);  /* get the metatable */
 #if ((SWIG_LUA_TARGET == SWIG_LUA_FLAVOR_ELUA) || (SWIG_LUA_TARGET == SWIG_LUA_FLAVOR_ELUAC))
-  assert(lua_istable(L,-1));  /* just in case */
+  assert(lua_isrotable(L,-1));  /* just in case */
 #else
   assert(lua_istable(L,-1));
 #endif
   SWIG_Lua_get_table(L,".set");  /* get the .set table */
   lua_remove(L,4);  /* remove metatable */
 #if ((SWIG_LUA_TARGET == SWIG_LUA_FLAVOR_ELUA) || (SWIG_LUA_TARGET == SWIG_LUA_FLAVOR_ELUAC))
-  if (lua_istable(L,-1))
+  if (lua_isrotable(L,-1))
 #else
   if (lua_istable(L,-1))
 #endif

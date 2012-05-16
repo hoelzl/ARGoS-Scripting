@@ -613,7 +613,7 @@ namespace argos {
 
 %extend argos::CCI_FootBotProximitySensor {
   // Re-implement the shadowed get_readings method.  Use the lower
-  // case name to avoid matchint the %ignore directive.
+  // case name to avoid matching the %ignore directive.
   std::vector<ProximitySensorReading>
     get_readings() {
       argos::CCI_FootBotProximitySensor::TReadings original_readings
@@ -624,7 +624,7 @@ namespace argos {
 
 %extend argos::CCI_RangeAndBearingSensor {
   // Re-implement the shadowed get_readings method.  Use the lower
-  // case name to avoid matchint the %ignore directive.
+  // case name to avoid matching the %ignore directive.
   const char *
     get_readings() {
       return "RangeAndBearingSensor";
@@ -633,7 +633,7 @@ namespace argos {
 
 %extend argos::CCI_FootBotLightSensor {
   // Re-implement the shadowed get_readings method.  Use the lower
-  // case name to avoid matchint the %ignore directive.
+  // case name to avoid matching the %ignore directive.
   const char *
     get_readings() {
       // argos::CCI_FootBotLightSensor::TReadings original_readings
@@ -644,7 +644,7 @@ namespace argos {
 
 %extend argos::CCI_FootBotMotorGroundSensor {
   // Re-implement the shadowed get_readings method.  Use the lower
-  // case name to avoid matchint the %ignore directive.
+  // case name to avoid matching the %ignore directive.
   const char *
     get_readings() {
       // argos::CCI_FootBotMotorGroundSensor::TReadings original_readings

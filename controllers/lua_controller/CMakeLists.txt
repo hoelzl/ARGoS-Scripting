@@ -1,3 +1,4 @@
+add_definitions(-DSWIG_LUA_TARGET=1)
 link_directories(/usr/local/lib /opt/local/lib /usr/lib)
 # add_module(lua-wrapper MODULE lua-wrapper.cpp)
 add_library(lua-controller MODULE lua-wrapper.cpp argos-converters.cpp lua-controller.cpp)
